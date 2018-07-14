@@ -1,8 +1,12 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "greeter",
+      "invocationName": "p o e",
       "intents": [{
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
           "name": "AMAZON.CancelIntent",
           "samples": []
         },
@@ -15,20 +19,626 @@
           "samples": []
         },
         {
-          "name": "AMAZON.FallbackIntent",
-          "samples": []
-        },
-        {
-          "name": "HelloWorldIntent",
-          "slots": [],
+          "name": "QuestRewardIntent",
+          "slots": [{
+            "name": "quest",
+            "type": "QUEST",
+            "samples": [
+              "{quest} quest",
+              "{quest}"
+            ]
+          }],
           "samples": [
-            "hello",
-            "say hello",
-            "say hello world"
+            "give me quest reward",
+            "give me quest reward for",
+            "give me quest reward for quest",
+            "give me quest reward for the",
+            "give me quest reward for the quest",
+            "give me quest reward for the {quest}",
+            "give me quest reward for the {quest} quest",
+            "give me quest reward for {quest}",
+            "give me quest reward for {quest} quest",
+            "give me quest reward quest",
+            "give me quest reward the",
+            "give me quest reward the quest",
+            "give me quest reward the {quest}",
+            "give me quest reward the {quest} quest",
+            "give me quest reward {quest}",
+            "give me quest reward {quest} quest",
+            "give me reward",
+            "give me reward for",
+            "give me reward for quest",
+            "give me reward for the",
+            "give me reward for the quest",
+            "give me reward for the {quest}",
+            "give me reward for the {quest} quest",
+            "give me reward for {quest}",
+            "give me reward for {quest} quest",
+            "give me reward quest",
+            "give me reward the",
+            "give me reward the quest",
+            "give me reward the {quest}",
+            "give me reward the {quest} quest",
+            "give me reward {quest}",
+            "give me reward {quest} quest",
+            "give me the quest reward",
+            "give me the quest reward for",
+            "give me the quest reward for quest",
+            "give me the quest reward for the",
+            "give me the quest reward for the quest",
+            "give me the quest reward for the {quest}",
+            "give me the quest reward for the {quest} quest",
+            "give me the quest reward for {quest}",
+            "give me the quest reward for {quest} quest",
+            "give me the quest reward quest",
+            "give me the quest reward the",
+            "give me the quest reward the quest",
+            "give me the quest reward the {quest}",
+            "give me the quest reward the {quest} quest",
+            "give me the quest reward {quest}",
+            "give me the quest reward {quest} quest",
+            "give me the reward",
+            "give me the reward for",
+            "give me the reward for quest",
+            "give me the reward for the",
+            "give me the reward for the quest",
+            "give me the reward for the {quest}",
+            "give me the reward for the {quest} quest",
+            "give me the reward for {quest}",
+            "give me the reward for {quest} quest",
+            "give me the reward quest",
+            "give me the reward the",
+            "give me the reward the quest",
+            "give me the reward the {quest}",
+            "give me the reward the {quest} quest",
+            "give me the reward {quest}",
+            "give me the reward {quest} quest",
+            "quest reward",
+            "quest reward for",
+            "quest reward for quest",
+            "quest reward for the",
+            "quest reward for the quest",
+            "quest reward for the {quest}",
+            "quest reward for the {quest} quest",
+            "quest reward for {quest}",
+            "quest reward for {quest} quest",
+            "quest reward quest",
+            "quest reward the",
+            "quest reward the quest",
+            "quest reward the {quest}",
+            "quest reward the {quest} quest",
+            "quest reward {quest}",
+            "quest reward {quest} quest",
+            "reward",
+            "reward for",
+            "reward for quest",
+            "reward for the",
+            "reward for the quest",
+            "reward for the {quest}",
+            "reward for the {quest} quest",
+            "reward for {quest}",
+            "reward for {quest} quest",
+            "reward quest",
+            "reward the",
+            "reward the quest",
+            "reward the {quest}",
+            "reward the {quest} quest",
+            "reward {quest}",
+            "reward {quest} quest",
+            "tell me quest reward",
+            "tell me quest reward for",
+            "tell me quest reward for quest",
+            "tell me quest reward for the",
+            "tell me quest reward for the quest",
+            "tell me quest reward for the {quest}",
+            "tell me quest reward for the {quest} quest",
+            "tell me quest reward for {quest}",
+            "tell me quest reward for {quest} quest",
+            "tell me quest reward quest",
+            "tell me quest reward the",
+            "tell me quest reward the quest",
+            "tell me quest reward the {quest}",
+            "tell me quest reward the {quest} quest",
+            "tell me quest reward {quest}",
+            "tell me quest reward {quest} quest",
+            "tell me reward",
+            "tell me reward for",
+            "tell me reward for quest",
+            "tell me reward for the",
+            "tell me reward for the quest",
+            "tell me reward for the {quest}",
+            "tell me reward for the {quest} quest",
+            "tell me reward for {quest}",
+            "tell me reward for {quest} quest",
+            "tell me reward quest",
+            "tell me reward the",
+            "tell me reward the quest",
+            "tell me reward the {quest}",
+            "tell me reward the {quest} quest",
+            "tell me reward {quest}",
+            "tell me reward {quest} quest",
+            "tell me the quest reward",
+            "tell me the quest reward for",
+            "tell me the quest reward for quest",
+            "tell me the quest reward for the",
+            "tell me the quest reward for the quest",
+            "tell me the quest reward for the {quest}",
+            "tell me the quest reward for the {quest} quest",
+            "tell me the quest reward for {quest}",
+            "tell me the quest reward for {quest} quest",
+            "tell me the quest reward quest",
+            "tell me the quest reward the",
+            "tell me the quest reward the quest",
+            "tell me the quest reward the {quest}",
+            "tell me the quest reward the {quest} quest",
+            "tell me the quest reward {quest}",
+            "tell me the quest reward {quest} quest",
+            "tell me the reward",
+            "tell me the reward for",
+            "tell me the reward for quest",
+            "tell me the reward for the",
+            "tell me the reward for the quest",
+            "tell me the reward for the {quest}",
+            "tell me the reward for the {quest} quest",
+            "tell me the reward for {quest}",
+            "tell me the reward for {quest} quest",
+            "tell me the reward quest",
+            "tell me the reward the",
+            "tell me the reward the quest",
+            "tell me the reward the {quest}",
+            "tell me the reward the {quest} quest",
+            "tell me the reward {quest}",
+            "tell me the reward {quest} quest",
+            "the quest reward",
+            "the quest reward for",
+            "the quest reward for quest",
+            "the quest reward for the",
+            "the quest reward for the quest",
+            "the quest reward for the {quest}",
+            "the quest reward for the {quest} quest",
+            "the quest reward for {quest}",
+            "the quest reward for {quest} quest",
+            "the quest reward quest",
+            "the quest reward the",
+            "the quest reward the quest",
+            "the quest reward the {quest}",
+            "the quest reward the {quest} quest",
+            "the quest reward {quest}",
+            "the quest reward {quest} quest",
+            "the reward",
+            "the reward for",
+            "the reward for quest",
+            "the reward for the",
+            "the reward for the quest",
+            "the reward for the {quest}",
+            "the reward for the {quest} quest",
+            "the reward for {quest}",
+            "the reward for {quest} quest",
+            "the reward quest",
+            "the reward the",
+            "the reward the quest",
+            "the reward the {quest}",
+            "the reward the {quest} quest",
+            "the reward {quest}",
+            "the reward {quest} quest",
+            "what is quest reward",
+            "what is quest reward for",
+            "what is quest reward for quest",
+            "what is quest reward for the",
+            "what is quest reward for the quest",
+            "what is quest reward for the {quest}",
+            "what is quest reward for the {quest} quest",
+            "what is quest reward for {quest}",
+            "what is quest reward for {quest} quest",
+            "what is quest reward quest",
+            "what is quest reward the",
+            "what is quest reward the quest",
+            "what is quest reward the {quest}",
+            "what is quest reward the {quest} quest",
+            "what is quest reward {quest}",
+            "what is quest reward {quest} quest",
+            "what is reward",
+            "what is reward for",
+            "what is reward for quest",
+            "what is reward for the",
+            "what is reward for the quest",
+            "what is reward for the {quest}",
+            "what is reward for the {quest} quest",
+            "what is reward for {quest}",
+            "what is reward for {quest} quest",
+            "what is reward quest",
+            "what is reward the",
+            "what is reward the quest",
+            "what is reward the {quest}",
+            "what is reward the {quest} quest",
+            "what is reward {quest}",
+            "what is reward {quest} quest",
+            "what is the quest reward",
+            "what is the quest reward for",
+            "what is the quest reward for quest",
+            "what is the quest reward for the",
+            "what is the quest reward for the quest",
+            "what is the quest reward for the {quest}",
+            "what is the quest reward for the {quest} quest",
+            "what is the quest reward for {quest}",
+            "what is the quest reward for {quest} quest",
+            "what is the quest reward quest",
+            "what is the quest reward the",
+            "what is the quest reward the quest",
+            "what is the quest reward the {quest}",
+            "what is the quest reward the {quest} quest",
+            "what is the quest reward {quest}",
+            "what is the quest reward {quest} quest",
+            "what is the reward",
+            "what is the reward for",
+            "what is the reward for quest",
+            "what is the reward for the",
+            "what is the reward for the quest",
+            "what is the reward for the {quest}",
+            "what is the reward for the {quest} quest",
+            "what is the reward for {quest}",
+            "what is the reward for {quest} quest",
+            "what is the reward quest",
+            "what is the reward the",
+            "what is the reward the quest",
+            "what is the reward the {quest}",
+            "what is the reward the {quest} quest",
+            "what is the reward {quest}",
+            "what is the reward {quest} quest"
           ]
         }
       ],
-      "types": []
-    }
+      "types": [{
+        "name": "QUEST",
+        "values": [{
+            "name": {
+              "value": "Einhar's Hunt"
+            }
+          },
+          {
+            "name": {
+              "value": "Einhar's Bestiary"
+            }
+          },
+          {
+            "name": {
+              "value": "Einhar's Menagerie"
+            }
+          },
+          {
+            "name": {
+              "value": "The Caged Brute"
+            }
+          },
+          {
+            "name": {
+              "value": "Mercy Mission"
+            }
+          },
+          {
+            "name": {
+              "value": "Breaking Some Eggs"
+            }
+          },
+          {
+            "name": {
+              "value": "The Siren's Cadence"
+            }
+          },
+          {
+            "name": {
+              "value": "Enemy at the Gate"
+            }
+          },
+          {
+            "name": {
+              "value": "A Dirty Job"
+            }
+          },
+          {
+            "name": {
+              "value": "The Dweller of the Deep"
+            }
+          },
+          {
+            "name": {
+              "value": "The Marooned Mariner"
+            }
+          },
+          {
+            "name": {
+              "value": "The Way Forward"
+            }
+          },
+          {
+            "name": {
+              "value": "Intruders in Black"
+            }
+          },
+          {
+            "name": {
+              "value": "Through Sacred Ground"
+            }
+          },
+          {
+            "name": {
+              "value": "The Great White Beast"
+            }
+          },
+          {
+            "name": {
+              "value": "Sharp and Cruel"
+            }
+          },
+          {
+            "name": {
+              "value": "Deal with the Bandits"
+            }
+          },
+          {
+            "name": {
+              "value": "The Ribbon Spool"
+            }
+          },
+          {
+            "name": {
+              "value": "Sever the Right Hand"
+            }
+          },
+          {
+            "name": {
+              "value": "Lost in Love"
+            }
+          },
+          {
+            "name": {
+              "value": "A Fixture of Fate"
+            }
+          },
+          {
+            "name": {
+              "value": "Piety's Pets"
+            }
+          },
+          {
+            "name": {
+              "value": "Victario's Secrets"
+            }
+          },
+          {
+            "name": {
+              "value": "A Swig of Hope"
+            }
+          },
+          {
+            "name": {
+              "value": "Fiery Dust"
+            }
+          },
+          {
+            "name": {
+              "value": "Breaking the Seal"
+            }
+          },
+          {
+            "name": {
+              "value": "An Indomitable Spirit"
+            }
+          },
+          {
+            "name": {
+              "value": "The Eternal Nightmare"
+            }
+          },
+          {
+            "name": {
+              "value": "The King's Feast"
+            }
+          },
+          {
+            "name": {
+              "value": "In Service to Science"
+            }
+          },
+          {
+            "name": {
+              "value": "Kitava's Torments"
+            }
+          },
+          {
+            "name": {
+              "value": "Death to Purity"
+            }
+          },
+          {
+            "name": {
+              "value": "The Key to Freedom"
+            }
+          },
+          {
+            "name": {
+              "value": "Return to Oriath"
+            }
+          },
+          {
+            "name": {
+              "value": "Bestel's Epic"
+            }
+          },
+          {
+            "name": {
+              "value": "Fallen from Grace"
+            }
+          },
+          {
+            "name": {
+              "value": "The Cloven One"
+            }
+          },
+          {
+            "name": {
+              "value": "The Father of War"
+            }
+          },
+          {
+            "name": {
+              "value": "The Puppet Mistress"
+            }
+          },
+          {
+            "name": {
+              "value": "Essence of Umbra"
+            }
+          },
+          {
+            "name": {
+              "value": "In Memory of Greust"
+            }
+          },
+          {
+            "name": {
+              "value": "The Silver Locket"
+            }
+          },
+          {
+            "name": {
+              "value": "Kishara's Star"
+            }
+          },
+          {
+            "name": {
+              "value": "Queen of Despair"
+            }
+          },
+          {
+            "name": {
+              "value": "The Master of a Million Faces"
+            }
+          },
+          {
+            "name": {
+              "value": "Essence of the Artist"
+            }
+          },
+          {
+            "name": {
+              "value": "Web of Secrets"
+            }
+          },
+          {
+            "name": {
+              "value": "Love is Dead"
+            }
+          },
+          {
+            "name": {
+              "value": "Reflection of Terror"
+            }
+          },
+          {
+            "name": {
+              "value": "The Gemling Legion"
+            }
+          },
+          {
+            "name": {
+              "value": "The Wings of Vastiri"
+            }
+          },
+          {
+            "name": {
+              "value": "Essence of the Hag"
+            }
+          },
+          {
+            "name": {
+              "value": "The Storm Blade"
+            }
+          },
+          {
+            "name": {
+              "value": "Fastis Fortuna"
+            }
+          },
+          {
+            "name": {
+              "value": "Queen of the Sands"
+            }
+          },
+          {
+            "name": {
+              "value": "The Ruler of Highgate"
+            }
+          },
+          {
+            "name": {
+              "value": "Safe Passage"
+            }
+          },
+          {
+            "name": {
+              "value": "Death and Rebirth"
+            }
+          },
+          {
+            "name": {
+              "value": "No Love for Old Ghosts"
+            }
+          },
+          {
+            "name": {
+              "value": "An End to Hunger"
+            }
+          },
+          {
+            "name": {
+              "value": "Vilenta's Vengeance"
+            }
+          },
+          {
+            "name": {
+              "value": "Map to Tsoatha"
+            }
+          },
+          {
+            "name": {
+              "value": "From Nightmare into Dream"
+            }
+          }
+        ]
+      }]
+    },
+    "dialog": {
+      "intents": [{
+        "name": "QuestRewardIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [{
+          "name": "quest",
+          "type": "QUEST",
+          "confirmationRequired": false,
+          "elicitationRequired": true,
+          "prompts": {
+            "elicitation": "Elicit.Slot.1442461833889.366650732166"
+          }
+        }]
+      }]
+    },
+    "prompts": [{
+      "id": "Elicit.Slot.1442461833889.366650732166",
+      "variations": [{
+          "type": "PlainText",
+          "value": "Which quest are you looking for?"
+        },
+        {
+          "type": "PlainText",
+          "value": "What is the name of the quest?"
+        },
+        {
+          "type": "PlainText",
+          "value": "What quest are you looking for?"
+        }
+      ]
+    }]
   }
 }

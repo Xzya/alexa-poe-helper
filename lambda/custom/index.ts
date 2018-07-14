@@ -2,7 +2,7 @@ import * as Alexa from "ask-sdk-core";
 import * as Intents from "./intents";
 import * as Errors from "./errors";
 import * as Interceptors from "./interceptors";
-import * as HelloIntents from "./intents/hello";
+import * as QuestRewardIntents from "./intents/questrewards";
 
 export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
@@ -16,8 +16,9 @@ export const handler = Alexa.SkillBuilders.custom()
         Intents.SystemExceptionEncountered,
         Intents.Fallback,
 
-        // Hello intents
-        HelloIntents.HelloWorld
+        // Quest reward intents
+        QuestRewardIntents.InProgressPlayRadio,
+        QuestRewardIntents.CompletedPlayRadio
     )
     .addErrorHandlers(Errors.Unknown)
     .addRequestInterceptors(Interceptors.Localization)
