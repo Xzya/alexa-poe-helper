@@ -7,8 +7,14 @@ interface IStrings {
     [Strings.GOODBYE_MSG]: string[];
     [Strings.HELP_MSG]: string;
     [Strings.ERROR_MSG]: string;
+    [Strings.ERROR_UNEXPECTED_MSG]: string;
     [Strings.SELECT_ONE_MSG]: string;
     [Strings.OR_MSG]: string;
+    [Strings.CHECKING_PRICE_OF_MSG]: string;
+    [Strings.PRICE_OF_IS_MSG]: string;
+    [Strings.ERROR_NOT_ENOUGH_DATA_MSG]: string;
+    [Strings.ERROR_CURRENCY_NOT_FOUND_MSG]: string;
+    [Strings.ERROR_API_MSG]: string;
     [Strings.QUEST_REWARD_MSG]: string;
     [Strings.QUEST_REWARDS]: any;
 }
@@ -25,8 +31,14 @@ export const strings: Resource = {
             ],
             HELP_MSG: "You can ask for the reward of a quest. How can I help?",
             ERROR_MSG: "Sorry, I can't understand the command. Please say again.",
+            ERROR_UNEXPECTED_MSG: "Sorry, an unexpected error has occured. Please try again later.",
             SELECT_ONE_MSG: "Which would you like: %s?",
             OR_MSG: " or",
+            CHECKING_PRICE_OF_MSG: "Checking the price of %s in %s league...",
+            PRICE_OF_IS_MSG: "The price of one %s is %.2f Chaos Orb",
+            ERROR_NOT_ENOUGH_DATA_MSG: "Sorry, there is not enough exchange data for the item you requested. Please try again later.",
+            ERROR_CURRENCY_NOT_FOUND_MSG: "Sorry, I couldn't find the exchange for the currency you requested.",
+            ERROR_API_MSG: "Sorry, there was a problem while getting the data. Please try again later.",
             QUEST_REWARD_MSG: "The reward for '%s' is: %s",
             QUEST_REWARDS: {
                 "Einhar's Hunt": "Reinforced Rope Net",

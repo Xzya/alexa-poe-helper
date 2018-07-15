@@ -1,25 +1,21 @@
 import { RequestHandler } from "ask-sdk-core";
-import { IntentRequest } from "ask-sdk-model";
-import { GetRequestAttributes, IsIntentWithCompleteDialog, GetSlotValues, CreateError } from "../../lib/helpers";
+import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
 
-export const CompletedPlayRadio: RequestHandler = {
+export const Completed: RequestHandler = {
     canHandle(handlerInput) {
         return IsIntentWithCompleteDialog(handlerInput, IntentTypes.QuestReward);
     },
     handle(handlerInput) {
-        const request = handlerInput.requestEnvelope.request as IntentRequest;
+        const { t, slots } = GetRequestAttributes(handlerInput);
 
-        const { t } = GetRequestAttributes(handlerInput);
-        const slots = GetSlotValues(request.intent.slots);
+        const slot = slots[SlotTypes.Quest];
 
-        const quest = slots[SlotTypes.Quest];
-
-        if (quest && quest.isMatch && !quest.isAmbiguous) {
+        if (slot && slot.isMatch && !slot.isAmbiguous) {
             const rewards = t(Strings.QUEST_REWARDS)
-            const reward = rewards[quest.resolved];
+            const reward = rewards[slot.resolved];
 
-            const speechText = t(Strings.QUEST_REWARD_MSG, quest.resolved, reward);
+            const speechText = t(Strings.QUEST_REWARD_MSG, slot.resolved, reward);
 
             return handlerInput.responseBuilder
                 .speak(speechText)
@@ -27,6 +23,6 @@ export const CompletedPlayRadio: RequestHandler = {
                 .getResponse();
         }
 
-        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.QuestReward} without a slot.`, ErrorTypes.Unknown);
+        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.QuestReward} without a slot.`, ErrorTypes.Unexpected);
     }
 };

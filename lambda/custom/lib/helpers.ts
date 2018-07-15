@@ -1,7 +1,7 @@
 import { HandlerInput } from "ask-sdk-core";
-import { IntentRequest } from "ask-sdk-model";
+import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes } from "../interfaces";
-import { RequestTypes, ErrorTypes } from "./constants";
+import { RequestTypes, ErrorTypes, Orbs, Fragments } from "./constants";
 
 /**
  * Checks if the request matches any of the given intents.
@@ -89,6 +89,15 @@ export function GetSessionAttributes(handlerInput: HandlerInput): SessionAttribu
 }
 
 /**
+ * Gets the directive service client.
+ * 
+ * @param handlerInput 
+ */
+export function GetDirectiveServiceClient(handlerInput: HandlerInput): services.directive.DirectiveServiceClient {
+    return handlerInput.serviceClientFactory!.getDirectiveServiceClient();
+}
+
+/**
  * Resets the given slot value by setting it to an empty string.
  * If the intent is using the Dialog Directive, this will cause Alexa
  * to reprompt the user for that slot.
@@ -112,17 +121,19 @@ export function ResetSlotValue(request: IntentRequest, slotName: string) {
  * 
  * @param request 
  */
-export function ResetUnmatchedSlotValues(request: IntentRequest) {
-    const slots = GetSlotValues(request.intent.slots);
+export function ResetUnmatchedSlotValues(handlerInput: HandlerInput, slots: SlotValues) {
+    if (handlerInput.requestEnvelope.request.type === RequestTypes.Intent) {
+        const request = handlerInput.requestEnvelope.request;
 
-    // reset invalid slots
-    Object.keys(slots).forEach((key) => {
-        const slot = slots[key];
+        // reset invalid slots
+        Object.keys(slots).forEach((key) => {
+            const slot = slots[key];
 
-        if (slot && !slot.isMatch) {
-            ResetSlotValue(request, slot.name);
-        }
-    });
+            if (slot && !slot.isMatch) {
+                ResetSlotValue(request, slot.name);
+            }
+        });
+    }
 }
 
 /**
@@ -272,4 +283,46 @@ export function CreateError(
  */
 export function Random<T>(arr: T[]): T {
     return arr[Math.floor(Math.random() * arr.length)];
+}
+
+/**
+ * Returns a VoicePlayer.Speak directive with the given speech. Useful for sending progressive responses.
+ * 
+ * @param handlerInput 
+ * @param speech 
+ */
+export function VoicePlayerSpeakDirective(handlerInput: HandlerInput, speech?: string): services.directive.SendDirectiveRequest {
+    const requestId = handlerInput.requestEnvelope.request.requestId;
+
+    return {
+        directive: {
+            type: "VoicePlayer.Speak",
+            speech: speech,
+        },
+        header: {
+            requestId,
+        },
+    };
+}
+
+export function FormatPrice(n: number): number {
+    return Math.round(n * 100) / 100;
+}
+
+/**
+ * Checks if the given string matches an orb id.
+ * 
+ * @param str 
+ */
+export function IsOrb(str: string): boolean {
+    return Orbs.indexOf(str) !== -1;
+}
+
+/**
+ * Checks if the given string matches a fragment id.
+ * 
+ * @param str 
+ */
+export function IsFragment(str: string): boolean {
+    return Fragments.indexOf(str) !== -1;
 }

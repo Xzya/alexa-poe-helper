@@ -1,4 +1,5 @@
 import { Slot, slu, SlotConfirmationStatus } from "ask-sdk-model";
+import { POENinjaClient } from "./api/POENinjaClient";
 
 export interface RequestAttributes {
     /**
@@ -18,6 +19,16 @@ export interface RequestAttributes {
      * @param key 
      */
     tr(key: string): string;
+
+    /**
+     * poe.ninja api client used to get currency/item prices
+     */
+    apiClient: POENinjaClient;
+
+    /**
+     * The slot values for the current request.
+     */
+    slots: SlotValues;
 
     [key: string]: any;
 }

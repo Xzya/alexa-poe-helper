@@ -7,9 +7,9 @@ export const Stop: RequestHandler = {
         return IsIntent(handlerInput, IntentTypes.Stop, IntentTypes.Cancel);
     },
     handle(handlerInput) {
-        const { t, trandom } = GetRequestAttributes(handlerInput);
+        const { t, tr } = GetRequestAttributes(handlerInput);
 
-        const speechText = trandom(Strings.GOODBYE_MSG);
+        const speechText = tr(Strings.GOODBYE_MSG);
 
         return handlerInput.responseBuilder
             .speak(speechText)

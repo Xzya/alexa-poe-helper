@@ -3,6 +3,7 @@ import * as Intents from "./intents";
 import * as Errors from "./errors";
 import * as Interceptors from "./interceptors";
 import * as QuestRewardIntents from "./intents/questrewards";
+import * as CurrencyPriceCheckIntents from "./intents/currencypricecheck";
 
 export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
@@ -17,9 +18,22 @@ export const handler = Alexa.SkillBuilders.custom()
         Intents.Fallback,
 
         // Quest reward intents
-        QuestRewardIntents.InProgressPlayRadio,
-        QuestRewardIntents.CompletedPlayRadio
+        QuestRewardIntents.InProgress,
+        QuestRewardIntents.Completed,
+
+        // Currency price check intents
+        CurrencyPriceCheckIntents.InProgress,
+        CurrencyPriceCheckIntents.Completed
     )
-    .addErrorHandlers(Errors.Unknown)
-    .addRequestInterceptors(Interceptors.Localization)
+    .addErrorHandlers(
+        Errors.Unknown,
+        Errors.Unexpected,
+        Errors.API
+    )
+    .addRequestInterceptors(
+        Interceptors.Localization,
+        Interceptors.APIClient,
+        Interceptors.Slots
+    )
+    .withApiClient(new Alexa.DefaultApiClient())
     .lambda();
