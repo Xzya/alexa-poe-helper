@@ -42,6 +42,17 @@ export const Completed: RequestHandler = {
                 throw CreateError(`Unexpected currency ${currency.resolved} with id ${currency.id}`, ErrorTypes.Unexpected);
             }
 
+            // get the quantity
+            let quantity = 1;
+
+            const quantitySlot = slots[SlotTypes.Quantity];
+            if (quantitySlot && quantitySlot.isMatch) {
+                quantity = parseFloat(quantitySlot.value);
+                if (quantity < 1 || isNaN(quantity)) {
+                    quantity = 1;
+                }
+            }
+
             try {
                 const [, res] = await Promise.all([
                     // send progressive response
@@ -70,10 +81,12 @@ export const Completed: RequestHandler = {
                                 .getResponse();
                         }
 
+                        const totalPrice = quantity * exchange.receive.value;
+
                         // exchange found
                         return handlerInput.responseBuilder
                             // TODO: - add plurals
-                            .speak(t(Strings.PRICE_OF_IS_MSG, currency.resolved, FormatPrice(exchange.receive.value)))
+                            .speak(t(Strings.PRICE_OF_IS_MSG, quantity, currency.resolved, FormatPrice(totalPrice)))
                             .getResponse();
                     }
                 }

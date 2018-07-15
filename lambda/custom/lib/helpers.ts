@@ -237,6 +237,22 @@ export function GetSlotValues(filledSlots?: Slots): SlotValues {
                     default:
                         break;
                 }
+            }
+            // slots which do not have any resolutions but have a value
+            // e.g. for AMAZON.NUMBER
+            else if (filledSlots[item] &&
+                !filledSlots[item].resolutions &&
+                filledSlots[item].value) {
+                slotValues[name] = {
+                    name: name,
+                    value: value,
+                    isMatch: true,
+                    resolved: value,
+                    id: "",
+                    isAmbiguous: false,
+                    values: [],
+                    confirmationStatus: confirmationStatus,
+                };
             } else {
                 slotValues[name] = {
                     name: name,

@@ -2,6 +2,10 @@ import { ErrorHandler } from "ask-sdk-core";
 import { GetRequestAttributes } from "../lib/helpers";
 import { Strings } from "../lib/constants";
 
+/**
+ * Handles unknown errors. Should be placed at the end, as it will catch
+ * all errors.
+ */
 export const Unknown: ErrorHandler = {
     canHandle() {
         return true;

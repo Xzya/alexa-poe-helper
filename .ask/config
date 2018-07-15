@@ -8,7 +8,7 @@
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "alexa-typescript-starter-default"
+                "uri": "alexa-poe-helper-default"
               }
             }
           }

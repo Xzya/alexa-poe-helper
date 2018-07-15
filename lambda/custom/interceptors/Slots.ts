@@ -3,6 +3,9 @@ import { RequestAttributes } from "../interfaces";
 import { RequestTypes } from "../lib/constants";
 import { GetSlotValues } from "../lib/helpers";
 
+/**
+ * Parses and adds the slot values to the RequestAttributes.
+ */
 export const Slots: RequestInterceptor = {
     process(handlerInput) {
         const attributes = handlerInput.attributesManager.getRequestAttributes() as RequestAttributes;

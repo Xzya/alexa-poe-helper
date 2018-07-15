@@ -300,6 +300,10 @@
             {
               "name": "league",
               "type": "LEAGUE"
+            },
+            {
+              "name": "quantity",
+              "type": "AMAZON.NUMBER"
             }
           ],
           "samples": [
@@ -309,6 +313,30 @@
             "currency price",
             "currency price in {league}",
             "currency price in {league} league",
+            "how much are a {currency}",
+            "how much are a {currency} in {league}",
+            "how much are a {currency} in {league} league",
+            "how much are a {currency} worth",
+            "how much are a {currency} worth in {league}",
+            "how much are a {currency} worth in {league} league",
+            "how much are an {currency}",
+            "how much are an {currency} in {league}",
+            "how much are an {currency} in {league} league",
+            "how much are an {currency} worth",
+            "how much are an {currency} worth in {league}",
+            "how much are an {currency} worth in {league} league",
+            "how much are the {currency}",
+            "how much are the {currency} in {league}",
+            "how much are the {currency} in {league} league",
+            "how much are the {currency} worth",
+            "how much are the {currency} worth in {league}",
+            "how much are the {currency} worth in {league} league",
+            "how much are {quantity} {currency}",
+            "how much are {quantity} {currency} in {league}",
+            "how much are {quantity} {currency} in {league} league",
+            "how much are {quantity} {currency} worth",
+            "how much are {quantity} {currency} worth in {league}",
+            "how much are {quantity} {currency} worth in {league} league",
             "how much is a {currency}",
             "how much is a {currency} in {league}",
             "how much is a {currency} in {league} league",
@@ -327,6 +355,12 @@
             "how much is the {currency} worth",
             "how much is the {currency} worth in {league}",
             "how much is the {currency} worth in {league} league",
+            "how much is {quantity} {currency}",
+            "how much is {quantity} {currency} in {league}",
+            "how much is {quantity} {currency} in {league} league",
+            "how much is {quantity} {currency} worth",
+            "how much is {quantity} {currency} worth in {league}",
+            "how much is {quantity} {currency} worth in {league} league",
             "price of a {currency}",
             "price of a {currency} in {league}",
             "price of a {currency} in {league} league",
@@ -336,6 +370,9 @@
             "price of the {currency}",
             "price of the {currency} in {league}",
             "price of the {currency} in {league} league",
+            "price of {quantity} {currency}",
+            "price of {quantity} {currency} in {league}",
+            "price of {quantity} {currency} in {league} league",
             "tell me price of a {currency}",
             "tell me price of a {currency} in {league}",
             "tell me price of a {currency} in {league} league",
@@ -345,6 +382,9 @@
             "tell me price of the {currency}",
             "tell me price of the {currency} in {league}",
             "tell me price of the {currency} in {league} league",
+            "tell me price of {quantity} {currency}",
+            "tell me price of {quantity} {currency} in {league}",
+            "tell me price of {quantity} {currency} in {league} league",
             "tell me the price of a {currency}",
             "tell me the price of a {currency} in {league}",
             "tell me the price of a {currency} in {league} league",
@@ -354,6 +394,9 @@
             "tell me the price of the {currency}",
             "tell me the price of the {currency} in {league}",
             "tell me the price of the {currency} in {league} league",
+            "tell me the price of {quantity} {currency}",
+            "tell me the price of {quantity} {currency} in {league}",
+            "tell me the price of {quantity} {currency} in {league} league",
             "the price of a {currency}",
             "the price of a {currency} in {league}",
             "the price of a {currency} in {league} league",
@@ -363,6 +406,9 @@
             "the price of the {currency}",
             "the price of the {currency} in {league}",
             "the price of the {currency} in {league} league",
+            "the price of {quantity} {currency}",
+            "the price of {quantity} {currency} in {league}",
+            "the price of {quantity} {currency} in {league} league",
             "what is price of a {currency}",
             "what is price of a {currency} in {league}",
             "what is price of a {currency} in {league} league",
@@ -372,6 +418,9 @@
             "what is price of the {currency}",
             "what is price of the {currency} in {league}",
             "what is price of the {currency} in {league} league",
+            "what is price of {quantity} {currency}",
+            "what is price of {quantity} {currency} in {league}",
+            "what is price of {quantity} {currency} in {league} league",
             "what is the price of a {currency}",
             "what is the price of a {currency} in {league}",
             "what is the price of a {currency} in {league} league",
@@ -381,12 +430,21 @@
             "what is the price of the {currency}",
             "what is the price of the {currency} in {league}",
             "what is the price of the {currency} in {league} league",
+            "what is the price of {quantity} {currency}",
+            "what is the price of {quantity} {currency} in {league}",
+            "what is the price of {quantity} {currency} in {league} league",
             "{currency}",
             "{currency} in {league}",
             "{currency} in {league} league",
             "{currency} price",
             "{currency} price in {league}",
-            "{currency} price in {league} league"
+            "{currency} price in {league} league",
+            "{quantity} {currency}",
+            "{quantity} {currency} in {league}",
+            "{quantity} {currency} in {league} league",
+            "{quantity} {currency} price",
+            "{quantity} {currency} price in {league}",
+            "{quantity} {currency} price in {league} league"
           ]
         }
       ],
@@ -733,7 +791,8 @@
                 "value": "Exalted Orb",
                 "synonyms": [
                   "Exalted",
-                  "Exalt"
+                  "Exalt",
+                  "Exalts"
                 ]
               }
             },
@@ -776,7 +835,8 @@
               "name": {
                 "value": "Divine Orb",
                 "synonyms": [
-                  "Divine"
+                  "Divine",
+                  "Divines"
                 ]
               }
             },
@@ -955,7 +1015,8 @@
               "name": {
                 "value": "Orb of Regret",
                 "synonyms": [
-                  "Regret"
+                  "Regret",
+                  "Regrets"
                 ]
               }
             },
@@ -964,7 +1025,8 @@
               "name": {
                 "value": "Cartographer's Chisel",
                 "synonyms": [
-                  "Chisel"
+                  "Chisel",
+                  "Chisels"
                 ]
               }
             },
@@ -973,7 +1035,9 @@
               "name": {
                 "value": "Orb of Fusing",
                 "synonyms": [
-                  "Fusing"
+                  "Fuse",
+                  "Fusing",
+                  "Fusings"
                 ]
               }
             },
@@ -982,7 +1046,8 @@
               "name": {
                 "value": "Orb of Alchemy",
                 "synonyms": [
-                  "Alchemy"
+                  "Alchemy",
+                  "Alchemies"
                 ]
               }
             },
@@ -991,7 +1056,8 @@
               "name": {
                 "value": "Orb of Scouring",
                 "synonyms": [
-                  "Scouring"
+                  "Scouring",
+                  "Scourings"
                 ]
               }
             },
@@ -1029,7 +1095,10 @@
               "name": {
                 "value": "Chromatic Orb",
                 "synonyms": [
-                  "Chromatic"
+                  "Chrom",
+                  "Chrome",
+                  "Chromatic",
+                  "Chromes"
                 ]
               }
             },
@@ -1039,7 +1108,8 @@
                 "value": "Jeweller's Orb",
                 "synonyms": [
                   "Jeweller",
-                  "Jeweller's"
+                  "Jeweller's",
+                  "Jewellers"
                 ]
               }
             },

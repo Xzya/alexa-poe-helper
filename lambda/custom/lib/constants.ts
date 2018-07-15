@@ -17,6 +17,7 @@ export enum IntentTypes {
 
 export enum SlotTypes {
     Quest = "quest",
+    Quantity = "quantity",
     Currency = "currency",
     League = "league",
 }
