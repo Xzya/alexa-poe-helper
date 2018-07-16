@@ -86,7 +86,7 @@ export const Completed: RequestHandler = {
                         // exchange found
                         return handlerInput.responseBuilder
                             // TODO: - add plurals
-                            .speak(t(Strings.PRICE_OF_IS_MSG, quantity, currency.resolved, FormatPrice(totalPrice)))
+                            .speak(t(Strings.PRICE_OF_IS_MSG, quantity, currency.resolved, FormatPrice(totalPrice).toString())) // .toString() removes the trailing zeros
                             .getResponse();
                     }
                 }

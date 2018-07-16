@@ -35,7 +35,7 @@ export const strings: Resource = {
             SELECT_ONE_MSG: "Which would you like: %s?",
             OR_MSG: " or",
             CHECKING_PRICE_OF_MSG: "Checking the price of %s in %s league...",
-            PRICE_OF_IS_MSG: "The price of %s %s is %.2f Chaos Orb",
+            PRICE_OF_IS_MSG: "The price of %s %s is %s Chaos Orb",
             ERROR_NOT_ENOUGH_DATA_MSG: "Sorry, there is not enough exchange data for the item you requested. Please try again later.",
             ERROR_CURRENCY_NOT_FOUND_MSG: "Sorry, I couldn't find the exchange for the currency you requested.",
             ERROR_API_MSG: "Sorry, there was a problem while getting the data. Please try again later.",

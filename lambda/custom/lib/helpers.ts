@@ -321,8 +321,13 @@ export function VoicePlayerSpeakDirective(handlerInput: HandlerInput, speech?: s
     };
 }
 
+/**
+ * Rounds the number to one decimal place.
+ * 
+ * @param n 
+ */
 export function FormatPrice(n: number): number {
-    return Math.round(n * 100) / 100;
+    return Math.round(n * 10) / 10;
 }
 
 /**
