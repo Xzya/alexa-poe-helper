@@ -1752,6 +1752,136 @@
                         "{uniquejewel} price in {league}",
                         "{uniquejewel} price in {league} league"
                     ]
+                },
+                {
+                    "name": "MapPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "map",
+                            "type": "MAP",
+                            "samples": [
+                                "{map} please",
+                                "{map} in {league} please",
+                                "{map} in {league} league please",
+                                "{map} in {league} league",
+                                "{map} in {league}",
+                                "{map}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {map}",
+                        "how much is a {map} in {league}",
+                        "how much is a {map} in {league} league",
+                        "how much is a {map} worth",
+                        "how much is a {map} worth in {league}",
+                        "how much is a {map} worth in {league} league",
+                        "how much is an {map}",
+                        "how much is an {map} in {league}",
+                        "how much is an {map} in {league} league",
+                        "how much is an {map} worth",
+                        "how much is an {map} worth in {league}",
+                        "how much is an {map} worth in {league} league",
+                        "how much is the {map}",
+                        "how much is the {map} in {league}",
+                        "how much is the {map} in {league} league",
+                        "how much is the {map} worth",
+                        "how much is the {map} worth in {league}",
+                        "how much is the {map} worth in {league} league",
+                        "how much is {map}",
+                        "how much is {map} in {league}",
+                        "how much is {map} in {league} league",
+                        "how much is {map} worth",
+                        "how much is {map} worth in {league}",
+                        "how much is {map} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {map}",
+                        "price of a {map} in {league}",
+                        "price of a {map} in {league} league",
+                        "price of an {map}",
+                        "price of an {map} in {league}",
+                        "price of an {map} in {league} league",
+                        "price of the {map}",
+                        "price of the {map} in {league}",
+                        "price of the {map} in {league} league",
+                        "price of {map}",
+                        "price of {map} in {league}",
+                        "price of {map} in {league} league",
+                        "tell me price of a {map}",
+                        "tell me price of a {map} in {league}",
+                        "tell me price of a {map} in {league} league",
+                        "tell me price of an {map}",
+                        "tell me price of an {map} in {league}",
+                        "tell me price of an {map} in {league} league",
+                        "tell me price of the {map}",
+                        "tell me price of the {map} in {league}",
+                        "tell me price of the {map} in {league} league",
+                        "tell me price of {map}",
+                        "tell me price of {map} in {league}",
+                        "tell me price of {map} in {league} league",
+                        "tell me the price of a {map}",
+                        "tell me the price of a {map} in {league}",
+                        "tell me the price of a {map} in {league} league",
+                        "tell me the price of an {map}",
+                        "tell me the price of an {map} in {league}",
+                        "tell me the price of an {map} in {league} league",
+                        "tell me the price of the {map}",
+                        "tell me the price of the {map} in {league}",
+                        "tell me the price of the {map} in {league} league",
+                        "tell me the price of {map}",
+                        "tell me the price of {map} in {league}",
+                        "tell me the price of {map} in {league} league",
+                        "the price of a {map}",
+                        "the price of a {map} in {league}",
+                        "the price of a {map} in {league} league",
+                        "the price of an {map}",
+                        "the price of an {map} in {league}",
+                        "the price of an {map} in {league} league",
+                        "the price of the {map}",
+                        "the price of the {map} in {league}",
+                        "the price of the {map} in {league} league",
+                        "the price of {map}",
+                        "the price of {map} in {league}",
+                        "the price of {map} in {league} league",
+                        "what is price of a {map}",
+                        "what is price of a {map} in {league}",
+                        "what is price of a {map} in {league} league",
+                        "what is price of an {map}",
+                        "what is price of an {map} in {league}",
+                        "what is price of an {map} in {league} league",
+                        "what is price of the {map}",
+                        "what is price of the {map} in {league}",
+                        "what is price of the {map} in {league} league",
+                        "what is price of {map}",
+                        "what is price of {map} in {league}",
+                        "what is price of {map} in {league} league",
+                        "what is the price of a {map}",
+                        "what is the price of a {map} in {league}",
+                        "what is the price of a {map} in {league} league",
+                        "what is the price of an {map}",
+                        "what is the price of an {map} in {league}",
+                        "what is the price of an {map} in {league} league",
+                        "what is the price of the {map}",
+                        "what is the price of the {map} in {league}",
+                        "what is the price of the {map} in {league} league",
+                        "what is the price of {map}",
+                        "what is the price of {map} in {league}",
+                        "what is the price of {map} in {league} league",
+                        "{map}",
+                        "{map} in {league}",
+                        "{map} in {league} league",
+                        "{map} price",
+                        "{map} price in {league}",
+                        "{map} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -6925,6 +7055,1580 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "MAP",
+                    "values": [{
+                            "name": {
+                                "value": "Academy Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Acid Lakes Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Alleyways Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancient City Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arachnid Nest Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arachnid Tomb Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arcade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arena Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arid Lake Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Armoury Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arsenal Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ashen Wood Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Atoll Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Barrows Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Basilica Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bazaar Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beach Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Belfry Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bog Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bone Crypt Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burial Chambers Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cage Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Caldera Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Canyon Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Carcass Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Castle Ruins Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cells Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cemetery Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Channel Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chateau Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "City Square Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Colonnade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Colosseum Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Conservatory Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coral Ruins Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Core Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Courthouse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Courtyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coves Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Crimson Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Crystal Ore Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cursed Crypt Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dark Forest Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Defiled Cathedral Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Desert Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Desert Spring Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dig Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dunes Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dungeon Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Academy Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Ancient City Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Arcade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Arena Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Arid Lake Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Armoury Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Arsenal Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Ashen Wood Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Atoll Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Beach Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Belfry Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Burial Chambers Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Cage Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Cells Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Cemetery Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Channel Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Chateau Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder City Square Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Core Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Courthouse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Courtyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Crystal Ore Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Cursed Crypt Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Desert Spring Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Dunes Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Estuary Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Excavation Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Fields Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Gorge Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Graveyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Grotto Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Haunted Mansion Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Ivory Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Laboratory Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Lair Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Leyline Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Mausoleum Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Maze Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Mesa Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Moon Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Necropolis Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Pen Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Peninsula Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Phantasmagoria Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Plateau Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Plaza Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Port Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Primordial Pool Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Promenade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Racecourse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Ramparts Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Relic Chambers Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Sepulchre Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Spider Forest Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Springs Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Strand Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Thicket Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Tower Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Toxic Sewer Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Tribunal Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Underground River Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Underground Sea Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Vault Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Volcano Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Waste Pool Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Waterways Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elder Wharf Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Estuary Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Excavation Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Factory Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fields Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flooded Mine Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Forge of the Phoenix Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gardens Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Geode Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ghetto Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gorge Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Graveyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Grotto Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Haunted Mansion Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Iceberg Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Infested Valley Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ivory Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jungle Valley Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Laboratory Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lair Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lair of the Hydra Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lava Chamber Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lava Lake Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Leyline Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lighthouse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lookout Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Malformation Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Marshes Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mausoleum Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Maze Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Maze of the Minotaur Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mesa Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mineral Pools Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Moon Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mud Geyser Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Museum Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Necropolis Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Orchard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Overgrown Ruin Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Overgrown Shrine Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Palace Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Park Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pen Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Peninsula Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Phantasmagoria Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pier Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pit Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pit of the Chimera Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Plateau Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Plaza Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Port Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Precinct Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Primordial Pool Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Promenade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Racecourse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ramparts Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reef Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Relic Chambers Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Residence Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Scriptorium Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sepulchre Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Academy Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Acid Lakes Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Alleyways Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Ancient City Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Arachnid Nest Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Arachnid Tomb Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Arcade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Arena Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Arid Lake Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Armoury Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Ashen Wood Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Atoll Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Barrows Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Bazaar Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Beach Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Belfry Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Bog Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Bone Crypt Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Burial Chambers Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Cage Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Canyon Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Castle Ruins Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Cells Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Cemetery Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Channel Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Chateau Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped City Square Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Colonnade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Conservatory Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Coral Ruins Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Courthouse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Courtyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Coves Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Cursed Crypt Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Desert Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Desert Spring Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Dunes Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Dungeon Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Estuary Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Excavation Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Factory Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Fields Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Flooded Mine Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Gardens Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Geode Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Ghetto Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Gorge Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Graveyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Grotto Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Haunted Mansion Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Iceberg Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Infested Valley Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Ivory Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Jungle Valley Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Laboratory Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Lava Chamber Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Leyline Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Lighthouse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Lookout Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Marshes Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Mausoleum Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Maze Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Mesa Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Mineral Pools Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Moon Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Mud Geyser Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Museum Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Orchard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Overgrown Ruin Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Overgrown Shrine Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Pen Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Peninsula Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Phantasmagoria Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Pier Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Pit Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Plateau Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Port Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Precinct Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Promenade Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Racecourse Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Ramparts Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Reef Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Relic Chambers Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Residence Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Scriptorium Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Sepulchre Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Shipyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Shore Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Siege Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Spider Forest Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Spider Lair Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Springs Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Strand Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Sulphur Vents Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Thicket Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Tower Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Toxic Sewer Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Tribunal Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Tropical Island Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Underground River Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Underground Sea Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Vaal Pyramid Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Vault Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Volcano Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Waste Pool Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Wasteland Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaped Wharf Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shipyard Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shore Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrine Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Siege Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spider Forest Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spider Lair Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Springs Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Strand Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sulphur Vents Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summit Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sunken City Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Terrace Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thicket Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Torture Chamber Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tower Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Toxic Sewer Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tribunal Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tropical Island Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Underground River Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Underground Sea Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Pyramid Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Temple Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vault Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Villa Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Volcano Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Waste Pool Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wasteland Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Waterways Map"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wharf Map"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -7080,6 +8784,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "MapPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "map",
+                            "type": "MAP",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1084701973626.435924820777"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -7181,6 +8907,22 @@
             },
             {
                 "id": "Elicit.Slot.275882774455.386994345417",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1084701973626.435924820777",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"
