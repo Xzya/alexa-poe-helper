@@ -1,17 +1,17 @@
 import { RequestHandler } from "ask-sdk-core";
-import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, IsOrb, IsFragment } from "../../lib/helpers";
+import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, IsOrb, IsFragment, CurrentDate } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
-import { CurrencyRequestTypes, LeagueTypes, CurrencyEntity } from "../../api/interfaces";
+import { CurrencyEntity, LeagueTypes, CurrencyRequestTypes } from "../../api";
 
 const showLowConfidence = false;
 
-function filterLowConfidence(value: CurrencyEntity, index: number, array: CurrencyEntity[]) {
+function filterLowConfidence(value: CurrencyEntity) {
     return value.receive && value.receive.count >= 5 || value.pay && value.pay.count >= 5;
 }
 
 export const Completed: RequestHandler = {
     canHandle(handlerInput) {
-        return IsIntentWithCompleteDialog(handlerInput, IntentTypes.CurrencyPriceCheckIntent);
+        return IsIntentWithCompleteDialog(handlerInput, IntentTypes.CurrencyPriceCheck);
     },
     async handle(handlerInput) {
         const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
@@ -59,10 +59,10 @@ export const Completed: RequestHandler = {
                     directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, currency.resolved, league))),
 
                     // get the currency exchange details
-                    apiClient.currency({
+                    apiClient.currencies({
                         league: league,
                         type: type,
-                        date: (new Date).toISOString().substring(0, 10),
+                        date: CurrentDate(),
                     }),
                 ]);
 
@@ -101,6 +101,6 @@ export const Completed: RequestHandler = {
             }
         }
 
-        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.CurrencyPriceCheckIntent} without a slot.`, ErrorTypes.Unexpected);
+        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.CurrencyPriceCheck} without a slot.`, ErrorTypes.Unexpected);
     }
 };

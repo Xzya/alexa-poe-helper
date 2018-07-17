@@ -2,6 +2,7 @@ import { HandlerInput } from "ask-sdk-core";
 import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes } from "../interfaces";
 import { RequestTypes, ErrorTypes, Orbs, Fragments } from "./constants";
+import { UniqueAccessories } from "./items";
 
 /**
  * Checks if the request matches any of the given intents.
@@ -346,4 +347,20 @@ export function IsOrb(str: string): boolean {
  */
 export function IsFragment(str: string): boolean {
     return Fragments.indexOf(str) !== -1;
+}
+
+/**
+ * Checks if the given string matches a unique accessory.
+ * 
+ * @param str 
+ */
+export function IsUniqueAccessory(str: string): boolean {
+    return UniqueAccessories.indexOf(str) !== -1;
+}
+
+/**
+ * Returns today's date in the format YYYY-MM-DD used by poe.ninja
+ */
+export function CurrentDate() {
+    return (new Date).toISOString().substring(0, 10);
 }

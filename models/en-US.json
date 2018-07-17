@@ -1,1580 +1,2443 @@
 {
-  "interactionModel": {
-    "languageModel": {
-      "invocationName": "p o e",
-      "intents": [{
-          "name": "AMAZON.FallbackIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "QuestRewardIntent",
-          "slots": [{
-            "name": "quest",
-            "type": "QUEST",
-            "samples": [
-              "{quest} quest",
-              "{quest}"
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "p o e",
+            "intents": [{
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "QuestRewardIntent",
+                    "slots": [{
+                        "name": "quest",
+                        "type": "QUEST",
+                        "samples": [
+                            "{quest} quest",
+                            "{quest}"
+                        ]
+                    }],
+                    "samples": [
+                        "give me quest reward",
+                        "give me quest reward for",
+                        "give me quest reward for quest",
+                        "give me quest reward for the",
+                        "give me quest reward for the quest",
+                        "give me quest reward for the {quest}",
+                        "give me quest reward for the {quest} quest",
+                        "give me quest reward for {quest}",
+                        "give me quest reward for {quest} quest",
+                        "give me quest reward quest",
+                        "give me quest reward the",
+                        "give me quest reward the quest",
+                        "give me quest reward the {quest}",
+                        "give me quest reward the {quest} quest",
+                        "give me quest reward {quest}",
+                        "give me quest reward {quest} quest",
+                        "give me reward",
+                        "give me reward for",
+                        "give me reward for quest",
+                        "give me reward for the",
+                        "give me reward for the quest",
+                        "give me reward for the {quest}",
+                        "give me reward for the {quest} quest",
+                        "give me reward for {quest}",
+                        "give me reward for {quest} quest",
+                        "give me reward quest",
+                        "give me reward the",
+                        "give me reward the quest",
+                        "give me reward the {quest}",
+                        "give me reward the {quest} quest",
+                        "give me reward {quest}",
+                        "give me reward {quest} quest",
+                        "give me the quest reward",
+                        "give me the quest reward for",
+                        "give me the quest reward for quest",
+                        "give me the quest reward for the",
+                        "give me the quest reward for the quest",
+                        "give me the quest reward for the {quest}",
+                        "give me the quest reward for the {quest} quest",
+                        "give me the quest reward for {quest}",
+                        "give me the quest reward for {quest} quest",
+                        "give me the quest reward quest",
+                        "give me the quest reward the",
+                        "give me the quest reward the quest",
+                        "give me the quest reward the {quest}",
+                        "give me the quest reward the {quest} quest",
+                        "give me the quest reward {quest}",
+                        "give me the quest reward {quest} quest",
+                        "give me the reward",
+                        "give me the reward for",
+                        "give me the reward for quest",
+                        "give me the reward for the",
+                        "give me the reward for the quest",
+                        "give me the reward for the {quest}",
+                        "give me the reward for the {quest} quest",
+                        "give me the reward for {quest}",
+                        "give me the reward for {quest} quest",
+                        "give me the reward quest",
+                        "give me the reward the",
+                        "give me the reward the quest",
+                        "give me the reward the {quest}",
+                        "give me the reward the {quest} quest",
+                        "give me the reward {quest}",
+                        "give me the reward {quest} quest",
+                        "quest reward",
+                        "quest reward for",
+                        "quest reward for quest",
+                        "quest reward for the",
+                        "quest reward for the quest",
+                        "quest reward for the {quest}",
+                        "quest reward for the {quest} quest",
+                        "quest reward for {quest}",
+                        "quest reward for {quest} quest",
+                        "quest reward quest",
+                        "quest reward the",
+                        "quest reward the quest",
+                        "quest reward the {quest}",
+                        "quest reward the {quest} quest",
+                        "quest reward {quest}",
+                        "quest reward {quest} quest",
+                        "reward",
+                        "reward for",
+                        "reward for quest",
+                        "reward for the",
+                        "reward for the quest",
+                        "reward for the {quest}",
+                        "reward for the {quest} quest",
+                        "reward for {quest}",
+                        "reward for {quest} quest",
+                        "reward quest",
+                        "reward the",
+                        "reward the quest",
+                        "reward the {quest}",
+                        "reward the {quest} quest",
+                        "reward {quest}",
+                        "reward {quest} quest",
+                        "tell me quest reward",
+                        "tell me quest reward for",
+                        "tell me quest reward for quest",
+                        "tell me quest reward for the",
+                        "tell me quest reward for the quest",
+                        "tell me quest reward for the {quest}",
+                        "tell me quest reward for the {quest} quest",
+                        "tell me quest reward for {quest}",
+                        "tell me quest reward for {quest} quest",
+                        "tell me quest reward quest",
+                        "tell me quest reward the",
+                        "tell me quest reward the quest",
+                        "tell me quest reward the {quest}",
+                        "tell me quest reward the {quest} quest",
+                        "tell me quest reward {quest}",
+                        "tell me quest reward {quest} quest",
+                        "tell me reward",
+                        "tell me reward for",
+                        "tell me reward for quest",
+                        "tell me reward for the",
+                        "tell me reward for the quest",
+                        "tell me reward for the {quest}",
+                        "tell me reward for the {quest} quest",
+                        "tell me reward for {quest}",
+                        "tell me reward for {quest} quest",
+                        "tell me reward quest",
+                        "tell me reward the",
+                        "tell me reward the quest",
+                        "tell me reward the {quest}",
+                        "tell me reward the {quest} quest",
+                        "tell me reward {quest}",
+                        "tell me reward {quest} quest",
+                        "tell me the quest reward",
+                        "tell me the quest reward for",
+                        "tell me the quest reward for quest",
+                        "tell me the quest reward for the",
+                        "tell me the quest reward for the quest",
+                        "tell me the quest reward for the {quest}",
+                        "tell me the quest reward for the {quest} quest",
+                        "tell me the quest reward for {quest}",
+                        "tell me the quest reward for {quest} quest",
+                        "tell me the quest reward quest",
+                        "tell me the quest reward the",
+                        "tell me the quest reward the quest",
+                        "tell me the quest reward the {quest}",
+                        "tell me the quest reward the {quest} quest",
+                        "tell me the quest reward {quest}",
+                        "tell me the quest reward {quest} quest",
+                        "tell me the reward",
+                        "tell me the reward for",
+                        "tell me the reward for quest",
+                        "tell me the reward for the",
+                        "tell me the reward for the quest",
+                        "tell me the reward for the {quest}",
+                        "tell me the reward for the {quest} quest",
+                        "tell me the reward for {quest}",
+                        "tell me the reward for {quest} quest",
+                        "tell me the reward quest",
+                        "tell me the reward the",
+                        "tell me the reward the quest",
+                        "tell me the reward the {quest}",
+                        "tell me the reward the {quest} quest",
+                        "tell me the reward {quest}",
+                        "tell me the reward {quest} quest",
+                        "the quest reward",
+                        "the quest reward for",
+                        "the quest reward for quest",
+                        "the quest reward for the",
+                        "the quest reward for the quest",
+                        "the quest reward for the {quest}",
+                        "the quest reward for the {quest} quest",
+                        "the quest reward for {quest}",
+                        "the quest reward for {quest} quest",
+                        "the quest reward quest",
+                        "the quest reward the",
+                        "the quest reward the quest",
+                        "the quest reward the {quest}",
+                        "the quest reward the {quest} quest",
+                        "the quest reward {quest}",
+                        "the quest reward {quest} quest",
+                        "the reward",
+                        "the reward for",
+                        "the reward for quest",
+                        "the reward for the",
+                        "the reward for the quest",
+                        "the reward for the {quest}",
+                        "the reward for the {quest} quest",
+                        "the reward for {quest}",
+                        "the reward for {quest} quest",
+                        "the reward quest",
+                        "the reward the",
+                        "the reward the quest",
+                        "the reward the {quest}",
+                        "the reward the {quest} quest",
+                        "the reward {quest}",
+                        "the reward {quest} quest",
+                        "what is quest reward",
+                        "what is quest reward for",
+                        "what is quest reward for quest",
+                        "what is quest reward for the",
+                        "what is quest reward for the quest",
+                        "what is quest reward for the {quest}",
+                        "what is quest reward for the {quest} quest",
+                        "what is quest reward for {quest}",
+                        "what is quest reward for {quest} quest",
+                        "what is quest reward quest",
+                        "what is quest reward the",
+                        "what is quest reward the quest",
+                        "what is quest reward the {quest}",
+                        "what is quest reward the {quest} quest",
+                        "what is quest reward {quest}",
+                        "what is quest reward {quest} quest",
+                        "what is reward",
+                        "what is reward for",
+                        "what is reward for quest",
+                        "what is reward for the",
+                        "what is reward for the quest",
+                        "what is reward for the {quest}",
+                        "what is reward for the {quest} quest",
+                        "what is reward for {quest}",
+                        "what is reward for {quest} quest",
+                        "what is reward quest",
+                        "what is reward the",
+                        "what is reward the quest",
+                        "what is reward the {quest}",
+                        "what is reward the {quest} quest",
+                        "what is reward {quest}",
+                        "what is reward {quest} quest",
+                        "what is the quest reward",
+                        "what is the quest reward for",
+                        "what is the quest reward for quest",
+                        "what is the quest reward for the",
+                        "what is the quest reward for the quest",
+                        "what is the quest reward for the {quest}",
+                        "what is the quest reward for the {quest} quest",
+                        "what is the quest reward for {quest}",
+                        "what is the quest reward for {quest} quest",
+                        "what is the quest reward quest",
+                        "what is the quest reward the",
+                        "what is the quest reward the quest",
+                        "what is the quest reward the {quest}",
+                        "what is the quest reward the {quest} quest",
+                        "what is the quest reward {quest}",
+                        "what is the quest reward {quest} quest",
+                        "what is the reward",
+                        "what is the reward for",
+                        "what is the reward for quest",
+                        "what is the reward for the",
+                        "what is the reward for the quest",
+                        "what is the reward for the {quest}",
+                        "what is the reward for the {quest} quest",
+                        "what is the reward for {quest}",
+                        "what is the reward for {quest} quest",
+                        "what is the reward quest",
+                        "what is the reward the",
+                        "what is the reward the quest",
+                        "what is the reward the {quest}",
+                        "what is the reward the {quest} quest",
+                        "what is the reward {quest}",
+                        "what is the reward {quest} quest"
+                    ]
+                },
+                {
+                    "name": "CurrencyPriceCheckIntent",
+                    "slots": [{
+                            "name": "currency",
+                            "type": "CURRENCY",
+                            "samples": [
+                                "{currency} please",
+                                "{currency}"
+                            ]
+                        },
+                        {
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "check currency price",
+                        "check currency price in {league}",
+                        "check currency price in {league} league",
+                        "currency price",
+                        "currency price in {league}",
+                        "currency price in {league} league",
+                        "how much are a {currency}",
+                        "how much are a {currency} in {league}",
+                        "how much are a {currency} in {league} league",
+                        "how much are a {currency} worth",
+                        "how much are a {currency} worth in {league}",
+                        "how much are a {currency} worth in {league} league",
+                        "how much are an {currency}",
+                        "how much are an {currency} in {league}",
+                        "how much are an {currency} in {league} league",
+                        "how much are an {currency} worth",
+                        "how much are an {currency} worth in {league}",
+                        "how much are an {currency} worth in {league} league",
+                        "how much are the {currency}",
+                        "how much are the {currency} in {league}",
+                        "how much are the {currency} in {league} league",
+                        "how much are the {currency} worth",
+                        "how much are the {currency} worth in {league}",
+                        "how much are the {currency} worth in {league} league",
+                        "how much are {quantity} {currency}",
+                        "how much are {quantity} {currency} in {league}",
+                        "how much are {quantity} {currency} in {league} league",
+                        "how much are {quantity} {currency} worth",
+                        "how much are {quantity} {currency} worth in {league}",
+                        "how much are {quantity} {currency} worth in {league} league",
+                        "how much is a {currency}",
+                        "how much is a {currency} in {league}",
+                        "how much is a {currency} in {league} league",
+                        "how much is a {currency} worth",
+                        "how much is a {currency} worth in {league}",
+                        "how much is a {currency} worth in {league} league",
+                        "how much is an {currency}",
+                        "how much is an {currency} in {league}",
+                        "how much is an {currency} in {league} league",
+                        "how much is an {currency} worth",
+                        "how much is an {currency} worth in {league}",
+                        "how much is an {currency} worth in {league} league",
+                        "how much is the {currency}",
+                        "how much is the {currency} in {league}",
+                        "how much is the {currency} in {league} league",
+                        "how much is the {currency} worth",
+                        "how much is the {currency} worth in {league}",
+                        "how much is the {currency} worth in {league} league",
+                        "how much is {quantity} {currency}",
+                        "how much is {quantity} {currency} in {league}",
+                        "how much is {quantity} {currency} in {league} league",
+                        "how much is {quantity} {currency} worth",
+                        "how much is {quantity} {currency} worth in {league}",
+                        "how much is {quantity} {currency} worth in {league} league",
+                        "price of a {currency}",
+                        "price of a {currency} in {league}",
+                        "price of a {currency} in {league} league",
+                        "price of an {currency}",
+                        "price of an {currency} in {league}",
+                        "price of an {currency} in {league} league",
+                        "price of the {currency}",
+                        "price of the {currency} in {league}",
+                        "price of the {currency} in {league} league",
+                        "price of {quantity} {currency}",
+                        "price of {quantity} {currency} in {league}",
+                        "price of {quantity} {currency} in {league} league",
+                        "tell me price of a {currency}",
+                        "tell me price of a {currency} in {league}",
+                        "tell me price of a {currency} in {league} league",
+                        "tell me price of an {currency}",
+                        "tell me price of an {currency} in {league}",
+                        "tell me price of an {currency} in {league} league",
+                        "tell me price of the {currency}",
+                        "tell me price of the {currency} in {league}",
+                        "tell me price of the {currency} in {league} league",
+                        "tell me price of {quantity} {currency}",
+                        "tell me price of {quantity} {currency} in {league}",
+                        "tell me price of {quantity} {currency} in {league} league",
+                        "tell me the price of a {currency}",
+                        "tell me the price of a {currency} in {league}",
+                        "tell me the price of a {currency} in {league} league",
+                        "tell me the price of an {currency}",
+                        "tell me the price of an {currency} in {league}",
+                        "tell me the price of an {currency} in {league} league",
+                        "tell me the price of the {currency}",
+                        "tell me the price of the {currency} in {league}",
+                        "tell me the price of the {currency} in {league} league",
+                        "tell me the price of {quantity} {currency}",
+                        "tell me the price of {quantity} {currency} in {league}",
+                        "tell me the price of {quantity} {currency} in {league} league",
+                        "the price of a {currency}",
+                        "the price of a {currency} in {league}",
+                        "the price of a {currency} in {league} league",
+                        "the price of an {currency}",
+                        "the price of an {currency} in {league}",
+                        "the price of an {currency} in {league} league",
+                        "the price of the {currency}",
+                        "the price of the {currency} in {league}",
+                        "the price of the {currency} in {league} league",
+                        "the price of {quantity} {currency}",
+                        "the price of {quantity} {currency} in {league}",
+                        "the price of {quantity} {currency} in {league} league",
+                        "what is price of a {currency}",
+                        "what is price of a {currency} in {league}",
+                        "what is price of a {currency} in {league} league",
+                        "what is price of an {currency}",
+                        "what is price of an {currency} in {league}",
+                        "what is price of an {currency} in {league} league",
+                        "what is price of the {currency}",
+                        "what is price of the {currency} in {league}",
+                        "what is price of the {currency} in {league} league",
+                        "what is price of {quantity} {currency}",
+                        "what is price of {quantity} {currency} in {league}",
+                        "what is price of {quantity} {currency} in {league} league",
+                        "what is the price of a {currency}",
+                        "what is the price of a {currency} in {league}",
+                        "what is the price of a {currency} in {league} league",
+                        "what is the price of an {currency}",
+                        "what is the price of an {currency} in {league}",
+                        "what is the price of an {currency} in {league} league",
+                        "what is the price of the {currency}",
+                        "what is the price of the {currency} in {league}",
+                        "what is the price of the {currency} in {league} league",
+                        "what is the price of {quantity} {currency}",
+                        "what is the price of {quantity} {currency} in {league}",
+                        "what is the price of {quantity} {currency} in {league} league",
+                        "{currency}",
+                        "{currency} in {league}",
+                        "{currency} in {league} league",
+                        "{currency} price",
+                        "{currency} price in {league}",
+                        "{currency} price in {league} league",
+                        "{quantity} {currency}",
+                        "{quantity} {currency} in {league}",
+                        "{quantity} {currency} in {league} league",
+                        "{quantity} {currency} price",
+                        "{quantity} {currency} price in {league}",
+                        "{quantity} {currency} price in {league} league"
+                    ]
+                },
+                {
+                    "name": "ItemPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "item",
+                            "type": "UNIQUE_ACCESSORY",
+                            "samples": [
+                                "{item} please",
+                                "{item}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {item}",
+                        "how much is a {item} in {league}",
+                        "how much is a {item} in {league} league",
+                        "how much is a {item} worth",
+                        "how much is a {item} worth in {league}",
+                        "how much is a {item} worth in {league} league",
+                        "how much is an {item}",
+                        "how much is an {item} in {league}",
+                        "how much is an {item} in {league} league",
+                        "how much is an {item} worth",
+                        "how much is an {item} worth in {league}",
+                        "how much is an {item} worth in {league} league",
+                        "how much is the {item}",
+                        "how much is the {item} in {league}",
+                        "how much is the {item} in {league} league",
+                        "how much is the {item} worth",
+                        "how much is the {item} worth in {league}",
+                        "how much is the {item} worth in {league} league",
+                        "how much is {item}",
+                        "how much is {item} in {league}",
+                        "how much is {item} in {league} league",
+                        "how much is {item} worth",
+                        "how much is {item} worth in {league}",
+                        "how much is {item} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {item}",
+                        "price of a {item} in {league}",
+                        "price of a {item} in {league} league",
+                        "price of an {item}",
+                        "price of an {item} in {league}",
+                        "price of an {item} in {league} league",
+                        "price of the {item}",
+                        "price of the {item} in {league}",
+                        "price of the {item} in {league} league",
+                        "price of {item}",
+                        "price of {item} in {league}",
+                        "price of {item} in {league} league",
+                        "tell me price of a {item}",
+                        "tell me price of a {item} in {league}",
+                        "tell me price of a {item} in {league} league",
+                        "tell me price of an {item}",
+                        "tell me price of an {item} in {league}",
+                        "tell me price of an {item} in {league} league",
+                        "tell me price of the {item}",
+                        "tell me price of the {item} in {league}",
+                        "tell me price of the {item} in {league} league",
+                        "tell me price of {item}",
+                        "tell me price of {item} in {league}",
+                        "tell me price of {item} in {league} league",
+                        "tell me the price of a {item}",
+                        "tell me the price of a {item} in {league}",
+                        "tell me the price of a {item} in {league} league",
+                        "tell me the price of an {item}",
+                        "tell me the price of an {item} in {league}",
+                        "tell me the price of an {item} in {league} league",
+                        "tell me the price of the {item}",
+                        "tell me the price of the {item} in {league}",
+                        "tell me the price of the {item} in {league} league",
+                        "tell me the price of {item}",
+                        "tell me the price of {item} in {league}",
+                        "tell me the price of {item} in {league} league",
+                        "the price of a {item}",
+                        "the price of a {item} in {league}",
+                        "the price of a {item} in {league} league",
+                        "the price of an {item}",
+                        "the price of an {item} in {league}",
+                        "the price of an {item} in {league} league",
+                        "the price of the {item}",
+                        "the price of the {item} in {league}",
+                        "the price of the {item} in {league} league",
+                        "the price of {item}",
+                        "the price of {item} in {league}",
+                        "the price of {item} in {league} league",
+                        "what is price of a {item}",
+                        "what is price of a {item} in {league}",
+                        "what is price of a {item} in {league} league",
+                        "what is price of an {item}",
+                        "what is price of an {item} in {league}",
+                        "what is price of an {item} in {league} league",
+                        "what is price of the {item}",
+                        "what is price of the {item} in {league}",
+                        "what is price of the {item} in {league} league",
+                        "what is price of {item}",
+                        "what is price of {item} in {league}",
+                        "what is price of {item} in {league} league",
+                        "what is the price of a {item}",
+                        "what is the price of a {item} in {league}",
+                        "what is the price of a {item} in {league} league",
+                        "what is the price of an {item}",
+                        "what is the price of an {item} in {league}",
+                        "what is the price of an {item} in {league} league",
+                        "what is the price of the {item}",
+                        "what is the price of the {item} in {league}",
+                        "what is the price of the {item} in {league} league",
+                        "what is the price of {item}",
+                        "what is the price of {item} in {league}",
+                        "what is the price of {item} in {league} league",
+                        "{item}",
+                        "{item} in {league}",
+                        "{item} in {league} league",
+                        "{item} price",
+                        "{item} price in {league}",
+                        "{item} price in {league} league"
+                    ]
+                }
+            ],
+            "types": [{
+                    "name": "QUEST",
+                    "values": [{
+                            "name": {
+                                "value": "Einhar's Hunt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Einhar's Bestiary"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Einhar's Menagerie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Caged Brute"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mercy Mission"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Breaking Some Eggs"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Siren's Cadence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Enemy at the Gate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Dirty Job"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dweller of the Deep"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Marooned Mariner"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Way Forward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Intruders in Black"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Through Sacred Ground"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Great White Beast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sharp and Cruel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deal with the Bandits"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ribbon Spool"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sever the Right Hand"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lost in Love"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Fixture of Fate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Piety's Pets"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Victario's Secrets"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Swig of Hope"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fiery Dust"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Breaking the Seal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "An Indomitable Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Eternal Nightmare"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The King's Feast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "In Service to Science"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kitava's Torments"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death to Purity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Key to Freedom"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Return to Oriath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bestel's Epic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fallen from Grace"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Cloven One"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Father of War"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Puppet Mistress"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence of Umbra"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "In Memory of Greust"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Silver Locket"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kishara's Star"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Queen of Despair"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Master of a Million Faces"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence of the Artist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Web of Secrets"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Love is Dead"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reflection of Terror"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Gemling Legion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wings of Vastiri"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence of the Hag"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Storm Blade"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fastis Fortuna"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Queen of the Sands"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ruler of Highgate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Safe Passage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death and Rebirth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "No Love for Old Ghosts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "An End to Hunger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vilenta's Vengeance"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Map to Tsoatha"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "From Nightmare into Dream"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CURRENCY",
+                    "values": [{
+                            "id": "mir",
+                            "name": {
+                                "value": "Mirror of Kalandra",
+                                "synonyms": [
+                                    "Mirror",
+                                    "Kalandra"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mirror-shard",
+                            "name": {
+                                "value": "Mirror Shard"
+                            }
+                        },
+                        {
+                            "id": "exa",
+                            "name": {
+                                "value": "Exalted Orb",
+                                "synonyms": [
+                                    "Exalted",
+                                    "Exalt",
+                                    "Exalts"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "exalted-shard",
+                            "name": {
+                                "value": "Exalted Shard"
+                            }
+                        },
+                        {
+                            "id": "chaos",
+                            "name": {
+                                "value": "Chaos Orb",
+                                "synonyms": [
+                                    "Chaos"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ancient-orb",
+                            "name": {
+                                "value": "Ancient Orb",
+                                "synonyms": [
+                                    "Ancient"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "harbingers-orb",
+                            "name": {
+                                "value": "Harbinger's Orb",
+                                "synonyms": [
+                                    "Harbinger",
+                                    "Harbinger's"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "divine",
+                            "name": {
+                                "value": "Divine Orb",
+                                "synonyms": [
+                                    "Divine",
+                                    "Divines"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "orb-of-annulment",
+                            "name": {
+                                "value": "Orb of Annulment",
+                                "synonyms": [
+                                    "Annulment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "master-sextant",
+                            "name": {
+                                "value": "Master Cartographer's Sextant",
+                                "synonyms": [
+                                    "Master",
+                                    "Master Sextant"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "orb-of-horizons",
+                            "name": {
+                                "value": "Orb of Horizons",
+                                "synonyms": [
+                                    "Horizons"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "journeyman-sextant",
+                            "name": {
+                                "value": "Journeyman Cartographer's Sextant",
+                                "synonyms": [
+                                    "Journeyman",
+                                    "Journeyman Sextant"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "apprentice-sextant",
+                            "name": {
+                                "value": "Apprentice Cartographer's Sextant",
+                                "synonyms": [
+                                    "Apprentice",
+                                    "Apprentice Sextant"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "engineers-orb",
+                            "name": {
+                                "value": "Engineer's Orb",
+                                "synonyms": [
+                                    "Engineer",
+                                    "Engineer's"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "vaal",
+                            "name": {
+                                "value": "Vaal Orb",
+                                "synonyms": [
+                                    "Vaal"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "blessing-chayula",
+                            "name": {
+                                "value": "Blessing of Chayula"
+                            }
+                        },
+                        {
+                            "id": "blessing-uul-netol",
+                            "name": {
+                                "value": "Blessing of Uul-Netol"
+                            }
+                        },
+                        {
+                            "id": "blessing-esh",
+                            "name": {
+                                "value": "Blessing of Esh",
+                                "synonyms": [
+                                    "Esh's Blessing"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "blessing-xoph",
+                            "name": {
+                                "value": "Blessing of Xoph",
+                                "synonyms": [
+                                    "Xoph's Blessing"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "blessing-tul",
+                            "name": {
+                                "value": "Blessing of Tul",
+                                "synonyms": [
+                                    "Tul's Blessing"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "splinter-chayula",
+                            "name": {
+                                "value": "Splinter of Chayula",
+                                "synonyms": [
+                                    "Chayula Splinter"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "splinter-xoph",
+                            "name": {
+                                "value": "Splinter of Xoph",
+                                "synonyms": [
+                                    "Xoph Splinter"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "splinter-esh",
+                            "name": {
+                                "value": "Splinter of Esh",
+                                "synonyms": [
+                                    "Esh Splinter"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "splinter-uul",
+                            "name": {
+                                "value": "Splinter of Uul-Netol",
+                                "synonyms": [
+                                    "Uul-Netol Splinter"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "splinter-tul",
+                            "name": {
+                                "value": "Splinter of Tul",
+                                "synonyms": [
+                                    "Tul Splinter"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "regal",
+                            "name": {
+                                "value": "Regal Orb",
+                                "synonyms": [
+                                    "Regal"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "gcp",
+                            "name": {
+                                "value": "Gemcutter's Prism",
+                                "synonyms": [
+                                    "Gemcutter",
+                                    "Gemcutter's"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "regret",
+                            "name": {
+                                "value": "Orb of Regret",
+                                "synonyms": [
+                                    "Regret",
+                                    "Regrets"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chisel",
+                            "name": {
+                                "value": "Cartographer's Chisel",
+                                "synonyms": [
+                                    "Chisel",
+                                    "Chisels"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "fuse",
+                            "name": {
+                                "value": "Orb of Fusing",
+                                "synonyms": [
+                                    "Fuse",
+                                    "Fusing",
+                                    "Fusings"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "alch",
+                            "name": {
+                                "value": "Orb of Alchemy",
+                                "synonyms": [
+                                    "Alchemy",
+                                    "Alchemies"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "scour",
+                            "name": {
+                                "value": "Orb of Scouring",
+                                "synonyms": [
+                                    "Scouring",
+                                    "Scourings"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "blessed",
+                            "name": {
+                                "value": "Blessed Orb"
+                            }
+                        },
+                        {
+                            "id": "silver",
+                            "name": {
+                                "value": "Silver Coin"
+                            }
+                        },
+                        {
+                            "id": "orb-of-binding",
+                            "name": {
+                                "value": "Orb of Binding"
+                            }
+                        },
+                        {
+                            "id": "ba",
+                            "name": {
+                                "value": "Glassblower's Bauble",
+                                "synonyms": [
+                                    "Glassblower",
+                                    "Glassblower's",
+                                    "Bauble"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chrom",
+                            "name": {
+                                "value": "Chromatic Orb",
+                                "synonyms": [
+                                    "Chrom",
+                                    "Chrome",
+                                    "Chromatic",
+                                    "Chromes"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "jew",
+                            "name": {
+                                "value": "Jeweller's Orb",
+                                "synonyms": [
+                                    "Jeweller",
+                                    "Jeweller's",
+                                    "Jewellers"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "alt",
+                            "name": {
+                                "value": "Orb of Alteration",
+                                "synonyms": [
+                                    "Alteration",
+                                    "Alteration Orb"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chance",
+                            "name": {
+                                "value": "Orb of Chance",
+                                "synonyms": [
+                                    "Chance",
+                                    "Chance Orb"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "aug",
+                            "name": {
+                                "value": "Orb of Augmentation",
+                                "synonyms": [
+                                    "Augmentation",
+                                    "Augmentation Orb"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tra",
+                            "name": {
+                                "value": "Orb of Transmutation",
+                                "synonyms": [
+                                    "Transmutation",
+                                    "Transmutation Orb"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "whe",
+                            "name": {
+                                "value": "Blacksmith's Whetstone",
+                                "synonyms": [
+                                    "Blacksmith",
+                                    "Blacksmith's"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "scr",
+                            "name": {
+                                "value": "Armourer's Scrap",
+                                "synonyms": [
+                                    "Armourer",
+                                    "Armourer's"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "p",
+                            "name": {
+                                "value": "Perandus Coin",
+                                "synonyms": [
+                                    "Perandus"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "port",
+                            "name": {
+                                "value": "Portal Scroll",
+                                "synonyms": [
+                                    "Portal"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "wis",
+                            "name": {
+                                "value": "Scroll of Wisdom",
+                                "synonyms": [
+                                    "Wisdom",
+                                    "Wisdom Scroll"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ete",
+                            "name": {
+                                "value": "Eternal Orb",
+                                "synonyms": [
+                                    "Eternal"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "annulment-shard",
+                            "name": {
+                                "value": "Annulment Shard"
+                            }
+                        },
+                        {
+                            "id": "binding-shard",
+                            "name": {
+                                "value": "Binding Shard"
+                            }
+                        },
+                        {
+                            "id": "horizon-shard",
+                            "name": {
+                                "value": "Horizon Shard"
+                            }
+                        },
+                        {
+                            "id": "harbingers-shard",
+                            "name": {
+                                "value": "Harbinger's Shard"
+                            }
+                        },
+                        {
+                            "id": "engineers-shard",
+                            "name": {
+                                "value": "Engineer's Shard"
+                            }
+                        },
+                        {
+                            "id": "ancient-shard",
+                            "name": {
+                                "value": "Ancient Shard"
+                            }
+                        },
+                        {
+                            "id": "chaos-shard",
+                            "name": {
+                                "value": "Chaos Shard"
+                            }
+                        },
+                        {
+                            "id": "regal-shard",
+                            "name": {
+                                "value": "Regal Shard"
+                            }
+                        },
+                        {
+                            "id": "dusk",
+                            "name": {
+                                "value": "Sacrifice at Dusk",
+                                "synonyms": [
+                                    "Dusk"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mid",
+                            "name": {
+                                "value": "Sacrifice at Midnight",
+                                "synonyms": [
+                                    "Midnight"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dawn",
+                            "name": {
+                                "value": "Sacrifice at Dawn",
+                                "synonyms": [
+                                    "Dawn"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "noon",
+                            "name": {
+                                "value": "Sacrifice at Noon",
+                                "synonyms": [
+                                    "Noon"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "grie",
+                            "name": {
+                                "value": "Mortal Grief",
+                                "synonyms": [
+                                    "Grief"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rage",
+                            "name": {
+                                "value": "Mortal Rage",
+                                "synonyms": [
+                                    "Rage"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hope",
+                            "name": {
+                                "value": "Mortal Hope",
+                                "synonyms": [
+                                    "Hope"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ign",
+                            "name": {
+                                "value": "Mortal Ignorance",
+                                "synonyms": [
+                                    "Ignorance"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eber",
+                            "name": {
+                                "value": "Eber's Key"
+                            }
+                        },
+                        {
+                            "id": "yriel",
+                            "name": {
+                                "value": "Yriel's Key"
+                            }
+                        },
+                        {
+                            "id": "inya",
+                            "name": {
+                                "value": "Inya's Key"
+                            }
+                        },
+                        {
+                            "id": "volkuur",
+                            "name": {
+                                "value": "Volkuur's Key"
+                            }
+                        },
+                        {
+                            "id": "hydra",
+                            "name": {
+                                "value": "Fragment of the Hydra",
+                                "synonyms": [
+                                    "Hydra",
+                                    "Hydra Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "phoenix",
+                            "name": {
+                                "value": "Fragment of the Phoenix",
+                                "synonyms": [
+                                    "Phoenix",
+                                    "Phoenix Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "minot",
+                            "name": {
+                                "value": "Fragment of the Minotaur",
+                                "synonyms": [
+                                    "Minotaur",
+                                    "Minotaur Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chimer",
+                            "name": {
+                                "value": "Fragment of the Chimera",
+                                "synonyms": [
+                                    "Chimera",
+                                    "Chimera Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sacrifice-set",
+                            "name": {
+                                "value": "Sacrifice Set"
+                            }
+                        },
+                        {
+                            "id": "mortal-set",
+                            "name": {
+                                "value": "Mortal Set"
+                            }
+                        },
+                        {
+                            "id": "pale-court-set",
+                            "name": {
+                                "value": "Pale Court Set"
+                            }
+                        },
+                        {
+                            "id": "shaper-set",
+                            "name": {
+                                "value": "Shaper Set"
+                            }
+                        },
+                        {
+                            "id": "xophs-breachstone",
+                            "name": {
+                                "value": "Xoph's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "tuls-breachstone",
+                            "name": {
+                                "value": "Tul's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "eshs-breachstone",
+                            "name": {
+                                "value": "Esh's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "uul-breachstone",
+                            "name": {
+                                "value": "Uul-Netol's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "chayulas-breachstone",
+                            "name": {
+                                "value": "Chayula's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "offer",
+                            "name": {
+                                "value": "Offering to the Goddess",
+                                "synonyms": [
+                                    "Offering"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "divine-vessel",
+                            "name": {
+                                "value": "Divine Vessel",
+                                "synonyms": [
+                                    "Vessel"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ancient-reliquary-key",
+                            "name": {
+                                "value": "Ancient Reliquary Key"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "LEAGUE",
+                    "values": [{
+                            "id": "Hardcore",
+                            "name": {
+                                "value": "Hardcore"
+                            }
+                        },
+                        {
+                            "id": "Standard",
+                            "name": {
+                                "value": "Standard"
+                            }
+                        },
+                        {
+                            "id": "tmphardcore",
+                            "name": {
+                                "value": "Hardcore Incursion",
+                                "synonyms": [
+                                    "Challenge Hardcore",
+                                    "Current Hardcore"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "tmpstandard",
+                            "name": {
+                                "value": "Incursion",
+                                "synonyms": [
+                                    "Current",
+                                    "Challenge"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "UNIQUE_ACCESSORY",
+                    "values": [{
+                            "name": {
+                                "value": "Bisco's Collar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Perandus Signet"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shavronne's Revelation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Presence of Chayula"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Astramentis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gifts from Above"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Choir of the Storm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Yoke of Suffering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thief's Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kaom's Way"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Voidheart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence Worm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kaom's Sign"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death Rush"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Victario's Acuity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Berek's Pass"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ngamahu Tiki"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Carnage Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rigwald's Crest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Andvarius"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Karui Charge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Night's Hold"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Valyrium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Pariah"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Darkness Enthroned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Perseverance"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Call of the Brotherhood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kikazaru"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ascent From Flesh"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Le Heup of All"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blackheart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eye of Chayula"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dream Fragments"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Emberwake"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Auxium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ascetic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bisco's Leash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Maligaro's Restraint"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Meginord's Girdle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Timeclasp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Magnate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bated Breath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pyre"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Warped Timepiece"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doedre's Damning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Heartbound Loop"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Belt of the Deceiver"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lori's Lantern"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shaper's Seed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Prismweave"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soulthirst"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Warden's Brand"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ventor's Gamble"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stone of Lazhwar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Maligaro's Cruelty"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Marylene's Fallacy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Anvil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ignomon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ungil's Harmony"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ming's Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Immortal Flesh"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rashkaldor's Patience"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sunblast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Extractor Mentis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mokou's Embrace"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sibyl's Lament"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sidhebreath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Karui Ward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Atziri's Foible"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wurm's Molt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Praxis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soul Tether"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Araku Tiki"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tear of Purity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bloodboil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Perandus Blazon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Demigod's Bounty"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Talisman of the Victor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eyes of the Greatwolf"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Headhunter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Demigod's Eye"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Berek's Respite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Taming"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Natural Hierarchy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xoph's Blood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xoph's Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Impresence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coward's Legacy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blightwell"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Voll's Devotion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Retch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Voice of the Storm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coward's Chains"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Daresso's Salute"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Berek's Grip"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Flow Untethered"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hinekora's Sight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Valako's Sign"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Star of Wraeclast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mark of the Shaper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Pandemonius"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Tactician"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Faminebind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Feastbind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Nomad"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Halcyon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rigwald's Curse"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "String of Servitude"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Effigon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "First Piece of Time"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mark of the Elder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Umbilicus Immortalis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood of Corruption"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eye of Innocence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hungry Loop"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Timetwist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Redblade Band"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Snakepit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tasalio's Sign"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stormfire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Voideye"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ngamahu's Sign"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cyclopean Coil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Second Piece of Time"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brinerot Mark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Winterweave"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doryani's Invitation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Winterheart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sacrificial Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mutewind Seal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ryslatha's Coil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bloodgrip"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Malachai's Artifice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Romira's Banquet"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gloomfang"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gluttony"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dyadian Dawn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Aylardex"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Zerphi's Heart"
+                            }
+                        }
+                    ]
+                }
             ]
-          }],
-          "samples": [
-            "give me quest reward",
-            "give me quest reward for",
-            "give me quest reward for quest",
-            "give me quest reward for the",
-            "give me quest reward for the quest",
-            "give me quest reward for the {quest}",
-            "give me quest reward for the {quest} quest",
-            "give me quest reward for {quest}",
-            "give me quest reward for {quest} quest",
-            "give me quest reward quest",
-            "give me quest reward the",
-            "give me quest reward the quest",
-            "give me quest reward the {quest}",
-            "give me quest reward the {quest} quest",
-            "give me quest reward {quest}",
-            "give me quest reward {quest} quest",
-            "give me reward",
-            "give me reward for",
-            "give me reward for quest",
-            "give me reward for the",
-            "give me reward for the quest",
-            "give me reward for the {quest}",
-            "give me reward for the {quest} quest",
-            "give me reward for {quest}",
-            "give me reward for {quest} quest",
-            "give me reward quest",
-            "give me reward the",
-            "give me reward the quest",
-            "give me reward the {quest}",
-            "give me reward the {quest} quest",
-            "give me reward {quest}",
-            "give me reward {quest} quest",
-            "give me the quest reward",
-            "give me the quest reward for",
-            "give me the quest reward for quest",
-            "give me the quest reward for the",
-            "give me the quest reward for the quest",
-            "give me the quest reward for the {quest}",
-            "give me the quest reward for the {quest} quest",
-            "give me the quest reward for {quest}",
-            "give me the quest reward for {quest} quest",
-            "give me the quest reward quest",
-            "give me the quest reward the",
-            "give me the quest reward the quest",
-            "give me the quest reward the {quest}",
-            "give me the quest reward the {quest} quest",
-            "give me the quest reward {quest}",
-            "give me the quest reward {quest} quest",
-            "give me the reward",
-            "give me the reward for",
-            "give me the reward for quest",
-            "give me the reward for the",
-            "give me the reward for the quest",
-            "give me the reward for the {quest}",
-            "give me the reward for the {quest} quest",
-            "give me the reward for {quest}",
-            "give me the reward for {quest} quest",
-            "give me the reward quest",
-            "give me the reward the",
-            "give me the reward the quest",
-            "give me the reward the {quest}",
-            "give me the reward the {quest} quest",
-            "give me the reward {quest}",
-            "give me the reward {quest} quest",
-            "quest reward",
-            "quest reward for",
-            "quest reward for quest",
-            "quest reward for the",
-            "quest reward for the quest",
-            "quest reward for the {quest}",
-            "quest reward for the {quest} quest",
-            "quest reward for {quest}",
-            "quest reward for {quest} quest",
-            "quest reward quest",
-            "quest reward the",
-            "quest reward the quest",
-            "quest reward the {quest}",
-            "quest reward the {quest} quest",
-            "quest reward {quest}",
-            "quest reward {quest} quest",
-            "reward",
-            "reward for",
-            "reward for quest",
-            "reward for the",
-            "reward for the quest",
-            "reward for the {quest}",
-            "reward for the {quest} quest",
-            "reward for {quest}",
-            "reward for {quest} quest",
-            "reward quest",
-            "reward the",
-            "reward the quest",
-            "reward the {quest}",
-            "reward the {quest} quest",
-            "reward {quest}",
-            "reward {quest} quest",
-            "tell me quest reward",
-            "tell me quest reward for",
-            "tell me quest reward for quest",
-            "tell me quest reward for the",
-            "tell me quest reward for the quest",
-            "tell me quest reward for the {quest}",
-            "tell me quest reward for the {quest} quest",
-            "tell me quest reward for {quest}",
-            "tell me quest reward for {quest} quest",
-            "tell me quest reward quest",
-            "tell me quest reward the",
-            "tell me quest reward the quest",
-            "tell me quest reward the {quest}",
-            "tell me quest reward the {quest} quest",
-            "tell me quest reward {quest}",
-            "tell me quest reward {quest} quest",
-            "tell me reward",
-            "tell me reward for",
-            "tell me reward for quest",
-            "tell me reward for the",
-            "tell me reward for the quest",
-            "tell me reward for the {quest}",
-            "tell me reward for the {quest} quest",
-            "tell me reward for {quest}",
-            "tell me reward for {quest} quest",
-            "tell me reward quest",
-            "tell me reward the",
-            "tell me reward the quest",
-            "tell me reward the {quest}",
-            "tell me reward the {quest} quest",
-            "tell me reward {quest}",
-            "tell me reward {quest} quest",
-            "tell me the quest reward",
-            "tell me the quest reward for",
-            "tell me the quest reward for quest",
-            "tell me the quest reward for the",
-            "tell me the quest reward for the quest",
-            "tell me the quest reward for the {quest}",
-            "tell me the quest reward for the {quest} quest",
-            "tell me the quest reward for {quest}",
-            "tell me the quest reward for {quest} quest",
-            "tell me the quest reward quest",
-            "tell me the quest reward the",
-            "tell me the quest reward the quest",
-            "tell me the quest reward the {quest}",
-            "tell me the quest reward the {quest} quest",
-            "tell me the quest reward {quest}",
-            "tell me the quest reward {quest} quest",
-            "tell me the reward",
-            "tell me the reward for",
-            "tell me the reward for quest",
-            "tell me the reward for the",
-            "tell me the reward for the quest",
-            "tell me the reward for the {quest}",
-            "tell me the reward for the {quest} quest",
-            "tell me the reward for {quest}",
-            "tell me the reward for {quest} quest",
-            "tell me the reward quest",
-            "tell me the reward the",
-            "tell me the reward the quest",
-            "tell me the reward the {quest}",
-            "tell me the reward the {quest} quest",
-            "tell me the reward {quest}",
-            "tell me the reward {quest} quest",
-            "the quest reward",
-            "the quest reward for",
-            "the quest reward for quest",
-            "the quest reward for the",
-            "the quest reward for the quest",
-            "the quest reward for the {quest}",
-            "the quest reward for the {quest} quest",
-            "the quest reward for {quest}",
-            "the quest reward for {quest} quest",
-            "the quest reward quest",
-            "the quest reward the",
-            "the quest reward the quest",
-            "the quest reward the {quest}",
-            "the quest reward the {quest} quest",
-            "the quest reward {quest}",
-            "the quest reward {quest} quest",
-            "the reward",
-            "the reward for",
-            "the reward for quest",
-            "the reward for the",
-            "the reward for the quest",
-            "the reward for the {quest}",
-            "the reward for the {quest} quest",
-            "the reward for {quest}",
-            "the reward for {quest} quest",
-            "the reward quest",
-            "the reward the",
-            "the reward the quest",
-            "the reward the {quest}",
-            "the reward the {quest} quest",
-            "the reward {quest}",
-            "the reward {quest} quest",
-            "what is quest reward",
-            "what is quest reward for",
-            "what is quest reward for quest",
-            "what is quest reward for the",
-            "what is quest reward for the quest",
-            "what is quest reward for the {quest}",
-            "what is quest reward for the {quest} quest",
-            "what is quest reward for {quest}",
-            "what is quest reward for {quest} quest",
-            "what is quest reward quest",
-            "what is quest reward the",
-            "what is quest reward the quest",
-            "what is quest reward the {quest}",
-            "what is quest reward the {quest} quest",
-            "what is quest reward {quest}",
-            "what is quest reward {quest} quest",
-            "what is reward",
-            "what is reward for",
-            "what is reward for quest",
-            "what is reward for the",
-            "what is reward for the quest",
-            "what is reward for the {quest}",
-            "what is reward for the {quest} quest",
-            "what is reward for {quest}",
-            "what is reward for {quest} quest",
-            "what is reward quest",
-            "what is reward the",
-            "what is reward the quest",
-            "what is reward the {quest}",
-            "what is reward the {quest} quest",
-            "what is reward {quest}",
-            "what is reward {quest} quest",
-            "what is the quest reward",
-            "what is the quest reward for",
-            "what is the quest reward for quest",
-            "what is the quest reward for the",
-            "what is the quest reward for the quest",
-            "what is the quest reward for the {quest}",
-            "what is the quest reward for the {quest} quest",
-            "what is the quest reward for {quest}",
-            "what is the quest reward for {quest} quest",
-            "what is the quest reward quest",
-            "what is the quest reward the",
-            "what is the quest reward the quest",
-            "what is the quest reward the {quest}",
-            "what is the quest reward the {quest} quest",
-            "what is the quest reward {quest}",
-            "what is the quest reward {quest} quest",
-            "what is the reward",
-            "what is the reward for",
-            "what is the reward for quest",
-            "what is the reward for the",
-            "what is the reward for the quest",
-            "what is the reward for the {quest}",
-            "what is the reward for the {quest} quest",
-            "what is the reward for {quest}",
-            "what is the reward for {quest} quest",
-            "what is the reward quest",
-            "what is the reward the",
-            "what is the reward the quest",
-            "what is the reward the {quest}",
-            "what is the reward the {quest} quest",
-            "what is the reward {quest}",
-            "what is the reward {quest} quest"
-          ]
         },
-        {
-          "name": "CurrencyPriceCheckIntent",
-          "slots": [{
-              "name": "currency",
-              "type": "CURRENCY",
-              "samples": [
-                "{currency} please",
-                "{currency}"
-              ]
-            },
-            {
-              "name": "league",
-              "type": "LEAGUE"
-            },
-            {
-              "name": "quantity",
-              "type": "AMAZON.NUMBER"
-            }
-          ],
-          "samples": [
-            "check currency price",
-            "check currency price in {league}",
-            "check currency price in {league} league",
-            "currency price",
-            "currency price in {league}",
-            "currency price in {league} league",
-            "how much are a {currency}",
-            "how much are a {currency} in {league}",
-            "how much are a {currency} in {league} league",
-            "how much are a {currency} worth",
-            "how much are a {currency} worth in {league}",
-            "how much are a {currency} worth in {league} league",
-            "how much are an {currency}",
-            "how much are an {currency} in {league}",
-            "how much are an {currency} in {league} league",
-            "how much are an {currency} worth",
-            "how much are an {currency} worth in {league}",
-            "how much are an {currency} worth in {league} league",
-            "how much are the {currency}",
-            "how much are the {currency} in {league}",
-            "how much are the {currency} in {league} league",
-            "how much are the {currency} worth",
-            "how much are the {currency} worth in {league}",
-            "how much are the {currency} worth in {league} league",
-            "how much are {quantity} {currency}",
-            "how much are {quantity} {currency} in {league}",
-            "how much are {quantity} {currency} in {league} league",
-            "how much are {quantity} {currency} worth",
-            "how much are {quantity} {currency} worth in {league}",
-            "how much are {quantity} {currency} worth in {league} league",
-            "how much is a {currency}",
-            "how much is a {currency} in {league}",
-            "how much is a {currency} in {league} league",
-            "how much is a {currency} worth",
-            "how much is a {currency} worth in {league}",
-            "how much is a {currency} worth in {league} league",
-            "how much is an {currency}",
-            "how much is an {currency} in {league}",
-            "how much is an {currency} in {league} league",
-            "how much is an {currency} worth",
-            "how much is an {currency} worth in {league}",
-            "how much is an {currency} worth in {league} league",
-            "how much is the {currency}",
-            "how much is the {currency} in {league}",
-            "how much is the {currency} in {league} league",
-            "how much is the {currency} worth",
-            "how much is the {currency} worth in {league}",
-            "how much is the {currency} worth in {league} league",
-            "how much is {quantity} {currency}",
-            "how much is {quantity} {currency} in {league}",
-            "how much is {quantity} {currency} in {league} league",
-            "how much is {quantity} {currency} worth",
-            "how much is {quantity} {currency} worth in {league}",
-            "how much is {quantity} {currency} worth in {league} league",
-            "price of a {currency}",
-            "price of a {currency} in {league}",
-            "price of a {currency} in {league} league",
-            "price of an {currency}",
-            "price of an {currency} in {league}",
-            "price of an {currency} in {league} league",
-            "price of the {currency}",
-            "price of the {currency} in {league}",
-            "price of the {currency} in {league} league",
-            "price of {quantity} {currency}",
-            "price of {quantity} {currency} in {league}",
-            "price of {quantity} {currency} in {league} league",
-            "tell me price of a {currency}",
-            "tell me price of a {currency} in {league}",
-            "tell me price of a {currency} in {league} league",
-            "tell me price of an {currency}",
-            "tell me price of an {currency} in {league}",
-            "tell me price of an {currency} in {league} league",
-            "tell me price of the {currency}",
-            "tell me price of the {currency} in {league}",
-            "tell me price of the {currency} in {league} league",
-            "tell me price of {quantity} {currency}",
-            "tell me price of {quantity} {currency} in {league}",
-            "tell me price of {quantity} {currency} in {league} league",
-            "tell me the price of a {currency}",
-            "tell me the price of a {currency} in {league}",
-            "tell me the price of a {currency} in {league} league",
-            "tell me the price of an {currency}",
-            "tell me the price of an {currency} in {league}",
-            "tell me the price of an {currency} in {league} league",
-            "tell me the price of the {currency}",
-            "tell me the price of the {currency} in {league}",
-            "tell me the price of the {currency} in {league} league",
-            "tell me the price of {quantity} {currency}",
-            "tell me the price of {quantity} {currency} in {league}",
-            "tell me the price of {quantity} {currency} in {league} league",
-            "the price of a {currency}",
-            "the price of a {currency} in {league}",
-            "the price of a {currency} in {league} league",
-            "the price of an {currency}",
-            "the price of an {currency} in {league}",
-            "the price of an {currency} in {league} league",
-            "the price of the {currency}",
-            "the price of the {currency} in {league}",
-            "the price of the {currency} in {league} league",
-            "the price of {quantity} {currency}",
-            "the price of {quantity} {currency} in {league}",
-            "the price of {quantity} {currency} in {league} league",
-            "what is price of a {currency}",
-            "what is price of a {currency} in {league}",
-            "what is price of a {currency} in {league} league",
-            "what is price of an {currency}",
-            "what is price of an {currency} in {league}",
-            "what is price of an {currency} in {league} league",
-            "what is price of the {currency}",
-            "what is price of the {currency} in {league}",
-            "what is price of the {currency} in {league} league",
-            "what is price of {quantity} {currency}",
-            "what is price of {quantity} {currency} in {league}",
-            "what is price of {quantity} {currency} in {league} league",
-            "what is the price of a {currency}",
-            "what is the price of a {currency} in {league}",
-            "what is the price of a {currency} in {league} league",
-            "what is the price of an {currency}",
-            "what is the price of an {currency} in {league}",
-            "what is the price of an {currency} in {league} league",
-            "what is the price of the {currency}",
-            "what is the price of the {currency} in {league}",
-            "what is the price of the {currency} in {league} league",
-            "what is the price of {quantity} {currency}",
-            "what is the price of {quantity} {currency} in {league}",
-            "what is the price of {quantity} {currency} in {league} league",
-            "{currency}",
-            "{currency} in {league}",
-            "{currency} in {league} league",
-            "{currency} price",
-            "{currency} price in {league}",
-            "{currency} price in {league} league",
-            "{quantity} {currency}",
-            "{quantity} {currency} in {league}",
-            "{quantity} {currency} in {league} league",
-            "{quantity} {currency} price",
-            "{quantity} {currency} price in {league}",
-            "{quantity} {currency} price in {league} league"
-          ]
-        }
-      ],
-      "types": [{
-          "name": "QUEST",
-          "values": [{
-              "name": {
-                "value": "Einhar's Hunt"
-              }
-            },
-            {
-              "name": {
-                "value": "Einhar's Bestiary"
-              }
-            },
-            {
-              "name": {
-                "value": "Einhar's Menagerie"
-              }
-            },
-            {
-              "name": {
-                "value": "The Caged Brute"
-              }
-            },
-            {
-              "name": {
-                "value": "Mercy Mission"
-              }
-            },
-            {
-              "name": {
-                "value": "Breaking Some Eggs"
-              }
-            },
-            {
-              "name": {
-                "value": "The Siren's Cadence"
-              }
-            },
-            {
-              "name": {
-                "value": "Enemy at the Gate"
-              }
-            },
-            {
-              "name": {
-                "value": "A Dirty Job"
-              }
-            },
-            {
-              "name": {
-                "value": "The Dweller of the Deep"
-              }
-            },
-            {
-              "name": {
-                "value": "The Marooned Mariner"
-              }
-            },
-            {
-              "name": {
-                "value": "The Way Forward"
-              }
-            },
-            {
-              "name": {
-                "value": "Intruders in Black"
-              }
-            },
-            {
-              "name": {
-                "value": "Through Sacred Ground"
-              }
-            },
-            {
-              "name": {
-                "value": "The Great White Beast"
-              }
-            },
-            {
-              "name": {
-                "value": "Sharp and Cruel"
-              }
-            },
-            {
-              "name": {
-                "value": "Deal with the Bandits"
-              }
-            },
-            {
-              "name": {
-                "value": "The Ribbon Spool"
-              }
-            },
-            {
-              "name": {
-                "value": "Sever the Right Hand"
-              }
-            },
-            {
-              "name": {
-                "value": "Lost in Love"
-              }
-            },
-            {
-              "name": {
-                "value": "A Fixture of Fate"
-              }
-            },
-            {
-              "name": {
-                "value": "Piety's Pets"
-              }
-            },
-            {
-              "name": {
-                "value": "Victario's Secrets"
-              }
-            },
-            {
-              "name": {
-                "value": "A Swig of Hope"
-              }
-            },
-            {
-              "name": {
-                "value": "Fiery Dust"
-              }
-            },
-            {
-              "name": {
-                "value": "Breaking the Seal"
-              }
-            },
-            {
-              "name": {
-                "value": "An Indomitable Spirit"
-              }
-            },
-            {
-              "name": {
-                "value": "The Eternal Nightmare"
-              }
-            },
-            {
-              "name": {
-                "value": "The King's Feast"
-              }
-            },
-            {
-              "name": {
-                "value": "In Service to Science"
-              }
-            },
-            {
-              "name": {
-                "value": "Kitava's Torments"
-              }
-            },
-            {
-              "name": {
-                "value": "Death to Purity"
-              }
-            },
-            {
-              "name": {
-                "value": "The Key to Freedom"
-              }
-            },
-            {
-              "name": {
-                "value": "Return to Oriath"
-              }
-            },
-            {
-              "name": {
-                "value": "Bestel's Epic"
-              }
-            },
-            {
-              "name": {
-                "value": "Fallen from Grace"
-              }
-            },
-            {
-              "name": {
-                "value": "The Cloven One"
-              }
-            },
-            {
-              "name": {
-                "value": "The Father of War"
-              }
-            },
-            {
-              "name": {
-                "value": "The Puppet Mistress"
-              }
-            },
-            {
-              "name": {
-                "value": "Essence of Umbra"
-              }
-            },
-            {
-              "name": {
-                "value": "In Memory of Greust"
-              }
-            },
-            {
-              "name": {
-                "value": "The Silver Locket"
-              }
-            },
-            {
-              "name": {
-                "value": "Kishara's Star"
-              }
-            },
-            {
-              "name": {
-                "value": "Queen of Despair"
-              }
-            },
-            {
-              "name": {
-                "value": "The Master of a Million Faces"
-              }
-            },
-            {
-              "name": {
-                "value": "Essence of the Artist"
-              }
-            },
-            {
-              "name": {
-                "value": "Web of Secrets"
-              }
-            },
-            {
-              "name": {
-                "value": "Love is Dead"
-              }
-            },
-            {
-              "name": {
-                "value": "Reflection of Terror"
-              }
-            },
-            {
-              "name": {
-                "value": "The Gemling Legion"
-              }
-            },
-            {
-              "name": {
-                "value": "The Wings of Vastiri"
-              }
-            },
-            {
-              "name": {
-                "value": "Essence of the Hag"
-              }
-            },
-            {
-              "name": {
-                "value": "The Storm Blade"
-              }
-            },
-            {
-              "name": {
-                "value": "Fastis Fortuna"
-              }
-            },
-            {
-              "name": {
-                "value": "Queen of the Sands"
-              }
-            },
-            {
-              "name": {
-                "value": "The Ruler of Highgate"
-              }
-            },
-            {
-              "name": {
-                "value": "Safe Passage"
-              }
-            },
-            {
-              "name": {
-                "value": "Death and Rebirth"
-              }
-            },
-            {
-              "name": {
-                "value": "No Love for Old Ghosts"
-              }
-            },
-            {
-              "name": {
-                "value": "An End to Hunger"
-              }
-            },
-            {
-              "name": {
-                "value": "Vilenta's Vengeance"
-              }
-            },
-            {
-              "name": {
-                "value": "Map to Tsoatha"
-              }
-            },
-            {
-              "name": {
-                "value": "From Nightmare into Dream"
-              }
-            }
-          ]
+        "dialog": {
+            "intents": [{
+                    "name": "QuestRewardIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                        "name": "quest",
+                        "type": "QUEST",
+                        "confirmationRequired": false,
+                        "elicitationRequired": true,
+                        "prompts": {
+                            "elicitation": "Elicit.Slot.1442461833889.366650732166"
+                        }
+                    }]
+                },
+                {
+                    "name": "CurrencyPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                        "name": "currency",
+                        "type": "CURRENCY",
+                        "confirmationRequired": false,
+                        "elicitationRequired": true,
+                        "prompts": {
+                            "elicitation": "Elicit.Slot.765265999649.1439525464611"
+                        }
+                    }]
+                },
+                {
+                    "name": "ItemPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "item",
+                            "type": "UNIQUE_ACCESSORY",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.893117663670.1002168224391"
+                            }
+                        }
+                    ]
+                }
+            ]
         },
-        {
-          "name": "CURRENCY",
-          "values": [{
-              "id": "mir",
-              "name": {
-                "value": "Mirror of Kalandra",
-                "synonyms": [
-                  "Mirror",
-                  "Kalandra"
+        "prompts": [{
+                "id": "Elicit.Slot.1442461833889.366650732166",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "Which quest are you looking for?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What is the name of the quest?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What quest are you looking for?"
+                    }
                 ]
-              }
             },
             {
-              "id": "mirror-shard",
-              "name": {
-                "value": "Mirror Shard"
-              }
-            },
-            {
-              "id": "exa",
-              "name": {
-                "value": "Exalted Orb",
-                "synonyms": [
-                  "Exalted",
-                  "Exalt",
-                  "Exalts"
+                "id": "Elicit.Slot.765265999649.1439525464611",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What currency do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What currency do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What currency are you looking for?"
+                    }
                 ]
-              }
             },
             {
-              "id": "exalted-shard",
-              "name": {
-                "value": "Exalted Shard"
-              }
-            },
-            {
-              "id": "chaos",
-              "name": {
-                "value": "Chaos Orb",
-                "synonyms": [
-                  "Chaos"
+                "id": "Elicit.Slot.893117663670.1002168224391",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
                 ]
-              }
-            },
-            {
-              "id": "ancient-orb",
-              "name": {
-                "value": "Ancient Orb",
-                "synonyms": [
-                  "Ancient"
-                ]
-              }
-            },
-            {
-              "id": "harbingers-orb",
-              "name": {
-                "value": "Harbinger's Orb",
-                "synonyms": [
-                  "Harbinger",
-                  "Harbinger's"
-                ]
-              }
-            },
-            {
-              "id": "divine",
-              "name": {
-                "value": "Divine Orb",
-                "synonyms": [
-                  "Divine",
-                  "Divines"
-                ]
-              }
-            },
-            {
-              "id": "orb-of-annulment",
-              "name": {
-                "value": "Orb of Annulment",
-                "synonyms": [
-                  "Annulment"
-                ]
-              }
-            },
-            {
-              "id": "master-sextant",
-              "name": {
-                "value": "Master Cartographer's Sextant",
-                "synonyms": [
-                  "Master",
-                  "Master Sextant"
-                ]
-              }
-            },
-            {
-              "id": "orb-of-horizons",
-              "name": {
-                "value": "Orb of Horizons",
-                "synonyms": [
-                  "Horizons"
-                ]
-              }
-            },
-            {
-              "id": "journeyman-sextant",
-              "name": {
-                "value": "Journeyman Cartographer's Sextant",
-                "synonyms": [
-                  "Journeyman",
-                  "Journeyman Sextant"
-                ]
-              }
-            },
-            {
-              "id": "apprentice-sextant",
-              "name": {
-                "value": "Apprentice Cartographer's Sextant",
-                "synonyms": [
-                  "Apprentice",
-                  "Apprentice Sextant"
-                ]
-              }
-            },
-            {
-              "id": "engineers-orb",
-              "name": {
-                "value": "Engineer's Orb",
-                "synonyms": [
-                  "Engineer",
-                  "Engineer's"
-                ]
-              }
-            },
-            {
-              "id": "vaal",
-              "name": {
-                "value": "Vaal Orb",
-                "synonyms": [
-                  "Vaal"
-                ]
-              }
-            },
-            {
-              "id": "blessing-chayula",
-              "name": {
-                "value": "Blessing of Chayula"
-              }
-            },
-            {
-              "id": "blessing-uul-netol",
-              "name": {
-                "value": "Blessing of Uul-Netol"
-              }
-            },
-            {
-              "id": "blessing-esh",
-              "name": {
-                "value": "Blessing of Esh",
-                "synonyms": [
-                  "Esh's Blessing"
-                ]
-              }
-            },
-            {
-              "id": "blessing-xoph",
-              "name": {
-                "value": "Blessing of Xoph",
-                "synonyms": [
-                  "Xoph's Blessing"
-                ]
-              }
-            },
-            {
-              "id": "blessing-tul",
-              "name": {
-                "value": "Blessing of Tul",
-                "synonyms": [
-                  "Tul's Blessing"
-                ]
-              }
-            },
-            {
-              "id": "splinter-chayula",
-              "name": {
-                "value": "Splinter of Chayula",
-                "synonyms": [
-                  "Chayula Splinter"
-                ]
-              }
-            },
-            {
-              "id": "splinter-xoph",
-              "name": {
-                "value": "Splinter of Xoph",
-                "synonyms": [
-                  "Xoph Splinter"
-                ]
-              }
-            },
-            {
-              "id": "splinter-esh",
-              "name": {
-                "value": "Splinter of Esh",
-                "synonyms": [
-                  "Esh Splinter"
-                ]
-              }
-            },
-            {
-              "id": "splinter-uul",
-              "name": {
-                "value": "Splinter of Uul-Netol",
-                "synonyms": [
-                  "Uul-Netol Splinter"
-                ]
-              }
-            },
-            {
-              "id": "splinter-tul",
-              "name": {
-                "value": "Splinter of Tul",
-                "synonyms": [
-                  "Tul Splinter"
-                ]
-              }
-            },
-            {
-              "id": "regal",
-              "name": {
-                "value": "Regal Orb",
-                "synonyms": [
-                  "Regal"
-                ]
-              }
-            },
-            {
-              "id": "gcp",
-              "name": {
-                "value": "Gemcutter's Prism",
-                "synonyms": [
-                  "Gemcutter",
-                  "Gemcutter's"
-                ]
-              }
-            },
-            {
-              "id": "regret",
-              "name": {
-                "value": "Orb of Regret",
-                "synonyms": [
-                  "Regret",
-                  "Regrets"
-                ]
-              }
-            },
-            {
-              "id": "chisel",
-              "name": {
-                "value": "Cartographer's Chisel",
-                "synonyms": [
-                  "Chisel",
-                  "Chisels"
-                ]
-              }
-            },
-            {
-              "id": "fuse",
-              "name": {
-                "value": "Orb of Fusing",
-                "synonyms": [
-                  "Fuse",
-                  "Fusing",
-                  "Fusings"
-                ]
-              }
-            },
-            {
-              "id": "alch",
-              "name": {
-                "value": "Orb of Alchemy",
-                "synonyms": [
-                  "Alchemy",
-                  "Alchemies"
-                ]
-              }
-            },
-            {
-              "id": "scour",
-              "name": {
-                "value": "Orb of Scouring",
-                "synonyms": [
-                  "Scouring",
-                  "Scourings"
-                ]
-              }
-            },
-            {
-              "id": "blessed",
-              "name": {
-                "value": "Blessed Orb"
-              }
-            },
-            {
-              "id": "silver",
-              "name": {
-                "value": "Silver Coin"
-              }
-            },
-            {
-              "id": "orb-of-binding",
-              "name": {
-                "value": "Orb of Binding"
-              }
-            },
-            {
-              "id": "ba",
-              "name": {
-                "value": "Glassblower's Bauble",
-                "synonyms": [
-                  "Glassblower",
-                  "Glassblower's",
-                  "Bauble"
-                ]
-              }
-            },
-            {
-              "id": "chrom",
-              "name": {
-                "value": "Chromatic Orb",
-                "synonyms": [
-                  "Chrom",
-                  "Chrome",
-                  "Chromatic",
-                  "Chromes"
-                ]
-              }
-            },
-            {
-              "id": "jew",
-              "name": {
-                "value": "Jeweller's Orb",
-                "synonyms": [
-                  "Jeweller",
-                  "Jeweller's",
-                  "Jewellers"
-                ]
-              }
-            },
-            {
-              "id": "alt",
-              "name": {
-                "value": "Orb of Alteration",
-                "synonyms": [
-                  "Alteration",
-                  "Alteration Orb"
-                ]
-              }
-            },
-            {
-              "id": "chance",
-              "name": {
-                "value": "Orb of Chance",
-                "synonyms": [
-                  "Chance",
-                  "Chance Orb"
-                ]
-              }
-            },
-            {
-              "id": "aug",
-              "name": {
-                "value": "Orb of Augmentation",
-                "synonyms": [
-                  "Augmentation",
-                  "Augmentation Orb"
-                ]
-              }
-            },
-            {
-              "id": "tra",
-              "name": {
-                "value": "Orb of Transmutation",
-                "synonyms": [
-                  "Transmutation",
-                  "Transmutation Orb"
-                ]
-              }
-            },
-            {
-              "id": "whe",
-              "name": {
-                "value": "Blacksmith's Whetstone",
-                "synonyms": [
-                  "Blacksmith",
-                  "Blacksmith's"
-                ]
-              }
-            },
-            {
-              "id": "scr",
-              "name": {
-                "value": "Armourer's Scrap",
-                "synonyms": [
-                  "Armourer",
-                  "Armourer's"
-                ]
-              }
-            },
-            {
-              "id": "p",
-              "name": {
-                "value": "Perandus Coin",
-                "synonyms": [
-                  "Perandus"
-                ]
-              }
-            },
-            {
-              "id": "port",
-              "name": {
-                "value": "Portal Scroll",
-                "synonyms": [
-                  "Portal"
-                ]
-              }
-            },
-            {
-              "id": "wis",
-              "name": {
-                "value": "Scroll of Wisdom",
-                "synonyms": [
-                  "Wisdom",
-                  "Wisdom Scroll"
-                ]
-              }
-            },
-            {
-              "id": "ete",
-              "name": {
-                "value": "Eternal Orb",
-                "synonyms": [
-                  "Eternal"
-                ]
-              }
-            },
-            {
-              "id": "annulment-shard",
-              "name": {
-                "value": "Annulment Shard"
-              }
-            },
-            {
-              "id": "binding-shard",
-              "name": {
-                "value": "Binding Shard"
-              }
-            },
-            {
-              "id": "horizon-shard",
-              "name": {
-                "value": "Horizon Shard"
-              }
-            },
-            {
-              "id": "harbingers-shard",
-              "name": {
-                "value": "Harbinger's Shard"
-              }
-            },
-            {
-              "id": "engineers-shard",
-              "name": {
-                "value": "Engineer's Shard"
-              }
-            },
-            {
-              "id": "ancient-shard",
-              "name": {
-                "value": "Ancient Shard"
-              }
-            },
-            {
-              "id": "chaos-shard",
-              "name": {
-                "value": "Chaos Shard"
-              }
-            },
-            {
-              "id": "regal-shard",
-              "name": {
-                "value": "Regal Shard"
-              }
-            },
-            {
-              "id": "dusk",
-              "name": {
-                "value": "Sacrifice at Dusk",
-                "synonyms": [
-                  "Dusk"
-                ]
-              }
-            },
-            {
-              "id": "mid",
-              "name": {
-                "value": "Sacrifice at Midnight",
-                "synonyms": [
-                  "Midnight"
-                ]
-              }
-            },
-            {
-              "id": "dawn",
-              "name": {
-                "value": "Sacrifice at Dawn",
-                "synonyms": [
-                  "Dawn"
-                ]
-              }
-            },
-            {
-              "id": "noon",
-              "name": {
-                "value": "Sacrifice at Noon",
-                "synonyms": [
-                  "Noon"
-                ]
-              }
-            },
-            {
-              "id": "grie",
-              "name": {
-                "value": "Mortal Grief",
-                "synonyms": [
-                  "Grief"
-                ]
-              }
-            },
-            {
-              "id": "rage",
-              "name": {
-                "value": "Mortal Rage",
-                "synonyms": [
-                  "Rage"
-                ]
-              }
-            },
-            {
-              "id": "hope",
-              "name": {
-                "value": "Mortal Hope",
-                "synonyms": [
-                  "Hope"
-                ]
-              }
-            },
-            {
-              "id": "ign",
-              "name": {
-                "value": "Mortal Ignorance",
-                "synonyms": [
-                  "Ignorance"
-                ]
-              }
-            },
-            {
-              "id": "eber",
-              "name": {
-                "value": "Eber's Key"
-              }
-            },
-            {
-              "id": "yriel",
-              "name": {
-                "value": "Yriel's Key"
-              }
-            },
-            {
-              "id": "inya",
-              "name": {
-                "value": "Inya's Key"
-              }
-            },
-            {
-              "id": "volkuur",
-              "name": {
-                "value": "Volkuur's Key"
-              }
-            },
-            {
-              "id": "hydra",
-              "name": {
-                "value": "Fragment of the Hydra",
-                "synonyms": [
-                  "Hydra",
-                  "Hydra Fragment"
-                ]
-              }
-            },
-            {
-              "id": "phoenix",
-              "name": {
-                "value": "Fragment of the Phoenix",
-                "synonyms": [
-                  "Phoenix",
-                  "Phoenix Fragment"
-                ]
-              }
-            },
-            {
-              "id": "minot",
-              "name": {
-                "value": "Fragment of the Minotaur",
-                "synonyms": [
-                  "Minotaur",
-                  "Minotaur Fragment"
-                ]
-              }
-            },
-            {
-              "id": "chimer",
-              "name": {
-                "value": "Fragment of the Chimera",
-                "synonyms": [
-                  "Chimera",
-                  "Chimera Fragment"
-                ]
-              }
-            },
-            {
-              "id": "sacrifice-set",
-              "name": {
-                "value": "Sacrifice Set"
-              }
-            },
-            {
-              "id": "mortal-set",
-              "name": {
-                "value": "Mortal Set"
-              }
-            },
-            {
-              "id": "pale-court-set",
-              "name": {
-                "value": "Pale Court Set"
-              }
-            },
-            {
-              "id": "shaper-set",
-              "name": {
-                "value": "Shaper Set"
-              }
-            },
-            {
-              "id": "xophs-breachstone",
-              "name": {
-                "value": "Xoph's Breachstone"
-              }
-            },
-            {
-              "id": "tuls-breachstone",
-              "name": {
-                "value": "Tul's Breachstone"
-              }
-            },
-            {
-              "id": "eshs-breachstone",
-              "name": {
-                "value": "Esh's Breachstone"
-              }
-            },
-            {
-              "id": "uul-breachstone",
-              "name": {
-                "value": "Uul-Netol's Breachstone"
-              }
-            },
-            {
-              "id": "chayulas-breachstone",
-              "name": {
-                "value": "Chayula's Breachstone"
-              }
-            },
-            {
-              "id": "offer",
-              "name": {
-                "value": "Offering to the Goddess",
-                "synonyms": [
-                  "Offering"
-                ]
-              }
-            },
-            {
-              "id": "divine-vessel",
-              "name": {
-                "value": "Divine Vessel",
-                "synonyms": [
-                  "Vessel"
-                ]
-              }
-            },
-            {
-              "id": "ancient-reliquary-key",
-              "name": {
-                "value": "Ancient Reliquary Key"
-              }
             }
-          ]
-        },
-        {
-          "name": "LEAGUE",
-          "values": [{
-              "id": "Hardcore",
-              "name": {
-                "value": "Hardcore"
-              }
-            },
-            {
-              "id": "Standard",
-              "name": {
-                "value": "Standard"
-              }
-            },
-            {
-              "id": "tmphardcore",
-              "name": {
-                "value": "Hardcore Incursion",
-                "synonyms": [
-                  "Challenge Hardcore",
-                  "Current Hardcore"
-                ]
-              }
-            },
-            {
-              "id": "tmpstandard",
-              "name": {
-                "value": "Incursion",
-                "synonyms": [
-                  "Current",
-                  "Challenge"
-                ]
-              }
-            }
-          ]
-        }
-      ]
-    },
-    "dialog": {
-      "intents": [{
-          "name": "QuestRewardIntent",
-          "confirmationRequired": false,
-          "prompts": {},
-          "slots": [{
-            "name": "quest",
-            "type": "QUEST",
-            "confirmationRequired": false,
-            "elicitationRequired": true,
-            "prompts": {
-              "elicitation": "Elicit.Slot.1442461833889.366650732166"
-            }
-          }]
-        },
-        {
-          "name": "CurrencyPriceCheckIntent",
-          "confirmationRequired": false,
-          "prompts": {},
-          "slots": [{
-            "name": "currency",
-            "type": "CURRENCY",
-            "confirmationRequired": false,
-            "elicitationRequired": true,
-            "prompts": {
-              "elicitation": "Elicit.Slot.765265999649.1439525464611"
-            }
-          }]
-        }
-      ]
-    },
-    "prompts": [{
-        "id": "Elicit.Slot.1442461833889.366650732166",
-        "variations": [{
-            "type": "PlainText",
-            "value": "Which quest are you looking for?"
-          },
-          {
-            "type": "PlainText",
-            "value": "What is the name of the quest?"
-          },
-          {
-            "type": "PlainText",
-            "value": "What quest are you looking for?"
-          }
         ]
-      },
-      {
-        "id": "Elicit.Slot.765265999649.1439525464611",
-        "variations": [{
-            "type": "PlainText",
-            "value": "What currency do you want to know the price of?"
-          },
-          {
-            "type": "PlainText",
-            "value": "What currency do you want?"
-          },
-          {
-            "type": "PlainText",
-            "value": "What currency are you looking for?"
-          }
-        ]
-      }
-    ]
-  }
+    }
 }

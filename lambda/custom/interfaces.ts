@@ -1,5 +1,5 @@
 import { Slot, slu, SlotConfirmationStatus } from "ask-sdk-model";
-import { POENinjaClient } from "./api/POENinjaClient";
+import { POENinjaClient } from "./api";
 
 export interface RequestAttributes {
     /**

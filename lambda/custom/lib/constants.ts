@@ -12,7 +12,8 @@ export enum IntentTypes {
     Fallback = "AMAZON.FallbackIntent",
 
     QuestReward = "QuestRewardIntent",
-    CurrencyPriceCheckIntent = "CurrencyPriceCheckIntent",
+    CurrencyPriceCheck = "CurrencyPriceCheckIntent",
+    ItemPriceCheck = "ItemPriceCheckIntent",
 }
 
 export enum SlotTypes {
@@ -20,6 +21,7 @@ export enum SlotTypes {
     Quantity = "quantity",
     Currency = "currency",
     League = "league",
+    Item = "item",
 }
 
 export enum ErrorTypes {
@@ -39,8 +41,10 @@ export enum Strings {
     OR_MSG = "OR_MSG",
     CHECKING_PRICE_OF_MSG = "CHECKING_PRICE_OF_MSG",
     PRICE_OF_IS_MSG = "PRICE_OF_IS_MSG",
+    PRICE_OF_IS_EXALTED_MSG = "PRICE_OF_IS_EXALTED_MSG",
     ERROR_NOT_ENOUGH_DATA_MSG = "ERROR_NOT_ENOUGH_DATA_MSG",
     ERROR_CURRENCY_NOT_FOUND_MSG = "ERROR_CURRENCY_NOT_FOUND_MSG",
+    ERROR_ITEM_NOT_FOUND_MSG = "ERROR_ITEM_NOT_FOUND_MSG",
     ERROR_API_MSG = "ERROR_API_MSG",
     QUEST_REWARD_MSG = "QUEST_REWARD_MSG",
     QUEST_REWARDS = "QUEST_REWARDS",

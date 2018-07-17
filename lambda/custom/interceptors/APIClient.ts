@@ -1,6 +1,6 @@
 import { RequestInterceptor } from "ask-sdk-core";
 import { RequestAttributes } from "../interfaces";
-import { POENinjaClient } from "../api/POENinjaClient";
+import { POENinjaClient } from "../api";
 
 /**
  * Adds the poe.ninja api client to the RequestAttributes.

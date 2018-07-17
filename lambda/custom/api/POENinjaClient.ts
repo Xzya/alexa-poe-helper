@@ -1,5 +1,5 @@
 import { JSONRequest } from "./HttpHelpers";
-import { CurrencyRequest, CurrencyResponse } from "./interfaces";
+import { CurrencyRequest, CurrencyResponse, ItemRequest, ItemResponse } from "./interfaces";
 
 export interface IPOENinjaClientSettings {
     baseUrl: string;
@@ -19,11 +19,21 @@ export class POENinjaClient {
         this.settings = defaultSettings;
     }
 
-    currency(req: CurrencyRequest) {
+    currencies(req: CurrencyRequest) {
         return JSONRequest<CurrencyResponse>({
             method: "GET",
             baseUrl: this.settings.baseUrl,
             uri: "/api/data/currencyoverview",
+            qs: req,
+            gzip: true,
+        });
+    }
+
+    items(req: ItemRequest) {
+        return JSONRequest<ItemResponse>({
+            method: "GET",
+            baseUrl: this.settings.baseUrl,
+            uri: "/api/data/itemoverview",
             qs: req,
             gzip: true,
         });

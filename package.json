@@ -9,7 +9,8 @@
     "deploy": "npm run build && ask deploy",
     "deploy:lambda": "npm run build && ask deploy --target lambda",
     "deploy:local": "ask deploy --target skill --profile local",
-    "start": "nodemon"
+    "start": "nodemon",
+    "generate-item-names": "ts-node lambda/tools/generateItemNames.ts"
   },
   "author": "Mihail Cristian Dumitru",
   "license": "MIT",

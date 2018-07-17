@@ -13,7 +13,7 @@ export enum CurrencyRequestTypes {
 export interface CurrencyRequest {
     league: LeagueTypes,
     type: CurrencyRequestTypes,
-    date?: string;
+    date: string;
 }
 
 export interface CurrencyResponse {
@@ -54,4 +54,61 @@ export interface CurrencyDetailsEntity {
     icon: string;
     name: string;
     poeTradeId: number;
+}
+
+export enum ItemRequestTypes {
+    Essence = "Essence",
+    DivinationCard = "DivinationCard",
+    UniqueMap = "UniqueMap",
+    Prophecy = "Prophecy",
+    SkillGem = "SkillGem",
+    HelmetEnchant = "HelmetEnchant",
+    Map = "Map",
+    UniqueJewel = "UniqueJewel",
+    UniqueFlask = "UniqueFlask",
+    UniqueWeapon = "UniqueWeapon",
+    UniqueArmour = "UniqueArmour",
+    UniqueAccessory = "UniqueAccessory",
+}
+
+export interface ItemRequest {
+    league: LeagueTypes,
+    type: ItemRequestTypes,
+    date: string;
+}
+
+export interface ItemResponse {
+    lines: ItemEntity[];
+}
+
+export interface ItemEntity {
+    id: number;
+    name: string;
+    icon: string;
+    mapTier: number;
+    levelRequired: number;
+    baseType: string;
+    stackSize: number;
+    variant?: string;
+    prophecyText?: string;
+    artFilename?: string;
+    links: number;
+    itemClass: number;
+    sparkline: SparkLine;
+    lowConfidenceSparkline: SparkLine;
+    implicitModifiers: ModifierEntity[];
+    explicitModifiers: ModifierEntity[];
+    flavourText: string;
+    corrupted: boolean;
+    gemLevel: number;
+    gemQuality: number;
+    itemType: string;
+    chaosValue: number;
+    exaltedValue: number;
+    count: number;
+}
+
+export interface ModifierEntity {
+    text: string;
+    optional: boolean;
 }
