@@ -13,7 +13,7 @@ export enum IntentTypes {
 
     QuestReward = "QuestRewardIntent",
     CurrencyPriceCheck = "CurrencyPriceCheckIntent",
-    ItemPriceCheck = "ItemPriceCheckIntent",
+    UniqueAccessoryPriceCheck = "UniqueAccessoryPriceCheckIntent",
     UniqueArmourPriceCheck = "UniqueArmourPriceCheckIntent",
 }
 
@@ -22,7 +22,7 @@ export enum SlotTypes {
     Quantity = "quantity",
     Currency = "currency",
     League = "league",
-    Item = "item",
+    UniqueAccessory = "uniqueaccessory",
     UniqueArmour = "uniquearmour",
     Links = "links",
 }

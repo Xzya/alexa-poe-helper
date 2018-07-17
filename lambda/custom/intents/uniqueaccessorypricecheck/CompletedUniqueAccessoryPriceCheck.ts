@@ -11,13 +11,13 @@ function filterLowConfidence(value: ItemEntity) {
 
 export const Completed: RequestHandler = {
     canHandle(handlerInput) {
-        return IsIntentWithCompleteDialog(handlerInput, IntentTypes.ItemPriceCheck);
+        return IsIntentWithCompleteDialog(handlerInput, IntentTypes.UniqueAccessoryPriceCheck);
     },
     async handle(handlerInput) {
         const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
         const { t, slots, apiClient } = GetRequestAttributes(handlerInput);
 
-        const item = slots[SlotTypes.Item];
+        const item = slots[SlotTypes.UniqueAccessory];
 
         if (item && item.isMatch && !item.isAmbiguous) {
             // get the league
@@ -81,6 +81,6 @@ export const Completed: RequestHandler = {
             }
         }
 
-        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.ItemPriceCheck} without a slot.`, ErrorTypes.Unexpected);
+        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.UniqueAccessoryPriceCheck} without a slot.`, ErrorTypes.Unexpected);
     }
 };

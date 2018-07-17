@@ -4,7 +4,7 @@ import * as Errors from "./errors";
 import * as Interceptors from "./interceptors";
 import * as QuestRewardIntents from "./intents/questrewards";
 import * as CurrencyPriceCheckIntents from "./intents/currencypricecheck";
-import * as ItemPriceCheckIntents from "./intents/itempricecheck";
+import * as UniqueAccessoryPriceCheckIntents from "./intents/uniqueaccessorypricecheck";
 import * as UniqueArmourPriceCheckIntents from "./intents/uniquearmourpricecheck";
 
 export const handler = Alexa.SkillBuilders.custom()
@@ -27,9 +27,9 @@ export const handler = Alexa.SkillBuilders.custom()
         CurrencyPriceCheckIntents.InProgress,
         CurrencyPriceCheckIntents.Completed,
 
-        // Item price check
-        ItemPriceCheckIntents.InProgress,
-        ItemPriceCheckIntents.Completed,
+        // Unique accessory price check
+        UniqueAccessoryPriceCheckIntents.InProgress,
+        UniqueAccessoryPriceCheckIntents.Completed,
 
         // Unique armour price check
         UniqueArmourPriceCheckIntents.InProgress,

@@ -5,7 +5,7 @@ import { SlotTypes, IntentTypes, Strings } from "../../lib/constants";
 
 export const InProgress: RequestHandler = {
     canHandle(handlerInput) {
-        return IsIntentWithIncompleteDialog(handlerInput, IntentTypes.ItemPriceCheck);
+        return IsIntentWithIncompleteDialog(handlerInput, IntentTypes.UniqueAccessoryPriceCheck);
     },
     handle(handlerInput) {
         const request = handlerInput.requestEnvelope.request as IntentRequest;
@@ -13,7 +13,7 @@ export const InProgress: RequestHandler = {
 
         const { t, slots } = GetRequestAttributes(handlerInput);
 
-        const slot = slots[SlotTypes.Item];
+        const slot = slots[SlotTypes.UniqueAccessory];
 
         // if we have a match but it's ambiguous
         // ask for clarification
