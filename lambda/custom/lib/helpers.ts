@@ -2,7 +2,7 @@ import { HandlerInput } from "ask-sdk-core";
 import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes } from "../interfaces";
 import { RequestTypes, ErrorTypes, Orbs, Fragments } from "./constants";
-import { UniqueAccessories } from "./items";
+import { UniqueAccessories, UniqueArmours } from "./items";
 
 /**
  * Checks if the request matches any of the given intents.
@@ -356,6 +356,15 @@ export function IsFragment(str: string): boolean {
  */
 export function IsUniqueAccessory(str: string): boolean {
     return UniqueAccessories.indexOf(str) !== -1;
+}
+
+/**
+ * Checks if the given string matches a unique armour.
+ * 
+ * @param str 
+ */
+export function IsUniqueArmour(str: string): boolean {
+    return UniqueArmours.indexOf(str) !== -1;
 }
 
 /**

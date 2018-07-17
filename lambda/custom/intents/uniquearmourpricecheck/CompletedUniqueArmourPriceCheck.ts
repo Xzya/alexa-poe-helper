@@ -11,13 +11,13 @@ function filterLowConfidence(value: ItemEntity) {
 
 export const Completed: RequestHandler = {
     canHandle(handlerInput) {
-        return IsIntentWithCompleteDialog(handlerInput, IntentTypes.ItemPriceCheck);
+        return IsIntentWithCompleteDialog(handlerInput, IntentTypes.UniqueArmourPriceCheck);
     },
     async handle(handlerInput) {
         const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
         const { t, slots, apiClient } = GetRequestAttributes(handlerInput);
 
-        const item = slots[SlotTypes.Item];
+        const item = slots[SlotTypes.UniqueArmour];
 
         if (item && item.isMatch && !item.isAmbiguous) {
             // get the league
@@ -31,6 +31,17 @@ export const Completed: RequestHandler = {
                 league = LeagueTypes.Challenge;
             }
 
+            // get the links
+            let links = 0;
+
+            const linksSlot = slots[SlotTypes.Links];
+            if (linksSlot && linksSlot.isMatch) {
+                links = parseFloat(linksSlot.value);
+                if (links < 5 || links > 6 || isNaN(links)) {
+                    links = 0;
+                }
+            }
+
             try {
                 const [, res] = await Promise.all([
                     // send progressive response
@@ -39,7 +50,7 @@ export const Completed: RequestHandler = {
                     // get the item prices
                     apiClient.items({
                         league: league,
-                        type: ItemRequestTypes.UniqueAccessory,
+                        type: ItemRequestTypes.UniqueArmour,
                         date: CurrentDate(),
                     }),
                 ]);
@@ -49,24 +60,33 @@ export const Completed: RequestHandler = {
                     res.lines = res.lines.filter(filterLowConfidence);
                 }
 
+                // find all items with a matching name
+                res.lines = res.lines.filter((i) => i.name === item.resolved);
+
+                // sort the item by price, cheaper first
+                res.lines = res.lines.sort((a, b) => a.chaosValue - b.chaosValue);
+
                 // search for the item that the user requested
                 for (let itemDetails of res.lines) {
-                    if (itemDetails.name === item.resolved) {
+                    // if the user didn't mention the links, we take the first item
+                    // if he did mention the links, then we need to check and make sure it matches
+                    if (links === 0 || links === itemDetails.links) {
                         const exaltedValue = itemDetails.exaltedValue;
                         const chaosValue = itemDetails.chaosValue;
+                        const linkedString = links !== 0 ? t(Strings.LINKED, links) : 1;
 
                         // only include the exalted price equivalent if it's higher than 1
                         if (exaltedValue >= 1) {
                             return handlerInput.responseBuilder
                                 // TODO: - add plurals
-                                .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, 1, item.resolved, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
+                                .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, linkedString, item.resolved, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
                                 .getResponse();
                         }
 
                         // chaos only price
                         return handlerInput.responseBuilder
                             // TODO: - add plurals
-                            .speak(t(Strings.PRICE_OF_IS_MSG, 1, item.resolved, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
+                            .speak(t(Strings.PRICE_OF_IS_MSG, linkedString, item.resolved, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
                             .getResponse();
                     }
                 }
@@ -77,10 +97,10 @@ export const Completed: RequestHandler = {
                     .getResponse();
 
             } catch (err) {
-                throw CreateError(`Got error while getting item prices: ${err}`, ErrorTypes.API)
+                throw CreateError(`Got error while getting unique armour prices: ${err}`, ErrorTypes.API)
             }
         }
 
-        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.ItemPriceCheck} without a slot.`, ErrorTypes.Unexpected);
+        throw CreateError(`Got to the COMPLETED state of ${IntentTypes.UniqueArmourPriceCheck} without a slot.`, ErrorTypes.Unexpected);
     }
 };

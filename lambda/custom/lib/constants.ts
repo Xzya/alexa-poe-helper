@@ -14,6 +14,7 @@ export enum IntentTypes {
     QuestReward = "QuestRewardIntent",
     CurrencyPriceCheck = "CurrencyPriceCheckIntent",
     ItemPriceCheck = "ItemPriceCheckIntent",
+    UniqueArmourPriceCheck = "UniqueArmourPriceCheckIntent",
 }
 
 export enum SlotTypes {
@@ -22,6 +23,8 @@ export enum SlotTypes {
     Currency = "currency",
     League = "league",
     Item = "item",
+    UniqueArmour = "uniquearmour",
+    Links = "links",
 }
 
 export enum ErrorTypes {
@@ -42,6 +45,7 @@ export enum Strings {
     CHECKING_PRICE_OF_MSG = "CHECKING_PRICE_OF_MSG",
     PRICE_OF_IS_MSG = "PRICE_OF_IS_MSG",
     PRICE_OF_IS_EXALTED_MSG = "PRICE_OF_IS_EXALTED_MSG",
+    LINKED = "LINKED",
     ERROR_NOT_ENOUGH_DATA_MSG = "ERROR_NOT_ENOUGH_DATA_MSG",
     ERROR_CURRENCY_NOT_FOUND_MSG = "ERROR_CURRENCY_NOT_FOUND_MSG",
     ERROR_ITEM_NOT_FOUND_MSG = "ERROR_ITEM_NOT_FOUND_MSG",
