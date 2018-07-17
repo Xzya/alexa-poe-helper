@@ -1492,6 +1492,136 @@
                         "{uniqueweapon} price in {league}",
                         "{uniqueweapon} price in {league} league"
                     ]
+                },
+                {
+                    "name": "UniqueFlaskPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "uniqueflask",
+                            "type": "UNIQUE_FLASK",
+                            "samples": [
+                                "{uniqueflask} please",
+                                "{uniqueflask} in {league} please",
+                                "{uniqueflask} in {league} league please",
+                                "{uniqueflask} in {league} league",
+                                "{uniqueflask} in {league}",
+                                "{uniqueflask}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {uniqueflask}",
+                        "how much is a {uniqueflask} in {league}",
+                        "how much is a {uniqueflask} in {league} league",
+                        "how much is a {uniqueflask} worth",
+                        "how much is a {uniqueflask} worth in {league}",
+                        "how much is a {uniqueflask} worth in {league} league",
+                        "how much is an {uniqueflask}",
+                        "how much is an {uniqueflask} in {league}",
+                        "how much is an {uniqueflask} in {league} league",
+                        "how much is an {uniqueflask} worth",
+                        "how much is an {uniqueflask} worth in {league}",
+                        "how much is an {uniqueflask} worth in {league} league",
+                        "how much is the {uniqueflask}",
+                        "how much is the {uniqueflask} in {league}",
+                        "how much is the {uniqueflask} in {league} league",
+                        "how much is the {uniqueflask} worth",
+                        "how much is the {uniqueflask} worth in {league}",
+                        "how much is the {uniqueflask} worth in {league} league",
+                        "how much is {uniqueflask}",
+                        "how much is {uniqueflask} in {league}",
+                        "how much is {uniqueflask} in {league} league",
+                        "how much is {uniqueflask} worth",
+                        "how much is {uniqueflask} worth in {league}",
+                        "how much is {uniqueflask} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {uniqueflask}",
+                        "price of a {uniqueflask} in {league}",
+                        "price of a {uniqueflask} in {league} league",
+                        "price of an {uniqueflask}",
+                        "price of an {uniqueflask} in {league}",
+                        "price of an {uniqueflask} in {league} league",
+                        "price of the {uniqueflask}",
+                        "price of the {uniqueflask} in {league}",
+                        "price of the {uniqueflask} in {league} league",
+                        "price of {uniqueflask}",
+                        "price of {uniqueflask} in {league}",
+                        "price of {uniqueflask} in {league} league",
+                        "tell me price of a {uniqueflask}",
+                        "tell me price of a {uniqueflask} in {league}",
+                        "tell me price of a {uniqueflask} in {league} league",
+                        "tell me price of an {uniqueflask}",
+                        "tell me price of an {uniqueflask} in {league}",
+                        "tell me price of an {uniqueflask} in {league} league",
+                        "tell me price of the {uniqueflask}",
+                        "tell me price of the {uniqueflask} in {league}",
+                        "tell me price of the {uniqueflask} in {league} league",
+                        "tell me price of {uniqueflask}",
+                        "tell me price of {uniqueflask} in {league}",
+                        "tell me price of {uniqueflask} in {league} league",
+                        "tell me the price of a {uniqueflask}",
+                        "tell me the price of a {uniqueflask} in {league}",
+                        "tell me the price of a {uniqueflask} in {league} league",
+                        "tell me the price of an {uniqueflask}",
+                        "tell me the price of an {uniqueflask} in {league}",
+                        "tell me the price of an {uniqueflask} in {league} league",
+                        "tell me the price of the {uniqueflask}",
+                        "tell me the price of the {uniqueflask} in {league}",
+                        "tell me the price of the {uniqueflask} in {league} league",
+                        "tell me the price of {uniqueflask}",
+                        "tell me the price of {uniqueflask} in {league}",
+                        "tell me the price of {uniqueflask} in {league} league",
+                        "the price of a {uniqueflask}",
+                        "the price of a {uniqueflask} in {league}",
+                        "the price of a {uniqueflask} in {league} league",
+                        "the price of an {uniqueflask}",
+                        "the price of an {uniqueflask} in {league}",
+                        "the price of an {uniqueflask} in {league} league",
+                        "the price of the {uniqueflask}",
+                        "the price of the {uniqueflask} in {league}",
+                        "the price of the {uniqueflask} in {league} league",
+                        "the price of {uniqueflask}",
+                        "the price of {uniqueflask} in {league}",
+                        "the price of {uniqueflask} in {league} league",
+                        "what is price of a {uniqueflask}",
+                        "what is price of a {uniqueflask} in {league}",
+                        "what is price of a {uniqueflask} in {league} league",
+                        "what is price of an {uniqueflask}",
+                        "what is price of an {uniqueflask} in {league}",
+                        "what is price of an {uniqueflask} in {league} league",
+                        "what is price of the {uniqueflask}",
+                        "what is price of the {uniqueflask} in {league}",
+                        "what is price of the {uniqueflask} in {league} league",
+                        "what is price of {uniqueflask}",
+                        "what is price of {uniqueflask} in {league}",
+                        "what is price of {uniqueflask} in {league} league",
+                        "what is the price of a {uniqueflask}",
+                        "what is the price of a {uniqueflask} in {league}",
+                        "what is the price of a {uniqueflask} in {league} league",
+                        "what is the price of an {uniqueflask}",
+                        "what is the price of an {uniqueflask} in {league}",
+                        "what is the price of an {uniqueflask} in {league} league",
+                        "what is the price of the {uniqueflask}",
+                        "what is the price of the {uniqueflask} in {league}",
+                        "what is the price of the {uniqueflask} in {league} league",
+                        "what is the price of {uniqueflask}",
+                        "what is the price of {uniqueflask} in {league}",
+                        "what is the price of {uniqueflask} in {league} league",
+                        "{uniqueflask}",
+                        "{uniqueflask} in {league}",
+                        "{uniqueflask} in {league} league",
+                        "{uniqueflask} price",
+                        "{uniqueflask} price in {league}",
+                        "{uniqueflask} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -5927,6 +6057,130 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "UNIQUE_FLASK",
+                    "values": [{
+                            "name": {
+                                "value": "Lavianga's Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vessel of Vinktar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dying Sun"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Zerphi's Last Breath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lion's Roar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kiara's Determination"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Taste of Hate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Witchfire Brew"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rumi's Concoction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sorrow of the Divine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Atziri's Promise"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Overflowing Chalice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coralito's Signature"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Divination Distillate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Writhing Jar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Forbidden Taste"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doedre's Elixir"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soul Ripper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sin's Rebirth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood of the Karui"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soul Catcher"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wise Oak"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coruscating Elixir"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rotgut"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -6038,6 +6292,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "UniqueFlaskPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "uniqueflask",
+                            "type": "UNIQUE_FLASK",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1437553110830.108642183886"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -6107,6 +6383,22 @@
             },
             {
                 "id": "Elicit.Slot.284233657049.1202921741920",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1437553110830.108642183886",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"
