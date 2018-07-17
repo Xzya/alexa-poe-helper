@@ -76,7 +76,7 @@ async function main() {
     // finalString += await stringForType(ItemRequestTypes.Map, "Maps");
     // finalString += await stringForType(ItemRequestTypes.UniqueJewel, "UniqueJewels");
     // finalString += await stringForType(ItemRequestTypes.UniqueFlask, "UniqueFlasks");
-    // finalString += await stringForType(ItemRequestTypes.UniqueWeapon, "UniqueWeapons");
+    finalString += await stringForType(ItemRequestTypes.UniqueWeapon, "UniqueWeapons");
     finalString += await stringForType(ItemRequestTypes.UniqueArmour, "UniqueArmours");
     finalString += await stringForType(ItemRequestTypes.UniqueAccessory, "UniqueAccessories");
 

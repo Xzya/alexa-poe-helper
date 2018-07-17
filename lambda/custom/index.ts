@@ -6,6 +6,7 @@ import * as QuestRewardIntents from "./intents/questrewards";
 import * as CurrencyPriceCheckIntents from "./intents/currencypricecheck";
 import * as UniqueAccessoryPriceCheckIntents from "./intents/uniqueaccessorypricecheck";
 import * as UniqueArmourPriceCheckIntents from "./intents/uniquearmourpricecheck";
+import * as UniqueWeaponPriceCheckIntents from "./intents/uniqueweaponpricecheck";
 
 export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
@@ -33,7 +34,11 @@ export const handler = Alexa.SkillBuilders.custom()
 
         // Unique armour price check
         UniqueArmourPriceCheckIntents.InProgress,
-        UniqueArmourPriceCheckIntents.Completed
+        UniqueArmourPriceCheckIntents.Completed,
+
+        // Unique weapon price check
+        UniqueWeaponPriceCheckIntents.InProgress,
+        UniqueWeaponPriceCheckIntents.Completed
     )
     .addErrorHandlers(
         Errors.Unknown,

@@ -1034,6 +1034,464 @@
                         "{links} {uniquearmour} price in {league}",
                         "{links} {uniquearmour} price in {league} league"
                     ]
+                },
+                {
+                    "name": "UniqueWeaponPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "links",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "uniqueweapon",
+                            "type": "UNIQUE_WEAPON",
+                            "samples": [
+                                "{links} {uniqueweapon} please",
+                                "{links} {uniqueweapon} in {league} please",
+                                "{links} {uniqueweapon} in {league} league please",
+                                "{links} {uniqueweapon} in {league} league",
+                                "{links} {uniqueweapon} in {league}",
+                                "{links} {uniqueweapon}",
+                                "{links} linked {uniqueweapon} please",
+                                "{links} linked {uniqueweapon} in {league} please",
+                                "{links} linked {uniqueweapon} in {league} league please",
+                                "{links} linked {uniqueweapon} in {league} league",
+                                "{links} linked {uniqueweapon} in {league}",
+                                "{links} linked {uniqueweapon}",
+                                "{links} link {uniqueweapon} please",
+                                "{links} link {uniqueweapon} in {league} please",
+                                "{links} link {uniqueweapon} in {league} league please",
+                                "{links} link {uniqueweapon} in {league} league",
+                                "{links} link {uniqueweapon} in {league}",
+                                "{links} link {uniqueweapon}",
+                                "{uniqueweapon} please",
+                                "{uniqueweapon} in {league} please",
+                                "{uniqueweapon} in {league} league please",
+                                "{uniqueweapon} in {league} league",
+                                "{uniqueweapon} in {league}",
+                                "{uniqueweapon}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {links} link {uniqueweapon}",
+                        "how much is a {links} link {uniqueweapon} in {league}",
+                        "how much is a {links} link {uniqueweapon} in {league} league",
+                        "how much is a {links} link {uniqueweapon} worth",
+                        "how much is a {links} link {uniqueweapon} worth in {league}",
+                        "how much is a {links} link {uniqueweapon} worth in {league} league",
+                        "how much is a {links} linked {uniqueweapon}",
+                        "how much is a {links} linked {uniqueweapon} in {league}",
+                        "how much is a {links} linked {uniqueweapon} in {league} league",
+                        "how much is a {links} linked {uniqueweapon} worth",
+                        "how much is a {links} linked {uniqueweapon} worth in {league}",
+                        "how much is a {links} linked {uniqueweapon} worth in {league} league",
+                        "how much is a {links} {uniqueweapon}",
+                        "how much is a {links} {uniqueweapon} in {league}",
+                        "how much is a {links} {uniqueweapon} in {league} league",
+                        "how much is a {links} {uniqueweapon} worth",
+                        "how much is a {links} {uniqueweapon} worth in {league}",
+                        "how much is a {links} {uniqueweapon} worth in {league} league",
+                        "how much is a {uniqueweapon}",
+                        "how much is a {uniqueweapon} in {league}",
+                        "how much is a {uniqueweapon} in {league} league",
+                        "how much is a {uniqueweapon} worth",
+                        "how much is a {uniqueweapon} worth in {league}",
+                        "how much is a {uniqueweapon} worth in {league} league",
+                        "how much is an {links} link {uniqueweapon}",
+                        "how much is an {links} link {uniqueweapon} in {league}",
+                        "how much is an {links} link {uniqueweapon} in {league} league",
+                        "how much is an {links} link {uniqueweapon} worth",
+                        "how much is an {links} link {uniqueweapon} worth in {league}",
+                        "how much is an {links} link {uniqueweapon} worth in {league} league",
+                        "how much is an {links} linked {uniqueweapon}",
+                        "how much is an {links} linked {uniqueweapon} in {league}",
+                        "how much is an {links} linked {uniqueweapon} in {league} league",
+                        "how much is an {links} linked {uniqueweapon} worth",
+                        "how much is an {links} linked {uniqueweapon} worth in {league}",
+                        "how much is an {links} linked {uniqueweapon} worth in {league} league",
+                        "how much is an {links} {uniqueweapon}",
+                        "how much is an {links} {uniqueweapon} in {league}",
+                        "how much is an {links} {uniqueweapon} in {league} league",
+                        "how much is an {links} {uniqueweapon} worth",
+                        "how much is an {links} {uniqueweapon} worth in {league}",
+                        "how much is an {links} {uniqueweapon} worth in {league} league",
+                        "how much is an {uniqueweapon}",
+                        "how much is an {uniqueweapon} in {league}",
+                        "how much is an {uniqueweapon} in {league} league",
+                        "how much is an {uniqueweapon} worth",
+                        "how much is an {uniqueweapon} worth in {league}",
+                        "how much is an {uniqueweapon} worth in {league} league",
+                        "how much is the {links} link {uniqueweapon}",
+                        "how much is the {links} link {uniqueweapon} in {league}",
+                        "how much is the {links} link {uniqueweapon} in {league} league",
+                        "how much is the {links} link {uniqueweapon} worth",
+                        "how much is the {links} link {uniqueweapon} worth in {league}",
+                        "how much is the {links} link {uniqueweapon} worth in {league} league",
+                        "how much is the {links} linked {uniqueweapon}",
+                        "how much is the {links} linked {uniqueweapon} in {league}",
+                        "how much is the {links} linked {uniqueweapon} in {league} league",
+                        "how much is the {links} linked {uniqueweapon} worth",
+                        "how much is the {links} linked {uniqueweapon} worth in {league}",
+                        "how much is the {links} linked {uniqueweapon} worth in {league} league",
+                        "how much is the {links} {uniqueweapon}",
+                        "how much is the {links} {uniqueweapon} in {league}",
+                        "how much is the {links} {uniqueweapon} in {league} league",
+                        "how much is the {links} {uniqueweapon} worth",
+                        "how much is the {links} {uniqueweapon} worth in {league}",
+                        "how much is the {links} {uniqueweapon} worth in {league} league",
+                        "how much is the {uniqueweapon}",
+                        "how much is the {uniqueweapon} in {league}",
+                        "how much is the {uniqueweapon} in {league} league",
+                        "how much is the {uniqueweapon} worth",
+                        "how much is the {uniqueweapon} worth in {league}",
+                        "how much is the {uniqueweapon} worth in {league} league",
+                        "how much is {links} link {uniqueweapon}",
+                        "how much is {links} link {uniqueweapon} in {league}",
+                        "how much is {links} link {uniqueweapon} in {league} league",
+                        "how much is {links} link {uniqueweapon} worth",
+                        "how much is {links} link {uniqueweapon} worth in {league}",
+                        "how much is {links} link {uniqueweapon} worth in {league} league",
+                        "how much is {links} linked {uniqueweapon}",
+                        "how much is {links} linked {uniqueweapon} in {league}",
+                        "how much is {links} linked {uniqueweapon} in {league} league",
+                        "how much is {links} linked {uniqueweapon} worth",
+                        "how much is {links} linked {uniqueweapon} worth in {league}",
+                        "how much is {links} linked {uniqueweapon} worth in {league} league",
+                        "how much is {links} {uniqueweapon}",
+                        "how much is {links} {uniqueweapon} in {league}",
+                        "how much is {links} {uniqueweapon} in {league} league",
+                        "how much is {links} {uniqueweapon} worth",
+                        "how much is {links} {uniqueweapon} worth in {league}",
+                        "how much is {links} {uniqueweapon} worth in {league} league",
+                        "how much is {uniqueweapon}",
+                        "how much is {uniqueweapon} in {league}",
+                        "how much is {uniqueweapon} in {league} league",
+                        "how much is {uniqueweapon} worth",
+                        "how much is {uniqueweapon} worth in {league}",
+                        "how much is {uniqueweapon} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {links} link {uniqueweapon}",
+                        "price of a {links} link {uniqueweapon} in {league}",
+                        "price of a {links} link {uniqueweapon} in {league} league",
+                        "price of a {links} linked {uniqueweapon}",
+                        "price of a {links} linked {uniqueweapon} in {league}",
+                        "price of a {links} linked {uniqueweapon} in {league} league",
+                        "price of a {links} {uniqueweapon}",
+                        "price of a {links} {uniqueweapon} in {league}",
+                        "price of a {links} {uniqueweapon} in {league} league",
+                        "price of a {uniqueweapon}",
+                        "price of a {uniqueweapon} in {league}",
+                        "price of a {uniqueweapon} in {league} league",
+                        "price of an {links} link {uniqueweapon}",
+                        "price of an {links} link {uniqueweapon} in {league}",
+                        "price of an {links} link {uniqueweapon} in {league} league",
+                        "price of an {links} linked {uniqueweapon}",
+                        "price of an {links} linked {uniqueweapon} in {league}",
+                        "price of an {links} linked {uniqueweapon} in {league} league",
+                        "price of an {links} {uniqueweapon}",
+                        "price of an {links} {uniqueweapon} in {league}",
+                        "price of an {links} {uniqueweapon} in {league} league",
+                        "price of an {uniqueweapon}",
+                        "price of an {uniqueweapon} in {league}",
+                        "price of an {uniqueweapon} in {league} league",
+                        "price of the {links} link {uniqueweapon}",
+                        "price of the {links} link {uniqueweapon} in {league}",
+                        "price of the {links} link {uniqueweapon} in {league} league",
+                        "price of the {links} linked {uniqueweapon}",
+                        "price of the {links} linked {uniqueweapon} in {league}",
+                        "price of the {links} linked {uniqueweapon} in {league} league",
+                        "price of the {links} {uniqueweapon}",
+                        "price of the {links} {uniqueweapon} in {league}",
+                        "price of the {links} {uniqueweapon} in {league} league",
+                        "price of the {uniqueweapon}",
+                        "price of the {uniqueweapon} in {league}",
+                        "price of the {uniqueweapon} in {league} league",
+                        "price of {links} link {uniqueweapon}",
+                        "price of {links} link {uniqueweapon} in {league}",
+                        "price of {links} link {uniqueweapon} in {league} league",
+                        "price of {links} linked {uniqueweapon}",
+                        "price of {links} linked {uniqueweapon} in {league}",
+                        "price of {links} linked {uniqueweapon} in {league} league",
+                        "price of {links} {uniqueweapon}",
+                        "price of {links} {uniqueweapon} in {league}",
+                        "price of {links} {uniqueweapon} in {league} league",
+                        "price of {uniqueweapon}",
+                        "price of {uniqueweapon} in {league}",
+                        "price of {uniqueweapon} in {league} league",
+                        "tell me price of a {links} link {uniqueweapon}",
+                        "tell me price of a {links} link {uniqueweapon} in {league}",
+                        "tell me price of a {links} link {uniqueweapon} in {league} league",
+                        "tell me price of a {links} linked {uniqueweapon}",
+                        "tell me price of a {links} linked {uniqueweapon} in {league}",
+                        "tell me price of a {links} linked {uniqueweapon} in {league} league",
+                        "tell me price of a {links} {uniqueweapon}",
+                        "tell me price of a {links} {uniqueweapon} in {league}",
+                        "tell me price of a {links} {uniqueweapon} in {league} league",
+                        "tell me price of a {uniqueweapon}",
+                        "tell me price of a {uniqueweapon} in {league}",
+                        "tell me price of a {uniqueweapon} in {league} league",
+                        "tell me price of an {links} link {uniqueweapon}",
+                        "tell me price of an {links} link {uniqueweapon} in {league}",
+                        "tell me price of an {links} link {uniqueweapon} in {league} league",
+                        "tell me price of an {links} linked {uniqueweapon}",
+                        "tell me price of an {links} linked {uniqueweapon} in {league}",
+                        "tell me price of an {links} linked {uniqueweapon} in {league} league",
+                        "tell me price of an {links} {uniqueweapon}",
+                        "tell me price of an {links} {uniqueweapon} in {league}",
+                        "tell me price of an {links} {uniqueweapon} in {league} league",
+                        "tell me price of an {uniqueweapon}",
+                        "tell me price of an {uniqueweapon} in {league}",
+                        "tell me price of an {uniqueweapon} in {league} league",
+                        "tell me price of the {links} link {uniqueweapon}",
+                        "tell me price of the {links} link {uniqueweapon} in {league}",
+                        "tell me price of the {links} link {uniqueweapon} in {league} league",
+                        "tell me price of the {links} linked {uniqueweapon}",
+                        "tell me price of the {links} linked {uniqueweapon} in {league}",
+                        "tell me price of the {links} linked {uniqueweapon} in {league} league",
+                        "tell me price of the {links} {uniqueweapon}",
+                        "tell me price of the {links} {uniqueweapon} in {league}",
+                        "tell me price of the {links} {uniqueweapon} in {league} league",
+                        "tell me price of the {uniqueweapon}",
+                        "tell me price of the {uniqueweapon} in {league}",
+                        "tell me price of the {uniqueweapon} in {league} league",
+                        "tell me price of {links} link {uniqueweapon}",
+                        "tell me price of {links} link {uniqueweapon} in {league}",
+                        "tell me price of {links} link {uniqueweapon} in {league} league",
+                        "tell me price of {links} linked {uniqueweapon}",
+                        "tell me price of {links} linked {uniqueweapon} in {league}",
+                        "tell me price of {links} linked {uniqueweapon} in {league} league",
+                        "tell me price of {links} {uniqueweapon}",
+                        "tell me price of {links} {uniqueweapon} in {league}",
+                        "tell me price of {links} {uniqueweapon} in {league} league",
+                        "tell me price of {uniqueweapon}",
+                        "tell me price of {uniqueweapon} in {league}",
+                        "tell me price of {uniqueweapon} in {league} league",
+                        "tell me the price of a {links} link {uniqueweapon}",
+                        "tell me the price of a {links} link {uniqueweapon} in {league}",
+                        "tell me the price of a {links} link {uniqueweapon} in {league} league",
+                        "tell me the price of a {links} linked {uniqueweapon}",
+                        "tell me the price of a {links} linked {uniqueweapon} in {league}",
+                        "tell me the price of a {links} linked {uniqueweapon} in {league} league",
+                        "tell me the price of a {links} {uniqueweapon}",
+                        "tell me the price of a {links} {uniqueweapon} in {league}",
+                        "tell me the price of a {links} {uniqueweapon} in {league} league",
+                        "tell me the price of a {uniqueweapon}",
+                        "tell me the price of a {uniqueweapon} in {league}",
+                        "tell me the price of a {uniqueweapon} in {league} league",
+                        "tell me the price of an {links} link {uniqueweapon}",
+                        "tell me the price of an {links} link {uniqueweapon} in {league}",
+                        "tell me the price of an {links} link {uniqueweapon} in {league} league",
+                        "tell me the price of an {links} linked {uniqueweapon}",
+                        "tell me the price of an {links} linked {uniqueweapon} in {league}",
+                        "tell me the price of an {links} linked {uniqueweapon} in {league} league",
+                        "tell me the price of an {links} {uniqueweapon}",
+                        "tell me the price of an {links} {uniqueweapon} in {league}",
+                        "tell me the price of an {links} {uniqueweapon} in {league} league",
+                        "tell me the price of an {uniqueweapon}",
+                        "tell me the price of an {uniqueweapon} in {league}",
+                        "tell me the price of an {uniqueweapon} in {league} league",
+                        "tell me the price of the {links} link {uniqueweapon}",
+                        "tell me the price of the {links} link {uniqueweapon} in {league}",
+                        "tell me the price of the {links} link {uniqueweapon} in {league} league",
+                        "tell me the price of the {links} linked {uniqueweapon}",
+                        "tell me the price of the {links} linked {uniqueweapon} in {league}",
+                        "tell me the price of the {links} linked {uniqueweapon} in {league} league",
+                        "tell me the price of the {links} {uniqueweapon}",
+                        "tell me the price of the {links} {uniqueweapon} in {league}",
+                        "tell me the price of the {links} {uniqueweapon} in {league} league",
+                        "tell me the price of the {uniqueweapon}",
+                        "tell me the price of the {uniqueweapon} in {league}",
+                        "tell me the price of the {uniqueweapon} in {league} league",
+                        "tell me the price of {links} link {uniqueweapon}",
+                        "tell me the price of {links} link {uniqueweapon} in {league}",
+                        "tell me the price of {links} link {uniqueweapon} in {league} league",
+                        "tell me the price of {links} linked {uniqueweapon}",
+                        "tell me the price of {links} linked {uniqueweapon} in {league}",
+                        "tell me the price of {links} linked {uniqueweapon} in {league} league",
+                        "tell me the price of {links} {uniqueweapon}",
+                        "tell me the price of {links} {uniqueweapon} in {league}",
+                        "tell me the price of {links} {uniqueweapon} in {league} league",
+                        "tell me the price of {uniqueweapon}",
+                        "tell me the price of {uniqueweapon} in {league}",
+                        "tell me the price of {uniqueweapon} in {league} league",
+                        "the price of a {links} link {uniqueweapon}",
+                        "the price of a {links} link {uniqueweapon} in {league}",
+                        "the price of a {links} link {uniqueweapon} in {league} league",
+                        "the price of a {links} linked {uniqueweapon}",
+                        "the price of a {links} linked {uniqueweapon} in {league}",
+                        "the price of a {links} linked {uniqueweapon} in {league} league",
+                        "the price of a {links} {uniqueweapon}",
+                        "the price of a {links} {uniqueweapon} in {league}",
+                        "the price of a {links} {uniqueweapon} in {league} league",
+                        "the price of a {uniqueweapon}",
+                        "the price of a {uniqueweapon} in {league}",
+                        "the price of a {uniqueweapon} in {league} league",
+                        "the price of an {links} link {uniqueweapon}",
+                        "the price of an {links} link {uniqueweapon} in {league}",
+                        "the price of an {links} link {uniqueweapon} in {league} league",
+                        "the price of an {links} linked {uniqueweapon}",
+                        "the price of an {links} linked {uniqueweapon} in {league}",
+                        "the price of an {links} linked {uniqueweapon} in {league} league",
+                        "the price of an {links} {uniqueweapon}",
+                        "the price of an {links} {uniqueweapon} in {league}",
+                        "the price of an {links} {uniqueweapon} in {league} league",
+                        "the price of an {uniqueweapon}",
+                        "the price of an {uniqueweapon} in {league}",
+                        "the price of an {uniqueweapon} in {league} league",
+                        "the price of the {links} link {uniqueweapon}",
+                        "the price of the {links} link {uniqueweapon} in {league}",
+                        "the price of the {links} link {uniqueweapon} in {league} league",
+                        "the price of the {links} linked {uniqueweapon}",
+                        "the price of the {links} linked {uniqueweapon} in {league}",
+                        "the price of the {links} linked {uniqueweapon} in {league} league",
+                        "the price of the {links} {uniqueweapon}",
+                        "the price of the {links} {uniqueweapon} in {league}",
+                        "the price of the {links} {uniqueweapon} in {league} league",
+                        "the price of the {uniqueweapon}",
+                        "the price of the {uniqueweapon} in {league}",
+                        "the price of the {uniqueweapon} in {league} league",
+                        "the price of {links} link {uniqueweapon}",
+                        "the price of {links} link {uniqueweapon} in {league}",
+                        "the price of {links} link {uniqueweapon} in {league} league",
+                        "the price of {links} linked {uniqueweapon}",
+                        "the price of {links} linked {uniqueweapon} in {league}",
+                        "the price of {links} linked {uniqueweapon} in {league} league",
+                        "the price of {links} {uniqueweapon}",
+                        "the price of {links} {uniqueweapon} in {league}",
+                        "the price of {links} {uniqueweapon} in {league} league",
+                        "the price of {uniqueweapon}",
+                        "the price of {uniqueweapon} in {league}",
+                        "the price of {uniqueweapon} in {league} league",
+                        "what is price of a {links} link {uniqueweapon}",
+                        "what is price of a {links} link {uniqueweapon} in {league}",
+                        "what is price of a {links} link {uniqueweapon} in {league} league",
+                        "what is price of a {links} linked {uniqueweapon}",
+                        "what is price of a {links} linked {uniqueweapon} in {league}",
+                        "what is price of a {links} linked {uniqueweapon} in {league} league",
+                        "what is price of a {links} {uniqueweapon}",
+                        "what is price of a {links} {uniqueweapon} in {league}",
+                        "what is price of a {links} {uniqueweapon} in {league} league",
+                        "what is price of a {uniqueweapon}",
+                        "what is price of a {uniqueweapon} in {league}",
+                        "what is price of a {uniqueweapon} in {league} league",
+                        "what is price of an {links} link {uniqueweapon}",
+                        "what is price of an {links} link {uniqueweapon} in {league}",
+                        "what is price of an {links} link {uniqueweapon} in {league} league",
+                        "what is price of an {links} linked {uniqueweapon}",
+                        "what is price of an {links} linked {uniqueweapon} in {league}",
+                        "what is price of an {links} linked {uniqueweapon} in {league} league",
+                        "what is price of an {links} {uniqueweapon}",
+                        "what is price of an {links} {uniqueweapon} in {league}",
+                        "what is price of an {links} {uniqueweapon} in {league} league",
+                        "what is price of an {uniqueweapon}",
+                        "what is price of an {uniqueweapon} in {league}",
+                        "what is price of an {uniqueweapon} in {league} league",
+                        "what is price of the {links} link {uniqueweapon}",
+                        "what is price of the {links} link {uniqueweapon} in {league}",
+                        "what is price of the {links} link {uniqueweapon} in {league} league",
+                        "what is price of the {links} linked {uniqueweapon}",
+                        "what is price of the {links} linked {uniqueweapon} in {league}",
+                        "what is price of the {links} linked {uniqueweapon} in {league} league",
+                        "what is price of the {links} {uniqueweapon}",
+                        "what is price of the {links} {uniqueweapon} in {league}",
+                        "what is price of the {links} {uniqueweapon} in {league} league",
+                        "what is price of the {uniqueweapon}",
+                        "what is price of the {uniqueweapon} in {league}",
+                        "what is price of the {uniqueweapon} in {league} league",
+                        "what is price of {links} link {uniqueweapon}",
+                        "what is price of {links} link {uniqueweapon} in {league}",
+                        "what is price of {links} link {uniqueweapon} in {league} league",
+                        "what is price of {links} linked {uniqueweapon}",
+                        "what is price of {links} linked {uniqueweapon} in {league}",
+                        "what is price of {links} linked {uniqueweapon} in {league} league",
+                        "what is price of {links} {uniqueweapon}",
+                        "what is price of {links} {uniqueweapon} in {league}",
+                        "what is price of {links} {uniqueweapon} in {league} league",
+                        "what is price of {uniqueweapon}",
+                        "what is price of {uniqueweapon} in {league}",
+                        "what is price of {uniqueweapon} in {league} league",
+                        "what is the price of a {links} link {uniqueweapon}",
+                        "what is the price of a {links} link {uniqueweapon} in {league}",
+                        "what is the price of a {links} link {uniqueweapon} in {league} league",
+                        "what is the price of a {links} linked {uniqueweapon}",
+                        "what is the price of a {links} linked {uniqueweapon} in {league}",
+                        "what is the price of a {links} linked {uniqueweapon} in {league} league",
+                        "what is the price of a {links} {uniqueweapon}",
+                        "what is the price of a {links} {uniqueweapon} in {league}",
+                        "what is the price of a {links} {uniqueweapon} in {league} league",
+                        "what is the price of a {uniqueweapon}",
+                        "what is the price of a {uniqueweapon} in {league}",
+                        "what is the price of a {uniqueweapon} in {league} league",
+                        "what is the price of an {links} link {uniqueweapon}",
+                        "what is the price of an {links} link {uniqueweapon} in {league}",
+                        "what is the price of an {links} link {uniqueweapon} in {league} league",
+                        "what is the price of an {links} linked {uniqueweapon}",
+                        "what is the price of an {links} linked {uniqueweapon} in {league}",
+                        "what is the price of an {links} linked {uniqueweapon} in {league} league",
+                        "what is the price of an {links} {uniqueweapon}",
+                        "what is the price of an {links} {uniqueweapon} in {league}",
+                        "what is the price of an {links} {uniqueweapon} in {league} league",
+                        "what is the price of an {uniqueweapon}",
+                        "what is the price of an {uniqueweapon} in {league}",
+                        "what is the price of an {uniqueweapon} in {league} league",
+                        "what is the price of the {links} link {uniqueweapon}",
+                        "what is the price of the {links} link {uniqueweapon} in {league}",
+                        "what is the price of the {links} link {uniqueweapon} in {league} league",
+                        "what is the price of the {links} linked {uniqueweapon}",
+                        "what is the price of the {links} linked {uniqueweapon} in {league}",
+                        "what is the price of the {links} linked {uniqueweapon} in {league} league",
+                        "what is the price of the {links} {uniqueweapon}",
+                        "what is the price of the {links} {uniqueweapon} in {league}",
+                        "what is the price of the {links} {uniqueweapon} in {league} league",
+                        "what is the price of the {uniqueweapon}",
+                        "what is the price of the {uniqueweapon} in {league}",
+                        "what is the price of the {uniqueweapon} in {league} league",
+                        "what is the price of {links} link {uniqueweapon}",
+                        "what is the price of {links} link {uniqueweapon} in {league}",
+                        "what is the price of {links} link {uniqueweapon} in {league} league",
+                        "what is the price of {links} linked {uniqueweapon}",
+                        "what is the price of {links} linked {uniqueweapon} in {league}",
+                        "what is the price of {links} linked {uniqueweapon} in {league} league",
+                        "what is the price of {links} {uniqueweapon}",
+                        "what is the price of {links} {uniqueweapon} in {league}",
+                        "what is the price of {links} {uniqueweapon} in {league} league",
+                        "what is the price of {uniqueweapon}",
+                        "what is the price of {uniqueweapon} in {league}",
+                        "what is the price of {uniqueweapon} in {league} league",
+                        "{links} link {uniqueweapon}",
+                        "{links} link {uniqueweapon} in {league}",
+                        "{links} link {uniqueweapon} in {league} league",
+                        "{links} link {uniqueweapon} price",
+                        "{links} link {uniqueweapon} price in {league}",
+                        "{links} link {uniqueweapon} price in {league} league",
+                        "{links} linked {uniqueweapon}",
+                        "{links} linked {uniqueweapon} in {league}",
+                        "{links} linked {uniqueweapon} in {league} league",
+                        "{links} linked {uniqueweapon} price",
+                        "{links} linked {uniqueweapon} price in {league}",
+                        "{links} linked {uniqueweapon} price in {league} league",
+                        "{links} {uniqueweapon}",
+                        "{links} {uniqueweapon} in {league}",
+                        "{links} {uniqueweapon} in {league} league",
+                        "{links} {uniqueweapon} price",
+                        "{links} {uniqueweapon} price in {league}",
+                        "{links} {uniqueweapon} price in {league} league",
+                        "{uniqueweapon}",
+                        "{uniqueweapon} in {league}",
+                        "{uniqueweapon} in {league} league",
+                        "{uniqueweapon} price",
+                        "{uniqueweapon} price in {league}",
+                        "{uniqueweapon} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -4365,6 +4823,1110 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "UNIQUE_WEAPON",
+                    "values": [{
+                            "name": {
+                                "value": "Edge of Madness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nycta's Lantern"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Severed in Sleep"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Starforge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Whispering Ice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pledge of Hands"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Windripper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death's Opus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Atziri's Disfavour"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reach of the Council"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Enmity Divine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Rippling Thoughts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mark of the Doubting Knight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Silverbranch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mjölner"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lioneye's Glare"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Oni-Goroshi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Geofri's Baptism"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soul Taker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Scourge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Searing Touch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Taryn's Shiver"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Moonsorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wings of Entropy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brain Rattler"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doon Cuebiyari"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Voltaxic Rift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Trypanon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ephemeral Edge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ngamahu's Flame"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sire of Shards"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Slivertongue"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dark Seer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xirgil's Crank"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hand of Thought and Motion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wasp Nest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sinvicta's Mettle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tremor Rod"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Callinellus Malleus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rigwald's Charge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tulborn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bloodseeker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hopeshredder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hand of Wisdom and Action"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Terminus Est"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Stormheart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Agnerod East"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Agnerod West"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essentia Sanguis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Apep's Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hegemony's Era"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mortem Morsu"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Cauteriser"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dreamfeather"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Scaeva"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Marohi Erqi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Widowmaker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kondo's Pride"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bino's Kitchen Knife"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reaper's Pursuit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Oro's Sacrifice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ichimonji"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fidelitas' Spike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Heartbreaker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reverberation Rod"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hezmana's Bloodlust"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kongor's Undying Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Agnerod North"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dancing Dervish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Storm Cloud"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Agnerod South"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chin Sol"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eclipse Solaris"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jack the Axe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Earendel's Embrace"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Obliteration"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cane of Unravelling"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dyadus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dying Breath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Daresso's Passion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Prismatic Eclipse"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Infractem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ashcaller"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hyaon's Fury"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Screaming Eagle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Tempestuous Steel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brightbeak"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Redbeak"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lifesprig"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rebuke of the Vaal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chitus' Needle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mightflay"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Darkscorn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Innsbury Edge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Piscator's Vigil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Princess"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Advancing Fortress"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Axiom Perpetuum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Blood Reaper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mon'tregul's Grasp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kaom's Primacy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Twyzel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Uul-Netol's Kiss"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death's Harp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cybil's Paw"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cameria's Maul"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Al Dhih"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Quill Rain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Taproot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Femurs of the Saints"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lakishu's Blade"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Midnight Bargain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Abberath's Horn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chober Chaber"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Aurumvorax"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bitterdream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bloodplay"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ewar's Mirage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Blood Thorn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Storm Prison"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Goredrill"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fencoil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Limbsplit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gorebreaker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Debeon's Dirge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flesh-Eater"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Roth's Reach"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Relentless Fury"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Queen's Decree"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Realmshaper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frostbreath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Clayshaper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dreadarc"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Moonbender's Wing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ornament of the East"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pillar of the Caged God"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Quecholli"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Goddess Bound"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ungil's Gauche"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Voidhome"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wideswing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wildslash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doomfletch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lavianga's Wisdom"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hrimnor's Hymn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Last Resort"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shiversting"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Iron Commander"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jorrhast's Blacksteel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Goddess Unleashed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Queen's Escape"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Tempest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Duskdawn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Silverbough"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Voidforge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rigwald's Savagery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tidebreaker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Disintegrator"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Martyr of Innocence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kitava's Feast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Stormwall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dancing Duo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arborix"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fate of the Vaal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doomfletch's Prism"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kingmaker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xoph's Nurture"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Null's Inclination"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Realm Ender"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "United in Dream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Panquetzaliztli"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doomsower"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nuro's Harp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Uul-Netol's Embrace"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Harvest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Supreme Truth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Geofri's Devotion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shimmeron"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rigwald's Command"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Void Battery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Poet's Pen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Varunastra"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hiltless"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brutus' Lead Sprinkler"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Breath of the Council"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hrimnor's Dirge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cameria's Avarice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doryani's Catalyst"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cospri's Malice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Goddess Scorned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Story of the Vaal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dreadbeak"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Corona Solaris"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mirebough"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shade of Solaris"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dreadsurge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Divinarius"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Gryphon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sanguine Gambol"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ahn's Might"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arakaali's Fang"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beltimber Blade"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Razor of the Seventh Sun"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tulfall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Augyre"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Amplification Rod"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Singularity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vulconus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nebuloch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Allure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death's Hand"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Izaro's Dilemma"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Touch of Anguish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Balefire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Grelwood Shank"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spine of the First Claimant"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Xoph's Inception"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rive"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Consuming Dark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "White Wind"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -4447,6 +6009,35 @@
                             "prompts": {}
                         }
                     ]
+                },
+                {
+                    "name": "UniqueWeaponPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "links",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "uniqueweapon",
+                            "type": "UNIQUE_WEAPON",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.284233657049.1202921741920"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -4500,6 +6091,22 @@
             },
             {
                 "id": "Elicit.Slot.1013761631030.1328409598286",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.284233657049.1202921741920",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"

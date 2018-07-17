@@ -15,6 +15,7 @@ export enum IntentTypes {
     CurrencyPriceCheck = "CurrencyPriceCheckIntent",
     UniqueAccessoryPriceCheck = "UniqueAccessoryPriceCheckIntent",
     UniqueArmourPriceCheck = "UniqueArmourPriceCheckIntent",
+    UniqueWeaponPriceCheck = "UniqueWeaponPriceCheckIntent",
 }
 
 export enum SlotTypes {
@@ -25,6 +26,7 @@ export enum SlotTypes {
     UniqueAccessory = "uniqueaccessory",
     UniqueArmour = "uniquearmour",
     Links = "links",
+    UniqueWeapon = "uniqueweapon",
 }
 
 export enum ErrorTypes {
