@@ -8,6 +8,7 @@ import * as UniqueAccessoryPriceCheckIntents from "./intents/uniqueaccessorypric
 import * as UniqueArmourPriceCheckIntents from "./intents/uniquearmourpricecheck";
 import * as UniqueWeaponPriceCheckIntents from "./intents/uniqueweaponpricecheck";
 import * as UniqueFlaskPriceCheckIntents from "./intents/uniqueflaskpricecheck";
+import * as UniqueJewelPriceCheckIntents from "./intents/uniquejewelpricecheck";
 
 export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
@@ -43,7 +44,11 @@ export const handler = Alexa.SkillBuilders.custom()
 
         // Unique flask price check
         UniqueFlaskPriceCheckIntents.InProgress,
-        UniqueFlaskPriceCheckIntents.Completed
+        UniqueFlaskPriceCheckIntents.Completed,
+
+        // Unique jewel price check
+        UniqueJewelPriceCheckIntents.InProgress,
+        UniqueJewelPriceCheckIntents.Completed
     )
     .addErrorHandlers(
         Errors.Unknown,

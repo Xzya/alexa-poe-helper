@@ -1622,6 +1622,136 @@
                         "{uniqueflask} price in {league}",
                         "{uniqueflask} price in {league} league"
                     ]
+                },
+                {
+                    "name": "UniqueJewelPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "uniquejewel",
+                            "type": "UNIQUE_JEWEL",
+                            "samples": [
+                                "{uniquejewel} please",
+                                "{uniquejewel} in {league} please",
+                                "{uniquejewel} in {league} league please",
+                                "{uniquejewel} in {league} league",
+                                "{uniquejewel} in {league}",
+                                "{uniquejewel}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {uniquejewel}",
+                        "how much is a {uniquejewel} in {league}",
+                        "how much is a {uniquejewel} in {league} league",
+                        "how much is a {uniquejewel} worth",
+                        "how much is a {uniquejewel} worth in {league}",
+                        "how much is a {uniquejewel} worth in {league} league",
+                        "how much is an {uniquejewel}",
+                        "how much is an {uniquejewel} in {league}",
+                        "how much is an {uniquejewel} in {league} league",
+                        "how much is an {uniquejewel} worth",
+                        "how much is an {uniquejewel} worth in {league}",
+                        "how much is an {uniquejewel} worth in {league} league",
+                        "how much is the {uniquejewel}",
+                        "how much is the {uniquejewel} in {league}",
+                        "how much is the {uniquejewel} in {league} league",
+                        "how much is the {uniquejewel} worth",
+                        "how much is the {uniquejewel} worth in {league}",
+                        "how much is the {uniquejewel} worth in {league} league",
+                        "how much is {uniquejewel}",
+                        "how much is {uniquejewel} in {league}",
+                        "how much is {uniquejewel} in {league} league",
+                        "how much is {uniquejewel} worth",
+                        "how much is {uniquejewel} worth in {league}",
+                        "how much is {uniquejewel} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {uniquejewel}",
+                        "price of a {uniquejewel} in {league}",
+                        "price of a {uniquejewel} in {league} league",
+                        "price of an {uniquejewel}",
+                        "price of an {uniquejewel} in {league}",
+                        "price of an {uniquejewel} in {league} league",
+                        "price of the {uniquejewel}",
+                        "price of the {uniquejewel} in {league}",
+                        "price of the {uniquejewel} in {league} league",
+                        "price of {uniquejewel}",
+                        "price of {uniquejewel} in {league}",
+                        "price of {uniquejewel} in {league} league",
+                        "tell me price of a {uniquejewel}",
+                        "tell me price of a {uniquejewel} in {league}",
+                        "tell me price of a {uniquejewel} in {league} league",
+                        "tell me price of an {uniquejewel}",
+                        "tell me price of an {uniquejewel} in {league}",
+                        "tell me price of an {uniquejewel} in {league} league",
+                        "tell me price of the {uniquejewel}",
+                        "tell me price of the {uniquejewel} in {league}",
+                        "tell me price of the {uniquejewel} in {league} league",
+                        "tell me price of {uniquejewel}",
+                        "tell me price of {uniquejewel} in {league}",
+                        "tell me price of {uniquejewel} in {league} league",
+                        "tell me the price of a {uniquejewel}",
+                        "tell me the price of a {uniquejewel} in {league}",
+                        "tell me the price of a {uniquejewel} in {league} league",
+                        "tell me the price of an {uniquejewel}",
+                        "tell me the price of an {uniquejewel} in {league}",
+                        "tell me the price of an {uniquejewel} in {league} league",
+                        "tell me the price of the {uniquejewel}",
+                        "tell me the price of the {uniquejewel} in {league}",
+                        "tell me the price of the {uniquejewel} in {league} league",
+                        "tell me the price of {uniquejewel}",
+                        "tell me the price of {uniquejewel} in {league}",
+                        "tell me the price of {uniquejewel} in {league} league",
+                        "the price of a {uniquejewel}",
+                        "the price of a {uniquejewel} in {league}",
+                        "the price of a {uniquejewel} in {league} league",
+                        "the price of an {uniquejewel}",
+                        "the price of an {uniquejewel} in {league}",
+                        "the price of an {uniquejewel} in {league} league",
+                        "the price of the {uniquejewel}",
+                        "the price of the {uniquejewel} in {league}",
+                        "the price of the {uniquejewel} in {league} league",
+                        "the price of {uniquejewel}",
+                        "the price of {uniquejewel} in {league}",
+                        "the price of {uniquejewel} in {league} league",
+                        "what is price of a {uniquejewel}",
+                        "what is price of a {uniquejewel} in {league}",
+                        "what is price of a {uniquejewel} in {league} league",
+                        "what is price of an {uniquejewel}",
+                        "what is price of an {uniquejewel} in {league}",
+                        "what is price of an {uniquejewel} in {league} league",
+                        "what is price of the {uniquejewel}",
+                        "what is price of the {uniquejewel} in {league}",
+                        "what is price of the {uniquejewel} in {league} league",
+                        "what is price of {uniquejewel}",
+                        "what is price of {uniquejewel} in {league}",
+                        "what is price of {uniquejewel} in {league} league",
+                        "what is the price of a {uniquejewel}",
+                        "what is the price of a {uniquejewel} in {league}",
+                        "what is the price of a {uniquejewel} in {league} league",
+                        "what is the price of an {uniquejewel}",
+                        "what is the price of an {uniquejewel} in {league}",
+                        "what is the price of an {uniquejewel} in {league} league",
+                        "what is the price of the {uniquejewel}",
+                        "what is the price of the {uniquejewel} in {league}",
+                        "what is the price of the {uniquejewel} in {league} league",
+                        "what is the price of {uniquejewel}",
+                        "what is the price of {uniquejewel} in {league}",
+                        "what is the price of {uniquejewel} in {league} league",
+                        "{uniquejewel}",
+                        "{uniquejewel} in {league}",
+                        "{uniquejewel} in {league} league",
+                        "{uniquejewel} price",
+                        "{uniquejewel} price in {league}",
+                        "{uniquejewel} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -6181,6 +6311,620 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "UNIQUE_JEWEL",
+                    "values": [{
+                            "name": {
+                                "value": "Anatomical Knowledge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancient Waystones"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Apparitions"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Assassin's Haste"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Atziri's Reign"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood Sacrifice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brawn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brittle Barrier"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brute Force Solution"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Careful Planning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cheap Construction"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chill of Corruption"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Clear Mind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coated Shrapnel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold Steel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Collateral Damage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Combat Focus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Combustibles"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Conqueror's Efficiency"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Conqueror's Longevity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Conqueror's Potency"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Corrupted Energy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dead Reckoning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Efficient Training"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Eldritch Knowledge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Emperor's Cunning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Emperor's Mastery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Emperor's Might"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Emperor's Wit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Energised Armour"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Energy From Within"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fertile Mind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fevered Mind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fight for Survival"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fireborn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "First Snow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fluid Motion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fortified Legion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fragile Bloom"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fragility"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "From Dust"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frozen Trail"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Grand Spectrum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Growing Agony"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hair Trigger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hazardous Research"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Healthy Mind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hidden Potential"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hotfooted"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hungry Abyss"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Inertia"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Inevitability"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Inspired Learning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Intuitive Leap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Izaro's Turmoil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lioneye's Fall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Malicious Intent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mantra of Flames"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Martial Artistry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Might and Influence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Might in All Forms"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Might of the Meek"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mutated Growth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Omen on the Winds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Overwhelming Odds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pacifism"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pitch Darkness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Poacher's Aim"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Powerlessness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Primordial Eminence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Primordial Harmony"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Primordial Might"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pugilist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pure Talent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rain of Splinters"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rapid Expansion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reckless Defence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ring of Blades"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rolling Flames"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sacrificial Harvest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Self-Flagellation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shattered Chains"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soul's Wick"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spire of Stone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spirit Guards"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spirited Response"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spreading Rot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Static Electricity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Steel Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sudden Ignition"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Survival Instincts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Survival Secrets"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Survival Skills"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tempered Flesh"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tempered Mind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tempered Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Anima Stone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Blue Dream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Blue Nightmare"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Golden Rule"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Green Dream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Green Nightmare"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Long Winter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Red Dream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Red Nightmare"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Vigil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "To Dust"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Transcendent Flesh"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Transcendent Mind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Transcendent Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unending Hunger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unstable Payload"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Sentencing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Violent Dead"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Volley Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Warlord's Reach"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Watcher's Eye"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weight of Sin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weight of the Empire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wildfire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Winter Burial"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Winter's Bounty"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -6314,6 +7058,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "UniqueJewelPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "uniquejewel",
+                            "type": "UNIQUE_JEWEL",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.275882774455.386994345417"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -6399,6 +7165,22 @@
             },
             {
                 "id": "Elicit.Slot.1437553110830.108642183886",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.275882774455.386994345417",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"
