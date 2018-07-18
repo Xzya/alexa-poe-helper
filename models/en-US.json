@@ -2012,6 +2012,136 @@
                         "{uniquemap} price in {league}",
                         "{uniquemap} price in {league} league"
                     ]
+                },
+                {
+                    "name": "EssencePriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "essence",
+                            "type": "ESSENCE",
+                            "samples": [
+                                "{essence} please",
+                                "{essence} in {league} please",
+                                "{essence} in {league} league please",
+                                "{essence} in {league} league",
+                                "{essence} in {league}",
+                                "{essence}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {essence}",
+                        "how much is a {essence} in {league}",
+                        "how much is a {essence} in {league} league",
+                        "how much is a {essence} worth",
+                        "how much is a {essence} worth in {league}",
+                        "how much is a {essence} worth in {league} league",
+                        "how much is an {essence}",
+                        "how much is an {essence} in {league}",
+                        "how much is an {essence} in {league} league",
+                        "how much is an {essence} worth",
+                        "how much is an {essence} worth in {league}",
+                        "how much is an {essence} worth in {league} league",
+                        "how much is the {essence}",
+                        "how much is the {essence} in {league}",
+                        "how much is the {essence} in {league} league",
+                        "how much is the {essence} worth",
+                        "how much is the {essence} worth in {league}",
+                        "how much is the {essence} worth in {league} league",
+                        "how much is {essence}",
+                        "how much is {essence} in {league}",
+                        "how much is {essence} in {league} league",
+                        "how much is {essence} worth",
+                        "how much is {essence} worth in {league}",
+                        "how much is {essence} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {essence}",
+                        "price of a {essence} in {league}",
+                        "price of a {essence} in {league} league",
+                        "price of an {essence}",
+                        "price of an {essence} in {league}",
+                        "price of an {essence} in {league} league",
+                        "price of the {essence}",
+                        "price of the {essence} in {league}",
+                        "price of the {essence} in {league} league",
+                        "price of {essence}",
+                        "price of {essence} in {league}",
+                        "price of {essence} in {league} league",
+                        "tell me price of a {essence}",
+                        "tell me price of a {essence} in {league}",
+                        "tell me price of a {essence} in {league} league",
+                        "tell me price of an {essence}",
+                        "tell me price of an {essence} in {league}",
+                        "tell me price of an {essence} in {league} league",
+                        "tell me price of the {essence}",
+                        "tell me price of the {essence} in {league}",
+                        "tell me price of the {essence} in {league} league",
+                        "tell me price of {essence}",
+                        "tell me price of {essence} in {league}",
+                        "tell me price of {essence} in {league} league",
+                        "tell me the price of a {essence}",
+                        "tell me the price of a {essence} in {league}",
+                        "tell me the price of a {essence} in {league} league",
+                        "tell me the price of an {essence}",
+                        "tell me the price of an {essence} in {league}",
+                        "tell me the price of an {essence} in {league} league",
+                        "tell me the price of the {essence}",
+                        "tell me the price of the {essence} in {league}",
+                        "tell me the price of the {essence} in {league} league",
+                        "tell me the price of {essence}",
+                        "tell me the price of {essence} in {league}",
+                        "tell me the price of {essence} in {league} league",
+                        "the price of a {essence}",
+                        "the price of a {essence} in {league}",
+                        "the price of a {essence} in {league} league",
+                        "the price of an {essence}",
+                        "the price of an {essence} in {league}",
+                        "the price of an {essence} in {league} league",
+                        "the price of the {essence}",
+                        "the price of the {essence} in {league}",
+                        "the price of the {essence} in {league} league",
+                        "the price of {essence}",
+                        "the price of {essence} in {league}",
+                        "the price of {essence} in {league} league",
+                        "what is price of a {essence}",
+                        "what is price of a {essence} in {league}",
+                        "what is price of a {essence} in {league} league",
+                        "what is price of an {essence}",
+                        "what is price of an {essence} in {league}",
+                        "what is price of an {essence} in {league} league",
+                        "what is price of the {essence}",
+                        "what is price of the {essence} in {league}",
+                        "what is price of the {essence} in {league} league",
+                        "what is price of {essence}",
+                        "what is price of {essence} in {league}",
+                        "what is price of {essence} in {league} league",
+                        "what is the price of a {essence}",
+                        "what is the price of a {essence} in {league}",
+                        "what is the price of a {essence} in {league} league",
+                        "what is the price of an {essence}",
+                        "what is the price of an {essence} in {league}",
+                        "what is the price of an {essence} in {league} league",
+                        "what is the price of the {essence}",
+                        "what is the price of the {essence} in {league}",
+                        "what is the price of the {essence} in {league} league",
+                        "what is the price of {essence}",
+                        "what is the price of {essence} in {league}",
+                        "what is the price of {essence} in {league} league",
+                        "{essence}",
+                        "{essence} in {league}",
+                        "{essence} in {league} league",
+                        "{essence} price",
+                        "{essence} price in {league}",
+                        "{essence} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -8858,6 +8988,535 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "ESSENCE",
+                    "values": [{
+                            "name": {
+                                "value": "Deafening Essence of Anger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Anguish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Contempt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Doubt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Dread"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Envy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Fear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Loathing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Misery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Scorn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Sorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Spite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Suffering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Woe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Wrath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deafening Essence of Zeal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence of Delirium"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence of Horror"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence of Hysteria"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence of Insanity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Anger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Contempt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Fear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Sorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Muttering Essence of Woe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Remnant of Corruption"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Anger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Anguish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Contempt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Doubt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Dread"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Envy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Fear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Loathing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Misery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Scorn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Sorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Spite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Suffering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Woe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Wrath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Screaming Essence of Zeal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Anger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Anguish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Contempt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Doubt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Dread"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Envy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Fear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Loathing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Misery"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Scorn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Sorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Spite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Suffering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Woe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Wrath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrieking Essence of Zeal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Anger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Anguish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Contempt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Doubt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Fear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Loathing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Sorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Spite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Suffering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Woe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Wrath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wailing Essence of Zeal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Anger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Contempt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Doubt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Fear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Sorrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Suffering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Woe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Essence of Wrath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Whispering Essence of Contempt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Whispering Essence of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Whispering Essence of Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Whispering Essence of Woe"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -9057,6 +9716,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "EssencePriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "essence",
+                            "type": "ESSENCE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.491108853353.335442133465"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -9190,6 +9871,22 @@
             },
             {
                 "id": "Elicit.Slot.1111599264067.502204165850",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.491108853353.335442133465",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"
