@@ -2272,6 +2272,136 @@
                         "{divination} price in {league}",
                         "{divination} price in {league} league"
                     ]
+                },
+                {
+                    "name": "ProphecyPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "prophecy",
+                            "type": "PROPHECY",
+                            "samples": [
+                                "{prophecy} please",
+                                "{prophecy} in {league} please",
+                                "{prophecy} in {league} league please",
+                                "{prophecy} in {league} league",
+                                "{prophecy} in {league}",
+                                "{prophecy}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {prophecy}",
+                        "how much is a {prophecy} in {league}",
+                        "how much is a {prophecy} in {league} league",
+                        "how much is a {prophecy} worth",
+                        "how much is a {prophecy} worth in {league}",
+                        "how much is a {prophecy} worth in {league} league",
+                        "how much is an {prophecy}",
+                        "how much is an {prophecy} in {league}",
+                        "how much is an {prophecy} in {league} league",
+                        "how much is an {prophecy} worth",
+                        "how much is an {prophecy} worth in {league}",
+                        "how much is an {prophecy} worth in {league} league",
+                        "how much is the {prophecy}",
+                        "how much is the {prophecy} in {league}",
+                        "how much is the {prophecy} in {league} league",
+                        "how much is the {prophecy} worth",
+                        "how much is the {prophecy} worth in {league}",
+                        "how much is the {prophecy} worth in {league} league",
+                        "how much is {prophecy}",
+                        "how much is {prophecy} in {league}",
+                        "how much is {prophecy} in {league} league",
+                        "how much is {prophecy} worth",
+                        "how much is {prophecy} worth in {league}",
+                        "how much is {prophecy} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {prophecy}",
+                        "price of a {prophecy} in {league}",
+                        "price of a {prophecy} in {league} league",
+                        "price of an {prophecy}",
+                        "price of an {prophecy} in {league}",
+                        "price of an {prophecy} in {league} league",
+                        "price of the {prophecy}",
+                        "price of the {prophecy} in {league}",
+                        "price of the {prophecy} in {league} league",
+                        "price of {prophecy}",
+                        "price of {prophecy} in {league}",
+                        "price of {prophecy} in {league} league",
+                        "tell me price of a {prophecy}",
+                        "tell me price of a {prophecy} in {league}",
+                        "tell me price of a {prophecy} in {league} league",
+                        "tell me price of an {prophecy}",
+                        "tell me price of an {prophecy} in {league}",
+                        "tell me price of an {prophecy} in {league} league",
+                        "tell me price of the {prophecy}",
+                        "tell me price of the {prophecy} in {league}",
+                        "tell me price of the {prophecy} in {league} league",
+                        "tell me price of {prophecy}",
+                        "tell me price of {prophecy} in {league}",
+                        "tell me price of {prophecy} in {league} league",
+                        "tell me the price of a {prophecy}",
+                        "tell me the price of a {prophecy} in {league}",
+                        "tell me the price of a {prophecy} in {league} league",
+                        "tell me the price of an {prophecy}",
+                        "tell me the price of an {prophecy} in {league}",
+                        "tell me the price of an {prophecy} in {league} league",
+                        "tell me the price of the {prophecy}",
+                        "tell me the price of the {prophecy} in {league}",
+                        "tell me the price of the {prophecy} in {league} league",
+                        "tell me the price of {prophecy}",
+                        "tell me the price of {prophecy} in {league}",
+                        "tell me the price of {prophecy} in {league} league",
+                        "the price of a {prophecy}",
+                        "the price of a {prophecy} in {league}",
+                        "the price of a {prophecy} in {league} league",
+                        "the price of an {prophecy}",
+                        "the price of an {prophecy} in {league}",
+                        "the price of an {prophecy} in {league} league",
+                        "the price of the {prophecy}",
+                        "the price of the {prophecy} in {league}",
+                        "the price of the {prophecy} in {league} league",
+                        "the price of {prophecy}",
+                        "the price of {prophecy} in {league}",
+                        "the price of {prophecy} in {league} league",
+                        "what is price of a {prophecy}",
+                        "what is price of a {prophecy} in {league}",
+                        "what is price of a {prophecy} in {league} league",
+                        "what is price of an {prophecy}",
+                        "what is price of an {prophecy} in {league}",
+                        "what is price of an {prophecy} in {league} league",
+                        "what is price of the {prophecy}",
+                        "what is price of the {prophecy} in {league}",
+                        "what is price of the {prophecy} in {league} league",
+                        "what is price of {prophecy}",
+                        "what is price of {prophecy} in {league}",
+                        "what is price of {prophecy} in {league} league",
+                        "what is the price of a {prophecy}",
+                        "what is the price of a {prophecy} in {league}",
+                        "what is the price of a {prophecy} in {league} league",
+                        "what is the price of an {prophecy}",
+                        "what is the price of an {prophecy} in {league}",
+                        "what is the price of an {prophecy} in {league} league",
+                        "what is the price of the {prophecy}",
+                        "what is the price of the {prophecy} in {league}",
+                        "what is the price of the {prophecy} in {league} league",
+                        "what is the price of {prophecy}",
+                        "what is the price of {prophecy} in {league}",
+                        "what is the price of {prophecy} in {league} league",
+                        "{prophecy}",
+                        "{prophecy} in {league}",
+                        "{prophecy} in {league} league",
+                        "{prophecy} price",
+                        "{prophecy} price in {league}",
+                        "{prophecy} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -10756,6 +10886,1175 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "PROPHECY",
+                    "values": [{
+                            "name": {
+                                "value": "A Call into the Void"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Dishonourable Death"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Firm Foothold"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Forest of False Idols"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Gracious Master"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Master Seeks Help"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Prodigious Hand"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Regal Death"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Rift in Time"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Valuable Combination"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Vision of Ice and Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "A Whispered Prayer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Abnormal Effulgence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Against the Tide"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Agony at Dusk"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "An Unseen Peril"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Anarchy's End I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Anarchy's End II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Anarchy's End III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Anarchy's End IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancient Doom"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancient Rivalries I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancient Rivalries II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Baptism by Death"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beyond Sight I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beyond Sight II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beyond Sight III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beyond Sight IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Black Devotion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blind Faith"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blinding Light"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood in the Eyes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood of the Betrayed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bountiful Traps"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brothers in Arms"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burning Dread"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cleanser of Sins"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold Blooded Fury"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Crimson Hues"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Crushing Squall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Custodians of Silence"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dance of Steel"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dark Instincts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Darktongue's Shriek"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Day of Sacrifice I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Day of Sacrifice II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Day of Sacrifice III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Day of Sacrifice IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deadly Rivalry I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deadly Rivalry II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deadly Rivalry III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deadly Rivalry IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deadly Rivalry V"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deadly Twins"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Defiled in the Sceptre"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dying Cry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Echoes of Witchcraft"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "End of the Light"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ending the Torment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Erased from Memory"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Erasmus' Gift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fallow At Last"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fated Connections"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fear's Wide Reach"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fire Wood and Stone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fire and Brimstone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fire and Ice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fire from the Sky"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flesh of the Beast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Forceful Exorcism"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "From Death Springs Life"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "From The Void"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gilded Within"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Golden Touch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Graceful Flames"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Greed's Folly"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Heart of the Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Heavy Blows"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hidden Reinforcements"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hidden Vaal Pathways"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Holding the Bridge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hunter's Lesson"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ice from Above"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "In the Grasp of Corruption"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kalandra's Craft"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Last of the Wildmen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lasting Impressions"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Falls"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Living Fires"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lost in the Pages"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Monstrous Treasure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mouth of Horrors"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mysterious Invaders"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nature's Resilience"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Nemesis of Greed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Notched Flesh"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Overflowing Riches"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Path of Betrayal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Plague of Frogs"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Plague of Rats"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pleasure and Pain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pools of Wealth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Possessed Foe"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Power Magnified"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rebirth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reforged Bonds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Resistant to Change"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Risen Blood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Roth's Legacy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Severed Limbs"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Smothering Tendrils"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soil Worms and Blood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Song of the Sekhema"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Storm on the Horizon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Storm on the Reef"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Strong as a Bull"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sun's Punishment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thaumaturgical History I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thaumaturgical History II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thaumaturgical History III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thaumaturgical History IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Aesthete's Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Alchemist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ambitious Bandit I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ambitious Bandit II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ambitious Bandit III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Apex Predator"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Beautiful Guide"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Beginning and the End"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Blacksmith"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Bloody Flowers Redux"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Bowstring's Music"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Brothers of Necromancy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Brutal Enforcer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Child of Lunaris"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Corrupt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Cursed Choir"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dreaded Rhoa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dream Trial"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dreamer's Dream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Eagle's Cry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Emperor's Trove"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Fall of an Empire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Feral Lord I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Feral Lord II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Feral Lord III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Feral Lord IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Feral Lord V"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Flayed Man"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Flow of Energy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Forgotten Garrison"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Forgotten Soldiers"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Fortune Teller's Collection"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Four Feral Exiles"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The God of Misfortune"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Great Leader of the North"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Great Mind of the North"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hardened Armour"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hollow Pledge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hungering Swarm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Invader"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Jeweller's Touch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Karui Rebellion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The King and the Brambles"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The King's Path"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lady in Black"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Last Watch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lost Maps"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lost Undying"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Malevolent Witch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Misunderstood Queen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Mysterious Gift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Nest"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Nightmare Awakens"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Petrified"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Plaguemaw I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Plaguemaw II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Plaguemaw III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Plaguemaw IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Plaguemaw V"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Prison Guard"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Prison Key"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Queen's Sacrifice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Queen's Vaults"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Scout"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Servant's Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sharpened Blade"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Silverwood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Singular Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sinner's Stone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Snuffed Flame"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Soulless Beast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Stockkeeper"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Storm Spire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sword King's Passion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Trembling Earth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Twins"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Unbreathing Queen I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Unbreathing Queen II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Unbreathing Queen III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Unbreathing Queen IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Unbreathing Queen V"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Undead Brutes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Undead Storm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Vanguard"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Walking Mountain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ward's Ward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Warmongers I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Warmongers II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Warmongers III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Warmongers IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Watcher's Watcher"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wealthy Exile"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Touched by the Wind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Trapped in the Tower"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Trash to Treasure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Twice Enchanted"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unbearable Whispers I"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unbearable Whispers II"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unbearable Whispers III"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unbearable Whispers IV"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unbearable Whispers V"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Undead Uprising"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unnatural Energy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Invasion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Winds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Visions of the Drowned"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vital Transformation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Waiting in Ambush"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Weeping Death"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wind and Thunder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Winter's Mournful Melodies"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -10999,6 +12298,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "ProphecyPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "prophecy",
+                            "type": "PROPHECY",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.360425256747.1199881857081"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -11164,6 +12485,22 @@
             },
             {
                 "id": "Elicit.Slot.468619514015.1091409364375",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.360425256747.1199881857081",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"
