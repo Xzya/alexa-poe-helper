@@ -2142,6 +2142,136 @@
                         "{essence} price in {league}",
                         "{essence} price in {league} league"
                     ]
+                },
+                {
+                    "name": "DivinationPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "divination",
+                            "type": "DIVINATION",
+                            "samples": [
+                                "{divination} please",
+                                "{divination} in {league} please",
+                                "{divination} in {league} league please",
+                                "{divination} in {league} league",
+                                "{divination} in {league}",
+                                "{divination}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {divination}",
+                        "how much is a {divination} in {league}",
+                        "how much is a {divination} in {league} league",
+                        "how much is a {divination} worth",
+                        "how much is a {divination} worth in {league}",
+                        "how much is a {divination} worth in {league} league",
+                        "how much is an {divination}",
+                        "how much is an {divination} in {league}",
+                        "how much is an {divination} in {league} league",
+                        "how much is an {divination} worth",
+                        "how much is an {divination} worth in {league}",
+                        "how much is an {divination} worth in {league} league",
+                        "how much is the {divination}",
+                        "how much is the {divination} in {league}",
+                        "how much is the {divination} in {league} league",
+                        "how much is the {divination} worth",
+                        "how much is the {divination} worth in {league}",
+                        "how much is the {divination} worth in {league} league",
+                        "how much is {divination}",
+                        "how much is {divination} in {league}",
+                        "how much is {divination} in {league} league",
+                        "how much is {divination} worth",
+                        "how much is {divination} worth in {league}",
+                        "how much is {divination} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {divination}",
+                        "price of a {divination} in {league}",
+                        "price of a {divination} in {league} league",
+                        "price of an {divination}",
+                        "price of an {divination} in {league}",
+                        "price of an {divination} in {league} league",
+                        "price of the {divination}",
+                        "price of the {divination} in {league}",
+                        "price of the {divination} in {league} league",
+                        "price of {divination}",
+                        "price of {divination} in {league}",
+                        "price of {divination} in {league} league",
+                        "tell me price of a {divination}",
+                        "tell me price of a {divination} in {league}",
+                        "tell me price of a {divination} in {league} league",
+                        "tell me price of an {divination}",
+                        "tell me price of an {divination} in {league}",
+                        "tell me price of an {divination} in {league} league",
+                        "tell me price of the {divination}",
+                        "tell me price of the {divination} in {league}",
+                        "tell me price of the {divination} in {league} league",
+                        "tell me price of {divination}",
+                        "tell me price of {divination} in {league}",
+                        "tell me price of {divination} in {league} league",
+                        "tell me the price of a {divination}",
+                        "tell me the price of a {divination} in {league}",
+                        "tell me the price of a {divination} in {league} league",
+                        "tell me the price of an {divination}",
+                        "tell me the price of an {divination} in {league}",
+                        "tell me the price of an {divination} in {league} league",
+                        "tell me the price of the {divination}",
+                        "tell me the price of the {divination} in {league}",
+                        "tell me the price of the {divination} in {league} league",
+                        "tell me the price of {divination}",
+                        "tell me the price of {divination} in {league}",
+                        "tell me the price of {divination} in {league} league",
+                        "the price of a {divination}",
+                        "the price of a {divination} in {league}",
+                        "the price of a {divination} in {league} league",
+                        "the price of an {divination}",
+                        "the price of an {divination} in {league}",
+                        "the price of an {divination} in {league} league",
+                        "the price of the {divination}",
+                        "the price of the {divination} in {league}",
+                        "the price of the {divination} in {league} league",
+                        "the price of {divination}",
+                        "the price of {divination} in {league}",
+                        "the price of {divination} in {league} league",
+                        "what is price of a {divination}",
+                        "what is price of a {divination} in {league}",
+                        "what is price of a {divination} in {league} league",
+                        "what is price of an {divination}",
+                        "what is price of an {divination} in {league}",
+                        "what is price of an {divination} in {league} league",
+                        "what is price of the {divination}",
+                        "what is price of the {divination} in {league}",
+                        "what is price of the {divination} in {league} league",
+                        "what is price of {divination}",
+                        "what is price of {divination} in {league}",
+                        "what is price of {divination} in {league} league",
+                        "what is the price of a {divination}",
+                        "what is the price of a {divination} in {league}",
+                        "what is the price of a {divination} in {league} league",
+                        "what is the price of an {divination}",
+                        "what is the price of an {divination} in {league}",
+                        "what is the price of an {divination} in {league} league",
+                        "what is the price of the {divination}",
+                        "what is the price of the {divination} in {league}",
+                        "what is the price of the {divination} in {league} league",
+                        "what is the price of {divination}",
+                        "what is the price of {divination} in {league}",
+                        "what is the price of {divination} in {league} league",
+                        "{divination}",
+                        "{divination} in {league}",
+                        "{divination} in {league} league",
+                        "{divination} price",
+                        "{divination} price in {league}",
+                        "{divination} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -9517,6 +9647,1115 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "DIVINATION",
+                    "values": [{
+                            "name": {
+                                "value": "A Mother's Parting Gift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Abandoned Wealth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Anarchy's Price"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Assassin's Favour"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Atziri's Arsenal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Audacity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Birth of the Three"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blessing of God"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blind Venture"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Boundless Realms"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bowyer's Dream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Call to the First Ones"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cartographer's Delight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chaotic Disposition"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Coveted Possession"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Destined to Crumble"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dialla's Subjugation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Doedre's Madness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dying Anguish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Earth Drinker"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Emperor of Purity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Emperor's Luck"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Forbidden Power"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gemcutter's Promise"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Gift of the Gemling Queen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Glimmer of Hope"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Grave Knowledge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Harmony of Souls"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Her Mask"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Heterochromia"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hope"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "House of Mirrors"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hubris"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Humility"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hunter's Resolve"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hunter's Reward"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Immortal Resolve"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jack in the Box"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lantador's Lost Love"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Last Hope"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Left to Fate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Light and Truth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lingering Remnants"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lost Worlds"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Loyalty"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lucky Connections"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lucky Deck"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lysah's Respite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mawr Blaidd"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Merciless Armament"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Might is Right"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mitts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "No Traces"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Perfection"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pride Before the Fall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Prosperity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rain Tempter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rain of Chaos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rats"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rebirth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Scholar of the Seas"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shard of Fate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Struck by Lightning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Admirer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Aesthete"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Arena Champion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Army of Blood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Artist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Avenger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Battle Born"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Beast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Betrayal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Blazing Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Body"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Breach"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Brittle Emperor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Calling"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Carrion Crow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Cartographer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Cataclysm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Catalyst"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Celestial Justicar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Celestial Stone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Chains that Bind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Coming Storm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Conduit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Cursed King"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dapper Prodigy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dark Mage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Darkest Dream"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Deceiver"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Demoness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Doctor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Doppelganger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dragon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dragon's Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dreamer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Dreamland"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Drunken Aristocrat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Encroaching Darkness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Endurance"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Enlightened"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ethereal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Explorer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Eye of the Dragon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Fathomless Depths"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Feast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Fiend"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Fletcher"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Flora's Gift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Formless Sea"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Forsaken"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Fox"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Gambler"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Garish Power"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Gemcutter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Gentleman"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Gladiator"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hale Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Harvester"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hermit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hoarder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Hunger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Immortal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Incantation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Inoculated"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Insatiable"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Inventor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Iron Bard"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Jester"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Jeweller's Boon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The King's Blade"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The King's Heart"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Last One Standing"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lich"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lord in Black"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lover"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Lunaris Priestess"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Master"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Mayor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Mercenary"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Metalsmith's Gift"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Oath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Obscured"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Offering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The One With All"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Opulent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Pack Leader"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Pact"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Penitent"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Poet"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Polymath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Porcupine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Professor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Puzzle"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Queen"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Rabid Rhoa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Realm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Risk"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Rite of Elements"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Road to Power"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Ruthless Ceinture"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Saint's Treasure"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Samurai's Eye"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Scarred Meadow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Scavenger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Scholar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sephirot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sigil"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Siren"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Soul"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Spark and the Flame"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Spoiled Prince"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Standoff"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Stormcaller"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Summoner"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sun"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Surgeon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Surveyor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Survivalist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Sword King's Salute"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Thaumaturgist"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Throne"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Tower"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Traitor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Trial"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Twins"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Tyrant"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Undaunted"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Undisputed"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Union"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Valkyrie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Valley of Steel Boxes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Vast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Visionary"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Void"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Warden"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Warlord"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Watcher"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Web"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wind"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Witch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wolf"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wolf's Shadow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wolven King's Bite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wolverine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The World Eater"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wrath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Wretched"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Three Faces in the Dark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Three Voices"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thunderous Skies"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Time-Lost Relic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tranquillity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Treasure Hunter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Turn the Other Cheek"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vinia's Token"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Volatile Power"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wealth and Power"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -9738,6 +10977,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "DivinationPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "divination",
+                            "type": "DIVINATION",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.468619514015.1091409364375"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -9887,6 +11148,22 @@
             },
             {
                 "id": "Elicit.Slot.491108853353.335442133465",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.468619514015.1091409364375",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"

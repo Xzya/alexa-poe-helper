@@ -12,6 +12,7 @@ import * as UniqueJewelPriceCheckIntents from "./intents/uniquejewelpricecheck";
 import * as MapPriceCheckIntents from "./intents/mappricecheck";
 import * as UniqueMapPriceCheckIntents from "./intents/uniquemappricecheck";
 import * as EssencePriceCheckIntents from "./intents/essencepricecheck";
+import * as DivinationPriceCheckIntents from "./intents/divinationpricecheck";
 
 export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
@@ -63,7 +64,11 @@ export const handler = Alexa.SkillBuilders.custom()
 
         // Essence price check
         EssencePriceCheckIntents.InProgress,
-        EssencePriceCheckIntents.Completed
+        EssencePriceCheckIntents.Completed,
+
+        // Divination price check
+        DivinationPriceCheckIntents.InProgress,
+        DivinationPriceCheckIntents.Completed
     )
     .addErrorHandlers(
         Errors.Unknown,
