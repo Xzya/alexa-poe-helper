@@ -19,6 +19,7 @@ export enum IntentTypes {
     UniqueFlaskPriceCheck = "UniqueFlaskPriceCheckIntent",
     UniqueJewelPriceCheck = "UniqueJewelPriceCheckIntent",
     MapPriceCheck = "MapPriceCheckIntent",
+    UniqueMapPriceCheck = "UniqueMapPriceCheckIntent",
 }
 
 export enum SlotTypes {
@@ -33,6 +34,7 @@ export enum SlotTypes {
     UniqueFlask = "uniqueflask",
     UniqueJewel = "uniquejewel",
     Map = "map",
+    UniqueMap = "uniquemap",
 }
 
 export enum ErrorTypes {

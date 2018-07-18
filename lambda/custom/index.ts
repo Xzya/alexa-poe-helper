@@ -10,6 +10,7 @@ import * as UniqueWeaponPriceCheckIntents from "./intents/uniqueweaponpricecheck
 import * as UniqueFlaskPriceCheckIntents from "./intents/uniqueflaskpricecheck";
 import * as UniqueJewelPriceCheckIntents from "./intents/uniquejewelpricecheck";
 import * as MapPriceCheckIntents from "./intents/mappricecheck";
+import * as UniqueMapPriceCheckIntents from "./intents/uniquemappricecheck";
 
 export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
@@ -53,7 +54,11 @@ export const handler = Alexa.SkillBuilders.custom()
 
         // Map price check
         MapPriceCheckIntents.InProgress,
-        MapPriceCheckIntents.Completed
+        MapPriceCheckIntents.Completed,
+
+        // Unique map price check
+        UniqueMapPriceCheckIntents.InProgress,
+        UniqueMapPriceCheckIntents.Completed
     )
     .addErrorHandlers(
         Errors.Unknown,

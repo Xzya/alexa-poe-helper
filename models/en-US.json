@@ -1882,6 +1882,136 @@
                         "{map} price in {league}",
                         "{map} price in {league} league"
                     ]
+                },
+                {
+                    "name": "UniqueMapPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "uniquemap",
+                            "type": "UNIQUE_MAP",
+                            "samples": [
+                                "{uniquemap} please",
+                                "{uniquemap} in {league} please",
+                                "{uniquemap} in {league} league please",
+                                "{uniquemap} in {league} league",
+                                "{uniquemap} in {league}",
+                                "{uniquemap}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "check item price",
+                        "check item price in {league}",
+                        "check item price in {league} league",
+                        "how much is a {uniquemap}",
+                        "how much is a {uniquemap} in {league}",
+                        "how much is a {uniquemap} in {league} league",
+                        "how much is a {uniquemap} worth",
+                        "how much is a {uniquemap} worth in {league}",
+                        "how much is a {uniquemap} worth in {league} league",
+                        "how much is an {uniquemap}",
+                        "how much is an {uniquemap} in {league}",
+                        "how much is an {uniquemap} in {league} league",
+                        "how much is an {uniquemap} worth",
+                        "how much is an {uniquemap} worth in {league}",
+                        "how much is an {uniquemap} worth in {league} league",
+                        "how much is the {uniquemap}",
+                        "how much is the {uniquemap} in {league}",
+                        "how much is the {uniquemap} in {league} league",
+                        "how much is the {uniquemap} worth",
+                        "how much is the {uniquemap} worth in {league}",
+                        "how much is the {uniquemap} worth in {league} league",
+                        "how much is {uniquemap}",
+                        "how much is {uniquemap} in {league}",
+                        "how much is {uniquemap} in {league} league",
+                        "how much is {uniquemap} worth",
+                        "how much is {uniquemap} worth in {league}",
+                        "how much is {uniquemap} worth in {league} league",
+                        "item price",
+                        "item price in {league}",
+                        "item price in {league} league",
+                        "price of a {uniquemap}",
+                        "price of a {uniquemap} in {league}",
+                        "price of a {uniquemap} in {league} league",
+                        "price of an {uniquemap}",
+                        "price of an {uniquemap} in {league}",
+                        "price of an {uniquemap} in {league} league",
+                        "price of the {uniquemap}",
+                        "price of the {uniquemap} in {league}",
+                        "price of the {uniquemap} in {league} league",
+                        "price of {uniquemap}",
+                        "price of {uniquemap} in {league}",
+                        "price of {uniquemap} in {league} league",
+                        "tell me price of a {uniquemap}",
+                        "tell me price of a {uniquemap} in {league}",
+                        "tell me price of a {uniquemap} in {league} league",
+                        "tell me price of an {uniquemap}",
+                        "tell me price of an {uniquemap} in {league}",
+                        "tell me price of an {uniquemap} in {league} league",
+                        "tell me price of the {uniquemap}",
+                        "tell me price of the {uniquemap} in {league}",
+                        "tell me price of the {uniquemap} in {league} league",
+                        "tell me price of {uniquemap}",
+                        "tell me price of {uniquemap} in {league}",
+                        "tell me price of {uniquemap} in {league} league",
+                        "tell me the price of a {uniquemap}",
+                        "tell me the price of a {uniquemap} in {league}",
+                        "tell me the price of a {uniquemap} in {league} league",
+                        "tell me the price of an {uniquemap}",
+                        "tell me the price of an {uniquemap} in {league}",
+                        "tell me the price of an {uniquemap} in {league} league",
+                        "tell me the price of the {uniquemap}",
+                        "tell me the price of the {uniquemap} in {league}",
+                        "tell me the price of the {uniquemap} in {league} league",
+                        "tell me the price of {uniquemap}",
+                        "tell me the price of {uniquemap} in {league}",
+                        "tell me the price of {uniquemap} in {league} league",
+                        "the price of a {uniquemap}",
+                        "the price of a {uniquemap} in {league}",
+                        "the price of a {uniquemap} in {league} league",
+                        "the price of an {uniquemap}",
+                        "the price of an {uniquemap} in {league}",
+                        "the price of an {uniquemap} in {league} league",
+                        "the price of the {uniquemap}",
+                        "the price of the {uniquemap} in {league}",
+                        "the price of the {uniquemap} in {league} league",
+                        "the price of {uniquemap}",
+                        "the price of {uniquemap} in {league}",
+                        "the price of {uniquemap} in {league} league",
+                        "what is price of a {uniquemap}",
+                        "what is price of a {uniquemap} in {league}",
+                        "what is price of a {uniquemap} in {league} league",
+                        "what is price of an {uniquemap}",
+                        "what is price of an {uniquemap} in {league}",
+                        "what is price of an {uniquemap} in {league} league",
+                        "what is price of the {uniquemap}",
+                        "what is price of the {uniquemap} in {league}",
+                        "what is price of the {uniquemap} in {league} league",
+                        "what is price of {uniquemap}",
+                        "what is price of {uniquemap} in {league}",
+                        "what is price of {uniquemap} in {league} league",
+                        "what is the price of a {uniquemap}",
+                        "what is the price of a {uniquemap} in {league}",
+                        "what is the price of a {uniquemap} in {league} league",
+                        "what is the price of an {uniquemap}",
+                        "what is the price of an {uniquemap} in {league}",
+                        "what is the price of an {uniquemap} in {league} league",
+                        "what is the price of the {uniquemap}",
+                        "what is the price of the {uniquemap} in {league}",
+                        "what is the price of the {uniquemap} in {league} league",
+                        "what is the price of {uniquemap}",
+                        "what is the price of {uniquemap} in {league}",
+                        "what is the price of {uniquemap} in {league} league",
+                        "{uniquemap}",
+                        "{uniquemap} in {league}",
+                        "{uniquemap} in {league} league",
+                        "{uniquemap} price",
+                        "{uniquemap} price in {league}",
+                        "{uniquemap} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -8629,6 +8759,105 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "UNIQUE_MAP",
+                    "values": [{
+                            "name": {
+                                "value": "Acton's Nightmare"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Caer Blaidd Wolfpack's Den"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Death and Taxes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hall of Grandmasters"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hallowed Ground"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Maelström of Chaos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mao Kun"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Oba's Cursed Trove"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Olmec's Sanctum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pillars of Arun"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Poorjoy's Asylum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Beachhead"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Coward's Trial"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Perandus Manor"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Putrid Cloister"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Twilight Temple"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The Vinktar Square"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaults of Atziri"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Whakawairua Tuahu"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -8806,6 +9035,28 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "UniqueMapPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "uniquemap",
+                            "type": "UNIQUE_MAP",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1111599264067.502204165850"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -8923,6 +9174,22 @@
             },
             {
                 "id": "Elicit.Slot.1084701973626.435924820777",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "What item do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "What item are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1111599264067.502204165850",
                 "variations": [{
                         "type": "PlainText",
                         "value": "What item do you want to know the price of?"

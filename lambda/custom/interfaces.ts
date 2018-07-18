@@ -30,11 +30,11 @@ export interface RequestAttributes {
      */
     slots: SlotValues;
 
-    [key: string]: any;
+    // [key: string]: any;
 }
 
 export interface SessionAttributes {
-    [key: string]: any;
+    // [key: string]: any;
 }
 
 export type Slots = { [key: string]: Slot };

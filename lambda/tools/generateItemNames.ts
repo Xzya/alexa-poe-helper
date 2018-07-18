@@ -74,7 +74,7 @@ async function main() {
 
     // finalString += await stringForType(ItemRequestTypes.Essence, "Essences");
     // finalString += await stringForType(ItemRequestTypes.DivinationCard, "Divinations");
-    // finalString += await stringForType(ItemRequestTypes.UniqueMap, "UniqueMaps");
+    finalString += await stringForType(ItemRequestTypes.UniqueMap, "UniqueMaps");
     // finalString += await stringForType(ItemRequestTypes.Prophecy, "Prophecies");
     // finalString += await stringForType(ItemRequestTypes.SkillGem, "SkillGems");
     // finalString += await stringForType(ItemRequestTypes.HelmetEnchant, "HelmetEnchants");
