@@ -2402,6 +2402,955 @@
                         "{prophecy} price in {league}",
                         "{prophecy} price in {league} league"
                     ]
+                },
+                {
+                    "name": "GemPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "level",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{level}"
+                            ]
+                        },
+                        {
+                            "name": "gem",
+                            "type": "GEM"
+                        },
+                        {
+                            "name": "quality",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "check gem price",
+                        "check gem price in {league}",
+                        "check gem price in {league} league",
+                        "gem price",
+                        "gem price in {league}",
+                        "gem price in {league} league",
+                        "how much is a level {level} {gem}",
+                        "how much is a level {level} {gem} in {league}",
+                        "how much is a level {level} {gem} in {league} league",
+                        "how much is a level {level} {gem} worth",
+                        "how much is a level {level} {gem} worth in {league}",
+                        "how much is a level {level} {gem} worth in {league} league",
+                        "how much is a level {level} {quality} quality {gem}",
+                        "how much is a level {level} {quality} quality {gem} in {league}",
+                        "how much is a level {level} {quality} quality {gem} in {league} league",
+                        "how much is a level {level} {quality} quality {gem} worth",
+                        "how much is a level {level} {quality} quality {gem} worth in {league}",
+                        "how much is a level {level} {quality} quality {gem} worth in {league} league",
+                        "how much is a level {level} {quality} {gem}",
+                        "how much is a level {level} {quality} {gem} in {league}",
+                        "how much is a level {level} {quality} {gem} in {league} league",
+                        "how much is a level {level} {quality} {gem} worth",
+                        "how much is a level {level} {quality} {gem} worth in {league}",
+                        "how much is a level {level} {quality} {gem} worth in {league} league",
+                        "how much is a {gem}",
+                        "how much is a {gem} in {league}",
+                        "how much is a {gem} in {league} league",
+                        "how much is a {gem} worth",
+                        "how much is a {gem} worth in {league}",
+                        "how much is a {gem} worth in {league} league",
+                        "how much is a {level} {gem}",
+                        "how much is a {level} {gem} in {league}",
+                        "how much is a {level} {gem} in {league} league",
+                        "how much is a {level} {gem} worth",
+                        "how much is a {level} {gem} worth in {league}",
+                        "how much is a {level} {gem} worth in {league} league",
+                        "how much is a {level} {quality} quality {gem}",
+                        "how much is a {level} {quality} quality {gem} in {league}",
+                        "how much is a {level} {quality} quality {gem} in {league} league",
+                        "how much is a {level} {quality} quality {gem} worth",
+                        "how much is a {level} {quality} quality {gem} worth in {league}",
+                        "how much is a {level} {quality} quality {gem} worth in {league} league",
+                        "how much is a {level} {quality} {gem}",
+                        "how much is a {level} {quality} {gem} in {league}",
+                        "how much is a {level} {quality} {gem} in {league} league",
+                        "how much is a {level} {quality} {gem} worth",
+                        "how much is a {level} {quality} {gem} worth in {league}",
+                        "how much is a {level} {quality} {gem} worth in {league} league",
+                        "how much is a {quality} quality {gem}",
+                        "how much is a {quality} quality {gem} in {league}",
+                        "how much is a {quality} quality {gem} in {league} league",
+                        "how much is a {quality} quality {gem} worth",
+                        "how much is a {quality} quality {gem} worth in {league}",
+                        "how much is a {quality} quality {gem} worth in {league} league",
+                        "how much is a {quality} {gem}",
+                        "how much is a {quality} {gem} in {league}",
+                        "how much is a {quality} {gem} in {league} league",
+                        "how much is a {quality} {gem} worth",
+                        "how much is a {quality} {gem} worth in {league}",
+                        "how much is a {quality} {gem} worth in {league} league",
+                        "how much is an level {level} {gem}",
+                        "how much is an level {level} {gem} in {league}",
+                        "how much is an level {level} {gem} in {league} league",
+                        "how much is an level {level} {gem} worth",
+                        "how much is an level {level} {gem} worth in {league}",
+                        "how much is an level {level} {gem} worth in {league} league",
+                        "how much is an level {level} {quality} quality {gem}",
+                        "how much is an level {level} {quality} quality {gem} in {league}",
+                        "how much is an level {level} {quality} quality {gem} in {league} league",
+                        "how much is an level {level} {quality} quality {gem} worth",
+                        "how much is an level {level} {quality} quality {gem} worth in {league}",
+                        "how much is an level {level} {quality} quality {gem} worth in {league} league",
+                        "how much is an level {level} {quality} {gem}",
+                        "how much is an level {level} {quality} {gem} in {league}",
+                        "how much is an level {level} {quality} {gem} in {league} league",
+                        "how much is an level {level} {quality} {gem} worth",
+                        "how much is an level {level} {quality} {gem} worth in {league}",
+                        "how much is an level {level} {quality} {gem} worth in {league} league",
+                        "how much is an {gem}",
+                        "how much is an {gem} in {league}",
+                        "how much is an {gem} in {league} league",
+                        "how much is an {gem} worth",
+                        "how much is an {gem} worth in {league}",
+                        "how much is an {gem} worth in {league} league",
+                        "how much is an {level} {gem}",
+                        "how much is an {level} {gem} in {league}",
+                        "how much is an {level} {gem} in {league} league",
+                        "how much is an {level} {gem} worth",
+                        "how much is an {level} {gem} worth in {league}",
+                        "how much is an {level} {gem} worth in {league} league",
+                        "how much is an {level} {quality} quality {gem}",
+                        "how much is an {level} {quality} quality {gem} in {league}",
+                        "how much is an {level} {quality} quality {gem} in {league} league",
+                        "how much is an {level} {quality} quality {gem} worth",
+                        "how much is an {level} {quality} quality {gem} worth in {league}",
+                        "how much is an {level} {quality} quality {gem} worth in {league} league",
+                        "how much is an {level} {quality} {gem}",
+                        "how much is an {level} {quality} {gem} in {league}",
+                        "how much is an {level} {quality} {gem} in {league} league",
+                        "how much is an {level} {quality} {gem} worth",
+                        "how much is an {level} {quality} {gem} worth in {league}",
+                        "how much is an {level} {quality} {gem} worth in {league} league",
+                        "how much is an {quality} quality {gem}",
+                        "how much is an {quality} quality {gem} in {league}",
+                        "how much is an {quality} quality {gem} in {league} league",
+                        "how much is an {quality} quality {gem} worth",
+                        "how much is an {quality} quality {gem} worth in {league}",
+                        "how much is an {quality} quality {gem} worth in {league} league",
+                        "how much is an {quality} {gem}",
+                        "how much is an {quality} {gem} in {league}",
+                        "how much is an {quality} {gem} in {league} league",
+                        "how much is an {quality} {gem} worth",
+                        "how much is an {quality} {gem} worth in {league}",
+                        "how much is an {quality} {gem} worth in {league} league",
+                        "how much is level {level} {gem}",
+                        "how much is level {level} {gem} in {league}",
+                        "how much is level {level} {gem} in {league} league",
+                        "how much is level {level} {gem} worth",
+                        "how much is level {level} {gem} worth in {league}",
+                        "how much is level {level} {gem} worth in {league} league",
+                        "how much is level {level} {quality} quality {gem}",
+                        "how much is level {level} {quality} quality {gem} in {league}",
+                        "how much is level {level} {quality} quality {gem} in {league} league",
+                        "how much is level {level} {quality} quality {gem} worth",
+                        "how much is level {level} {quality} quality {gem} worth in {league}",
+                        "how much is level {level} {quality} quality {gem} worth in {league} league",
+                        "how much is level {level} {quality} {gem}",
+                        "how much is level {level} {quality} {gem} in {league}",
+                        "how much is level {level} {quality} {gem} in {league} league",
+                        "how much is level {level} {quality} {gem} worth",
+                        "how much is level {level} {quality} {gem} worth in {league}",
+                        "how much is level {level} {quality} {gem} worth in {league} league",
+                        "how much is the level {level} {gem}",
+                        "how much is the level {level} {gem} in {league}",
+                        "how much is the level {level} {gem} in {league} league",
+                        "how much is the level {level} {gem} worth",
+                        "how much is the level {level} {gem} worth in {league}",
+                        "how much is the level {level} {gem} worth in {league} league",
+                        "how much is the level {level} {quality} quality {gem}",
+                        "how much is the level {level} {quality} quality {gem} in {league}",
+                        "how much is the level {level} {quality} quality {gem} in {league} league",
+                        "how much is the level {level} {quality} quality {gem} worth",
+                        "how much is the level {level} {quality} quality {gem} worth in {league}",
+                        "how much is the level {level} {quality} quality {gem} worth in {league} league",
+                        "how much is the level {level} {quality} {gem}",
+                        "how much is the level {level} {quality} {gem} in {league}",
+                        "how much is the level {level} {quality} {gem} in {league} league",
+                        "how much is the level {level} {quality} {gem} worth",
+                        "how much is the level {level} {quality} {gem} worth in {league}",
+                        "how much is the level {level} {quality} {gem} worth in {league} league",
+                        "how much is the {gem}",
+                        "how much is the {gem} in {league}",
+                        "how much is the {gem} in {league} league",
+                        "how much is the {gem} worth",
+                        "how much is the {gem} worth in {league}",
+                        "how much is the {gem} worth in {league} league",
+                        "how much is the {level} {gem}",
+                        "how much is the {level} {gem} in {league}",
+                        "how much is the {level} {gem} in {league} league",
+                        "how much is the {level} {gem} worth",
+                        "how much is the {level} {gem} worth in {league}",
+                        "how much is the {level} {gem} worth in {league} league",
+                        "how much is the {level} {quality} quality {gem}",
+                        "how much is the {level} {quality} quality {gem} in {league}",
+                        "how much is the {level} {quality} quality {gem} in {league} league",
+                        "how much is the {level} {quality} quality {gem} worth",
+                        "how much is the {level} {quality} quality {gem} worth in {league}",
+                        "how much is the {level} {quality} quality {gem} worth in {league} league",
+                        "how much is the {level} {quality} {gem}",
+                        "how much is the {level} {quality} {gem} in {league}",
+                        "how much is the {level} {quality} {gem} in {league} league",
+                        "how much is the {level} {quality} {gem} worth",
+                        "how much is the {level} {quality} {gem} worth in {league}",
+                        "how much is the {level} {quality} {gem} worth in {league} league",
+                        "how much is the {quality} quality {gem}",
+                        "how much is the {quality} quality {gem} in {league}",
+                        "how much is the {quality} quality {gem} in {league} league",
+                        "how much is the {quality} quality {gem} worth",
+                        "how much is the {quality} quality {gem} worth in {league}",
+                        "how much is the {quality} quality {gem} worth in {league} league",
+                        "how much is the {quality} {gem}",
+                        "how much is the {quality} {gem} in {league}",
+                        "how much is the {quality} {gem} in {league} league",
+                        "how much is the {quality} {gem} worth",
+                        "how much is the {quality} {gem} worth in {league}",
+                        "how much is the {quality} {gem} worth in {league} league",
+                        "how much is {gem}",
+                        "how much is {gem} in {league}",
+                        "how much is {gem} in {league} league",
+                        "how much is {gem} worth",
+                        "how much is {gem} worth in {league}",
+                        "how much is {gem} worth in {league} league",
+                        "how much is {level} {gem}",
+                        "how much is {level} {gem} in {league}",
+                        "how much is {level} {gem} in {league} league",
+                        "how much is {level} {gem} worth",
+                        "how much is {level} {gem} worth in {league}",
+                        "how much is {level} {gem} worth in {league} league",
+                        "how much is {level} {quality} quality {gem}",
+                        "how much is {level} {quality} quality {gem} in {league}",
+                        "how much is {level} {quality} quality {gem} in {league} league",
+                        "how much is {level} {quality} quality {gem} worth",
+                        "how much is {level} {quality} quality {gem} worth in {league}",
+                        "how much is {level} {quality} quality {gem} worth in {league} league",
+                        "how much is {level} {quality} {gem}",
+                        "how much is {level} {quality} {gem} in {league}",
+                        "how much is {level} {quality} {gem} in {league} league",
+                        "how much is {level} {quality} {gem} worth",
+                        "how much is {level} {quality} {gem} worth in {league}",
+                        "how much is {level} {quality} {gem} worth in {league} league",
+                        "how much is {quality} quality {gem}",
+                        "how much is {quality} quality {gem} in {league}",
+                        "how much is {quality} quality {gem} in {league} league",
+                        "how much is {quality} quality {gem} worth",
+                        "how much is {quality} quality {gem} worth in {league}",
+                        "how much is {quality} quality {gem} worth in {league} league",
+                        "how much is {quality} {gem}",
+                        "how much is {quality} {gem} in {league}",
+                        "how much is {quality} {gem} in {league} league",
+                        "how much is {quality} {gem} worth",
+                        "how much is {quality} {gem} worth in {league}",
+                        "how much is {quality} {gem} worth in {league} league",
+                        "level {level} {gem}",
+                        "level {level} {gem} in {league}",
+                        "level {level} {gem} in {league} league",
+                        "level {level} {gem} price",
+                        "level {level} {gem} price in {league}",
+                        "level {level} {gem} price in {league} league",
+                        "level {level} {quality} quality {gem}",
+                        "level {level} {quality} quality {gem} in {league}",
+                        "level {level} {quality} quality {gem} in {league} league",
+                        "level {level} {quality} quality {gem} price",
+                        "level {level} {quality} quality {gem} price in {league}",
+                        "level {level} {quality} quality {gem} price in {league} league",
+                        "level {level} {quality} {gem}",
+                        "level {level} {quality} {gem} in {league}",
+                        "level {level} {quality} {gem} in {league} league",
+                        "level {level} {quality} {gem} price",
+                        "level {level} {quality} {gem} price in {league}",
+                        "level {level} {quality} {gem} price in {league} league",
+                        "price of a level {level} {gem}",
+                        "price of a level {level} {gem} in {league}",
+                        "price of a level {level} {gem} in {league} league",
+                        "price of a level {level} {quality} quality {gem}",
+                        "price of a level {level} {quality} quality {gem} in {league}",
+                        "price of a level {level} {quality} quality {gem} in {league} league",
+                        "price of a level {level} {quality} {gem}",
+                        "price of a level {level} {quality} {gem} in {league}",
+                        "price of a level {level} {quality} {gem} in {league} league",
+                        "price of a {gem}",
+                        "price of a {gem} in {league}",
+                        "price of a {gem} in {league} league",
+                        "price of a {level} {gem}",
+                        "price of a {level} {gem} in {league}",
+                        "price of a {level} {gem} in {league} league",
+                        "price of a {level} {quality} quality {gem}",
+                        "price of a {level} {quality} quality {gem} in {league}",
+                        "price of a {level} {quality} quality {gem} in {league} league",
+                        "price of a {level} {quality} {gem}",
+                        "price of a {level} {quality} {gem} in {league}",
+                        "price of a {level} {quality} {gem} in {league} league",
+                        "price of a {quality} quality {gem}",
+                        "price of a {quality} quality {gem} in {league}",
+                        "price of a {quality} quality {gem} in {league} league",
+                        "price of a {quality} {gem}",
+                        "price of a {quality} {gem} in {league}",
+                        "price of a {quality} {gem} in {league} league",
+                        "price of an level {level} {gem}",
+                        "price of an level {level} {gem} in {league}",
+                        "price of an level {level} {gem} in {league} league",
+                        "price of an level {level} {quality} quality {gem}",
+                        "price of an level {level} {quality} quality {gem} in {league}",
+                        "price of an level {level} {quality} quality {gem} in {league} league",
+                        "price of an level {level} {quality} {gem}",
+                        "price of an level {level} {quality} {gem} in {league}",
+                        "price of an level {level} {quality} {gem} in {league} league",
+                        "price of an {gem}",
+                        "price of an {gem} in {league}",
+                        "price of an {gem} in {league} league",
+                        "price of an {level} {gem}",
+                        "price of an {level} {gem} in {league}",
+                        "price of an {level} {gem} in {league} league",
+                        "price of an {level} {quality} quality {gem}",
+                        "price of an {level} {quality} quality {gem} in {league}",
+                        "price of an {level} {quality} quality {gem} in {league} league",
+                        "price of an {level} {quality} {gem}",
+                        "price of an {level} {quality} {gem} in {league}",
+                        "price of an {level} {quality} {gem} in {league} league",
+                        "price of an {quality} quality {gem}",
+                        "price of an {quality} quality {gem} in {league}",
+                        "price of an {quality} quality {gem} in {league} league",
+                        "price of an {quality} {gem}",
+                        "price of an {quality} {gem} in {league}",
+                        "price of an {quality} {gem} in {league} league",
+                        "price of level {level} {gem}",
+                        "price of level {level} {gem} in {league}",
+                        "price of level {level} {gem} in {league} league",
+                        "price of level {level} {quality} quality {gem}",
+                        "price of level {level} {quality} quality {gem} in {league}",
+                        "price of level {level} {quality} quality {gem} in {league} league",
+                        "price of level {level} {quality} {gem}",
+                        "price of level {level} {quality} {gem} in {league}",
+                        "price of level {level} {quality} {gem} in {league} league",
+                        "price of the level {level} {gem}",
+                        "price of the level {level} {gem} in {league}",
+                        "price of the level {level} {gem} in {league} league",
+                        "price of the level {level} {quality} quality {gem}",
+                        "price of the level {level} {quality} quality {gem} in {league}",
+                        "price of the level {level} {quality} quality {gem} in {league} league",
+                        "price of the level {level} {quality} {gem}",
+                        "price of the level {level} {quality} {gem} in {league}",
+                        "price of the level {level} {quality} {gem} in {league} league",
+                        "price of the {gem}",
+                        "price of the {gem} in {league}",
+                        "price of the {gem} in {league} league",
+                        "price of the {level} {gem}",
+                        "price of the {level} {gem} in {league}",
+                        "price of the {level} {gem} in {league} league",
+                        "price of the {level} {quality} quality {gem}",
+                        "price of the {level} {quality} quality {gem} in {league}",
+                        "price of the {level} {quality} quality {gem} in {league} league",
+                        "price of the {level} {quality} {gem}",
+                        "price of the {level} {quality} {gem} in {league}",
+                        "price of the {level} {quality} {gem} in {league} league",
+                        "price of the {quality} quality {gem}",
+                        "price of the {quality} quality {gem} in {league}",
+                        "price of the {quality} quality {gem} in {league} league",
+                        "price of the {quality} {gem}",
+                        "price of the {quality} {gem} in {league}",
+                        "price of the {quality} {gem} in {league} league",
+                        "price of {gem}",
+                        "price of {gem} in {league}",
+                        "price of {gem} in {league} league",
+                        "price of {level} {gem}",
+                        "price of {level} {gem} in {league}",
+                        "price of {level} {gem} in {league} league",
+                        "price of {level} {quality} quality {gem}",
+                        "price of {level} {quality} quality {gem} in {league}",
+                        "price of {level} {quality} quality {gem} in {league} league",
+                        "price of {level} {quality} {gem}",
+                        "price of {level} {quality} {gem} in {league}",
+                        "price of {level} {quality} {gem} in {league} league",
+                        "price of {quality} quality {gem}",
+                        "price of {quality} quality {gem} in {league}",
+                        "price of {quality} quality {gem} in {league} league",
+                        "price of {quality} {gem}",
+                        "price of {quality} {gem} in {league}",
+                        "price of {quality} {gem} in {league} league",
+                        "tell me price of a level {level} {gem}",
+                        "tell me price of a level {level} {gem} in {league}",
+                        "tell me price of a level {level} {gem} in {league} league",
+                        "tell me price of a level {level} {quality} quality {gem}",
+                        "tell me price of a level {level} {quality} quality {gem} in {league}",
+                        "tell me price of a level {level} {quality} quality {gem} in {league} league",
+                        "tell me price of a level {level} {quality} {gem}",
+                        "tell me price of a level {level} {quality} {gem} in {league}",
+                        "tell me price of a level {level} {quality} {gem} in {league} league",
+                        "tell me price of a {gem}",
+                        "tell me price of a {gem} in {league}",
+                        "tell me price of a {gem} in {league} league",
+                        "tell me price of a {level} {gem}",
+                        "tell me price of a {level} {gem} in {league}",
+                        "tell me price of a {level} {gem} in {league} league",
+                        "tell me price of a {level} {quality} quality {gem}",
+                        "tell me price of a {level} {quality} quality {gem} in {league}",
+                        "tell me price of a {level} {quality} quality {gem} in {league} league",
+                        "tell me price of a {level} {quality} {gem}",
+                        "tell me price of a {level} {quality} {gem} in {league}",
+                        "tell me price of a {level} {quality} {gem} in {league} league",
+                        "tell me price of a {quality} quality {gem}",
+                        "tell me price of a {quality} quality {gem} in {league}",
+                        "tell me price of a {quality} quality {gem} in {league} league",
+                        "tell me price of a {quality} {gem}",
+                        "tell me price of a {quality} {gem} in {league}",
+                        "tell me price of a {quality} {gem} in {league} league",
+                        "tell me price of an level {level} {gem}",
+                        "tell me price of an level {level} {gem} in {league}",
+                        "tell me price of an level {level} {gem} in {league} league",
+                        "tell me price of an level {level} {quality} quality {gem}",
+                        "tell me price of an level {level} {quality} quality {gem} in {league}",
+                        "tell me price of an level {level} {quality} quality {gem} in {league} league",
+                        "tell me price of an level {level} {quality} {gem}",
+                        "tell me price of an level {level} {quality} {gem} in {league}",
+                        "tell me price of an level {level} {quality} {gem} in {league} league",
+                        "tell me price of an {gem}",
+                        "tell me price of an {gem} in {league}",
+                        "tell me price of an {gem} in {league} league",
+                        "tell me price of an {level} {gem}",
+                        "tell me price of an {level} {gem} in {league}",
+                        "tell me price of an {level} {gem} in {league} league",
+                        "tell me price of an {level} {quality} quality {gem}",
+                        "tell me price of an {level} {quality} quality {gem} in {league}",
+                        "tell me price of an {level} {quality} quality {gem} in {league} league",
+                        "tell me price of an {level} {quality} {gem}",
+                        "tell me price of an {level} {quality} {gem} in {league}",
+                        "tell me price of an {level} {quality} {gem} in {league} league",
+                        "tell me price of an {quality} quality {gem}",
+                        "tell me price of an {quality} quality {gem} in {league}",
+                        "tell me price of an {quality} quality {gem} in {league} league",
+                        "tell me price of an {quality} {gem}",
+                        "tell me price of an {quality} {gem} in {league}",
+                        "tell me price of an {quality} {gem} in {league} league",
+                        "tell me price of level {level} {gem}",
+                        "tell me price of level {level} {gem} in {league}",
+                        "tell me price of level {level} {gem} in {league} league",
+                        "tell me price of level {level} {quality} quality {gem}",
+                        "tell me price of level {level} {quality} quality {gem} in {league}",
+                        "tell me price of level {level} {quality} quality {gem} in {league} league",
+                        "tell me price of level {level} {quality} {gem}",
+                        "tell me price of level {level} {quality} {gem} in {league}",
+                        "tell me price of level {level} {quality} {gem} in {league} league",
+                        "tell me price of the level {level} {gem}",
+                        "tell me price of the level {level} {gem} in {league}",
+                        "tell me price of the level {level} {gem} in {league} league",
+                        "tell me price of the level {level} {quality} quality {gem}",
+                        "tell me price of the level {level} {quality} quality {gem} in {league}",
+                        "tell me price of the level {level} {quality} quality {gem} in {league} league",
+                        "tell me price of the level {level} {quality} {gem}",
+                        "tell me price of the level {level} {quality} {gem} in {league}",
+                        "tell me price of the level {level} {quality} {gem} in {league} league",
+                        "tell me price of the {gem}",
+                        "tell me price of the {gem} in {league}",
+                        "tell me price of the {gem} in {league} league",
+                        "tell me price of the {level} {gem}",
+                        "tell me price of the {level} {gem} in {league}",
+                        "tell me price of the {level} {gem} in {league} league",
+                        "tell me price of the {level} {quality} quality {gem}",
+                        "tell me price of the {level} {quality} quality {gem} in {league}",
+                        "tell me price of the {level} {quality} quality {gem} in {league} league",
+                        "tell me price of the {level} {quality} {gem}",
+                        "tell me price of the {level} {quality} {gem} in {league}",
+                        "tell me price of the {level} {quality} {gem} in {league} league",
+                        "tell me price of the {quality} quality {gem}",
+                        "tell me price of the {quality} quality {gem} in {league}",
+                        "tell me price of the {quality} quality {gem} in {league} league",
+                        "tell me price of the {quality} {gem}",
+                        "tell me price of the {quality} {gem} in {league}",
+                        "tell me price of the {quality} {gem} in {league} league",
+                        "tell me price of {gem}",
+                        "tell me price of {gem} in {league}",
+                        "tell me price of {gem} in {league} league",
+                        "tell me price of {level} {gem}",
+                        "tell me price of {level} {gem} in {league}",
+                        "tell me price of {level} {gem} in {league} league",
+                        "tell me price of {level} {quality} quality {gem}",
+                        "tell me price of {level} {quality} quality {gem} in {league}",
+                        "tell me price of {level} {quality} quality {gem} in {league} league",
+                        "tell me price of {level} {quality} {gem}",
+                        "tell me price of {level} {quality} {gem} in {league}",
+                        "tell me price of {level} {quality} {gem} in {league} league",
+                        "tell me price of {quality} quality {gem}",
+                        "tell me price of {quality} quality {gem} in {league}",
+                        "tell me price of {quality} quality {gem} in {league} league",
+                        "tell me price of {quality} {gem}",
+                        "tell me price of {quality} {gem} in {league}",
+                        "tell me price of {quality} {gem} in {league} league",
+                        "tell me the price of a level {level} {gem}",
+                        "tell me the price of a level {level} {gem} in {league}",
+                        "tell me the price of a level {level} {gem} in {league} league",
+                        "tell me the price of a level {level} {quality} quality {gem}",
+                        "tell me the price of a level {level} {quality} quality {gem} in {league}",
+                        "tell me the price of a level {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of a level {level} {quality} {gem}",
+                        "tell me the price of a level {level} {quality} {gem} in {league}",
+                        "tell me the price of a level {level} {quality} {gem} in {league} league",
+                        "tell me the price of a {gem}",
+                        "tell me the price of a {gem} in {league}",
+                        "tell me the price of a {gem} in {league} league",
+                        "tell me the price of a {level} {gem}",
+                        "tell me the price of a {level} {gem} in {league}",
+                        "tell me the price of a {level} {gem} in {league} league",
+                        "tell me the price of a {level} {quality} quality {gem}",
+                        "tell me the price of a {level} {quality} quality {gem} in {league}",
+                        "tell me the price of a {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of a {level} {quality} {gem}",
+                        "tell me the price of a {level} {quality} {gem} in {league}",
+                        "tell me the price of a {level} {quality} {gem} in {league} league",
+                        "tell me the price of a {quality} quality {gem}",
+                        "tell me the price of a {quality} quality {gem} in {league}",
+                        "tell me the price of a {quality} quality {gem} in {league} league",
+                        "tell me the price of a {quality} {gem}",
+                        "tell me the price of a {quality} {gem} in {league}",
+                        "tell me the price of a {quality} {gem} in {league} league",
+                        "tell me the price of an level {level} {gem}",
+                        "tell me the price of an level {level} {gem} in {league}",
+                        "tell me the price of an level {level} {gem} in {league} league",
+                        "tell me the price of an level {level} {quality} quality {gem}",
+                        "tell me the price of an level {level} {quality} quality {gem} in {league}",
+                        "tell me the price of an level {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of an level {level} {quality} {gem}",
+                        "tell me the price of an level {level} {quality} {gem} in {league}",
+                        "tell me the price of an level {level} {quality} {gem} in {league} league",
+                        "tell me the price of an {gem}",
+                        "tell me the price of an {gem} in {league}",
+                        "tell me the price of an {gem} in {league} league",
+                        "tell me the price of an {level} {gem}",
+                        "tell me the price of an {level} {gem} in {league}",
+                        "tell me the price of an {level} {gem} in {league} league",
+                        "tell me the price of an {level} {quality} quality {gem}",
+                        "tell me the price of an {level} {quality} quality {gem} in {league}",
+                        "tell me the price of an {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of an {level} {quality} {gem}",
+                        "tell me the price of an {level} {quality} {gem} in {league}",
+                        "tell me the price of an {level} {quality} {gem} in {league} league",
+                        "tell me the price of an {quality} quality {gem}",
+                        "tell me the price of an {quality} quality {gem} in {league}",
+                        "tell me the price of an {quality} quality {gem} in {league} league",
+                        "tell me the price of an {quality} {gem}",
+                        "tell me the price of an {quality} {gem} in {league}",
+                        "tell me the price of an {quality} {gem} in {league} league",
+                        "tell me the price of level {level} {gem}",
+                        "tell me the price of level {level} {gem} in {league}",
+                        "tell me the price of level {level} {gem} in {league} league",
+                        "tell me the price of level {level} {quality} quality {gem}",
+                        "tell me the price of level {level} {quality} quality {gem} in {league}",
+                        "tell me the price of level {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of level {level} {quality} {gem}",
+                        "tell me the price of level {level} {quality} {gem} in {league}",
+                        "tell me the price of level {level} {quality} {gem} in {league} league",
+                        "tell me the price of the level {level} {gem}",
+                        "tell me the price of the level {level} {gem} in {league}",
+                        "tell me the price of the level {level} {gem} in {league} league",
+                        "tell me the price of the level {level} {quality} quality {gem}",
+                        "tell me the price of the level {level} {quality} quality {gem} in {league}",
+                        "tell me the price of the level {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of the level {level} {quality} {gem}",
+                        "tell me the price of the level {level} {quality} {gem} in {league}",
+                        "tell me the price of the level {level} {quality} {gem} in {league} league",
+                        "tell me the price of the {gem}",
+                        "tell me the price of the {gem} in {league}",
+                        "tell me the price of the {gem} in {league} league",
+                        "tell me the price of the {level} {gem}",
+                        "tell me the price of the {level} {gem} in {league}",
+                        "tell me the price of the {level} {gem} in {league} league",
+                        "tell me the price of the {level} {quality} quality {gem}",
+                        "tell me the price of the {level} {quality} quality {gem} in {league}",
+                        "tell me the price of the {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of the {level} {quality} {gem}",
+                        "tell me the price of the {level} {quality} {gem} in {league}",
+                        "tell me the price of the {level} {quality} {gem} in {league} league",
+                        "tell me the price of the {quality} quality {gem}",
+                        "tell me the price of the {quality} quality {gem} in {league}",
+                        "tell me the price of the {quality} quality {gem} in {league} league",
+                        "tell me the price of the {quality} {gem}",
+                        "tell me the price of the {quality} {gem} in {league}",
+                        "tell me the price of the {quality} {gem} in {league} league",
+                        "tell me the price of {gem}",
+                        "tell me the price of {gem} in {league}",
+                        "tell me the price of {gem} in {league} league",
+                        "tell me the price of {level} {gem}",
+                        "tell me the price of {level} {gem} in {league}",
+                        "tell me the price of {level} {gem} in {league} league",
+                        "tell me the price of {level} {quality} quality {gem}",
+                        "tell me the price of {level} {quality} quality {gem} in {league}",
+                        "tell me the price of {level} {quality} quality {gem} in {league} league",
+                        "tell me the price of {level} {quality} {gem}",
+                        "tell me the price of {level} {quality} {gem} in {league}",
+                        "tell me the price of {level} {quality} {gem} in {league} league",
+                        "tell me the price of {quality} quality {gem}",
+                        "tell me the price of {quality} quality {gem} in {league}",
+                        "tell me the price of {quality} quality {gem} in {league} league",
+                        "tell me the price of {quality} {gem}",
+                        "tell me the price of {quality} {gem} in {league}",
+                        "tell me the price of {quality} {gem} in {league} league",
+                        "the price of a level {level} {gem}",
+                        "the price of a level {level} {gem} in {league}",
+                        "the price of a level {level} {gem} in {league} league",
+                        "the price of a level {level} {quality} quality {gem}",
+                        "the price of a level {level} {quality} quality {gem} in {league}",
+                        "the price of a level {level} {quality} quality {gem} in {league} league",
+                        "the price of a level {level} {quality} {gem}",
+                        "the price of a level {level} {quality} {gem} in {league}",
+                        "the price of a level {level} {quality} {gem} in {league} league",
+                        "the price of a {gem}",
+                        "the price of a {gem} in {league}",
+                        "the price of a {gem} in {league} league",
+                        "the price of a {level} {gem}",
+                        "the price of a {level} {gem} in {league}",
+                        "the price of a {level} {gem} in {league} league",
+                        "the price of a {level} {quality} quality {gem}",
+                        "the price of a {level} {quality} quality {gem} in {league}",
+                        "the price of a {level} {quality} quality {gem} in {league} league",
+                        "the price of a {level} {quality} {gem}",
+                        "the price of a {level} {quality} {gem} in {league}",
+                        "the price of a {level} {quality} {gem} in {league} league",
+                        "the price of a {quality} quality {gem}",
+                        "the price of a {quality} quality {gem} in {league}",
+                        "the price of a {quality} quality {gem} in {league} league",
+                        "the price of a {quality} {gem}",
+                        "the price of a {quality} {gem} in {league}",
+                        "the price of a {quality} {gem} in {league} league",
+                        "the price of an level {level} {gem}",
+                        "the price of an level {level} {gem} in {league}",
+                        "the price of an level {level} {gem} in {league} league",
+                        "the price of an level {level} {quality} quality {gem}",
+                        "the price of an level {level} {quality} quality {gem} in {league}",
+                        "the price of an level {level} {quality} quality {gem} in {league} league",
+                        "the price of an level {level} {quality} {gem}",
+                        "the price of an level {level} {quality} {gem} in {league}",
+                        "the price of an level {level} {quality} {gem} in {league} league",
+                        "the price of an {gem}",
+                        "the price of an {gem} in {league}",
+                        "the price of an {gem} in {league} league",
+                        "the price of an {level} {gem}",
+                        "the price of an {level} {gem} in {league}",
+                        "the price of an {level} {gem} in {league} league",
+                        "the price of an {level} {quality} quality {gem}",
+                        "the price of an {level} {quality} quality {gem} in {league}",
+                        "the price of an {level} {quality} quality {gem} in {league} league",
+                        "the price of an {level} {quality} {gem}",
+                        "the price of an {level} {quality} {gem} in {league}",
+                        "the price of an {level} {quality} {gem} in {league} league",
+                        "the price of an {quality} quality {gem}",
+                        "the price of an {quality} quality {gem} in {league}",
+                        "the price of an {quality} quality {gem} in {league} league",
+                        "the price of an {quality} {gem}",
+                        "the price of an {quality} {gem} in {league}",
+                        "the price of an {quality} {gem} in {league} league",
+                        "the price of level {level} {gem}",
+                        "the price of level {level} {gem} in {league}",
+                        "the price of level {level} {gem} in {league} league",
+                        "the price of level {level} {quality} quality {gem}",
+                        "the price of level {level} {quality} quality {gem} in {league}",
+                        "the price of level {level} {quality} quality {gem} in {league} league",
+                        "the price of level {level} {quality} {gem}",
+                        "the price of level {level} {quality} {gem} in {league}",
+                        "the price of level {level} {quality} {gem} in {league} league",
+                        "the price of the level {level} {gem}",
+                        "the price of the level {level} {gem} in {league}",
+                        "the price of the level {level} {gem} in {league} league",
+                        "the price of the level {level} {quality} quality {gem}",
+                        "the price of the level {level} {quality} quality {gem} in {league}",
+                        "the price of the level {level} {quality} quality {gem} in {league} league",
+                        "the price of the level {level} {quality} {gem}",
+                        "the price of the level {level} {quality} {gem} in {league}",
+                        "the price of the level {level} {quality} {gem} in {league} league",
+                        "the price of the {gem}",
+                        "the price of the {gem} in {league}",
+                        "the price of the {gem} in {league} league",
+                        "the price of the {level} {gem}",
+                        "the price of the {level} {gem} in {league}",
+                        "the price of the {level} {gem} in {league} league",
+                        "the price of the {level} {quality} quality {gem}",
+                        "the price of the {level} {quality} quality {gem} in {league}",
+                        "the price of the {level} {quality} quality {gem} in {league} league",
+                        "the price of the {level} {quality} {gem}",
+                        "the price of the {level} {quality} {gem} in {league}",
+                        "the price of the {level} {quality} {gem} in {league} league",
+                        "the price of the {quality} quality {gem}",
+                        "the price of the {quality} quality {gem} in {league}",
+                        "the price of the {quality} quality {gem} in {league} league",
+                        "the price of the {quality} {gem}",
+                        "the price of the {quality} {gem} in {league}",
+                        "the price of the {quality} {gem} in {league} league",
+                        "the price of {gem}",
+                        "the price of {gem} in {league}",
+                        "the price of {gem} in {league} league",
+                        "the price of {level} {gem}",
+                        "the price of {level} {gem} in {league}",
+                        "the price of {level} {gem} in {league} league",
+                        "the price of {level} {quality} quality {gem}",
+                        "the price of {level} {quality} quality {gem} in {league}",
+                        "the price of {level} {quality} quality {gem} in {league} league",
+                        "the price of {level} {quality} {gem}",
+                        "the price of {level} {quality} {gem} in {league}",
+                        "the price of {level} {quality} {gem} in {league} league",
+                        "the price of {quality} quality {gem}",
+                        "the price of {quality} quality {gem} in {league}",
+                        "the price of {quality} quality {gem} in {league} league",
+                        "the price of {quality} {gem}",
+                        "the price of {quality} {gem} in {league}",
+                        "the price of {quality} {gem} in {league} league",
+                        "what is price of a level {level} {gem}",
+                        "what is price of a level {level} {gem} in {league}",
+                        "what is price of a level {level} {gem} in {league} league",
+                        "what is price of a level {level} {quality} quality {gem}",
+                        "what is price of a level {level} {quality} quality {gem} in {league}",
+                        "what is price of a level {level} {quality} quality {gem} in {league} league",
+                        "what is price of a level {level} {quality} {gem}",
+                        "what is price of a level {level} {quality} {gem} in {league}",
+                        "what is price of a level {level} {quality} {gem} in {league} league",
+                        "what is price of a {gem}",
+                        "what is price of a {gem} in {league}",
+                        "what is price of a {gem} in {league} league",
+                        "what is price of a {level} {gem}",
+                        "what is price of a {level} {gem} in {league}",
+                        "what is price of a {level} {gem} in {league} league",
+                        "what is price of a {level} {quality} quality {gem}",
+                        "what is price of a {level} {quality} quality {gem} in {league}",
+                        "what is price of a {level} {quality} quality {gem} in {league} league",
+                        "what is price of a {level} {quality} {gem}",
+                        "what is price of a {level} {quality} {gem} in {league}",
+                        "what is price of a {level} {quality} {gem} in {league} league",
+                        "what is price of a {quality} quality {gem}",
+                        "what is price of a {quality} quality {gem} in {league}",
+                        "what is price of a {quality} quality {gem} in {league} league",
+                        "what is price of a {quality} {gem}",
+                        "what is price of a {quality} {gem} in {league}",
+                        "what is price of a {quality} {gem} in {league} league",
+                        "what is price of an level {level} {gem}",
+                        "what is price of an level {level} {gem} in {league}",
+                        "what is price of an level {level} {gem} in {league} league",
+                        "what is price of an level {level} {quality} quality {gem}",
+                        "what is price of an level {level} {quality} quality {gem} in {league}",
+                        "what is price of an level {level} {quality} quality {gem} in {league} league",
+                        "what is price of an level {level} {quality} {gem}",
+                        "what is price of an level {level} {quality} {gem} in {league}",
+                        "what is price of an level {level} {quality} {gem} in {league} league",
+                        "what is price of an {gem}",
+                        "what is price of an {gem} in {league}",
+                        "what is price of an {gem} in {league} league",
+                        "what is price of an {level} {gem}",
+                        "what is price of an {level} {gem} in {league}",
+                        "what is price of an {level} {gem} in {league} league",
+                        "what is price of an {level} {quality} quality {gem}",
+                        "what is price of an {level} {quality} quality {gem} in {league}",
+                        "what is price of an {level} {quality} quality {gem} in {league} league",
+                        "what is price of an {level} {quality} {gem}",
+                        "what is price of an {level} {quality} {gem} in {league}",
+                        "what is price of an {level} {quality} {gem} in {league} league",
+                        "what is price of an {quality} quality {gem}",
+                        "what is price of an {quality} quality {gem} in {league}",
+                        "what is price of an {quality} quality {gem} in {league} league",
+                        "what is price of an {quality} {gem}",
+                        "what is price of an {quality} {gem} in {league}",
+                        "what is price of an {quality} {gem} in {league} league",
+                        "what is price of level {level} {gem}",
+                        "what is price of level {level} {gem} in {league}",
+                        "what is price of level {level} {gem} in {league} league",
+                        "what is price of level {level} {quality} quality {gem}",
+                        "what is price of level {level} {quality} quality {gem} in {league}",
+                        "what is price of level {level} {quality} quality {gem} in {league} league",
+                        "what is price of level {level} {quality} {gem}",
+                        "what is price of level {level} {quality} {gem} in {league}",
+                        "what is price of level {level} {quality} {gem} in {league} league",
+                        "what is price of the level {level} {gem}",
+                        "what is price of the level {level} {gem} in {league}",
+                        "what is price of the level {level} {gem} in {league} league",
+                        "what is price of the level {level} {quality} quality {gem}",
+                        "what is price of the level {level} {quality} quality {gem} in {league}",
+                        "what is price of the level {level} {quality} quality {gem} in {league} league",
+                        "what is price of the level {level} {quality} {gem}",
+                        "what is price of the level {level} {quality} {gem} in {league}",
+                        "what is price of the level {level} {quality} {gem} in {league} league",
+                        "what is price of the {gem}",
+                        "what is price of the {gem} in {league}",
+                        "what is price of the {gem} in {league} league",
+                        "what is price of the {level} {gem}",
+                        "what is price of the {level} {gem} in {league}",
+                        "what is price of the {level} {gem} in {league} league",
+                        "what is price of the {level} {quality} quality {gem}",
+                        "what is price of the {level} {quality} quality {gem} in {league}",
+                        "what is price of the {level} {quality} quality {gem} in {league} league",
+                        "what is price of the {level} {quality} {gem}",
+                        "what is price of the {level} {quality} {gem} in {league}",
+                        "what is price of the {level} {quality} {gem} in {league} league",
+                        "what is price of the {quality} quality {gem}",
+                        "what is price of the {quality} quality {gem} in {league}",
+                        "what is price of the {quality} quality {gem} in {league} league",
+                        "what is price of the {quality} {gem}",
+                        "what is price of the {quality} {gem} in {league}",
+                        "what is price of the {quality} {gem} in {league} league",
+                        "what is price of {gem}",
+                        "what is price of {gem} in {league}",
+                        "what is price of {gem} in {league} league",
+                        "what is price of {level} {gem}",
+                        "what is price of {level} {gem} in {league}",
+                        "what is price of {level} {gem} in {league} league",
+                        "what is price of {level} {quality} quality {gem}",
+                        "what is price of {level} {quality} quality {gem} in {league}",
+                        "what is price of {level} {quality} quality {gem} in {league} league",
+                        "what is price of {level} {quality} {gem}",
+                        "what is price of {level} {quality} {gem} in {league}",
+                        "what is price of {level} {quality} {gem} in {league} league",
+                        "what is price of {quality} quality {gem}",
+                        "what is price of {quality} quality {gem} in {league}",
+                        "what is price of {quality} quality {gem} in {league} league",
+                        "what is price of {quality} {gem}",
+                        "what is price of {quality} {gem} in {league}",
+                        "what is price of {quality} {gem} in {league} league",
+                        "what is the price of a level {level} {gem}",
+                        "what is the price of a level {level} {gem} in {league}",
+                        "what is the price of a level {level} {gem} in {league} league",
+                        "what is the price of a level {level} {quality} quality {gem}",
+                        "what is the price of a level {level} {quality} quality {gem} in {league}",
+                        "what is the price of a level {level} {quality} quality {gem} in {league} league",
+                        "what is the price of a level {level} {quality} {gem}",
+                        "what is the price of a level {level} {quality} {gem} in {league}",
+                        "what is the price of a level {level} {quality} {gem} in {league} league",
+                        "what is the price of a {gem}",
+                        "what is the price of a {gem} in {league}",
+                        "what is the price of a {gem} in {league} league",
+                        "what is the price of a {level} {gem}",
+                        "what is the price of a {level} {gem} in {league}",
+                        "what is the price of a {level} {gem} in {league} league",
+                        "what is the price of a {level} {quality} quality {gem}",
+                        "what is the price of a {level} {quality} quality {gem} in {league}",
+                        "what is the price of a {level} {quality} quality {gem} in {league} league",
+                        "what is the price of a {level} {quality} {gem}",
+                        "what is the price of a {level} {quality} {gem} in {league}",
+                        "what is the price of a {level} {quality} {gem} in {league} league",
+                        "what is the price of a {quality} quality {gem}",
+                        "what is the price of a {quality} quality {gem} in {league}",
+                        "what is the price of a {quality} quality {gem} in {league} league",
+                        "what is the price of a {quality} {gem}",
+                        "what is the price of a {quality} {gem} in {league}",
+                        "what is the price of a {quality} {gem} in {league} league",
+                        "what is the price of an level {level} {gem}",
+                        "what is the price of an level {level} {gem} in {league}",
+                        "what is the price of an level {level} {gem} in {league} league",
+                        "what is the price of an level {level} {quality} quality {gem}",
+                        "what is the price of an level {level} {quality} quality {gem} in {league}",
+                        "what is the price of an level {level} {quality} quality {gem} in {league} league",
+                        "what is the price of an level {level} {quality} {gem}",
+                        "what is the price of an level {level} {quality} {gem} in {league}",
+                        "what is the price of an level {level} {quality} {gem} in {league} league",
+                        "what is the price of an {gem}",
+                        "what is the price of an {gem} in {league}",
+                        "what is the price of an {gem} in {league} league",
+                        "what is the price of an {level} {gem}",
+                        "what is the price of an {level} {gem} in {league}",
+                        "what is the price of an {level} {gem} in {league} league",
+                        "what is the price of an {level} {quality} quality {gem}",
+                        "what is the price of an {level} {quality} quality {gem} in {league}",
+                        "what is the price of an {level} {quality} quality {gem} in {league} league",
+                        "what is the price of an {level} {quality} {gem}",
+                        "what is the price of an {level} {quality} {gem} in {league}",
+                        "what is the price of an {level} {quality} {gem} in {league} league",
+                        "what is the price of an {quality} quality {gem}",
+                        "what is the price of an {quality} quality {gem} in {league}",
+                        "what is the price of an {quality} quality {gem} in {league} league",
+                        "what is the price of an {quality} {gem}",
+                        "what is the price of an {quality} {gem} in {league}",
+                        "what is the price of an {quality} {gem} in {league} league",
+                        "what is the price of level {level} {gem}",
+                        "what is the price of level {level} {gem} in {league}",
+                        "what is the price of level {level} {gem} in {league} league",
+                        "what is the price of level {level} {quality} quality {gem}",
+                        "what is the price of level {level} {quality} quality {gem} in {league}",
+                        "what is the price of level {level} {quality} quality {gem} in {league} league",
+                        "what is the price of level {level} {quality} {gem}",
+                        "what is the price of level {level} {quality} {gem} in {league}",
+                        "what is the price of level {level} {quality} {gem} in {league} league",
+                        "what is the price of the level {level} {gem}",
+                        "what is the price of the level {level} {gem} in {league}",
+                        "what is the price of the level {level} {gem} in {league} league",
+                        "what is the price of the level {level} {quality} quality {gem}",
+                        "what is the price of the level {level} {quality} quality {gem} in {league}",
+                        "what is the price of the level {level} {quality} quality {gem} in {league} league",
+                        "what is the price of the level {level} {quality} {gem}",
+                        "what is the price of the level {level} {quality} {gem} in {league}",
+                        "what is the price of the level {level} {quality} {gem} in {league} league",
+                        "what is the price of the {gem}",
+                        "what is the price of the {gem} in {league}",
+                        "what is the price of the {gem} in {league} league",
+                        "what is the price of the {level} {gem}",
+                        "what is the price of the {level} {gem} in {league}",
+                        "what is the price of the {level} {gem} in {league} league",
+                        "what is the price of the {level} {quality} quality {gem}",
+                        "what is the price of the {level} {quality} quality {gem} in {league}",
+                        "what is the price of the {level} {quality} quality {gem} in {league} league",
+                        "what is the price of the {level} {quality} {gem}",
+                        "what is the price of the {level} {quality} {gem} in {league}",
+                        "what is the price of the {level} {quality} {gem} in {league} league",
+                        "what is the price of the {quality} quality {gem}",
+                        "what is the price of the {quality} quality {gem} in {league}",
+                        "what is the price of the {quality} quality {gem} in {league} league",
+                        "what is the price of the {quality} {gem}",
+                        "what is the price of the {quality} {gem} in {league}",
+                        "what is the price of the {quality} {gem} in {league} league",
+                        "what is the price of {gem}",
+                        "what is the price of {gem} in {league}",
+                        "what is the price of {gem} in {league} league",
+                        "what is the price of {level} {gem}",
+                        "what is the price of {level} {gem} in {league}",
+                        "what is the price of {level} {gem} in {league} league",
+                        "what is the price of {level} {quality} quality {gem}",
+                        "what is the price of {level} {quality} quality {gem} in {league}",
+                        "what is the price of {level} {quality} quality {gem} in {league} league",
+                        "what is the price of {level} {quality} {gem}",
+                        "what is the price of {level} {quality} {gem} in {league}",
+                        "what is the price of {level} {quality} {gem} in {league} league",
+                        "what is the price of {quality} quality {gem}",
+                        "what is the price of {quality} quality {gem} in {league}",
+                        "what is the price of {quality} quality {gem} in {league} league",
+                        "what is the price of {quality} {gem}",
+                        "what is the price of {quality} {gem} in {league}",
+                        "what is the price of {quality} {gem} in {league} league",
+                        "{gem}",
+                        "{gem} in {league}",
+                        "{gem} in {league} league",
+                        "{gem} price",
+                        "{gem} price in {league}",
+                        "{gem} price in {league} league",
+                        "{level} {gem}",
+                        "{level} {gem} in {league}",
+                        "{level} {gem} in {league} league",
+                        "{level} {gem} price",
+                        "{level} {gem} price in {league}",
+                        "{level} {gem} price in {league} league",
+                        "{level} {quality} quality {gem}",
+                        "{level} {quality} quality {gem} in {league}",
+                        "{level} {quality} quality {gem} in {league} league",
+                        "{level} {quality} quality {gem} price",
+                        "{level} {quality} quality {gem} price in {league}",
+                        "{level} {quality} quality {gem} price in {league} league",
+                        "{level} {quality} {gem}",
+                        "{level} {quality} {gem} in {league}",
+                        "{level} {quality} {gem} in {league} league",
+                        "{level} {quality} {gem} price",
+                        "{level} {quality} {gem} price in {league}",
+                        "{level} {quality} {gem} price in {league} league",
+                        "{quality} quality {gem}",
+                        "{quality} quality {gem} in {league}",
+                        "{quality} quality {gem} in {league} league",
+                        "{quality} quality {gem} price",
+                        "{quality} quality {gem} price in {league}",
+                        "{quality} quality {gem} price in {league} league",
+                        "{quality} {gem}",
+                        "{quality} {gem} in {league}",
+                        "{quality} {gem} in {league} league",
+                        "{quality} {gem} price",
+                        "{quality} {gem} price in {league}",
+                        "{quality} {gem} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -12055,6 +13004,1585 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "GEM",
+                    "values": [{
+                            "name": {
+                                "value": "Abyssal Cry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Added Chaos Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Added Cold Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Added Fire Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Added Lightning Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Additional Accuracy Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Advanced Traps Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancestral Call Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancestral Protector"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ancestral Warchief"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Anger"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Animate Guardian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Animate Weapon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arc"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arcane Surge Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arctic Armour"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Arctic Breath"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Assassin's Mark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ball Lightning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Barrage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bear Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blade Flurry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blade Vortex"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bladefall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blasphemy Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blast Rain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blind Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blink Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Block Chance Reduction Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood Magic Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Blood Rage"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bloodlust Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bodyswap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bone Offering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Brutality Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burning Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Burning Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cast On Critical Strike Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cast on Death Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cast on Melee Kill Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cast when Damage Taken Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cast when Stunned Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cast while Channelling Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Caustic Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chain Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chance to Bleed Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chance to Flee Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Charged Dash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Charged Traps Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Clarity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cleave"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cluster Traps Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold Penetration Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold Snap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cold to Fire Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Combustion Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Concentrated Effect Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Conductivity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Contagion"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Controlled Destruction Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Conversion Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Convocation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cremation"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Culling Strike Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Curse On Hit Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cyclone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Damage on Full Life Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dark Pact"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Deadly Ailments Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Decay Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Decoy Totem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Desecrate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Despair"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Determination"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Detonate Dead"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Detonate Mines"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Devouring Totem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Discharge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Discipline"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dominating Blow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Double Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Dual Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Earthquake"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Efficacy Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elemental Damage with Attacks Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elemental Focus Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elemental Hit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elemental Proliferation Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Elemental Weakness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Empower Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Endurance Charge on Melee Stun Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Enduring Cry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Enfeeble"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Enhance Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Enlighten Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Essence Drain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ethereal Knives"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Explosive Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Explosive Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Faster Attacks Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Faster Casting Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Faster Projectiles Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fire Nova Mine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fire Penetration Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fire Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fireball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Firestorm"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flame Dash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flame Surge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flame Totem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flameblast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flamethrower Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flammability"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flesh Offering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flicker Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fork Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Fortify Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Freeze Mine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Freezing Pulse"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frenzy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frost Blades"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frost Bomb"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frost Wall"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frostbite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Frostbolt"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Generosity Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Glacial Cascade"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Glacial Hammer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Grace"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Greater Multiple Projectiles Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ground Slam"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Haste"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hatred"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Heavy Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Herald of Ash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Herald of Ice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Herald of Thunder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hypothermia Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ice Bite Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ice Crash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ice Nova"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ice Shot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ice Spear"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ice Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ignite Proliferation Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Immolate Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Immortal Call"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Incinerate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Increased Area of Effect Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Increased Critical Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Increased Critical Strikes Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Increased Duration Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Infernal Blow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Innervate Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Iron Grip Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Iron Will Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Item Quantity Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Item Rarity Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Kinetic Blast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Knockback Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lacerate"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Leap Slam"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Less Duration Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lesser Multiple Projectiles Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lesser Poison Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Life Gain on Hit Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Life Leech Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Penetration Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Spire Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Tendrils"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lightning Warp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Magma Orb"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Maim Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mana Leech Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Melee Physical Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Melee Splash Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Minefield Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Minion Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Minion Life Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Minion Speed Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Minion and Totem Elemental Resistance Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mirage Archer Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mirror Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Molten Shell"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Molten Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Multiple Traps Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Multistrike Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Onslaught Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Orb of Storms"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Phase Run"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Physical Projectile Attack Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Physical to Lightning Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pierce Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Poacher's Mark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Point Blank Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Poison Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Portal"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Power Charge On Critical Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Power Siphon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Projectile Weakness"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Puncture"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Punishment"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Purity of Elements"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Purity of Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Purity of Ice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Purity of Lightning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rain of Arrows"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Raise Spectre"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Raise Zombie"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rallying Cry"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ranged Attack Totem Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reave"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reckoning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Reduced Mana Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rejuvenation Totem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Remote Mine Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Righteous Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Riposte"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ruthless Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Scorching Ray"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Searing Bond"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Seismic Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shield Charge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shock Nova"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shockwave Totem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shrapnel Shot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Siege Ballista"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Siphoning Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Slower Projectiles Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Smoke Mine"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spectral Shield Throw"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spectral Throw"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spell Cascade Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spell Echo Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spell Totem Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spirit Offering"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Split Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Static Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Storm Barrier Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Storm Burst"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Storm Call"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Stun Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Chaos Golem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Flame Golem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Ice Golem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Lightning Golem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Phantasm on Kill Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Raging Spirit"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Skeleton"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summon Stone Golem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sunder"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sweep"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Swift Affliction Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tectonic Slam"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tempest Shield"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Temporal Chains"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tornado Shot"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Trap Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Trap and Mine Damage Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unbound Ailments Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Unearth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Arc"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Blade Vortex"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Blight"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Burning Arrow"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Clarity"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Cold Snap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Cyclone"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Detonate Dead"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Discipline"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Double Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Earthquake"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Fireball"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Flameblast"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Glacial Hammer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Grace"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Ground Slam"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Haste"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Ice Nova"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Immortal Call"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Impurity of Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Impurity of Ice"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Impurity of Lightning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Lightning Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Lightning Trap"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Lightning Warp"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Molten Shell"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Power Siphon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Rain of Arrows"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Reave"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Righteous Fire"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Spark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Spectral Throw"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Storm Call"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vaal Summon Skeletons"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vengeance"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vigilant Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vile Toxins Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Viper Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vitality"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Void Manipulation Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Volatile Dead"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Volley Support"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vortex"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vulnerability"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Warlord's Mark"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Whirling Blades"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wild Strike"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wither"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Wrath"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -12320,6 +14848,42 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "GemPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "level",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1319948098406.1217524111804"
+                            }
+                        },
+                        {
+                            "name": "gem",
+                            "type": "GEM",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "quality",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
                 }
             ]
         },
@@ -12514,6 +15078,20 @@
                         "value": "What item are you looking for?"
                     }
                 ]
+            },
+            {
+                "id": "Elicit.Slot.1319948098406.57906807723",
+                "variations": [{
+                    "type": "PlainText",
+                    "value": "What gem quality do you want?"
+                }]
+            },
+            {
+                "id": "Elicit.Slot.1319948098406.1217524111804",
+                "variations": [{
+                    "type": "PlainText",
+                    "value": "What gem level do you want?"
+                }]
             }
         ]
     }

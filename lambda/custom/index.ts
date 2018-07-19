@@ -14,6 +14,7 @@ import * as UniqueMapPriceCheckIntents from "./intents/uniquemappricecheck";
 import * as EssencePriceCheckIntents from "./intents/essencepricecheck";
 import * as DivinationPriceCheckIntents from "./intents/divinationpricecheck";
 import * as ProphecyPriceCheckIntents from "./intents/prophecypricecheck";
+import * as GemPriceCheckIntents from "./intents/gempricecheck";
 
 export const handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
@@ -73,7 +74,11 @@ export const handler = Alexa.SkillBuilders.custom()
 
         // Prophecy price check
         ProphecyPriceCheckIntents.InProgress,
-        ProphecyPriceCheckIntents.Completed
+        ProphecyPriceCheckIntents.Completed,
+
+        // Skill gem price check
+        GemPriceCheckIntents.InProgress,
+        GemPriceCheckIntents.Completed
     )
     .addErrorHandlers(
         Errors.Unknown,

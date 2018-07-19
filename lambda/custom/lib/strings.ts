@@ -14,6 +14,8 @@ interface IStrings {
     [Strings.PRICE_OF_IS_MSG]: string;
     [Strings.PRICE_OF_IS_EXALTED_MSG]: string;
     [Strings.LINKED]: string;
+    [Strings.LEVEL]: string;
+    [Strings.QUALITY]: string;
     [Strings.ERROR_NOT_ENOUGH_DATA_MSG]: string;
     [Strings.ERROR_CURRENCY_NOT_FOUND_MSG]: string;
     [Strings.ERROR_ITEM_NOT_FOUND_MSG]: string;
@@ -41,6 +43,8 @@ export const strings: Resource = {
             PRICE_OF_IS_MSG: "The price of %s %s is %s Chaos Orbs",
             PRICE_OF_IS_EXALTED_MSG: "The price of %s %s is %s Exalted Orbs or %s Chaos Orbs",
             LINKED: "a %s linked",
+            LEVEL: "a level %s",
+            QUALITY: " %s quality",
             ERROR_NOT_ENOUGH_DATA_MSG: "Sorry, there is not enough exchange data for the item you requested. Please try again later.",
             ERROR_CURRENCY_NOT_FOUND_MSG: "Sorry, I couldn't find the exchange for the currency you requested.",
             ERROR_ITEM_NOT_FOUND_MSG: "Sorry, I couldn't find the price of the item you requested.",

@@ -23,6 +23,7 @@ export enum IntentTypes {
     EssencePriceCheck = "EssencePriceCheckIntent",
     DivinationPriceCheck = "DivinationPriceCheckIntent",
     ProphecyPriceCheck = "ProphecyPriceCheckIntent",
+    GemPriceCheck = "GemPriceCheckIntent",
 }
 
 export enum SlotTypes {
@@ -41,6 +42,9 @@ export enum SlotTypes {
     Essence = "essence",
     Divination = "divination",
     Prophecy = "prophecy",
+    Gem = "gem",
+    Level = "level",
+    Quality = "quality",
 }
 
 export enum ErrorTypes {
@@ -62,6 +66,8 @@ export enum Strings {
     PRICE_OF_IS_MSG = "PRICE_OF_IS_MSG",
     PRICE_OF_IS_EXALTED_MSG = "PRICE_OF_IS_EXALTED_MSG",
     LINKED = "LINKED",
+    LEVEL = "LEVEL",
+    QUALITY = "QUALITY",
     ERROR_NOT_ENOUGH_DATA_MSG = "ERROR_NOT_ENOUGH_DATA_MSG",
     ERROR_CURRENCY_NOT_FOUND_MSG = "ERROR_CURRENCY_NOT_FOUND_MSG",
     ERROR_ITEM_NOT_FOUND_MSG = "ERROR_ITEM_NOT_FOUND_MSG",
