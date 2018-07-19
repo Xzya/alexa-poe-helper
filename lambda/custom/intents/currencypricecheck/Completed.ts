@@ -1,9 +1,7 @@
 import { RequestHandler } from "ask-sdk-core";
-import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, IsOrb, IsFragment, CurrentDate } from "../../lib/helpers";
+import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, IsOrb, IsFragment, CurrentDate, GetLeagueSlot } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
-import { CurrencyEntity, LeagueTypes, CurrencyRequestTypes } from "../../api";
-
-const showLowConfidence = false;
+import { CurrencyEntity, CurrencyRequestTypes } from "../../api";
 
 function filterLowConfidence(value: CurrencyEntity) {
     return value.receive && value.receive.count >= 5 || value.pay && value.pay.count >= 5;
@@ -21,15 +19,7 @@ export const Completed: RequestHandler = {
 
         if (currency && currency.isMatch && !currency.isAmbiguous) {
             // get the league
-            let league: LeagueTypes;
-
-            const leagueSlot = slots[SlotTypes.League];
-            if (leagueSlot && leagueSlot.isMatch) {
-                league = leagueSlot.resolved as LeagueTypes;
-            } else {
-                // default temp challenge league
-                league = LeagueTypes.Challenge;
-            }
+            const league = GetLeagueSlot(slots);
 
             // get the currency type
             let type: CurrencyRequestTypes;
@@ -54,22 +44,20 @@ export const Completed: RequestHandler = {
             }
 
             try {
-                const [, res] = await Promise.all([
-                    // send progressive response
-                    directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, currency.resolved, league))),
-
+                const [res] = await Promise.all([
                     // get the currency exchange details
                     apiClient.currencies({
                         league: league,
                         type: type,
                         date: CurrentDate(),
                     }),
+
+                    // send progressive response
+                    directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, currency.resolved, league))),
                 ]);
 
                 // filter out low confidence elements
-                if (!showLowConfidence) {
-                    res.lines = res.lines.filter(filterLowConfidence);
-                }
+                res.lines = res.lines.filter(filterLowConfidence);
 
                 // search for the currency that the user requested
                 for (let exchange of res.lines) {

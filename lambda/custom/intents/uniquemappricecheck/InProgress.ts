@@ -1,8 +1,8 @@
 import { RequestHandler } from "ask-sdk-core";
 import { SlotTypes, IntentTypes } from "../../lib/constants";
-import { CreateInProgressHandler } from "../../lib/helpers";
+import { CreateDefaultInProgressHandler } from "../../lib/helpers";
 
-export const InProgress: RequestHandler = CreateInProgressHandler({
+export const InProgress: RequestHandler = CreateDefaultInProgressHandler({
     intentName: IntentTypes.UniqueMapPriceCheck,
     slotName: SlotTypes.UniqueMap,
 });

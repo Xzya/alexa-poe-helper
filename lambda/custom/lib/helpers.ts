@@ -1,8 +1,9 @@
 import { HandlerInput, RequestHandler } from "ask-sdk-core";
 import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
-import { RequestTypes, ErrorTypes, Orbs, Fragments, Strings } from "./constants";
+import { RequestTypes, ErrorTypes, Orbs, Fragments, Strings, SlotTypes } from "./constants";
 import { UniqueAccessories, UniqueArmours, UniqueWeapons } from "./items";
+import { LeagueTypes, ItemEntity, ItemRequestTypes } from "../api";
 
 /**
  * Checks if the request matches any of the given intents.
@@ -407,7 +408,55 @@ export function DisambiguateSlot(handlerInput: HandlerInput, slot: MatchedSlotVa
         .getResponse();
 }
 
-export function CreateInProgressHandler(options: {
+/**
+ * Returns the LeagueType if it was found in the slots.
+ * Defaults to LeagueTypes.Challenge.
+ * 
+ * @param slots 
+ */
+export function GetLeagueSlot(slots: SlotValues): LeagueTypes {
+    const leagueSlot = slots[SlotTypes.League];
+    if (leagueSlot && leagueSlot.isMatch) {
+        return leagueSlot.resolved as LeagueTypes
+    }
+
+    return LeagueTypes.Challenge;
+}
+
+/**
+ * Returns the links slot. Defaults to 0.
+ * 
+ * @param slots 
+ */
+export function GetLinksSlot(slots: SlotValues): number {
+    let links = 0;
+
+    const linksSlot = slots[SlotTypes.Links];
+    if (linksSlot && linksSlot.isMatch) {
+        links = parseFloat(linksSlot.value);
+        if (links < 5 || links > 6 || isNaN(links)) {
+            links = 0;
+        }
+    }
+
+    return links;
+}
+
+/**
+ * Checks the count of the ItemEntity. Returns true if the count >= 5.
+ * 
+ * @param value 
+ */
+export function IsHighConfidenceItemPrice(value: ItemEntity) {
+    return value.count >= 5;
+}
+
+/**
+ * Creates a Dialog handler with incomplete state.
+ * 
+ * @param options 
+ */
+export function CreateDefaultInProgressHandler(options: {
     intentName: string;
     slotName: string;
 }): RequestHandler {
@@ -437,6 +486,82 @@ export function CreateInProgressHandler(options: {
             return handlerInput.responseBuilder
                 .addDelegateDirective(currentIntent)
                 .getResponse();
+        }
+    };
+}
+
+/**
+ * Creates an item Dialog handler with complete state.
+ * 
+ * @param options 
+ */
+export function CreateDefaultCompletedItemHandler(options: {
+    intentName: string;
+    slotName: string;
+    requestType: ItemRequestTypes;
+}): RequestHandler {
+    return {
+        canHandle(handlerInput) {
+            return IsIntentWithCompleteDialog(handlerInput, options.intentName);
+        },
+        async handle(handlerInput) {
+            const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
+            const { t, slots, apiClient } = GetRequestAttributes(handlerInput);
+
+            const item = slots[options.slotName];
+
+            if (item && item.isMatch && !item.isAmbiguous) {
+                try {
+                    const league = GetLeagueSlot(slots);
+
+                    const [res] = await Promise.all([
+                        // get the item prices
+                        apiClient.items({
+                            league: league,
+                            type: options.requestType,
+                            date: CurrentDate(),
+                        }),
+
+                        // send progressive response
+                        directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, item.resolved, league))),
+                    ]);
+
+                    // filter out low confidence elements
+                    res.lines = res.lines.filter(IsHighConfidenceItemPrice);
+
+                    // search for the item that the user requested
+                    for (let itemDetails of res.lines) {
+                        if (itemDetails.name === item.resolved) {
+                            const exaltedValue = itemDetails.exaltedValue;
+                            const chaosValue = itemDetails.chaosValue;
+
+                            // only include the exalted price equivalent if it's higher than 1
+                            if (exaltedValue >= 1) {
+                                return handlerInput.responseBuilder
+                                    // TODO: - add plurals
+                                    .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, 1, item.resolved, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
+                                    .getResponse();
+                            }
+
+                            // chaos only price
+                            return handlerInput.responseBuilder
+                                // TODO: - add plurals
+                                .speak(t(Strings.PRICE_OF_IS_MSG, 1, item.resolved, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
+                                .getResponse();
+                        }
+                    }
+
+                    // item not found
+                    return handlerInput.responseBuilder
+                        .speak(t(Strings.ERROR_ITEM_NOT_FOUND_MSG))
+                        .getResponse();
+
+                } catch (err) {
+                    throw CreateError(`Got error while getting ${options.requestType} prices: ${err}`, ErrorTypes.API)
+                }
+            }
+
+            throw CreateError(`Got to the COMPLETED state of ${options.intentName} without a slot.`, ErrorTypes.Unexpected);
         }
     };
 }

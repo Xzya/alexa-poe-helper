@@ -1,13 +1,7 @@
 import { RequestHandler } from "ask-sdk-core";
-import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, CurrentDate } from "../../lib/helpers";
+import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, CurrentDate, GetLeagueSlot, GetLinksSlot, IsHighConfidenceItemPrice } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
-import { ItemEntity, LeagueTypes, ItemRequestTypes } from "../../api";
-
-const showLowConfidence = false;
-
-function filterLowConfidence(value: ItemEntity) {
-    return value.count >= 5;
-}
+import { ItemRequestTypes } from "../../api";
 
 export const Completed: RequestHandler = {
     canHandle(handlerInput) {
@@ -21,44 +15,26 @@ export const Completed: RequestHandler = {
 
         if (item && item.isMatch && !item.isAmbiguous) {
             // get the league
-            let league: LeagueTypes;
-
-            const leagueSlot = slots[SlotTypes.League];
-            if (leagueSlot && leagueSlot.isMatch) {
-                league = leagueSlot.resolved as LeagueTypes;
-            } else {
-                // default temp challenge league
-                league = LeagueTypes.Challenge;
-            }
+            const league = GetLeagueSlot(slots);
 
             // get the links
-            let links = 0;
-
-            const linksSlot = slots[SlotTypes.Links];
-            if (linksSlot && linksSlot.isMatch) {
-                links = parseFloat(linksSlot.value);
-                if (links < 5 || links > 6 || isNaN(links)) {
-                    links = 0;
-                }
-            }
+            const links = GetLinksSlot(slots);
 
             try {
-                const [, res] = await Promise.all([
-                    // send progressive response
-                    directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, item.resolved, league))),
-
+                const [res] = await Promise.all([
                     // get the item prices
                     apiClient.items({
                         league: league,
                         type: ItemRequestTypes.UniqueArmour,
                         date: CurrentDate(),
                     }),
+
+                    // send progressive response
+                    directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, item.resolved, league))),
                 ]);
 
                 // filter out low confidence elements
-                if (!showLowConfidence) {
-                    res.lines = res.lines.filter(filterLowConfidence);
-                }
+                res.lines = res.lines.filter(IsHighConfidenceItemPrice);
 
                 // find all items with a matching name
                 res.lines = res.lines.filter((i) => i.name === item.resolved);
