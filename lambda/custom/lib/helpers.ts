@@ -1,7 +1,7 @@
-import { HandlerInput } from "ask-sdk-core";
+import { HandlerInput, RequestHandler } from "ask-sdk-core";
 import { IntentRequest, services } from "ask-sdk-model";
-import { RequestAttributes, Slots, SlotValues, SessionAttributes } from "../interfaces";
-import { RequestTypes, ErrorTypes, Orbs, Fragments } from "./constants";
+import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
+import { RequestTypes, ErrorTypes, Orbs, Fragments, Strings } from "./constants";
 import { UniqueAccessories, UniqueArmours, UniqueWeapons } from "./items";
 
 /**
@@ -381,4 +381,62 @@ export function IsUniqueWeapon(str: string): boolean {
  */
 export function CurrentDate() {
     return (new Date).toISOString().substring(0, 10);
+}
+
+/**
+ * Repropts the user to say a slot if it is ambiguous.
+ * 
+ * @param handlerInput 
+ * @param slot 
+ */
+export function DisambiguateSlot(handlerInput: HandlerInput, slot: MatchedSlotValue) {
+    const { t } = GetRequestAttributes(handlerInput);
+
+    let prompt = "";
+    const size = slot.values.length;
+
+    slot.values
+        .forEach((element, index) => {
+            prompt += `${(index === size - 1) ? t(Strings.OR_MSG) : " "} ${element.name}`;
+        });
+
+    return handlerInput.responseBuilder
+        .speak(t(Strings.SELECT_ONE_MSG, prompt))
+        .reprompt(t(Strings.SELECT_ONE_MSG, prompt))
+        .addElicitSlotDirective(slot.name)
+        .getResponse();
+}
+
+export function CreateInProgressHandler(options: {
+    intentName: string;
+    slotName: string;
+}): RequestHandler {
+    return {
+        canHandle(handlerInput) {
+            return IsIntentWithIncompleteDialog(handlerInput, options.intentName);
+        },
+        handle(handlerInput) {
+            const request = handlerInput.requestEnvelope.request as IntentRequest;
+            const currentIntent = request.intent;
+
+            const { slots } = GetRequestAttributes(handlerInput);
+
+            const slot = slots[options.slotName];
+
+            // if we have a match but it's ambiguous
+            // ask for clarification
+            if (slot && slot.isMatch && slot.isAmbiguous) {
+                return DisambiguateSlot(handlerInput, slot);
+            }
+
+            // reset any unmatched slots
+            ResetUnmatchedSlotValues(handlerInput, slots);
+
+            // let Alexa reprompt the user
+            // or switch to the completed handler if it's done
+            return handlerInput.responseBuilder
+                .addDelegateDirective(currentIntent)
+                .getResponse();
+        }
+    };
 }
