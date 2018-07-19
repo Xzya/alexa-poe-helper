@@ -1,2 +1,2 @@
-export * from "./InProgressQuestReward";
-export * from "./CompletedQuestReward";
+export * from "./InProgress";
+export * from "./Completed";

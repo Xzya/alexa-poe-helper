@@ -1,2 +1,2 @@
-export * from "./InProgressUniqueAccessoryPriceCheck";
-export * from "./CompletedUniqueAccessoryPriceCheck";
+export * from "./InProgress";
+export * from "./Completed";

@@ -1,2 +1,2 @@
-export * from "./InProgressMapPriceCheck";
-export * from "./CompletedMapPriceCheck";
+export * from "./InProgress";
+export * from "./Completed";
