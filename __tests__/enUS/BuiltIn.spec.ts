@@ -1,5 +1,5 @@
-import { skill, ssml, RequestWithIntent } from "./helpers";
-import { IntentTypes, LocaleTypes } from "../lambda/custom/lib/constants";
+import { skill, ssml, RequestWithIntent } from "../helpers";
+import { IntentTypes, LocaleTypes } from "../../lambda/custom/lib/constants";
 
 describe("BuiltIn Intents", () => {
     it("Help", async () => {

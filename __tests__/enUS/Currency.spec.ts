@@ -1,6 +1,6 @@
-import { skill, ssml, CreateIntentRequest, inProgressDelegate } from "./helpers";
-import { IntentTypes, LocaleTypes, SlotTypes } from "../lambda/custom/lib/constants";
-import { LeagueTypes } from "../lambda/custom/api";
+import { skill, ssml, CreateIntentRequest, inProgressDelegate } from "../helpers";
+import { IntentTypes, LocaleTypes, SlotTypes } from "../../lambda/custom/lib/constants";
+import { LeagueTypes } from "../../lambda/custom/api";
 
 // mock the poe.ninja api client
 jest.mock("../lambda/custom/api/POENinjaClient");

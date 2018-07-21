@@ -1,5 +1,5 @@
-import { skill, ssml, RequestWithType } from "./helpers";
-import { RequestTypes, LocaleTypes } from "../lambda/custom/lib/constants";
+import { skill, ssml, RequestWithType } from "../helpers";
+import { RequestTypes, LocaleTypes } from "../../lambda/custom/lib/constants";
 
 describe("Launch", () => {
     it("should work", async () => {

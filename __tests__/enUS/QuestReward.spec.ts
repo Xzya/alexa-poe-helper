@@ -1,5 +1,5 @@
-import { IntentTypes, LocaleTypes, SlotTypes } from "../lambda/custom/lib/constants";
-import { skill, ssml, CreateIntentRequest, inProgressDelegate } from "./helpers";
+import { IntentTypes, LocaleTypes, SlotTypes } from "../../lambda/custom/lib/constants";
+import { skill, ssml, CreateIntentRequest, inProgressDelegate } from "../helpers";
 
 describe("Quest reward", () => {
     const name = IntentTypes.QuestReward;

@@ -5,8 +5,11 @@ import { LeagueTypes } from "../lambda/custom/api";
 // mock the poe.ninja api client
 jest.mock("../lambda/custom/api/POENinjaClient");
 
-describe("Prophecies", () => {
-    const name = IntentTypes.ProphecyPriceCheck;
+export function GenericTest(options: {
+    intentName: IntentTypes;
+    slotName: SlotTypes;
+}) {
+    const name = options.intentName;
     const locale = LocaleTypes.enUS;
 
     it("InProgress", async () => {
@@ -25,14 +28,14 @@ describe("Prophecies", () => {
             locale: locale,
             dialogState: "IN_PROGRESS",
             slots: {
-                [SlotTypes.Prophecy]: {
+                [options.slotName]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "Unbearable Whispers I",
+                            name: "Value 1",
                         },
                         {
-                            name: "Unbearable Whispers II",
+                            name: "Value 2",
                         }]
                     }
                 }
@@ -48,11 +51,11 @@ describe("Prophecies", () => {
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [SlotTypes.Prophecy]: {
+                [options.slotName]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "Fated Connections",
+                            name: "Value 2",
                         }]
                     }
                 }
@@ -68,11 +71,11 @@ describe("Prophecies", () => {
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [SlotTypes.Prophecy]: {
+                [options.slotName]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "The Queen's Sacrifice",
+                            name: "Value 1",
                         }]
                     }
                 },
@@ -97,11 +100,11 @@ describe("Prophecies", () => {
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [SlotTypes.Prophecy]: {
+                [options.slotName]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "A Vision of Ice and Fire",
+                            name: "Value 3",
                         }]
                     }
                 },
@@ -110,4 +113,4 @@ describe("Prophecies", () => {
         const response = await skill(request);
         expect(response).toMatchObject(ssml(/Sorry, I couldn't find the price of the item you requested/gi));
     });
-});
+}

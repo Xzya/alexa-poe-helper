@@ -98,111 +98,18 @@ class DummyClient implements IPOENinjaClient {
 
             switch (req.type) {
                 case ItemRequestTypes.DivinationCard:
-                    return fulfill({
-                        lines: [
-                            {
-                                "id": -1,
-                                "name": "The Doctor",
-                                "icon": "",
-                                "mapTier": -1,
-                                "levelRequired": -1,
-                                "stackSize": -1,
-                                "links": -1,
-                                "itemClass": -1,
-                                "sparkline": empty,
-                                "lowConfidenceSparkline": empty,
-                                "implicitModifiers": [],
-                                "explicitModifiers": [],
-                                "flavourText": "",
-                                "corrupted": false,
-                                "gemLevel": -1,
-                                "gemQuality": -1,
-                                "itemType": "",
-                                "chaosValue": 123.45,
-                                "exaltedValue": 12.34,
-                                "count": 5
-                            },
-                            {
-                                "id": -1,
-                                "name": "House of Mirrors",
-                                "icon": "",
-                                "mapTier": -1,
-                                "levelRequired": -1,
-                                "stackSize": -1,
-                                "links": -1,
-                                "itemClass": -1,
-                                "sparkline": empty,
-                                "lowConfidenceSparkline": empty,
-                                "implicitModifiers": [],
-                                "explicitModifiers": [],
-                                "flavourText": "",
-                                "corrupted": false,
-                                "gemLevel": -1,
-                                "gemQuality": -1,
-                                "itemType": "",
-                                "chaosValue": 123.45,
-                                "exaltedValue": 0.5,
-                                "count": 5
-                            }
-                        ]
-                    });
-
-                case ItemRequestTypes.Prophecy:
-                    return fulfill({
-                        lines: [
-                            {
-                                "id": -1,
-                                "name": "The Queen's Sacrifice",
-                                "icon": "",
-                                "mapTier": -1,
-                                "levelRequired": -1,
-                                "stackSize": -1,
-                                "links": -1,
-                                "itemClass": -1,
-                                "sparkline": empty,
-                                "lowConfidenceSparkline": empty,
-                                "implicitModifiers": [],
-                                "explicitModifiers": [],
-                                "flavourText": "",
-                                "corrupted": false,
-                                "gemLevel": -1,
-                                "gemQuality": -1,
-                                "itemType": "",
-                                "chaosValue": 123.45,
-                                "exaltedValue": 12.34,
-                                "count": 5
-                            },
-                            {
-                                "id": -1,
-                                "name": "Fated Connections",
-                                "icon": "",
-                                "mapTier": -1,
-                                "levelRequired": -1,
-                                "stackSize": -1,
-                                "links": -1,
-                                "itemClass": -1,
-                                "sparkline": empty,
-                                "lowConfidenceSparkline": empty,
-                                "implicitModifiers": [],
-                                "explicitModifiers": [],
-                                "flavourText": "",
-                                "corrupted": false,
-                                "gemLevel": -1,
-                                "gemQuality": -1,
-                                "itemType": "",
-                                "chaosValue": 123.45,
-                                "exaltedValue": 0.5,
-                                "count": 5
-                            }
-                        ]
-                    });
-
                 case ItemRequestTypes.Essence:
+                case ItemRequestTypes.Map:
+                case ItemRequestTypes.Prophecy:
+                case ItemRequestTypes.UniqueAccessory:
+                case ItemRequestTypes.UniqueFlask:
+                case ItemRequestTypes.UniqueJewel:
+                case ItemRequestTypes.UniqueMap:
                     return fulfill({
                         lines: [
                             {
                                 "id": -1,
-                                "name": "Essence of Horror",
+                                "name": "Value 1",
                                 "icon": "",
                                 "mapTier": -1,
                                 "levelRequired": -1,
@@ -224,7 +131,7 @@ class DummyClient implements IPOENinjaClient {
                             },
                             {
                                 "id": -1,
-                                "name": "Essence of Insanity",
+                                "name": "Value 2",
                                 "icon": "",
                                 "mapTier": -1,
                                 "levelRequired": -1,
