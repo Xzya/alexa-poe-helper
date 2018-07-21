@@ -3,7 +3,7 @@ import { IntentTypes, LocaleTypes, SlotTypes } from "../../lambda/custom/lib/con
 import { LeagueTypes } from "../../lambda/custom/api";
 
 // mock the poe.ninja api client
-jest.mock("../lambda/custom/api/POENinjaClient");
+jest.mock("../../lambda/custom/api/POENinjaClient");
 
 describe("Currency", () => {
     const name = IntentTypes.CurrencyPriceCheck;
