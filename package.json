@@ -10,7 +10,22 @@
     "deploy:lambda": "npm run build && ask deploy --target lambda",
     "deploy:local": "ask deploy --target skill --profile local",
     "start": "nodemon",
-    "generate-item-names": "ts-node lambda/tools/generateItemNames.ts"
+    "generate-item-names": "ts-node lambda/tools/generateItemNames.ts",
+    "test": "jest",
+    "start:test": "nodemon --config nodemon_tests.json"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testMatch": [
+      "**/*.spec.ts"
+    ]
   },
   "author": "Mihail Cristian Dumitru",
   "license": "MIT",
@@ -27,12 +42,17 @@
     "@types/i18next": "^8.4.3",
     "@types/i18next-sprintf-postprocessor": "^0.0.29",
     "@types/request": "2.47.0",
+    "@types/jest": "^23.3.0",
+    "@types/lodash": "^4.14.112",
     "express": "^4.16.3",
     "gulp": "^3.9.1",
     "gulp-typescript": "^4.0.1",
     "rimraf": "^2.6.2",
     "ts-node": "^5.0.1",
     "typescript": "^2.9.2",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "jest": "^23.4.1",
+    "ts-jest": "^23.0.1",
+    "lodash": "^4.17.10"
   }
 }

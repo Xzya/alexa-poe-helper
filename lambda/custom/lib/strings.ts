@@ -1,5 +1,5 @@
 import { Resource } from "i18next";
-import { Strings } from "./constants";
+import { Strings, LocaleTypes } from "./constants";
 
 interface IStrings {
     [Strings.SKILL_NAME]: string;
@@ -25,7 +25,7 @@ interface IStrings {
 }
 
 export const strings: Resource = {
-    "en-US": {
+    [LocaleTypes.enUS]: {
         translation: {
             SKILL_NAME: "POE Helper",
             WELCOME_MSG: "Welcome to P.O.E. Helper. How can I help?",
@@ -38,7 +38,7 @@ export const strings: Resource = {
             ERROR_MSG: "Sorry, I can't understand the command. Please say again.",
             ERROR_UNEXPECTED_MSG: "Sorry, an unexpected error has occured. Please try again later.",
             SELECT_ONE_MSG: "Which would you like: %s?",
-            OR_MSG: " or",
+            OR_MSG: " or ",
             CHECKING_PRICE_OF_MSG: "Checking the price of %s in %s league...",
             PRICE_OF_IS_MSG: "The price of %s %s is %s Chaos Orbs",
             PRICE_OF_IS_EXALTED_MSG: "The price of %s %s is %s Exalted Orbs or %s Chaos Orbs",

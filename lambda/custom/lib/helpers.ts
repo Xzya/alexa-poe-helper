@@ -398,7 +398,12 @@ export function DisambiguateSlot(handlerInput: HandlerInput, slot: MatchedSlotVa
 
     slot.values
         .forEach((element, index) => {
-            prompt += `${(index === size - 1) ? t(Strings.OR_MSG) : " "} ${element.name}`;
+            if (index === size - 1) {
+                prompt += t(Strings.OR_MSG);
+            } else if (index !== 0) {
+                prompt += ", ";
+            }
+            prompt += element.name;
         });
 
     return handlerInput.responseBuilder
