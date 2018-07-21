@@ -1,7 +1,7 @@
 import { RequestHandler } from "ask-sdk-core";
-import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, IsOrb, IsFragment, CurrentDate, GetLeagueSlot } from "../../lib/helpers";
+import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, FormatPrice, IsOrb, IsFragment, CurrentDate, GetLeagueSlot } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
-import { CurrencyEntity, CurrencyRequestTypes } from "../../api";
+import { CurrencyEntity, CurrencyRequestTypes, apiClient } from "../../api";
 
 function filterLowConfidence(value: CurrencyEntity) {
     return value.receive && value.receive.count >= 5 || value.pay && value.pay.count >= 5;
@@ -12,8 +12,7 @@ export const Completed: RequestHandler = {
         return IsIntentWithCompleteDialog(handlerInput, IntentTypes.CurrencyPriceCheck);
     },
     async handle(handlerInput) {
-        const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
-        const { t, slots, apiClient } = GetRequestAttributes(handlerInput);
+        const { t, slots } = GetRequestAttributes(handlerInput);
 
         const currency = slots[SlotTypes.Currency];
 
@@ -44,17 +43,12 @@ export const Completed: RequestHandler = {
             }
 
             try {
-                const [res] = await Promise.all([
-                    // get the currency exchange details
-                    apiClient.currencies({
-                        league: league,
-                        type: type,
-                        date: CurrentDate(),
-                    }),
-
-                    // send progressive response
-                    directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, currency.resolved, league))),
-                ]);
+                // get the currency exchange details
+                const res = await apiClient.currencies({
+                    league: league,
+                    type: type,
+                    date: CurrentDate(),
+                });
 
                 // filter out low confidence elements
                 res.lines = res.lines.filter(filterLowConfidence);
@@ -74,7 +68,7 @@ export const Completed: RequestHandler = {
                         // exchange found
                         return handlerInput.responseBuilder
                             // TODO: - add plurals
-                            .speak(t(Strings.PRICE_OF_IS_MSG, quantity, currency.resolved, FormatPrice(totalPrice).toString())) // .toString() removes the trailing zeros
+                            .speak(t(Strings.PRICE_OF_IS_MSG, quantity, currency.resolved, league, FormatPrice(totalPrice).toString())) // .toString() removes the trailing zeros
                             .getResponse();
                     }
                 }

@@ -23,6 +23,8 @@
   "exclude": [
     "/**/node_modules",
     "lambda/local/",
-    "lambda/tools/"
+    "lambda/tools/",
+    "__tests__",
+    "**/__mocks__"
   ]
 }

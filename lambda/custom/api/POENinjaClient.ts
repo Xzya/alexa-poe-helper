@@ -1,15 +1,11 @@
 import { JSONRequest } from "./HttpHelpers";
-import { CurrencyRequest, CurrencyResponse, ItemRequest, ItemResponse } from "./interfaces";
-
-export interface IPOENinjaClientSettings {
-    baseUrl: string;
-}
+import { CurrencyRequest, CurrencyResponse, ItemRequest, ItemResponse, IPOENinjaClientSettings, IPOENinjaClient } from "./interfaces";
 
 const defaultSettings: IPOENinjaClientSettings = {
     baseUrl: "https://poe.ninja",
 };
 
-export class POENinjaClient {
+export class POENinjaClient implements IPOENinjaClient {
     protected settings: IPOENinjaClientSettings;
 
     constructor(settings?: IPOENinjaClientSettings) {
@@ -40,3 +36,5 @@ export class POENinjaClient {
     }
 
 }
+
+export const apiClient = new POENinjaClient();

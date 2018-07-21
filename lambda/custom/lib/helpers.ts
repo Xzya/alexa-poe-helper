@@ -3,7 +3,7 @@ import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
 import { RequestTypes, ErrorTypes, Orbs, Fragments, Strings, SlotTypes } from "./constants";
 import { UniqueAccessories, UniqueArmours, UniqueWeapons } from "./items";
-import { LeagueTypes, ItemEntity, ItemRequestTypes } from "../api";
+import { LeagueTypes, ItemEntity, ItemRequestTypes, apiClient } from "../api";
 
 /**
  * Checks if the request matches any of the given intents.
@@ -511,7 +511,7 @@ export function CreateDefaultCompletedItemHandler(options: {
         },
         async handle(handlerInput) {
             const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
-            const { t, slots, apiClient } = GetRequestAttributes(handlerInput);
+            const { t, slots } = GetRequestAttributes(handlerInput);
 
             const item = slots[options.slotName];
 

@@ -40,7 +40,7 @@ export const strings: Resource = {
             SELECT_ONE_MSG: "Which would you like: %s?",
             OR_MSG: " or ",
             CHECKING_PRICE_OF_MSG: "Checking the price of %s in %s league...",
-            PRICE_OF_IS_MSG: "The price of %s %s is %s Chaos Orbs",
+            PRICE_OF_IS_MSG: "The price of %s %s in %s league is %s Chaos Orbs",
             PRICE_OF_IS_EXALTED_MSG: "The price of %s %s is %s Exalted Orbs or %s Chaos Orbs",
             LINKED: "a %s linked",
             LEVEL: "a level %s",

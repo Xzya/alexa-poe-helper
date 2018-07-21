@@ -1,6 +1,6 @@
-import { RequestEnvelope, ResponseEnvelope } from "../node_modules/ask-sdk-model";
+import { RequestEnvelope, ResponseEnvelope, DialogState, SlotConfirmationStatus, slu, Slot } from "ask-sdk-model";
 import { handler } from "../lambda/custom";
-import { IntentTypes, SlotTypes, RequestTypes, LocaleTypes } from "../lambda/custom/lib/constants";
+import { IntentTypes, RequestTypes, LocaleTypes } from "../lambda/custom/lib/constants";
 
 export type PartialDeep<T> = {
     [P in keyof T]?: PartialDeep<T[P]>;
@@ -43,6 +43,27 @@ export function ssml(pattern: string | RegExp) {
             outputSpeech: {
                 ssml: expect.stringMatching(pattern)
             }
+        }
+    });
+}
+
+/**
+ * Returns a partial ResponseEnvelope for the given intent matching a
+ * Dialog.Delegate directive.
+ * 
+ * @param intentName 
+ */
+export function inProgressDelegate(intentName: string) {
+    return partial<ResponseEnvelope>({
+        response: {
+            directives: [
+                {
+                    type: "Dialog.Delegate",
+                    updatedIntent: {
+                        name: intentName,
+                    }
+                }
+            ]
         }
     });
 }
@@ -91,14 +112,27 @@ export function RequestWithIntent(options: {
 }
 
 /**
- * InProgress dialog with slot value match
+ * Creates an intent request envelope with the given parameters.
+ * 
+ * @param options 
  */
-
-export function RequestInProgressMatch(options: {
-    intentName: IntentTypes;
-    locale: LocaleTypes,
-    slotName: SlotTypes;
-    slotValue: string;
+export function CreateIntentRequest(options: {
+    name: string;
+    locale: LocaleTypes;
+    dialogState?: DialogState;
+    slots?: {
+        [key: string]: {
+            value?: string;
+            confirmationStatus?: SlotConfirmationStatus;
+            resolutions?: {
+                status: slu.entityresolution.StatusCode,
+                values?: {
+                    name: string;
+                    id?: string;
+                }[];
+            }
+        }
+    },
 }) {
     return partial<RequestEnvelope>({
         "context": {
@@ -108,184 +142,43 @@ export function RequestInProgressMatch(options: {
             "type": "IntentRequest",
             "locale": options.locale,
             "intent": {
-                "name": options.intentName,
+                "name": options.name,
                 "confirmationStatus": "NONE",
-                "slots": {
-                    [options.slotName]: {
-                        "name": options.slotName,
-                        "value": options.slotValue,
-                        "resolutions": {
-                            "resolutionsPerAuthority": [
-                                {
-                                    "status": {
-                                        "code": "ER_SUCCESS_MATCH"
-                                    },
-                                    "values": [
-                                        {
-                                            "value": {
-                                                "name": options.slotValue
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        "confirmationStatus": "NONE"
-                    }
-                }
-            },
-            "dialogState": "STARTED"
-        }
-    });
-}
+                "slots": options.slots ? (() => {
+                    const slots: {
+                        [key: string]: Slot;
+                    } = {};
 
-export function ResponseInProgressMatch(options: {
-    intentName: IntentTypes;
-    slotName: SlotTypes;
-    slotValue: string;
-}) {
-    return partial<ResponseEnvelope>({
-        "response": {
-            "directives": [
-                {
-                    "type": "Dialog.Delegate",
-                    "updatedIntent": {
-                        "name": options.intentName,
-                        "confirmationStatus": "NONE",
-                        "slots": {
-                            [options.slotName]: {
-                                "name": options.slotName,
-                                "value": options.slotValue,
-                                "confirmationStatus": "NONE"
-                            }
+                    for (let slotName of Object.keys(options.slots)) {
+                        const slot = options.slots[slotName];
+                        slots[slotName] = {
+                            name: slotName,
+                            value: slot.value ? slot.value : "",
+                            confirmationStatus: slot.confirmationStatus ? slot.confirmationStatus : "NONE",
+                            resolutions: slot.resolutions ? {
+                                resolutionsPerAuthority: [
+                                    {
+                                        authority: "",
+                                        status: {
+                                            code: slot.resolutions.status
+                                        },
+                                        values: slot.resolutions.values ? slot.resolutions.values.map((item) => {
+                                            return {
+                                                value: {
+                                                    name: item.name,
+                                                    id: item.id ? item.id : ""
+                                                }
+                                            };
+                                        }) : []
+                                    }
+                                ]
+                            } : undefined,
                         }
                     }
-                }
-            ]
-        }
-    });
-}
-
-/**
- * InProgress dialog with ambiguous slot values.
- */
-
-export function RequestInProgressAmbiguous(options: {
-    intentName: IntentTypes,
-    slotName: SlotTypes,
-    slotResolutionValues: string[];
-}) {
-    return partial<RequestEnvelope>({
-        "context": {
-            "System": {}
-        },
-        "request": {
-            "type": "IntentRequest",
-            "locale": "en-US",
-            "intent": {
-                "name": options.intentName,
-                "confirmationStatus": "NONE",
-                "slots": {
-                    "quest": {
-                        "name": options.slotName,
-                        "value": "",
-                        "resolutions": {
-                            "resolutionsPerAuthority": [
-                                {
-                                    "status": {
-                                        "code": "ER_SUCCESS_MATCH"
-                                    },
-                                    "values": options.slotResolutionValues.map((item) => {
-                                        return {
-                                            "value": {
-                                                "name": item
-                                            }
-                                        };
-                                    })
-                                }
-                            ]
-                        },
-                        "confirmationStatus": "NONE"
-                    }
-                }
+                    return slots;
+                })() : undefined,
             },
-            "dialogState": "IN_PROGRESS"
-        }
-    });
-}
-
-export function ResponseInProgressAmbiguous(options: {
-    slotName: SlotTypes,
-    pattern: string | RegExp;
-}) {
-    return partial<ResponseEnvelope>({
-        "response": {
-            "outputSpeech": {
-                "type": "SSML",
-                "ssml": expect.stringMatching(options.pattern)
-            },
-            "directives": [
-                {
-                    "type": "Dialog.ElicitSlot",
-                    "slotToElicit": options.slotName
-                }
-            ],
-            "reprompt": {
-                "outputSpeech": {
-                    "type": "SSML",
-                    "ssml": expect.stringMatching(options.pattern)
-                }
-            },
-            "shouldEndSession": false
-        },
-    });
-}
-
-/**
- * Completed dialog.
- */
-
-export function RequestCompleted(options: {
-    intentName: IntentTypes;
-    locale: LocaleTypes,
-    slotName: SlotTypes;
-    slotValue: string;
-}) {
-    return partial<RequestEnvelope>({
-        "context": {
-            "System": {}
-        },
-        "request": {
-            "type": "IntentRequest",
-            "locale": "en-US",
-            "intent": {
-                "name": options.intentName,
-                "confirmationStatus": "NONE",
-                "slots": {
-                    "quest": {
-                        "name": options.slotName,
-                        "value": options.slotValue,
-                        "resolutions": {
-                            "resolutionsPerAuthority": [
-                                {
-                                    "status": {
-                                        "code": "ER_SUCCESS_MATCH"
-                                    },
-                                    "values": [
-                                        {
-                                            "value": {
-                                                "name": options.slotValue,
-                                            }
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        "confirmationStatus": "NONE"
-                    }
-                }
-            },
-            "dialogState": "COMPLETED"
+            "dialogState": options.dialogState ? options.dialogState : "STARTED",
         }
     });
 }

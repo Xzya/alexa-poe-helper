@@ -81,14 +81,14 @@ export const handler = Alexa.SkillBuilders.custom()
         GemPriceCheckIntents.Completed
     )
     .addErrorHandlers(
-        Errors.Unknown,
         Errors.Unexpected,
-        Errors.API
+        Errors.API,
+        Errors.Unknown
     )
     .addRequestInterceptors(
         Interceptors.Localization,
-        Interceptors.APIClient,
         Interceptors.Slots
     )
+    // TODO: - remove
     .withApiClient(new Alexa.DefaultApiClient())
     .lambda();

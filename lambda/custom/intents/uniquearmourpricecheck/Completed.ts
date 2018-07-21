@@ -1,7 +1,7 @@
 import { RequestHandler } from "ask-sdk-core";
 import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, CurrentDate, GetLeagueSlot, GetLinksSlot, IsHighConfidenceItemPrice } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
-import { ItemRequestTypes } from "../../api";
+import { ItemRequestTypes, apiClient } from "../../api";
 
 export const Completed: RequestHandler = {
     canHandle(handlerInput) {
@@ -9,7 +9,7 @@ export const Completed: RequestHandler = {
     },
     async handle(handlerInput) {
         const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
-        const { t, slots, apiClient } = GetRequestAttributes(handlerInput);
+        const { t, slots } = GetRequestAttributes(handlerInput);
 
         const item = slots[SlotTypes.UniqueArmour];
 

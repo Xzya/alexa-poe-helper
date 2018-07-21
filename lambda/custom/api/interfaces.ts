@@ -112,3 +112,17 @@ export interface ModifierEntity {
     text: string;
     optional: boolean;
 }
+
+/**
+ * APIClient
+ */
+
+export interface IPOENinjaClientSettings {
+    baseUrl: string;
+}
+
+export declare class IPOENinjaClient {
+    constructor(settings?: IPOENinjaClientSettings);
+    currencies(req: CurrencyRequest): Promise<CurrencyResponse>;
+    items(req: ItemRequest): Promise<ItemResponse>;
+}

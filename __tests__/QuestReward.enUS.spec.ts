@@ -1,50 +1,63 @@
-import * as _ from "lodash";
-import { skill, RequestInProgressMatch, ResponseInProgressMatch, RequestInProgressAmbiguous, ResponseInProgressAmbiguous, RequestCompleted, ssml } from "./helpers";
-import { IntentTypes, SlotTypes, LocaleTypes } from "../lambda/custom/lib/constants";
+import { IntentTypes, LocaleTypes, SlotTypes } from "../lambda/custom/lib/constants";
+import { skill, ssml, CreateIntentRequest, inProgressDelegate } from "./helpers";
 
 describe("Quest reward", () => {
-    const _data = {
-        intentName: IntentTypes.QuestReward,
-        locale: LocaleTypes.enUS,
-        slotName: SlotTypes.Quest,
-    };
-
-    let data = _.cloneDeep(_data);
-
-    beforeEach(() => {
-        // reset the values
-        data = _.cloneDeep(_data);
-    });
+    const name = IntentTypes.QuestReward;
+    const locale = LocaleTypes.enUS;
 
     it("InProgress match", async () => {
-        const options = Object.assign(data, {
-            slotValue: "Vilenta's Vengeance",
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "IN_PROGRESS",
         });
-
-        const response = await skill(RequestInProgressMatch(options));
-        expect(response).toMatchObject(ResponseInProgressMatch(options));
+        const response = await skill(request);
+        expect(response).toMatchObject(inProgressDelegate(name));
     });
 
     it("InProgress ambiguous", async () => {
-        const options = Object.assign(data, {
-            slotResolutionValues: [
-                "Einhar's Hunt",
-                "Einhar's Bestiary",
-                "Einhar's Menagerie",
-            ],
-            pattern: /Which would you like: Einhar's Hunt, Einhar's Bestiary or Einhar's Menagerie\?/gi,
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "IN_PROGRESS",
+            slots: {
+                [SlotTypes.Quest]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Einhar's Hunt",
+                        },
+                        {
+                            name: "Einhar's Bestiary",
+                        },
+                        {
+                            name: "Einhar's Menagerie",
+                        }]
+                    }
+                }
+            }
         });
-
-        const response = await skill(RequestInProgressAmbiguous(options));
-        expect(response).toMatchObject(ResponseInProgressAmbiguous(options));
+        const response = await skill(request);
+        expect(response).toMatchObject(ssml(/Which would you like: Einhar's Hunt, Einhar's Bestiary or Einhar's Menagerie\?/gi));
     });
 
     it("Completed", async () => {
-        const options = Object.assign(data, {
-            slotValue: "Vilenta's Vengeance",
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "COMPLETED",
+            slots: {
+                [SlotTypes.Quest]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Vilenta's Vengeance",
+                        }]
+                    }
+                }
+            }
         });
-
-        const response = await skill(RequestCompleted(options));
+        const response = await skill(request);
         expect(response).toMatchObject(ssml(/The reward for 'Vilenta's Vengeance' is: Book of Skill/gi));
     });
 });
