@@ -5,8 +5,8 @@ import { LeagueTypes } from "../lambda/custom/api";
 // mock the poe.ninja api client
 jest.mock("../lambda/custom/api/POENinjaClient");
 
-describe("Currency", () => {
-    const name = IntentTypes.CurrencyPriceCheck;
+describe("Essences", () => {
+    const name = IntentTypes.EssencePriceCheck;
     const locale = LocaleTypes.enUS;
 
     it("InProgress", async () => {
@@ -25,17 +25,14 @@ describe("Currency", () => {
             locale: locale,
             dialogState: "IN_PROGRESS",
             slots: {
-                [SlotTypes.Currency]: {
-                    value: "exalted",
+                [SlotTypes.Essence]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "Exalted Orb",
-                            id: "exa"
+                            name: "Essence of Horror",
                         },
                         {
-                            name: "Exalted Shard",
-                            id: "exalted-shard"
+                            name: "Essence of Insanity",
                         }]
                     }
                 }
@@ -45,18 +42,17 @@ describe("Currency", () => {
         expect(response).toMatchObject(ssml(/Which would you like:/gi));
     });
 
-    it("Completed, just currency", async () => {
+    it("Completed, chaos only price", async () => {
         const request = CreateIntentRequest({
             name: name,
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [SlotTypes.Currency]: {
+                [SlotTypes.Essence]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "Exalted Orb",
-                            id: "exa"
+                            name: "Essence of Insanity",
                         }]
                     }
                 }
@@ -66,23 +62,19 @@ describe("Currency", () => {
         expect(response).toMatchObject(ssml(/The price of 1 '.+' in Incursion league is 123.5 Chaos Orbs/gi));
     });
 
-    it("Completed, currency with quantity and league", async () => {
+    it("Completed, chaos and exalt price and league", async () => {
         const request = CreateIntentRequest({
             name: name,
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [SlotTypes.Currency]: {
+                [SlotTypes.Essence]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "Exalted Orb",
-                            id: "exa"
+                            name: "Essence of Horror",
                         }]
                     }
-                },
-                [SlotTypes.Quantity]: {
-                    value: "25",
                 },
                 [SlotTypes.League]: {
                     resolutions: {
@@ -96,57 +88,7 @@ describe("Currency", () => {
             }
         });
         const response = await skill(request);
-        // 123.45 * 25 = 3086.25 => rounds to 3086.3
-        expect(response).toMatchObject(ssml(/The price of 25 '.+' in Standard league is 3086.3 Chaos Orbs/gi));
-    });
-
-    it("Completed, fragment with quantity and league", async () => {
-        const request = CreateIntentRequest({
-            name: name,
-            locale: locale,
-            dialogState: "COMPLETED",
-            slots: {
-                [SlotTypes.Currency]: {
-                    resolutions: {
-                        status: "ER_SUCCESS_MATCH",
-                        values: [{
-                            name: "Chayula's Breachstone",
-                            id: "chayulas-breachstone"
-                        }]
-                    }
-                },
-                [SlotTypes.Quantity]: {
-                    value: "25",
-                },
-                [SlotTypes.League]: {
-                    resolutions: {
-                        status: "ER_SUCCESS_MATCH",
-                        values: [{
-                            name: "Standard",
-                            id: LeagueTypes.Standard
-                        }]
-                    }
-                },
-            }
-        });
-        const response = await skill(request);
-        // 123.45 * 25 = 3086.25 => rounds to 3086.3
-        expect(response).toMatchObject(ssml(/The price of 25 '.+' in Standard league is 3086.3 Chaos Orbs/gi));
-    });
-
-    it("Completed, invalid currency", async () => {
-        const request = CreateIntentRequest({
-            name: name,
-            locale: locale,
-            dialogState: "COMPLETED",
-            slots: {
-                [SlotTypes.Currency]: {
-                    value: "a"
-                }
-            }
-        });
-        const response = await skill(request);
-        expect(response).toMatchObject(ssml(/unexpected error/gi));
+        expect(response).toMatchObject(ssml(/The price of 1 '.+' in Standard league is 12.3 Exalted Orbs or 123.5 Chaos Orbs/gi));
     });
 
     it("Completed, not found", async () => {
@@ -155,18 +97,17 @@ describe("Currency", () => {
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [SlotTypes.Currency]: {
+                [SlotTypes.Essence]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
-                            name: "Mirror of Kalandra",
-                            id: "mir"
+                            name: "Essence of Hysteria",
                         }]
                     }
                 },
             }
         });
         const response = await skill(request);
-        expect(response).toMatchObject(ssml(/Sorry, I couldn't find the exchange for the currency you requested/gi));
+        expect(response).toMatchObject(ssml(/Sorry, I couldn't find the price of the item you requested/gi));
     });
 });

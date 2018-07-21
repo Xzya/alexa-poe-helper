@@ -1,4 +1,4 @@
-import { IPOENinjaClient, IPOENinjaClientSettings, CurrencyRequest, CurrencyResponse, ItemResponse, ItemRequest, SparkLine, CurrencyRequestTypes } from "../interfaces";
+import { IPOENinjaClient, IPOENinjaClientSettings, CurrencyRequest, CurrencyResponse, ItemResponse, ItemRequest, SparkLine, CurrencyRequestTypes, ItemRequestTypes } from "../interfaces";
 
 class DummyClient implements IPOENinjaClient {
     constructor(settings?: IPOENinjaClientSettings) {
@@ -91,10 +91,162 @@ class DummyClient implements IPOENinjaClient {
 
     items(req: ItemRequest) {
         return new Promise<ItemResponse>((fulfill, reject) => {
-            const res: ItemResponse = {
-                lines: [],
+            const empty: SparkLine = {
+                data: [],
+                totalChange: 0,
             };
-            fulfill(res);
+
+            switch (req.type) {
+                case ItemRequestTypes.DivinationCard:
+                    return fulfill({
+                        lines: [
+                            {
+                                "id": -1,
+                                "name": "The Doctor",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": -1,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 12.34,
+                                "count": 5
+                            },
+                            {
+                                "id": -1,
+                                "name": "House of Mirrors",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": -1,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 0.5,
+                                "count": 5
+                            }
+                        ]
+                    });
+
+                case ItemRequestTypes.Prophecy:
+                    return fulfill({
+                        lines: [
+                            {
+                                "id": -1,
+                                "name": "The Queen's Sacrifice",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": -1,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 12.34,
+                                "count": 5
+                            },
+                            {
+                                "id": -1,
+                                "name": "Fated Connections",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": -1,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 0.5,
+                                "count": 5
+                            }
+                        ]
+                    });
+
+                case ItemRequestTypes.Essence:
+                    return fulfill({
+                        lines: [
+                            {
+                                "id": -1,
+                                "name": "Essence of Horror",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": -1,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 12.34,
+                                "count": 5
+                            },
+                            {
+                                "id": -1,
+                                "name": "Essence of Insanity",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": -1,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 0.5,
+                                "count": 5
+                            }
+                        ]
+                    });
+            }
         });
     }
 }

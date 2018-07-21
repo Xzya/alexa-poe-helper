@@ -510,7 +510,6 @@ export function CreateDefaultCompletedItemHandler(options: {
             return IsIntentWithCompleteDialog(handlerInput, options.intentName);
         },
         async handle(handlerInput) {
-            const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
             const { t, slots } = GetRequestAttributes(handlerInput);
 
             const item = slots[options.slotName];
@@ -519,17 +518,12 @@ export function CreateDefaultCompletedItemHandler(options: {
                 try {
                     const league = GetLeagueSlot(slots);
 
-                    const [res] = await Promise.all([
-                        // get the item prices
-                        apiClient.items({
-                            league: league,
-                            type: options.requestType,
-                            date: CurrentDate(),
-                        }),
-
-                        // send progressive response
-                        directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, item.resolved, league))),
-                    ]);
+                    // get the item prices
+                    const res = await apiClient.items({
+                        league: league,
+                        type: options.requestType,
+                        date: CurrentDate(),
+                    });
 
                     // filter out low confidence elements
                     res.lines = res.lines.filter(IsHighConfidenceItemPrice);
@@ -544,14 +538,14 @@ export function CreateDefaultCompletedItemHandler(options: {
                             if (exaltedValue >= 1) {
                                 return handlerInput.responseBuilder
                                     // TODO: - add plurals
-                                    .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, 1, item.resolved, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
+                                    .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, 1, item.resolved, league, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
                                     .getResponse();
                             }
 
                             // chaos only price
                             return handlerInput.responseBuilder
                                 // TODO: - add plurals
-                                .speak(t(Strings.PRICE_OF_IS_MSG, 1, item.resolved, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
+                                .speak(t(Strings.PRICE_OF_IS_MSG, 1, item.resolved, league, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
                                 .getResponse();
                         }
                     }

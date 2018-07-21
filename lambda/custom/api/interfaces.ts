@@ -87,7 +87,7 @@ export interface ItemEntity {
     icon: string;
     mapTier: number;
     levelRequired: number;
-    baseType: string;
+    baseType?: string;
     stackSize: number;
     variant?: string;
     prophecyText?: string;
