@@ -1,5 +1,5 @@
 import { RequestHandler } from "ask-sdk-core";
-import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, VoicePlayerSpeakDirective, GetDirectiveServiceClient, FormatPrice, CurrentDate, GetLeagueSlot, GetLinksSlot, IsHighConfidenceItemPrice } from "../../lib/helpers";
+import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, FormatPrice, CurrentDate, GetLeagueSlot, GetLinksSlot, IsHighConfidenceItemPrice } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
 import { ItemRequestTypes, apiClient } from "../../api";
 
@@ -8,7 +8,6 @@ export const Completed: RequestHandler = {
         return IsIntentWithCompleteDialog(handlerInput, IntentTypes.UniqueArmourPriceCheck);
     },
     async handle(handlerInput) {
-        const directiveServiceClient = GetDirectiveServiceClient(handlerInput);
         const { t, slots } = GetRequestAttributes(handlerInput);
 
         const item = slots[SlotTypes.UniqueArmour];
@@ -21,17 +20,12 @@ export const Completed: RequestHandler = {
             const links = GetLinksSlot(slots);
 
             try {
-                const [res] = await Promise.all([
-                    // get the item prices
-                    apiClient.items({
-                        league: league,
-                        type: ItemRequestTypes.UniqueArmour,
-                        date: CurrentDate(),
-                    }),
-
-                    // send progressive response
-                    directiveServiceClient.enqueue(VoicePlayerSpeakDirective(handlerInput, t(Strings.CHECKING_PRICE_OF_MSG, item.resolved, league))),
-                ]);
+                // get the item prices
+                const res = await apiClient.items({
+                    league: league,
+                    type: ItemRequestTypes.UniqueArmour,
+                    date: CurrentDate(),
+                });
 
                 // filter out low confidence elements
                 res.lines = res.lines.filter(IsHighConfidenceItemPrice);
@@ -55,14 +49,14 @@ export const Completed: RequestHandler = {
                         if (exaltedValue >= 1) {
                             return handlerInput.responseBuilder
                                 // TODO: - add plurals
-                                .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, linkedString, item.resolved, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
+                                .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, linkedString, item.resolved, league, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
                                 .getResponse();
                         }
 
                         // chaos only price
                         return handlerInput.responseBuilder
                             // TODO: - add plurals
-                            .speak(t(Strings.PRICE_OF_IS_MSG, linkedString, item.resolved, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
+                            .speak(t(Strings.PRICE_OF_IS_MSG, linkedString, item.resolved, league, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
                             .getResponse();
                     }
                 }

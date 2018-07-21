@@ -153,6 +153,57 @@ class DummyClient implements IPOENinjaClient {
                             }
                         ]
                     });
+
+                case ItemRequestTypes.UniqueWeapon:
+                case ItemRequestTypes.UniqueArmour:
+                    return fulfill({
+                        lines: [
+                            {
+                                "id": -1,
+                                "name": "Value 1",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": 6,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 12.34,
+                                "count": 5
+                            },
+                            {
+                                "id": -1,
+                                "name": "Value 2",
+                                "icon": "",
+                                "mapTier": -1,
+                                "levelRequired": -1,
+                                "stackSize": -1,
+                                "links": 5,
+                                "itemClass": -1,
+                                "sparkline": empty,
+                                "lowConfidenceSparkline": empty,
+                                "implicitModifiers": [],
+                                "explicitModifiers": [],
+                                "flavourText": "",
+                                "corrupted": false,
+                                "gemLevel": -1,
+                                "gemQuality": -1,
+                                "itemType": "",
+                                "chaosValue": 123.45,
+                                "exaltedValue": 0.5,
+                                "count": 5
+                            }
+                        ]
+                    });
             }
         });
     }

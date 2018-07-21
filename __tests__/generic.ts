@@ -114,3 +114,43 @@ export function GenericTest(options: {
         expect(response).toMatchObject(ssml(/Sorry, I couldn't find the price of the item you requested/gi));
     });
 }
+
+export function LinkedItemTest(options: {
+    intentName: IntentTypes;
+    slotName: SlotTypes;
+}) {
+    const name = options.intentName;
+    const locale = LocaleTypes.enUS;
+
+    it("Completed, linked", async () => {
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "COMPLETED",
+            slots: {
+                [options.slotName]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Value 1",
+                        }]
+                    }
+                },
+                [SlotTypes.Links]: {
+                    value: "6"
+                },
+                [SlotTypes.League]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Standard",
+                            id: LeagueTypes.Standard
+                        }]
+                    }
+                },
+            }
+        });
+        const response = await skill(request);
+        expect(response).toMatchObject(ssml(/The price of a 6 linked '.+' in Standard league is 12.3 Exalted Orbs or 123.5 Chaos Orbs/gi));
+    });
+}
