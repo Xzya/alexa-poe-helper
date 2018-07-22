@@ -2,7 +2,6 @@ import { HandlerInput } from "ask-sdk-core";
 import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
 import { RequestTypes, ErrorTypes, Orbs, Fragments, Strings, SlotTypes } from "./constants";
-import { UniqueAccessories, UniqueArmours, UniqueWeapons } from "./items";
 import { LeagueTypes, ItemEntity } from "../api";
 
 /**
@@ -348,33 +347,6 @@ export function IsOrb(str: string): boolean {
  */
 export function IsFragment(str: string): boolean {
     return Fragments.indexOf(str) !== -1;
-}
-
-/**
- * Checks if the given string matches a unique accessory.
- * 
- * @param str 
- */
-export function IsUniqueAccessory(str: string): boolean {
-    return UniqueAccessories.indexOf(str) !== -1;
-}
-
-/**
- * Checks if the given string matches a unique armour.
- * 
- * @param str 
- */
-export function IsUniqueArmour(str: string): boolean {
-    return UniqueArmours.indexOf(str) !== -1;
-}
-
-/**
- * Checks if the given string matches a unique weapon.
- * 
- * @param str 
- */
-export function IsUniqueWeapon(str: string): boolean {
-    return UniqueWeapons.indexOf(str) !== -1;
 }
 
 /**
