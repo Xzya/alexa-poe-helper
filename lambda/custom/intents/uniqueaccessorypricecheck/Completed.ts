@@ -1,9 +1,9 @@
 import { RequestHandler } from "ask-sdk-core";
 import { SlotTypes, IntentTypes } from "../../lib/constants";
 import { ItemRequestTypes } from "../../api";
-import { CreateDefaultCompletedItemHandler } from "../../lib/helpers";
+import { CreateNormalItemCompletedHandler } from "../normalitempricecheck";
 
-export const Completed: RequestHandler = CreateDefaultCompletedItemHandler({
+export const Completed: RequestHandler = CreateNormalItemCompletedHandler({
     intentName: IntentTypes.UniqueAccessoryPriceCheck,
     slotName: SlotTypes.UniqueAccessory,
     requestType: ItemRequestTypes.UniqueAccessory,

@@ -1,9 +1,9 @@
-import { HandlerInput, RequestHandler } from "ask-sdk-core";
+import { HandlerInput } from "ask-sdk-core";
 import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
 import { RequestTypes, ErrorTypes, Orbs, Fragments, Strings, SlotTypes } from "./constants";
 import { UniqueAccessories, UniqueArmours, UniqueWeapons } from "./items";
-import { LeagueTypes, ItemEntity, ItemRequestTypes, apiClient } from "../api";
+import { LeagueTypes, ItemEntity } from "../api";
 
 /**
  * Checks if the request matches any of the given intents.
@@ -454,113 +454,4 @@ export function GetLinksSlot(slots: SlotValues): number {
  */
 export function IsHighConfidenceItemPrice(value: ItemEntity) {
     return value.count >= 5;
-}
-
-/**
- * Creates a Dialog handler with incomplete state.
- * 
- * @param options 
- */
-export function CreateDefaultInProgressHandler(options: {
-    intentName: string;
-    slotName: string;
-}): RequestHandler {
-    return {
-        canHandle(handlerInput) {
-            return IsIntentWithIncompleteDialog(handlerInput, options.intentName);
-        },
-        handle(handlerInput) {
-            const request = handlerInput.requestEnvelope.request as IntentRequest;
-            const currentIntent = request.intent;
-
-            const { slots } = GetRequestAttributes(handlerInput);
-
-            const slot = slots[options.slotName];
-
-            // if we have a match but it's ambiguous
-            // ask for clarification
-            if (slot && slot.isMatch && slot.isAmbiguous) {
-                return DisambiguateSlot(handlerInput, slot);
-            }
-
-            // reset any unmatched slots
-            ResetUnmatchedSlotValues(handlerInput, slots);
-
-            // let Alexa reprompt the user
-            // or switch to the completed handler if it's done
-            return handlerInput.responseBuilder
-                .addDelegateDirective(currentIntent)
-                .getResponse();
-        }
-    };
-}
-
-/**
- * Creates an item Dialog handler with complete state.
- * 
- * @param options 
- */
-export function CreateDefaultCompletedItemHandler(options: {
-    intentName: string;
-    slotName: string;
-    requestType: ItemRequestTypes;
-}): RequestHandler {
-    return {
-        canHandle(handlerInput) {
-            return IsIntentWithCompleteDialog(handlerInput, options.intentName);
-        },
-        async handle(handlerInput) {
-            const { t, slots } = GetRequestAttributes(handlerInput);
-
-            const item = slots[options.slotName];
-
-            if (item && item.isMatch && !item.isAmbiguous) {
-                try {
-                    const league = GetLeagueSlot(slots);
-
-                    // get the item prices
-                    const res = await apiClient.items({
-                        league: league,
-                        type: options.requestType,
-                        date: CurrentDate(),
-                    });
-
-                    // filter out low confidence elements
-                    res.lines = res.lines.filter(IsHighConfidenceItemPrice);
-
-                    // search for the item that the user requested
-                    for (let itemDetails of res.lines) {
-                        if (itemDetails.name === item.resolved) {
-                            const exaltedValue = itemDetails.exaltedValue;
-                            const chaosValue = itemDetails.chaosValue;
-
-                            // only include the exalted price equivalent if it's higher than 1
-                            if (exaltedValue >= 1) {
-                                return handlerInput.responseBuilder
-                                    // TODO: - add plurals
-                                    .speak(t(Strings.PRICE_OF_IS_EXALTED_MSG, 1, item.resolved, league, FormatPrice(exaltedValue).toString(), FormatPrice(chaosValue).toString())) // .toString() removes the trailing zeros
-                                    .getResponse();
-                            }
-
-                            // chaos only price
-                            return handlerInput.responseBuilder
-                                // TODO: - add plurals
-                                .speak(t(Strings.PRICE_OF_IS_MSG, 1, item.resolved, league, FormatPrice(itemDetails.chaosValue).toString())) // .toString() removes the trailing zeros
-                                .getResponse();
-                        }
-                    }
-
-                    // item not found
-                    return handlerInput.responseBuilder
-                        .speak(t(Strings.ERROR_ITEM_NOT_FOUND_MSG))
-                        .getResponse();
-
-                } catch (err) {
-                    throw CreateError(`Got error while getting ${options.requestType} prices: ${err}`, ErrorTypes.API)
-                }
-            }
-
-            throw CreateError(`Got to the COMPLETED state of ${options.intentName} without a slot.`, ErrorTypes.Unexpected);
-        }
-    };
 }
