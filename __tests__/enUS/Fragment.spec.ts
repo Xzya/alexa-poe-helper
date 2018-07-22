@@ -1,9 +1,9 @@
 import { CurrencyItemTest } from "../generic";
 import { IntentTypes, SlotTypes } from "../../lambda/custom/lib/constants";
 
-describe("Currencies", () => {
+describe("Fragments", () => {
     CurrencyItemTest({
-        intentName: IntentTypes.CurrencyPriceCheck,
-        slotName: SlotTypes.Currency,
+        intentName: IntentTypes.FragmentPriceCheck,
+        slotName: SlotTypes.Fragment,
     });
 });

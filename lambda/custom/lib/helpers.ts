@@ -1,7 +1,7 @@
 import { HandlerInput } from "ask-sdk-core";
 import { IntentRequest, services } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
-import { RequestTypes, ErrorTypes, Orbs, Fragments, Strings, SlotTypes } from "./constants";
+import { RequestTypes, ErrorTypes, Strings, SlotTypes } from "./constants";
 import { LeagueTypes, ItemEntity } from "../api";
 
 /**
@@ -329,24 +329,6 @@ export function VoicePlayerSpeakDirective(handlerInput: HandlerInput, speech?: s
  */
 export function FormatPrice(n: number): number {
     return Math.round(n * 10) / 10;
-}
-
-/**
- * Checks if the given string matches an orb id.
- * 
- * @param str 
- */
-export function IsOrb(str: string): boolean {
-    return Orbs.indexOf(str) !== -1;
-}
-
-/**
- * Checks if the given string matches a fragment id.
- * 
- * @param str 
- */
-export function IsFragment(str: string): boolean {
-    return Fragments.indexOf(str) !== -1;
 }
 
 /**

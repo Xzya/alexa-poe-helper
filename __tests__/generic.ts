@@ -165,3 +165,155 @@ export function LinkedItemTest(options: {
         expect(response).toMatchObject(ssml(/The price of a 6 linked '.+' in Standard league is 12.3 Exalted Orbs or 123.5 Chaos Orbs/gi));
     });
 }
+
+/**
+ * Runs tests for currency items, e.g. currency and fragments.
+ * 
+ * @param options 
+ */
+export function CurrencyItemTest(options: {
+    intentName: IntentTypes;
+    slotName: SlotTypes;
+}) {
+    const name = options.intentName;
+    const locale = LocaleTypes.enUS;
+
+    it("InProgress", async () => {
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "IN_PROGRESS",
+        });
+        const response = await skill(request);
+        expect(response).toMatchObject(inProgressDelegate(name));
+    });
+
+    it("InProgress ambiguous", async () => {
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "IN_PROGRESS",
+            slots: {
+                [options.slotName]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Value 1",
+                        },
+                        {
+                            name: "Value 2",
+                        }]
+                    }
+                }
+            }
+        });
+        const response = await skill(request);
+        expect(response).toMatchObject(ssml(/Which would you like:/gi));
+    });
+
+    it("Completed, just currency", async () => {
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "COMPLETED",
+            slots: {
+                [options.slotName]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Value 1",
+                        }]
+                    }
+                }
+            }
+        });
+        const response = await skill(request);
+        expect(response).toMatchObject(ssml(/The price of 1 '.+' in Incursion league is 123.5 Chaos Orbs/gi));
+    });
+
+    it("Completed, currency with quantity and league", async () => {
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "COMPLETED",
+            slots: {
+                [options.slotName]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Value 1",
+                        }]
+                    }
+                },
+                [SlotTypes.Quantity]: {
+                    value: "25",
+                },
+                [SlotTypes.League]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Standard",
+                            id: LeagueTypes.Standard
+                        }]
+                    }
+                },
+            }
+        });
+        const response = await skill(request);
+        // 123.45 * 25 = 3086.25 => rounds to 3086.3
+        expect(response).toMatchObject(ssml(/The price of 25 '.+' in Standard league is 3086.3 Chaos Orbs/gi));
+    });
+
+    it("Completed, fragment with quantity and league", async () => {
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "COMPLETED",
+            slots: {
+                [options.slotName]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Value 1",
+                        }]
+                    }
+                },
+                [SlotTypes.Quantity]: {
+                    value: "25",
+                },
+                [SlotTypes.League]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Standard",
+                            id: LeagueTypes.Standard
+                        }]
+                    }
+                },
+            }
+        });
+        const response = await skill(request);
+        // 123.45 * 25 = 3086.25 => rounds to 3086.3
+        expect(response).toMatchObject(ssml(/The price of 25 '.+' in Standard league is 3086.3 Chaos Orbs/gi));
+    });
+
+    it("Completed, not found", async () => {
+        const request = CreateIntentRequest({
+            name: name,
+            locale: locale,
+            dialogState: "COMPLETED",
+            slots: {
+                [options.slotName]: {
+                    resolutions: {
+                        status: "ER_SUCCESS_MATCH",
+                        values: [{
+                            name: "Value 3",
+                        }]
+                    }
+                },
+            }
+        });
+        const response = await skill(request);
+        expect(response).toMatchObject(ssml(/Sorry, I couldn't find the exchange for the currency you requested/gi));
+    });
+}

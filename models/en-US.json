@@ -3351,6 +3351,166 @@
                         "{quality} {gem} price in {league}",
                         "{quality} {gem} price in {league} league"
                     ]
+                },
+                {
+                    "name": "FragmentPriceCheckIntent",
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE"
+                        },
+                        {
+                            "name": "fragment",
+                            "type": "FRAGMENT",
+                            "samples": [
+                                "{fragment} please",
+                                "{fragment}"
+                            ]
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "check fragment price",
+                        "check fragment price in {league}",
+                        "check fragment price in {league} league",
+                        "fragment price",
+                        "fragment price in {league}",
+                        "fragment price in {league} league",
+                        "how much are a {fragment}",
+                        "how much are a {fragment} in {league}",
+                        "how much are a {fragment} in {league} league",
+                        "how much are a {fragment} worth",
+                        "how much are a {fragment} worth in {league}",
+                        "how much are a {fragment} worth in {league} league",
+                        "how much are an {fragment}",
+                        "how much are an {fragment} in {league}",
+                        "how much are an {fragment} in {league} league",
+                        "how much are an {fragment} worth",
+                        "how much are an {fragment} worth in {league}",
+                        "how much are an {fragment} worth in {league} league",
+                        "how much are the {fragment}",
+                        "how much are the {fragment} in {league}",
+                        "how much are the {fragment} in {league} league",
+                        "how much are the {fragment} worth",
+                        "how much are the {fragment} worth in {league}",
+                        "how much are the {fragment} worth in {league} league",
+                        "how much are {quantity} {fragment}",
+                        "how much are {quantity} {fragment} in {league}",
+                        "how much are {quantity} {fragment} in {league} league",
+                        "how much are {quantity} {fragment} worth",
+                        "how much are {quantity} {fragment} worth in {league}",
+                        "how much are {quantity} {fragment} worth in {league} league",
+                        "how much is a {fragment}",
+                        "how much is a {fragment} in {league}",
+                        "how much is a {fragment} in {league} league",
+                        "how much is a {fragment} worth",
+                        "how much is a {fragment} worth in {league}",
+                        "how much is a {fragment} worth in {league} league",
+                        "how much is an {fragment}",
+                        "how much is an {fragment} in {league}",
+                        "how much is an {fragment} in {league} league",
+                        "how much is an {fragment} worth",
+                        "how much is an {fragment} worth in {league}",
+                        "how much is an {fragment} worth in {league} league",
+                        "how much is the {fragment}",
+                        "how much is the {fragment} in {league}",
+                        "how much is the {fragment} in {league} league",
+                        "how much is the {fragment} worth",
+                        "how much is the {fragment} worth in {league}",
+                        "how much is the {fragment} worth in {league} league",
+                        "how much is {quantity} {fragment}",
+                        "how much is {quantity} {fragment} in {league}",
+                        "how much is {quantity} {fragment} in {league} league",
+                        "how much is {quantity} {fragment} worth",
+                        "how much is {quantity} {fragment} worth in {league}",
+                        "how much is {quantity} {fragment} worth in {league} league",
+                        "price of a {fragment}",
+                        "price of a {fragment} in {league}",
+                        "price of a {fragment} in {league} league",
+                        "price of an {fragment}",
+                        "price of an {fragment} in {league}",
+                        "price of an {fragment} in {league} league",
+                        "price of the {fragment}",
+                        "price of the {fragment} in {league}",
+                        "price of the {fragment} in {league} league",
+                        "price of {quantity} {fragment}",
+                        "price of {quantity} {fragment} in {league}",
+                        "price of {quantity} {fragment} in {league} league",
+                        "tell me price of a {fragment}",
+                        "tell me price of a {fragment} in {league}",
+                        "tell me price of a {fragment} in {league} league",
+                        "tell me price of an {fragment}",
+                        "tell me price of an {fragment} in {league}",
+                        "tell me price of an {fragment} in {league} league",
+                        "tell me price of the {fragment}",
+                        "tell me price of the {fragment} in {league}",
+                        "tell me price of the {fragment} in {league} league",
+                        "tell me price of {quantity} {fragment}",
+                        "tell me price of {quantity} {fragment} in {league}",
+                        "tell me price of {quantity} {fragment} in {league} league",
+                        "tell me the price of a {fragment}",
+                        "tell me the price of a {fragment} in {league}",
+                        "tell me the price of a {fragment} in {league} league",
+                        "tell me the price of an {fragment}",
+                        "tell me the price of an {fragment} in {league}",
+                        "tell me the price of an {fragment} in {league} league",
+                        "tell me the price of the {fragment}",
+                        "tell me the price of the {fragment} in {league}",
+                        "tell me the price of the {fragment} in {league} league",
+                        "tell me the price of {quantity} {fragment}",
+                        "tell me the price of {quantity} {fragment} in {league}",
+                        "tell me the price of {quantity} {fragment} in {league} league",
+                        "the price of a {fragment}",
+                        "the price of a {fragment} in {league}",
+                        "the price of a {fragment} in {league} league",
+                        "the price of an {fragment}",
+                        "the price of an {fragment} in {league}",
+                        "the price of an {fragment} in {league} league",
+                        "the price of the {fragment}",
+                        "the price of the {fragment} in {league}",
+                        "the price of the {fragment} in {league} league",
+                        "the price of {quantity} {fragment}",
+                        "the price of {quantity} {fragment} in {league}",
+                        "the price of {quantity} {fragment} in {league} league",
+                        "what is price of a {fragment}",
+                        "what is price of a {fragment} in {league}",
+                        "what is price of a {fragment} in {league} league",
+                        "what is price of an {fragment}",
+                        "what is price of an {fragment} in {league}",
+                        "what is price of an {fragment} in {league} league",
+                        "what is price of the {fragment}",
+                        "what is price of the {fragment} in {league}",
+                        "what is price of the {fragment} in {league} league",
+                        "what is price of {quantity} {fragment}",
+                        "what is price of {quantity} {fragment} in {league}",
+                        "what is price of {quantity} {fragment} in {league} league",
+                        "what is the price of a {fragment}",
+                        "what is the price of a {fragment} in {league}",
+                        "what is the price of a {fragment} in {league} league",
+                        "what is the price of an {fragment}",
+                        "what is the price of an {fragment} in {league}",
+                        "what is the price of an {fragment} in {league} league",
+                        "what is the price of the {fragment}",
+                        "what is the price of the {fragment} in {league}",
+                        "what is the price of the {fragment} in {league} league",
+                        "what is the price of {quantity} {fragment}",
+                        "what is the price of {quantity} {fragment} in {league}",
+                        "what is the price of {quantity} {fragment} in {league} league",
+                        "{fragment}",
+                        "{fragment} in {league}",
+                        "{fragment} in {league} league",
+                        "{fragment} price",
+                        "{fragment} price in {league}",
+                        "{fragment} price in {league} league",
+                        "{quantity} {fragment}",
+                        "{quantity} {fragment} in {league}",
+                        "{quantity} {fragment} in {league} league",
+                        "{quantity} {fragment} price",
+                        "{quantity} {fragment} price in {league}",
+                        "{quantity} {fragment} price in {league} league"
+                    ]
                 }
             ],
             "types": [{
@@ -4161,220 +4321,6 @@
                             "id": "regal-shard",
                             "name": {
                                 "value": "Regal Shard"
-                            }
-                        },
-                        {
-                            "id": "dusk",
-                            "name": {
-                                "value": "Sacrifice at Dusk",
-                                "synonyms": [
-                                    "Dusk"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "mid",
-                            "name": {
-                                "value": "Sacrifice at Midnight",
-                                "synonyms": [
-                                    "Midnight"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "dawn",
-                            "name": {
-                                "value": "Sacrifice at Dawn",
-                                "synonyms": [
-                                    "Dawn"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "noon",
-                            "name": {
-                                "value": "Sacrifice at Noon",
-                                "synonyms": [
-                                    "Noon"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "grie",
-                            "name": {
-                                "value": "Mortal Grief",
-                                "synonyms": [
-                                    "Grief"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "rage",
-                            "name": {
-                                "value": "Mortal Rage",
-                                "synonyms": [
-                                    "Rage"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "hope",
-                            "name": {
-                                "value": "Mortal Hope",
-                                "synonyms": [
-                                    "Hope"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "ign",
-                            "name": {
-                                "value": "Mortal Ignorance",
-                                "synonyms": [
-                                    "Ignorance"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "eber",
-                            "name": {
-                                "value": "Eber's Key"
-                            }
-                        },
-                        {
-                            "id": "yriel",
-                            "name": {
-                                "value": "Yriel's Key"
-                            }
-                        },
-                        {
-                            "id": "inya",
-                            "name": {
-                                "value": "Inya's Key"
-                            }
-                        },
-                        {
-                            "id": "volkuur",
-                            "name": {
-                                "value": "Volkuur's Key"
-                            }
-                        },
-                        {
-                            "id": "hydra",
-                            "name": {
-                                "value": "Fragment of the Hydra",
-                                "synonyms": [
-                                    "Hydra",
-                                    "Hydra Fragment"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "phoenix",
-                            "name": {
-                                "value": "Fragment of the Phoenix",
-                                "synonyms": [
-                                    "Phoenix",
-                                    "Phoenix Fragment"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "minot",
-                            "name": {
-                                "value": "Fragment of the Minotaur",
-                                "synonyms": [
-                                    "Minotaur",
-                                    "Minotaur Fragment"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "chimer",
-                            "name": {
-                                "value": "Fragment of the Chimera",
-                                "synonyms": [
-                                    "Chimera",
-                                    "Chimera Fragment"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "sacrifice-set",
-                            "name": {
-                                "value": "Sacrifice Set"
-                            }
-                        },
-                        {
-                            "id": "mortal-set",
-                            "name": {
-                                "value": "Mortal Set"
-                            }
-                        },
-                        {
-                            "id": "pale-court-set",
-                            "name": {
-                                "value": "Pale Court Set"
-                            }
-                        },
-                        {
-                            "id": "shaper-set",
-                            "name": {
-                                "value": "Shaper Set"
-                            }
-                        },
-                        {
-                            "id": "xophs-breachstone",
-                            "name": {
-                                "value": "Xoph's Breachstone"
-                            }
-                        },
-                        {
-                            "id": "tuls-breachstone",
-                            "name": {
-                                "value": "Tul's Breachstone"
-                            }
-                        },
-                        {
-                            "id": "eshs-breachstone",
-                            "name": {
-                                "value": "Esh's Breachstone"
-                            }
-                        },
-                        {
-                            "id": "uul-breachstone",
-                            "name": {
-                                "value": "Uul-Netol's Breachstone"
-                            }
-                        },
-                        {
-                            "id": "chayulas-breachstone",
-                            "name": {
-                                "value": "Chayula's Breachstone"
-                            }
-                        },
-                        {
-                            "id": "offer",
-                            "name": {
-                                "value": "Offering to the Goddess",
-                                "synonyms": [
-                                    "Offering"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "divine-vessel",
-                            "name": {
-                                "value": "Divine Vessel",
-                                "synonyms": [
-                                    "Vessel"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "ancient-reliquary-key",
-                            "name": {
-                                "value": "Ancient Reliquary Key"
                             }
                         }
                     ]
@@ -14583,6 +14529,224 @@
                             }
                         }
                     ]
+                },
+                {
+                    "name": "FRAGMENT",
+                    "values": [{
+                            "id": "dusk",
+                            "name": {
+                                "value": "Sacrifice at Dusk",
+                                "synonyms": [
+                                    "Dusk"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "mid",
+                            "name": {
+                                "value": "Sacrifice at Midnight",
+                                "synonyms": [
+                                    "Midnight"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "dawn",
+                            "name": {
+                                "value": "Sacrifice at Dawn",
+                                "synonyms": [
+                                    "Dawn"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "noon",
+                            "name": {
+                                "value": "Sacrifice at Noon",
+                                "synonyms": [
+                                    "Noon"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "grie",
+                            "name": {
+                                "value": "Mortal Grief",
+                                "synonyms": [
+                                    "Grief"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "rage",
+                            "name": {
+                                "value": "Mortal Rage",
+                                "synonyms": [
+                                    "Rage"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "hope",
+                            "name": {
+                                "value": "Mortal Hope",
+                                "synonyms": [
+                                    "Hope"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ign",
+                            "name": {
+                                "value": "Mortal Ignorance",
+                                "synonyms": [
+                                    "Ignorance"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "eber",
+                            "name": {
+                                "value": "Eber's Key"
+                            }
+                        },
+                        {
+                            "id": "yriel",
+                            "name": {
+                                "value": "Yriel's Key"
+                            }
+                        },
+                        {
+                            "id": "inya",
+                            "name": {
+                                "value": "Inya's Key"
+                            }
+                        },
+                        {
+                            "id": "volkuur",
+                            "name": {
+                                "value": "Volkuur's Key"
+                            }
+                        },
+                        {
+                            "id": "hydra",
+                            "name": {
+                                "value": "Fragment of the Hydra",
+                                "synonyms": [
+                                    "Hydra",
+                                    "Hydra Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "phoenix",
+                            "name": {
+                                "value": "Fragment of the Phoenix",
+                                "synonyms": [
+                                    "Phoenix",
+                                    "Phoenix Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "minot",
+                            "name": {
+                                "value": "Fragment of the Minotaur",
+                                "synonyms": [
+                                    "Minotaur",
+                                    "Minotaur Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "chimer",
+                            "name": {
+                                "value": "Fragment of the Chimera",
+                                "synonyms": [
+                                    "Chimera",
+                                    "Chimera Fragment"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "sacrifice-set",
+                            "name": {
+                                "value": "Sacrifice Set"
+                            }
+                        },
+                        {
+                            "id": "mortal-set",
+                            "name": {
+                                "value": "Mortal Set"
+                            }
+                        },
+                        {
+                            "id": "pale-court-set",
+                            "name": {
+                                "value": "Pale Court Set"
+                            }
+                        },
+                        {
+                            "id": "shaper-set",
+                            "name": {
+                                "value": "Shaper Set"
+                            }
+                        },
+                        {
+                            "id": "xophs-breachstone",
+                            "name": {
+                                "value": "Xoph's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "tuls-breachstone",
+                            "name": {
+                                "value": "Tul's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "eshs-breachstone",
+                            "name": {
+                                "value": "Esh's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "uul-breachstone",
+                            "name": {
+                                "value": "Uul-Netol's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "chayulas-breachstone",
+                            "name": {
+                                "value": "Chayula's Breachstone"
+                            }
+                        },
+                        {
+                            "id": "offer",
+                            "name": {
+                                "value": "Offering to the Goddess",
+                                "synonyms": [
+                                    "Offering"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "divine-vessel",
+                            "name": {
+                                "value": "Divine Vessel",
+                                "synonyms": [
+                                    "Vessel"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "ancient-reliquary-key",
+                            "name": {
+                                "value": "Ancient Reliquary Key"
+                            }
+                        }
+                    ]
                 }
             ]
         },
@@ -14884,6 +15048,35 @@
                             "prompts": {}
                         }
                     ]
+                },
+                {
+                    "name": "FragmentPriceCheckIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [{
+                            "name": "league",
+                            "type": "LEAGUE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "fragment",
+                            "type": "FRAGMENT",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.234040955515.491343535539"
+                            }
+                        },
+                        {
+                            "name": "quantity",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
                 }
             ]
         },
@@ -15092,6 +15285,22 @@
                     "type": "PlainText",
                     "value": "What gem level do you want?"
                 }]
+            },
+            {
+                "id": "Elicit.Slot.234040955515.491343535539",
+                "variations": [{
+                        "type": "PlainText",
+                        "value": "Which fragment do you want to know the price of?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which fragment do you want?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which fragment are you looking for?"
+                    }
+                ]
             }
         ]
     }
