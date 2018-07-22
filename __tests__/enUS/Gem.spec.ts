@@ -1,21 +1,13 @@
-import { skill, ssml, CreateIntentRequest, inProgressDelegate } from "./helpers";
-import { IntentTypes, LocaleTypes, SlotTypes } from "../lambda/custom/lib/constants";
-import { LeagueTypes } from "../lambda/custom/api";
+import { GenericTest } from "../generic";
+import { IntentTypes, SlotTypes, LocaleTypes } from "../../lambda/custom/lib/constants";
+import { CreateIntentRequest, skill, inProgressDelegate, ssml } from "../helpers";
+import { LeagueTypes } from "../../lambda/custom/api";
 
 // mock the poe.ninja api client
-jest.mock("../lambda/custom/api/POENinjaClient");
+jest.mock("../../lambda/custom/api/POENinjaClient");
 
-/**
- * Runs some generic tests for the given itent. This can be used for all
- * intents that just have the item + league.
- * 
- * @param options 
- */
-export function GenericTest(options: {
-    intentName: IntentTypes;
-    slotName: SlotTypes;
-}) {
-    const name = options.intentName;
+describe("Skill Gems", () => {
+    const name = IntentTypes.GemPriceCheck;
     const locale = LocaleTypes.enUS;
 
     it("InProgress", async () => {
@@ -34,7 +26,7 @@ export function GenericTest(options: {
             locale: locale,
             dialogState: "IN_PROGRESS",
             slots: {
-                [options.slotName]: {
+                [SlotTypes.Gem]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
@@ -57,18 +49,21 @@ export function GenericTest(options: {
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [options.slotName]: {
+                [SlotTypes.Gem]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
                             name: "Value 2",
                         }]
                     }
+                },
+                [SlotTypes.Level]: {
+                    value: "21"
                 }
             }
         });
         const response = await skill(request);
-        expect(response).toMatchObject(ssml(/The price of 1 '.+' in Incursion league is 123.5 Chaos Orbs/gi));
+        expect(response).toMatchObject(ssml(/The price of a level 21 '.+' in Incursion league is 123.5 Chaos Orbs/gi));
     });
 
     it("Completed, chaos and exalt price and league", async () => {
@@ -77,13 +72,19 @@ export function GenericTest(options: {
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [options.slotName]: {
+                [SlotTypes.Gem]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
                             name: "Value 1",
                         }]
                     }
+                },
+                [SlotTypes.Level]: {
+                    value: "21"
+                },
+                [SlotTypes.Quality]: {
+                    value: "23"
                 },
                 [SlotTypes.League]: {
                     resolutions: {
@@ -97,7 +98,7 @@ export function GenericTest(options: {
             }
         });
         const response = await skill(request);
-        expect(response).toMatchObject(ssml(/The price of 1 '.+' in Standard league is 12.3 Exalted Orbs or 123.5 Chaos Orbs/gi));
+        expect(response).toMatchObject(ssml(/The price of a level 21 23 quality '.+' in Standard league is 12.3 Exalted Orbs or 123.5 Chaos Orbs/gi));
     });
 
     it("Completed, not found", async () => {
@@ -106,7 +107,7 @@ export function GenericTest(options: {
             locale: locale,
             dialogState: "COMPLETED",
             slots: {
-                [options.slotName]: {
+                [SlotTypes.Gem]: {
                     resolutions: {
                         status: "ER_SUCCESS_MATCH",
                         values: [{
@@ -114,54 +115,12 @@ export function GenericTest(options: {
                         }]
                     }
                 },
+                [SlotTypes.Level]: {
+                    value: "21"
+                },
             }
         });
         const response = await skill(request);
         expect(response).toMatchObject(ssml(/Sorry, I couldn't find the price of the item you requested/gi));
     });
-}
-
-/**
- * Runs tests for items with links, e.g. armour and weapons.
- * 
- * @param options 
- */
-export function LinkedItemTest(options: {
-    intentName: IntentTypes;
-    slotName: SlotTypes;
-}) {
-    const name = options.intentName;
-    const locale = LocaleTypes.enUS;
-
-    it("Completed, linked", async () => {
-        const request = CreateIntentRequest({
-            name: name,
-            locale: locale,
-            dialogState: "COMPLETED",
-            slots: {
-                [options.slotName]: {
-                    resolutions: {
-                        status: "ER_SUCCESS_MATCH",
-                        values: [{
-                            name: "Value 1",
-                        }]
-                    }
-                },
-                [SlotTypes.Links]: {
-                    value: "6"
-                },
-                [SlotTypes.League]: {
-                    resolutions: {
-                        status: "ER_SUCCESS_MATCH",
-                        values: [{
-                            name: "Standard",
-                            id: LeagueTypes.Standard
-                        }]
-                    }
-                },
-            }
-        });
-        const response = await skill(request);
-        expect(response).toMatchObject(ssml(/The price of a 6 linked '.+' in Standard league is 12.3 Exalted Orbs or 123.5 Chaos Orbs/gi));
-    });
-}
+});
