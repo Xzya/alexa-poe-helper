@@ -1,7 +1,30 @@
 import { RequestHandler } from "ask-sdk-core";
 import { IntentRequest } from "ask-sdk-model";
-import { GetRequestAttributes, IsIntentWithIncompleteDialog, ResetUnmatchedSlotValues, ResetSlotValue, DisambiguateSlot } from "../../lib/helpers";
+import { IsIntentWithIncompleteDialog, ResetUnmatchedSlotValues, ResetSlotValue, DisambiguateSlot, SetSlotValue, GetSlotValues } from "../../lib/helpers";
 import { SlotTypes, IntentTypes } from "../../lib/constants";
+
+/**
+ * Checks if the given value is in the form "2123". This happens if you say something
+ * like "twenty one twenty three", Alexa will interpret it as a single number, so we
+ * need to manually split it. If it detects this case, it will manually set the slot values.
+ * 
+ * @param request 
+ * @param value 
+ */
+function ParseLevelAndQualityInSingleSlot(request: IntentRequest, value?: string) {
+    if (value && value.length === 4) {
+        const first = value.substr(0, 2);
+        const second = value.substr(2, 2);
+
+        const firstValue = parseInt(first);
+        const secondValue = parseInt(second);
+
+        if (!isNaN(firstValue) && !isNaN(secondValue)) {
+            SetSlotValue(request, SlotTypes.Level, first);
+            SetSlotValue(request, SlotTypes.Quality, second);
+        }
+    }
+}
 
 export const InProgress: RequestHandler = {
     canHandle(handlerInput) {
@@ -11,7 +34,19 @@ export const InProgress: RequestHandler = {
         const request = handlerInput.requestEnvelope.request as IntentRequest;
         const currentIntent = request.intent;
 
-        const { slots } = GetRequestAttributes(handlerInput);
+        if (currentIntent.slots) {
+            const levelSlot = currentIntent.slots[SlotTypes.Level];
+            const qualitySlot = currentIntent.slots[SlotTypes.Quality];
+
+            if (levelSlot) {
+                ParseLevelAndQualityInSingleSlot(request, levelSlot.value);
+            }
+            if (qualitySlot) {
+                ParseLevelAndQualityInSingleSlot(request, qualitySlot.value);
+            }
+        }
+
+        const slots = GetSlotValues(currentIntent.slots);
 
         const slot = slots[SlotTypes.Gem];
 

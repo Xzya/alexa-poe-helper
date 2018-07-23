@@ -107,10 +107,26 @@ export function GetDirectiveServiceClient(handlerInput: HandlerInput): services.
  * @param slotName 
  */
 export function ResetSlotValue(request: IntentRequest, slotName: string) {
+    SetSlotValue(request, slotName, "");
+}
+
+/**
+ * Sets the given value for the slot.
+ * 
+ * @param request 
+ * @param slotName 
+ */
+export function SetSlotValue(request: IntentRequest, slotName: string, slotValue: string) {
     if (request.intent.slots) {
         const slot = request.intent.slots[slotName];
         if (slot) {
-            slot.value = "";
+            slot.value = slotValue;
+        } else {
+            request.intent.slots[slotName] = {
+                name: slotName,
+                value: slotValue,
+                confirmationStatus: "NONE",
+            };
         }
     }
 }
