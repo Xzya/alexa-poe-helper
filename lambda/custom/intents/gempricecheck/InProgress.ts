@@ -1,6 +1,6 @@
 import { RequestHandler } from "ask-sdk-core";
 import { IntentRequest } from "ask-sdk-model";
-import { IsIntentWithIncompleteDialog, ResetUnmatchedSlotValues, ResetSlotValue, DisambiguateSlot, SetSlotValue, GetSlotValues } from "../../lib/helpers";
+import { IsIntentWithIncompleteDialog, ResetUnmatchedSlotValues, ResetSlotValue, DisambiguateSlot, SetSlotValue, GetSlotValues, TryToResolveValue } from "../../lib/helpers";
 import { SlotTypes, IntentTypes } from "../../lib/constants";
 
 /**
@@ -53,7 +53,11 @@ export const InProgress: RequestHandler = {
         // if we have a match but it's ambiguous
         // ask for clarification
         if (slot && slot.isMatch && slot.isAmbiguous) {
-            return DisambiguateSlot(handlerInput, slot);
+            // try to resolve the value
+            if (!TryToResolveValue(currentIntent, slot)) {
+                // otherwise try to disambiguate it
+                return DisambiguateSlot(handlerInput, slot);
+            }
         }
 
         // validate the level and quality

@@ -1,6 +1,6 @@
 import { RequestHandler } from "ask-sdk-core";
 import { IntentRequest } from "ask-sdk-model";
-import { IsIntentWithIncompleteDialog, GetRequestAttributes, DisambiguateSlot, ResetUnmatchedSlotValues } from "../../lib/helpers";
+import { IsIntentWithIncompleteDialog, GetRequestAttributes, DisambiguateSlot, ResetUnmatchedSlotValues, TryToResolveValue } from "../../lib/helpers";
 
 /**
  * Creates a Dialog handler with incomplete state.
@@ -26,7 +26,11 @@ export function CreateNormalItemInProgressHandler(options: {
             // if we have a match but it's ambiguous
             // ask for clarification
             if (slot && slot.isMatch && slot.isAmbiguous) {
-                return DisambiguateSlot(handlerInput, slot);
+                // try to resolve the value
+                if (!TryToResolveValue(currentIntent, slot)) {
+                    // otherwise try to disambiguate it
+                    return DisambiguateSlot(handlerInput, slot);
+                }
             }
 
             // reset any unmatched slots

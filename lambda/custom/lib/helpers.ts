@@ -1,5 +1,5 @@
 import { HandlerInput } from "ask-sdk-core";
-import { IntentRequest, services } from "ask-sdk-model";
+import { IntentRequest, services, Intent } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
 import { RequestTypes, ErrorTypes, Strings, SlotTypes } from "./constants";
 import { LeagueTypes, ItemEntity } from "../api";
@@ -352,6 +352,63 @@ export function FormatPrice(n: number): number {
  */
 export function CurrentDate() {
     return (new Date).toISOString().substring(0, 10);
+}
+
+/**
+ * Tries to resolve an ambiguous value. Returns true if the value was resolved,
+ * false otherwise.
+ * 
+ * @param intent 
+ * @param slot 
+ */
+export function TryToResolveValue(intent: Intent, slot: MatchedSlotValue) {
+    let resolvedValue: string | undefined;
+
+    // iterate trough the values
+    for (let i = 0; i < slot.values.length; i++) {
+        const value = slot.values[i];
+
+        // if one of values matches exactly with what the user said
+        if (value.name.toLowerCase() === slot.value.toLowerCase()) {
+            resolvedValue = value.name;
+            break;
+        }
+
+        // if one of the values is the prefix of another
+        // then assume the prefix to be the correct value
+        // otherwise there is no way for the user to tell which one he wants
+        // e.g. if we have two slot values, Coca Cola and Coca Cola Zero, and the user
+        // says Cola, so it will match both, but "Coca Cola" is the prefix of "Coca Cola Zero"
+        // so we pick the prefix, we take the less specific one.
+        for (let j = i + 1; j < slot.values.length; j++) {
+            if (value.name.startsWith(slot.values[j].name)) {
+                resolvedValue = slot.values[j].name;
+                break;
+            } else if (slot.values[j].name.startsWith(value.name)) {
+                resolvedValue = value.name;
+                break;
+            }
+        }
+
+        if (resolvedValue) {
+            break;
+        }
+    }
+
+    // if we resolved the value
+    if (resolvedValue && intent.slots) {
+        const existingSlot = intent.slots[slot.name];
+
+        // use this value
+        existingSlot.value = resolvedValue;
+
+        // delete the resolutions
+        delete existingSlot.resolutions;
+
+        return true;
+    }
+
+    return false;
 }
 
 /**
