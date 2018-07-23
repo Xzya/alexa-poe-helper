@@ -1,314 +1,417 @@
-Academy Map,
-Acid Lakes Map,
-Alleyways Map,
-Ancient City Map,
-Arachnid Nest Map,
-Arachnid Tomb Map,
-Arcade Map,
-Arena Map,
-Arid Lake Map,
-Armoury Map,
-Arsenal Map,
-Ashen Wood Map,
-Atoll Map,
-Barrows Map,
-Basilica Map,
-Bazaar Map,
-Beach Map,
-Belfry Map,
-Bog Map,
-Bone Crypt Map,
-Burial Chambers Map,
-Cage Map,
-Caldera Map,
-Canyon Map,
-Carcass Map,
-Castle Ruins Map,
-Cells Map,
-Cemetery Map,
-Channel Map,
-Chateau Map,
-City Square Map,
-Colonnade Map,
-Colosseum Map,
-Conservatory Map,
-Coral Ruins Map,
-Core Map,
-Courthouse Map,
-Courtyard Map,
-Coves Map,
-Crimson Temple Map,
-Crystal Ore Map,
-Cursed Crypt Map,
-Dark Forest Map,
-Defiled Cathedral Map,
-Desert Map,
-Desert Spring Map,
-Dig Map,
-Dunes Map,
-Dungeon Map,
-Elder Academy Map,
-Elder Ancient City Map,
-Elder Arcade Map,
-Elder Arena Map,
-Elder Arid Lake Map,
-Elder Armoury Map,
-Elder Arsenal Map,
-Elder Ashen Wood Map,
-Elder Atoll Map,
-Elder Beach Map,
-Elder Belfry Map,
-Elder Burial Chambers Map,
-Elder Cage Map,
-Elder Cells Map,
-Elder Cemetery Map,
-Elder Channel Map,
-Elder Chateau Map,
-Elder City Square Map,
-Elder Core Map,
-Elder Courthouse Map,
-Elder Courtyard Map,
-Elder Crystal Ore Map,
-Elder Cursed Crypt Map,
-Elder Desert Spring Map,
-Elder Dunes Map,
-Elder Estuary Map,
-Elder Excavation Map,
-Elder Fields Map,
-Elder Gorge Map,
-Elder Graveyard Map,
-Elder Grotto Map,
-Elder Haunted Mansion Map,
-Elder Ivory Temple Map,
-Elder Laboratory Map,
-Elder Lair Map,
-Elder Leyline Map,
-Elder Mausoleum Map,
-Elder Maze Map,
-Elder Mesa Map,
-Elder Moon Temple Map,
-Elder Necropolis Map,
-Elder Pen Map,
-Elder Peninsula Map,
-Elder Phantasmagoria Map,
-Elder Plateau Map,
-Elder Plaza Map,
-Elder Port Map,
-Elder Primordial Pool Map,
-Elder Promenade Map,
-Elder Racecourse Map,
-Elder Ramparts Map,
-Elder Relic Chambers Map,
-Elder Sepulchre Map,
-Elder Spider Forest Map,
-Elder Springs Map,
-Elder Strand Map,
-Elder Thicket Map,
-Elder Tower Map,
-Elder Toxic Sewer Map,
-Elder Tribunal Map,
-Elder Underground River Map,
-Elder Underground Sea Map,
-Elder Vault Map,
-Elder Volcano Map,
-Elder Waste Pool Map,
-Elder Waterways Map,
-Elder Wharf Map,
-Estuary Map,
-Excavation Map,
-Factory Map,
-Fields Map,
-Flooded Mine Map,
-Forge of the Phoenix Map,
-Gardens Map,
-Geode Map,
-Ghetto Map,
-Gorge Map,
-Graveyard Map,
-Grotto Map,
-Haunted Mansion Map,
-Iceberg Map,
-Infested Valley Map,
-Ivory Temple Map,
-Jungle Valley Map,
-Laboratory Map,
-Lair Map,
-Lair of the Hydra Map,
-Lava Chamber Map,
-Lava Lake Map,
-Leyline Map,
-Lighthouse Map,
-Lookout Map,
-Malformation Map,
-Marshes Map,
-Mausoleum Map,
-Maze Map,
-Maze of the Minotaur Map,
-Mesa Map,
-Mineral Pools Map,
-Moon Temple Map,
-Mud Geyser Map,
-Museum Map,
-Necropolis Map,
-Orchard Map,
-Overgrown Ruin Map,
-Overgrown Shrine Map,
-Palace Map,
-Park Map,
-Pen Map,
-Peninsula Map,
-Phantasmagoria Map,
-Pier Map,
-Pit Map,
-Pit of the Chimera Map,
-Plateau Map,
-Plaza Map,
-Port Map,
-Precinct Map,
-Primordial Pool Map,
-Promenade Map,
-Racecourse Map,
-Ramparts Map,
-Reef Map,
-Relic Chambers Map,
-Residence Map,
-Scriptorium Map,
-Sepulchre Map,
-Shaped Academy Map,
-Shaped Acid Lakes Map,
-Shaped Alleyways Map,
-Shaped Ancient City Map,
-Shaped Arachnid Nest Map,
-Shaped Arachnid Tomb Map,
-Shaped Arcade Map,
-Shaped Arena Map,
-Shaped Arid Lake Map,
-Shaped Armoury Map,
-Shaped Ashen Wood Map,
-Shaped Atoll Map,
-Shaped Barrows Map,
-Shaped Bazaar Map,
-Shaped Beach Map,
-Shaped Belfry Map,
-Shaped Bog Map,
-Shaped Bone Crypt Map,
-Shaped Burial Chambers Map,
-Shaped Cage Map,
-Shaped Canyon Map,
-Shaped Castle Ruins Map,
-Shaped Cells Map,
-Shaped Cemetery Map,
-Shaped Channel Map,
-Shaped Chateau Map,
-Shaped City Square Map,
-Shaped Colonnade Map,
-Shaped Conservatory Map,
-Shaped Coral Ruins Map,
-Shaped Courthouse Map,
-Shaped Courtyard Map,
-Shaped Coves Map,
-Shaped Cursed Crypt Map,
-Shaped Desert Map,
-Shaped Desert Spring Map,
-Shaped Dunes Map,
-Shaped Dungeon Map,
-Shaped Estuary Map,
-Shaped Excavation Map,
-Shaped Factory Map,
-Shaped Fields Map,
-Shaped Flooded Mine Map,
-Shaped Gardens Map,
-Shaped Geode Map,
-Shaped Ghetto Map,
-Shaped Gorge Map,
-Shaped Graveyard Map,
-Shaped Grotto Map,
-Shaped Haunted Mansion Map,
-Shaped Iceberg Map,
-Shaped Infested Valley Map,
-Shaped Ivory Temple Map,
-Shaped Jungle Valley Map,
-Shaped Laboratory Map,
-Shaped Lava Chamber Map,
-Shaped Leyline Map,
-Shaped Lighthouse Map,
-Shaped Lookout Map,
-Shaped Marshes Map,
-Shaped Mausoleum Map,
-Shaped Maze Map,
-Shaped Mesa Map,
-Shaped Mineral Pools Map,
-Shaped Moon Temple Map,
-Shaped Mud Geyser Map,
-Shaped Museum Map,
-Shaped Orchard Map,
-Shaped Overgrown Ruin Map,
-Shaped Overgrown Shrine Map,
-Shaped Pen Map,
-Shaped Peninsula Map,
-Shaped Phantasmagoria Map,
-Shaped Pier Map,
-Shaped Pit Map,
-Shaped Plateau Map,
-Shaped Port Map,
-Shaped Precinct Map,
-Shaped Promenade Map,
-Shaped Racecourse Map,
-Shaped Ramparts Map,
-Shaped Reef Map,
-Shaped Relic Chambers Map,
-Shaped Residence Map,
-Shaped Scriptorium Map,
-Shaped Sepulchre Map,
-Shaped Shipyard Map,
-Shaped Shore Map,
-Shaped Siege Map,
-Shaped Spider Forest Map,
-Shaped Spider Lair Map,
-Shaped Springs Map,
-Shaped Strand Map,
-Shaped Sulphur Vents Map,
-Shaped Temple Map,
-Shaped Thicket Map,
-Shaped Tower Map,
-Shaped Toxic Sewer Map,
-Shaped Tribunal Map,
-Shaped Tropical Island Map,
-Shaped Underground River Map,
-Shaped Underground Sea Map,
-Shaped Vaal Pyramid Map,
-Shaped Vault Map,
-Shaped Volcano Map,
-Shaped Waste Pool Map,
-Shaped Wasteland Map,
-Shaped Wharf Map,
-Shipyard Map,
-Shore Map,
-Shrine Map,
-Siege Map,
-Spider Forest Map,
-Spider Lair Map,
-Springs Map,
-Strand Map,
-Sulphur Vents Map,
-Summit Map,
-Sunken City Map,
-Temple Map,
-Terrace Map,
-Thicket Map,
-Torture Chamber Map,
-Tower Map,
-Toxic Sewer Map,
-Tribunal Map,
-Tropical Island Map,
-Underground River Map,
-Underground Sea Map,
-Vaal Pyramid Map,
-Vaal Temple Map,
-Vault Map,
-Villa Map,
-Volcano Map,
-Waste Pool Map,
-Wasteland Map,
-Waterways Map,
-Wharf Map,
+Academy Map,,Academy
+Acid Lakes Map,,Acid Lakes
+Alleyways Map,,Alleyways
+Ancient City Map,,Ancient City
+Arachnid Nest Map,,Arachnid Nest
+Arachnid Tomb Map,,Arachnid Tomb
+Arcade Map,,Arcade
+Arena Map,,Arena
+Arid Lake Map,,Arid Lake
+Armoury Map,,Armoury
+Arsenal Map,,Arsenal
+Ashen Wood Map,,Ashen Wood
+Atoll Map,,Atoll
+Barrows Map,,Barrows
+Basilica Map,,Basilica
+Bazaar Map,,Bazaar
+Beach Map,,Beach
+Belfry Map,,Belfry
+Bog Map,,Bog
+Bone Crypt Map,,Bone Crypt
+Burial Chambers Map,,Burial Chambers
+Cage Map,,Cage
+Caldera Map,,Caldera
+Canyon Map,,Canyon
+Carcass Map,,Carcass
+Castle Ruins Map,,Castle Ruins
+Cells Map,,Cells
+Cemetery Map,,Cemetery
+Channel Map,,Channel
+Chateau Map,,Chateau
+City Square Map,,City Square
+Colonnade Map,,Colonnade
+Colosseum Map,,Colosseum
+Conservatory Map,,Conservatory
+Coral Ruins Map,,Coral Ruins
+Core Map,,Core
+Courthouse Map,,Courthouse
+Courtyard Map,,Courtyard
+Coves Map,,Coves
+Crimson Temple Map,,Crimson Temple
+Crystal Ore Map,,Crystal Ore
+Cursed Crypt Map,,Cursed Crypt
+Dark Forest Map,,Dark Forest
+Defiled Cathedral Map,,Defiled Cathedral
+Desert Map,,Desert
+Desert Spring Map,,Desert Spring
+Dig Map,,Dig
+Dunes Map,,Dunes
+Dungeon Map,,Dungeon
+Estuary Map,,Estuary
+Excavation Map,,Excavation
+Factory Map,,Factory
+Fields Map,,Fields
+Flooded Mine Map,,Flooded Mine
+Forge of the Phoenix Map,,Forge of the Phoenix
+Gardens Map,,Gardens
+Geode Map,,Geode
+Ghetto Map,,Ghetto
+Gorge Map,,Gorge
+Graveyard Map,,Graveyard
+Grotto Map,,Grotto
+Haunted Mansion Map,,Haunted Mansion
+Iceberg Map,,Iceberg
+Infested Valley Map,,Infested Valley
+Ivory Temple Map,,Ivory Temple
+Jungle Valley Map,,Jungle Valley
+Laboratory Map,,Laboratory
+Lair Map,,Lair
+Lair of the Hydra Map,,Lair of the Hydra
+Lava Chamber Map,,Lava Chamber
+Lava Lake Map,,Lava Lake
+Leyline Map,,Leyline
+Lighthouse Map,,Lighthouse
+Lookout Map,,Lookout
+Malformation Map,,Malformation
+Marshes Map,,Marshes
+Mausoleum Map,,Mausoleum
+Maze Map,,Maze
+Maze of the Minotaur Map,,Maze of the Minotaur
+Mesa Map,,Mesa
+Mineral Pools Map,,Mineral Pools
+Moon Temple Map,,Moon Temple
+Mud Geyser Map,,Mud Geyser
+Museum Map,,Museum
+Necropolis Map,,Necropolis
+Orchard Map,,Orchard
+Overgrown Ruin Map,,Overgrown Ruin
+Overgrown Shrine Map,,Overgrown Shrine
+Palace Map,,Palace
+Park Map,,Park
+Pen Map,,Pen
+Peninsula Map,,Peninsula
+Phantasmagoria Map,,Phantasmagoria
+Pier Map,,Pier
+Pit Map,,Pit
+Pit of the Chimera Map,,Pit of the Chimera
+Plateau Map,,Plateau
+Plaza Map,,Plaza
+Port Map,,Port
+Precinct Map,,Precinct
+Primordial Pool Map,,Primordial Pool
+Promenade Map,,Promenade
+Racecourse Map,,Racecourse
+Ramparts Map,,Ramparts
+Reef Map,,Reef
+Relic Chambers Map,,Relic Chambers
+Residence Map,,Residence
+Scriptorium Map,,Scriptorium
+Sepulchre Map,,Sepulchre
+Shipyard Map,,Shipyard
+Shore Map,,Shore
+Shrine Map,,Shrine
+Siege Map,,Siege
+Spider Forest Map,,Spider Forest
+Spider Lair Map,,Spider Lair
+Springs Map,,Springs
+Strand Map,,Strand
+Sulphur Vents Map,,Sulphur Vents
+Summit Map,,Summit
+Sunken City Map,,Sunken City
+Temple Map,,Temple
+Terrace Map,,Terrace
+Thicket Map,,Thicket
+Torture Chamber Map,,Torture Chamber
+Tower Map,,Tower
+Toxic Sewer Map,,Toxic Sewer
+Tribunal Map,,Tribunal
+Tropical Island Map,,Tropical Island
+Underground River Map,,Underground River
+Underground Sea Map,,Underground Sea
+Vaal Pyramid Map,,Vaal Pyramid
+Vaal Temple Map,,Vaal Temple
+Vault Map,,Vault
+Villa Map,,Villa
+Volcano Map,,Volcano
+Waste Pool Map,,Waste Pool
+Wasteland Map,,Wasteland
+Waterways Map,,Waterways
+Wharf Map,,Wharf
+Elder Academy Map,,Elder Academy
+Elder Acid Lakes Map,,Elder Acid Lakes
+Elder Alleyways Map,,Elder Alleyways
+Elder Ancient City Map,,Elder Ancient City
+Elder Arachnid Nest Map,,Elder Arachnid Nest
+Elder Arachnid Tomb Map,,Elder Arachnid Tomb
+Elder Arcade Map,,Elder Arcade
+Elder Arena Map,,Elder Arena
+Elder Arid Lake Map,,Elder Arid Lake
+Elder Armoury Map,,Elder Armoury
+Elder Arsenal Map,,Elder Arsenal
+Elder Ashen Wood Map,,Elder Ashen Wood
+Elder Atoll Map,,Elder Atoll
+Elder Barrows Map,,Elder Barrows
+Elder Basilica Map,,Elder Basilica
+Elder Bazaar Map,,Elder Bazaar
+Elder Beach Map,,Elder Beach
+Elder Belfry Map,,Elder Belfry
+Elder Bog Map,,Elder Bog
+Elder Bone Crypt Map,,Elder Bone Crypt
+Elder Burial Chambers Map,,Elder Burial Chambers
+Elder Cage Map,,Elder Cage
+Elder Caldera Map,,Elder Caldera
+Elder Canyon Map,,Elder Canyon
+Elder Carcass Map,,Elder Carcass
+Elder Castle Ruins Map,,Elder Castle Ruins
+Elder Cells Map,,Elder Cells
+Elder Cemetery Map,,Elder Cemetery
+Elder Channel Map,,Elder Channel
+Elder Chateau Map,,Elder Chateau
+Elder City Square Map,,Elder City Square
+Elder Colonnade Map,,Elder Colonnade
+Elder Colosseum Map,,Elder Colosseum
+Elder Conservatory Map,,Elder Conservatory
+Elder Coral Ruins Map,,Elder Coral Ruins
+Elder Core Map,,Elder Core
+Elder Courthouse Map,,Elder Courthouse
+Elder Courtyard Map,,Elder Courtyard
+Elder Coves Map,,Elder Coves
+Elder Crimson Temple Map,,Elder Crimson Temple
+Elder Crystal Ore Map,,Elder Crystal Ore
+Elder Cursed Crypt Map,,Elder Cursed Crypt
+Elder Dark Forest Map,,Elder Dark Forest
+Elder Defiled Cathedral Map,,Elder Defiled Cathedral
+Elder Desert Map,,Elder Desert
+Elder Desert Spring Map,,Elder Desert Spring
+Elder Dig Map,,Elder Dig
+Elder Dunes Map,,Elder Dunes
+Elder Dungeon Map,,Elder Dungeon
+Elder Estuary Map,,Elder Estuary
+Elder Excavation Map,,Elder Excavation
+Elder Factory Map,,Elder Factory
+Elder Fields Map,,Elder Fields
+Elder Flooded Mine Map,,Elder Flooded Mine
+Elder Forge of the Phoenix Map,,Elder Forge of the Phoenix
+Elder Gardens Map,,Elder Gardens
+Elder Geode Map,,Elder Geode
+Elder Ghetto Map,,Elder Ghetto
+Elder Gorge Map,,Elder Gorge
+Elder Graveyard Map,,Elder Graveyard
+Elder Grotto Map,,Elder Grotto
+Elder Haunted Mansion Map,,Elder Haunted Mansion
+Elder Iceberg Map,,Elder Iceberg
+Elder Infested Valley Map,,Elder Infested Valley
+Elder Ivory Temple Map,,Elder Ivory Temple
+Elder Jungle Valley Map,,Elder Jungle Valley
+Elder Laboratory Map,,Elder Laboratory
+Elder Lair Map,,Elder Lair
+Elder Lair of the Hydra Map,,Elder Lair of the Hydra
+Elder Lava Chamber Map,,Elder Lava Chamber
+Elder Lava Lake Map,,Elder Lava Lake
+Elder Leyline Map,,Elder Leyline
+Elder Lighthouse Map,,Elder Lighthouse
+Elder Lookout Map,,Elder Lookout
+Elder Malformation Map,,Elder Malformation
+Elder Marshes Map,,Elder Marshes
+Elder Mausoleum Map,,Elder Mausoleum
+Elder Maze Map,,Elder Maze
+Elder Maze of the Minotaur Map,,Elder Maze of the Minotaur
+Elder Mesa Map,,Elder Mesa
+Elder Mineral Pools Map,,Elder Mineral Pools
+Elder Moon Temple Map,,Elder Moon Temple
+Elder Mud Geyser Map,,Elder Mud Geyser
+Elder Museum Map,,Elder Museum
+Elder Necropolis Map,,Elder Necropolis
+Elder Orchard Map,,Elder Orchard
+Elder Overgrown Ruin Map,,Elder Overgrown Ruin
+Elder Overgrown Shrine Map,,Elder Overgrown Shrine
+Elder Palace Map,,Elder Palace
+Elder Park Map,,Elder Park
+Elder Pen Map,,Elder Pen
+Elder Peninsula Map,,Elder Peninsula
+Elder Phantasmagoria Map,,Elder Phantasmagoria
+Elder Pier Map,,Elder Pier
+Elder Pit Map,,Elder Pit
+Elder Pit of the Chimera Map,,Elder Pit of the Chimera
+Elder Plateau Map,,Elder Plateau
+Elder Plaza Map,,Elder Plaza
+Elder Port Map,,Elder Port
+Elder Precinct Map,,Elder Precinct
+Elder Primordial Pool Map,,Elder Primordial Pool
+Elder Promenade Map,,Elder Promenade
+Elder Racecourse Map,,Elder Racecourse
+Elder Ramparts Map,,Elder Ramparts
+Elder Reef Map,,Elder Reef
+Elder Relic Chambers Map,,Elder Relic Chambers
+Elder Residence Map,,Elder Residence
+Elder Scriptorium Map,,Elder Scriptorium
+Elder Sepulchre Map,,Elder Sepulchre
+Elder Shipyard Map,,Elder Shipyard
+Elder Shore Map,,Elder Shore
+Elder Shrine Map,,Elder Shrine
+Elder Siege Map,,Elder Siege
+Elder Spider Forest Map,,Elder Spider Forest
+Elder Spider Lair Map,,Elder Spider Lair
+Elder Springs Map,,Elder Springs
+Elder Strand Map,,Elder Strand
+Elder Sulphur Vents Map,,Elder Sulphur Vents
+Elder Summit Map,,Elder Summit
+Elder Sunken City Map,,Elder Sunken City
+Elder Temple Map,,Elder Temple
+Elder Terrace Map,,Elder Terrace
+Elder Thicket Map,,Elder Thicket
+Elder Torture Chamber Map,,Elder Torture Chamber
+Elder Tower Map,,Elder Tower
+Elder Toxic Sewer Map,,Elder Toxic Sewer
+Elder Tribunal Map,,Elder Tribunal
+Elder Tropical Island Map,,Elder Tropical Island
+Elder Underground River Map,,Elder Underground River
+Elder Underground Sea Map,,Elder Underground Sea
+Elder Vaal Pyramid Map,,Elder Vaal Pyramid
+Elder Vaal Temple Map,,Elder Vaal Temple
+Elder Vault Map,,Elder Vault
+Elder Villa Map,,Elder Villa
+Elder Volcano Map,,Elder Volcano
+Elder Waste Pool Map,,Elder Waste Pool
+Elder Wasteland Map,,Elder Wasteland
+Elder Waterways Map,,Elder Waterways
+Elder Wharf Map,,Elder Wharf
+Shaped Academy Map,,Shaped Academy
+Shaped Acid Lakes Map,,Shaped Acid Lakes
+Shaped Alleyways Map,,Shaped Alleyways
+Shaped Ancient City Map,,Shaped Ancient City
+Shaped Arachnid Nest Map,,Shaped Arachnid Nest
+Shaped Arachnid Tomb Map,,Shaped Arachnid Tomb
+Shaped Arcade Map,,Shaped Arcade
+Shaped Arena Map,,Shaped Arena
+Shaped Arid Lake Map,,Shaped Arid Lake
+Shaped Armoury Map,,Shaped Armoury
+Shaped Arsenal Map,,Shaped Arsenal
+Shaped Ashen Wood Map,,Shaped Ashen Wood
+Shaped Atoll Map,,Shaped Atoll
+Shaped Barrows Map,,Shaped Barrows
+Shaped Basilica Map,,Shaped Basilica
+Shaped Bazaar Map,,Shaped Bazaar
+Shaped Beach Map,,Shaped Beach
+Shaped Belfry Map,,Shaped Belfry
+Shaped Bog Map,,Shaped Bog
+Shaped Bone Crypt Map,,Shaped Bone Crypt
+Shaped Burial Chambers Map,,Shaped Burial Chambers
+Shaped Cage Map,,Shaped Cage
+Shaped Caldera Map,,Shaped Caldera
+Shaped Canyon Map,,Shaped Canyon
+Shaped Carcass Map,,Shaped Carcass
+Shaped Castle Ruins Map,,Shaped Castle Ruins
+Shaped Cells Map,,Shaped Cells
+Shaped Cemetery Map,,Shaped Cemetery
+Shaped Channel Map,,Shaped Channel
+Shaped Chateau Map,,Shaped Chateau
+Shaped City Square Map,,Shaped City Square
+Shaped Colonnade Map,,Shaped Colonnade
+Shaped Colosseum Map,,Shaped Colosseum
+Shaped Conservatory Map,,Shaped Conservatory
+Shaped Coral Ruins Map,,Shaped Coral Ruins
+Shaped Core Map,,Shaped Core
+Shaped Courthouse Map,,Shaped Courthouse
+Shaped Courtyard Map,,Shaped Courtyard
+Shaped Coves Map,,Shaped Coves
+Shaped Crimson Temple Map,,Shaped Crimson Temple
+Shaped Crystal Ore Map,,Shaped Crystal Ore
+Shaped Cursed Crypt Map,,Shaped Cursed Crypt
+Shaped Dark Forest Map,,Shaped Dark Forest
+Shaped Defiled Cathedral Map,,Shaped Defiled Cathedral
+Shaped Desert Map,,Shaped Desert
+Shaped Desert Spring Map,,Shaped Desert Spring
+Shaped Dig Map,,Shaped Dig
+Shaped Dunes Map,,Shaped Dunes
+Shaped Dungeon Map,,Shaped Dungeon
+Shaped Estuary Map,,Shaped Estuary
+Shaped Excavation Map,,Shaped Excavation
+Shaped Factory Map,,Shaped Factory
+Shaped Fields Map,,Shaped Fields
+Shaped Flooded Mine Map,,Shaped Flooded Mine
+Shaped Forge of the Phoenix Map,,Shaped Forge of the Phoenix
+Shaped Gardens Map,,Shaped Gardens
+Shaped Geode Map,,Shaped Geode
+Shaped Ghetto Map,,Shaped Ghetto
+Shaped Gorge Map,,Shaped Gorge
+Shaped Graveyard Map,,Shaped Graveyard
+Shaped Grotto Map,,Shaped Grotto
+Shaped Haunted Mansion Map,,Shaped Haunted Mansion
+Shaped Iceberg Map,,Shaped Iceberg
+Shaped Infested Valley Map,,Shaped Infested Valley
+Shaped Ivory Temple Map,,Shaped Ivory Temple
+Shaped Jungle Valley Map,,Shaped Jungle Valley
+Shaped Laboratory Map,,Shaped Laboratory
+Shaped Lair Map,,Shaped Lair
+Shaped Lair of the Hydra Map,,Shaped Lair of the Hydra
+Shaped Lava Chamber Map,,Shaped Lava Chamber
+Shaped Lava Lake Map,,Shaped Lava Lake
+Shaped Leyline Map,,Shaped Leyline
+Shaped Lighthouse Map,,Shaped Lighthouse
+Shaped Lookout Map,,Shaped Lookout
+Shaped Malformation Map,,Shaped Malformation
+Shaped Marshes Map,,Shaped Marshes
+Shaped Mausoleum Map,,Shaped Mausoleum
+Shaped Maze Map,,Shaped Maze
+Shaped Maze of the Minotaur Map,,Shaped Maze of the Minotaur
+Shaped Mesa Map,,Shaped Mesa
+Shaped Mineral Pools Map,,Shaped Mineral Pools
+Shaped Moon Temple Map,,Shaped Moon Temple
+Shaped Mud Geyser Map,,Shaped Mud Geyser
+Shaped Museum Map,,Shaped Museum
+Shaped Necropolis Map,,Shaped Necropolis
+Shaped Orchard Map,,Shaped Orchard
+Shaped Overgrown Ruin Map,,Shaped Overgrown Ruin
+Shaped Overgrown Shrine Map,,Shaped Overgrown Shrine
+Shaped Palace Map,,Shaped Palace
+Shaped Park Map,,Shaped Park
+Shaped Pen Map,,Shaped Pen
+Shaped Peninsula Map,,Shaped Peninsula
+Shaped Phantasmagoria Map,,Shaped Phantasmagoria
+Shaped Pier Map,,Shaped Pier
+Shaped Pit Map,,Shaped Pit
+Shaped Pit of the Chimera Map,,Shaped Pit of the Chimera
+Shaped Plateau Map,,Shaped Plateau
+Shaped Plaza Map,,Shaped Plaza
+Shaped Port Map,,Shaped Port
+Shaped Precinct Map,,Shaped Precinct
+Shaped Primordial Pool Map,,Shaped Primordial Pool
+Shaped Promenade Map,,Shaped Promenade
+Shaped Racecourse Map,,Shaped Racecourse
+Shaped Ramparts Map,,Shaped Ramparts
+Shaped Reef Map,,Shaped Reef
+Shaped Relic Chambers Map,,Shaped Relic Chambers
+Shaped Residence Map,,Shaped Residence
+Shaped Scriptorium Map,,Shaped Scriptorium
+Shaped Sepulchre Map,,Shaped Sepulchre
+Shaped Shipyard Map,,Shaped Shipyard
+Shaped Shore Map,,Shaped Shore
+Shaped Shrine Map,,Shaped Shrine
+Shaped Siege Map,,Shaped Siege
+Shaped Spider Forest Map,,Shaped Spider Forest
+Shaped Spider Lair Map,,Shaped Spider Lair
+Shaped Springs Map,,Shaped Springs
+Shaped Strand Map,,Shaped Strand
+Shaped Sulphur Vents Map,,Shaped Sulphur Vents
+Shaped Summit Map,,Shaped Summit
+Shaped Sunken City Map,,Shaped Sunken City
+Shaped Temple Map,,Shaped Temple
+Shaped Terrace Map,,Shaped Terrace
+Shaped Thicket Map,,Shaped Thicket
+Shaped Torture Chamber Map,,Shaped Torture Chamber
+Shaped Tower Map,,Shaped Tower
+Shaped Toxic Sewer Map,,Shaped Toxic Sewer
+Shaped Tribunal Map,,Shaped Tribunal
+Shaped Tropical Island Map,,Shaped Tropical Island
+Shaped Underground River Map,,Shaped Underground River
+Shaped Underground Sea Map,,Shaped Underground Sea
+Shaped Vaal Pyramid Map,,Shaped Vaal Pyramid
+Shaped Vaal Temple Map,,Shaped Vaal Temple
+Shaped Vault Map,,Shaped Vault
+Shaped Villa Map,,Shaped Villa
+Shaped Volcano Map,,Shaped Volcano
+Shaped Waste Pool Map,,Shaped Waste Pool
+Shaped Wasteland Map,,Shaped Wasteland
+Shaped Waterways Map,,Shaped Waterways
+Shaped Wharf Map,,Shaped Wharf
