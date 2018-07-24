@@ -3463,7 +3463,11 @@
                         },
                         {
                             "name": {
-                                "value": "Inpulsa's Broken Heart"
+                                "value": "Inpulsa's Broken Heart",
+                                "synonyms": [
+                                    "Inpulsa",
+                                    "Inpulsa's"
+                                ]
                             }
                         },
                         {
@@ -3478,7 +3482,10 @@
                         },
                         {
                             "name": {
-                                "value": "Carcass Jack"
+                                "value": "Carcass Jack",
+                                "synonyms": [
+                                    "Carcass"
+                                ]
                             }
                         },
                         {
@@ -4782,7 +4789,10 @@
                         },
                         {
                             "name": {
-                                "value": "Atziri's Disfavour"
+                                "value": "Atziri's Disfavour",
+                                "synonyms": [
+                                    "Disfavour"
+                                ]
                             }
                         },
                         {
@@ -4837,7 +4847,10 @@
                         },
                         {
                             "name": {
-                                "value": "The Scourge"
+                                "value": "The Scourge",
+                                "synonyms": [
+                                    "Scourge"
+                                ]
                             }
                         },
                         {
@@ -4887,7 +4900,11 @@
                         },
                         {
                             "name": {
-                                "value": "Ngamahu's Flame"
+                                "value": "Ngamahu's Flame",
+                                "synonyms": [
+                                    "Ngamahu",
+                                    "Ngamahu's"
+                                ]
                             }
                         },
                         {
@@ -5212,7 +5229,11 @@
                         },
                         {
                             "name": {
-                                "value": "Piscator's Vigil"
+                                "value": "Piscator's Vigil",
+                                "synonyms": [
+                                    "Piscator",
+                                    "Piscator's"
+                                ]
                             }
                         },
                         {
@@ -5642,7 +5663,11 @@
                         },
                         {
                             "name": {
-                                "value": "The Poet's Pen"
+                                "value": "The Poet's Pen",
+                                "synonyms": [
+                                    "Poet's Pen",
+                                    "pen"
+                                ]
                             }
                         },
                         {
@@ -5657,7 +5682,11 @@
                         },
                         {
                             "name": {
-                                "value": "Brutus' Lead Sprinkler"
+                                "value": "Brutus' Lead Sprinkler",
+                                "synonyms": [
+                                    "Lead Sprinkler",
+                                    "Sprinkler"
+                                ]
                             }
                         },
                         {
@@ -5677,12 +5706,20 @@
                         },
                         {
                             "name": {
-                                "value": "Doryani's Catalyst"
+                                "value": "Doryani's Catalyst",
+                                "synonyms": [
+                                    "Doryani",
+                                    "Doryani's"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "Cospri's Malice"
+                                "value": "Cospri's Malice",
+                                "synonyms": [
+                                    "Cospri",
+                                    "Cospri's"
+                                ]
                             }
                         },
                         {
