@@ -27,14 +27,14 @@ interface IStrings {
 export const strings: Resource = {
     [LocaleTypes.enUS]: {
         translation: {
-            SKILL_NAME: "POE Helper",
+            SKILL_NAME: "Path of Exile Helper",
             WELCOME_MSG: "Welcome to P.O.E. Helper. How can I help?",
             GOODBYE_MSG: [
                 "May your maps be merciful.",
                 "Good luck with your maps exile.",
                 "Stay sane.",
             ],
-            HELP_MSG: "You can ask for the reward of a quest. How can I help?",
+            HELP_MSG: `You can ask for the price of an item, or the reward of a quest. Here are some things you can try: "What is the price of an Exalted Orb?", or, "What is the price of one hundred fusings in Standard league?", or, "What is the price of a six linked Loreweave?", or, "What is the price of a twenty one twenty three Kinetic Blast?", or "What is the quest reward for The Dweller of the Deep?". How can I help?`,
             ERROR_MSG: "Sorry, I can't understand the command. Please say again.",
             ERROR_UNEXPECTED_MSG: "Sorry, an unexpected error has occured. Please try again later.",
             SELECT_ONE_MSG: "Which would you like: %s?",

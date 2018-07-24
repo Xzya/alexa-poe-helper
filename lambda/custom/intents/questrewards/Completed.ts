@@ -19,7 +19,6 @@ export const Completed: RequestHandler = {
 
             return handlerInput.responseBuilder
                 .speak(speechText)
-                .withSimpleCard(t(Strings.SKILL_NAME), speechText)
                 .getResponse();
         }
 

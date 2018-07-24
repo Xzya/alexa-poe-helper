@@ -14,7 +14,6 @@ export const Help: RequestHandler = {
         return handlerInput.responseBuilder
             .speak(speechText)
             .reprompt(speechText)
-            .withSimpleCard(t(Strings.SKILL_NAME), speechText)
             .getResponse();
     }
 };

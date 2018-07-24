@@ -3,19 +3,27 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Sample Short Description",
+          "summary": "Helper for Path of Exile which allows you to price check items and find the rewards for quests.",
           "examplePhrases": [
-            "Alexa open greeter",
-            "Alexa tell greeter hello",
-            "Alexa ask greeter to say hello"
+            "Alexa, ask p o e for the price of a Mirror of Kalandra",
+            "Alexa, ask p o e for the price of twenty five Exalted Orbs in Standard league",
+            "Alexa, ask p o e for the price of a six linked Loreweave"
           ],
-          "name": "ask-hello",
-          "description": "Sample Full Description"
+          "keywords": [
+            "path",
+            "of",
+            "exile",
+            "poe",
+            "p.o.e.",
+            "helper"
+          ],
+          "name": "Path of Exile Helper",
+          "description": "This is helper for Path of Exile by Grinding Gear Games. It can check the price of an item, or lookup a quest reward.\n\nCurrent items supported for price checking: Currency, fragments, divination cards, prophecies, skill gems, maps, unique maps, unique jewels, unique flasks, unique weapons, unique armors, unique accessories.\n\n# Price checking details\n\nYou can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.\n\n# Currency\n\nRequired: item name\nOptional: quantity, league\n\n\"What is the price of ten Exalted Orbs in Incursion league?\"\n\n# Linked items\n\nRequired: item name\nOptional: links, league\n\n\"What is the price of a six linked Loreweave in Standard?\"\n\n# Skill gems\n\nRequired: item name, level\nOptional: quality, league\n\n\"What is the price of a twenty one twenty three Kinetic Blast in Hardcore Incursion league?\"\n\n# Other items\n\nRequired: item name\nOptional: league\n\n\"What is the price of a Headhunter in Incursion?\"\n\n\nThis skill is fan-made and not affiliated with Grinding Gear Games in any way."
         }
       },
       "isAvailableWorldwide": true,
-      "testingInstructions": "Sample Testing Instructions.",
-      "category": "EDUCATION_AND_REFERENCE",
+      "testingInstructions": "The purpose of the skill is to price check items, and to check the rewards for quests.\n\nHere is how to check the reward of a quest:\n- \"What is the quest reward for The Dweller of the Deep?\"\n\nYou can find the full list of quests here [1].\n\nHere is how to check the price of an item:\n- \"What is the price of an Exalted Orb?\"\n- \"What is the price of one hundred fusings in Standard league?\"\n- \"What is the price of a six linked Loreweave?\"\n- \"What is the price of a twenty one twenty three Kinetic Blast?\"\n\nMost items found on this page [2] are available for price checking.\n\n[1]: https://pathofexile.gamepedia.com/Quest_Rewards\n[2]: https://poe.ninja/challenge/currency",
+      "category": "KNOWLEDGE_AND_TRIVIA",
       "distributionCountries": []
     },
     "apis": {
@@ -25,6 +33,13 @@
         }
       }
     },
-    "manifestVersion": "1.0"
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
   }
 }

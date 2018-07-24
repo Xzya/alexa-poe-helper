@@ -7,13 +7,12 @@ export const Stop: RequestHandler = {
         return IsIntent(handlerInput, IntentTypes.Stop, IntentTypes.Cancel);
     },
     handle(handlerInput) {
-        const { t, tr } = GetRequestAttributes(handlerInput);
+        const { tr } = GetRequestAttributes(handlerInput);
 
         const speechText = tr(Strings.GOODBYE_MSG);
 
         return handlerInput.responseBuilder
             .speak(speechText)
-            .withSimpleCard(t(Strings.SKILL_NAME), speechText)
             .getResponse();
     }
 };
