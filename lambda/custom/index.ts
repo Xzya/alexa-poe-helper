@@ -94,6 +94,4 @@ export const handler = Alexa.SkillBuilders.custom()
         Interceptors.Localization,
         Interceptors.Slots
     )
-    // TODO: - remove
-    .withApiClient(new Alexa.DefaultApiClient())
     .lambda();

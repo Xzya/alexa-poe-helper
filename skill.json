@@ -18,7 +18,89 @@
             "helper"
           ],
           "name": "Path of Exile Helper",
-          "description": "This is helper for Path of Exile by Grinding Gear Games. It can check the price of an item, or lookup a quest reward.\n\nCurrent items supported for price checking: Currency, fragments, divination cards, prophecies, skill gems, maps, unique maps, unique jewels, unique flasks, unique weapons, unique armors, unique accessories.\n\n# Price checking details\n\nYou can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.\n\n# Currency\n\nRequired: item name\nOptional: quantity, league\n\n\"What is the price of ten Exalted Orbs in Incursion league?\"\n\n# Linked items\n\nRequired: item name\nOptional: links, league\n\n\"What is the price of a six linked Loreweave in Standard?\"\n\n# Skill gems\n\nRequired: item name, level\nOptional: quality, league\n\n\"What is the price of a twenty one twenty three Kinetic Blast in Hardcore Incursion league?\"\n\n# Other items\n\nRequired: item name\nOptional: league\n\n\"What is the price of a Headhunter in Incursion?\"\n\n\nThis skill is fan-made and not affiliated with Grinding Gear Games in any way."
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/ad51/05ca7196729a437c9e2c8d7304f94d2c/APP_ICON?versionId=2hkkdKqx.x7rE_urSCKkCn5QkRZyVopH&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=WXxyHS5SYNarUC7RB3vTNgk%2Bfow%3D",
+          "description": "This is helper for Path of Exile by Grinding Gear Games. It can check the price of an item, or lookup a quest reward.\n\nCurrent items supported for price checking: Currency, fragments, divination cards, prophecies, skill gems, maps, unique maps, unique jewels, unique flasks, unique weapons, unique armors, unique accessories.\n\nYou can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.\n\n# Currency\n\nRequired: item name\nOptional: quantity, league\n\n\"What is the price of ten Exalted Orbs in Incursion league?\"\n\n# Linked items\n\nRequired: item name\nOptional: links, league\n\n\"What is the price of a six linked Loreweave in Standard?\"\n\n# Skill gems\n\nRequired: item name, level\nOptional: quality, league\n\n\"What is the price of a twenty one twenty three Kinetic Blast in Hardcore Incursion league?\"\n\n# Other items\n\nRequired: item name\nOptional: league\n\n\"What is the price of a Headhunter in Incursion?\"\n\n\nThis skill is fan-made and not affiliated with Grinding Gear Games in any way.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/144a/50bde57e2c0a428fb1d2d65862a35e1b/APP_ICON_LARGE?versionId=X5Edp0BeKCqGtzLTybLqq9_od9MtJR7c&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=xam1xrwElP2VmDiW4wXhl4qEL4w%3D"
+        },
+        "en-CA": {
+          "summary": "Helper for Path of Exile which allows you to price check items and find the rewards for quests.",
+          "examplePhrases": [
+            "Alexa, ask p o e for the price of a Mirror of Kalandra",
+            "Alexa, ask p o e for the price of twenty five Exalted Orbs in Standard league",
+            "Alexa, ask p o e for the price of a six linked Loreweave"
+          ],
+          "keywords": [
+            "path",
+            "of",
+            "exile",
+            "poe",
+            "p.o.e.",
+            "helper"
+          ],
+          "name": "Path of Exile Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/711b/ec53544d69b4483ca41be2ff19476e0c/APP_ICON?versionId=OaPqkQtm3Dhc0aO8PMCE5JyThCeJjxdE&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=XADMUmcQP00sZQ%2FTjGgNI%2FG6vV4%3D",
+          "description": "This is helper for Path of Exile by Grinding Gear Games. It can check the price of an item, or lookup a quest reward.\n\nCurrent items supported for price checking: Currency, fragments, divination cards, prophecies, skill gems, maps, unique maps, unique jewels, unique flasks, unique weapons, unique armors, unique accessories.\n\nYou can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.\n\n# Currency\n\nRequired: item name\nOptional: quantity, league\n\n\"What is the price of ten Exalted Orbs in Incursion league?\"\n\n# Linked items\n\nRequired: item name\nOptional: links, league\n\n\"What is the price of a six linked Loreweave in Standard?\"\n\n# Skill gems\n\nRequired: item name, level\nOptional: quality, league\n\n\"What is the price of a twenty one twenty three Kinetic Blast in Hardcore Incursion league?\"\n\n# Other items\n\nRequired: item name\nOptional: league\n\n\"What is the price of a Headhunter in Incursion?\"\n\n\nThis skill is fan-made and not affiliated with Grinding Gear Games in any way.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/f1c0/48c171012a2f4c8fbecd24f90b6dbcb2/APP_ICON_LARGE?versionId=zMFFXdapFO8vYBKPzXNmDIbR4h6eSHtE&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=MGpxGaBOhRXpeBDOocJPZnjq91s%3D"
+        },
+        "en-IN": {
+          "summary": "Helper for Path of Exile which allows you to price check items and find the rewards for quests.",
+          "examplePhrases": [
+            "Alexa, ask p o e for the price of a Mirror of Kalandra",
+            "Alexa, ask p o e for the price of twenty five Exalted Orbs in Standard league",
+            "Alexa, ask p o e for the price of a six linked Loreweave"
+          ],
+          "keywords": [
+            "path",
+            "of",
+            "exile",
+            "poe",
+            "p.o.e.",
+            "helper"
+          ],
+          "name": "Path of Exile Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/b1a2/6145b15814964dea9eb560e8a75daa28/APP_ICON?versionId=mEogyU0dgU.p5q5n4r.kwtxBQ_gdlQFY&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=iIcI1fDuCSMQNAwGOagAfrQhqVU%3D",
+          "description": "This is helper for Path of Exile by Grinding Gear Games. It can check the price of an item, or lookup a quest reward.\n\nCurrent items supported for price checking: Currency, fragments, divination cards, prophecies, skill gems, maps, unique maps, unique jewels, unique flasks, unique weapons, unique armors, unique accessories.\n\nYou can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.\n\n# Currency\n\nRequired: item name\nOptional: quantity, league\n\n\"What is the price of ten Exalted Orbs in Incursion league?\"\n\n# Linked items\n\nRequired: item name\nOptional: links, league\n\n\"What is the price of a six linked Loreweave in Standard?\"\n\n# Skill gems\n\nRequired: item name, level\nOptional: quality, league\n\n\"What is the price of a twenty one twenty three Kinetic Blast in Hardcore Incursion league?\"\n\n# Other items\n\nRequired: item name\nOptional: league\n\n\"What is the price of a Headhunter in Incursion?\"\n\n\nThis skill is fan-made and not affiliated with Grinding Gear Games in any way.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/629b/13a08a6428ce44da91a8ea20d7c6b1fb/APP_ICON_LARGE?versionId=LpaBJt1YA7ncFyoPeSBs6pugs0ec_Qdk&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=ULvnoX0IJfIpojDz1ZREKQj6TAM%3D"
+        },
+        "en-AU": {
+          "summary": "Helper for Path of Exile which allows you to price check items and find the rewards for quests.",
+          "examplePhrases": [
+            "Alexa, ask p o e for the price of a Mirror of Kalandra",
+            "Alexa, ask p o e for the price of twenty five Exalted Orbs in Standard league",
+            "Alexa, ask p o e for the price of a six linked Loreweave"
+          ],
+          "keywords": [
+            "path",
+            "of",
+            "exile",
+            "poe",
+            "p.o.e.",
+            "helper"
+          ],
+          "name": "Path of Exile Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/fd44/4eabe746fc114a2ba3b0375d78be8d0a/APP_ICON?versionId=lzSnKCQWxMuph4rPVXHg6khfO3I3GcnY&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=qUDylA5QG8etETs3mydF7sI0BfE%3D",
+          "description": "This is helper for Path of Exile by Grinding Gear Games. It can check the price of an item, or lookup a quest reward.\n\nCurrent items supported for price checking: Currency, fragments, divination cards, prophecies, skill gems, maps, unique maps, unique jewels, unique flasks, unique weapons, unique armors, unique accessories.\n\nYou can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.\n\n# Currency\n\nRequired: item name\nOptional: quantity, league\n\n\"What is the price of ten Exalted Orbs in Incursion league?\"\n\n# Linked items\n\nRequired: item name\nOptional: links, league\n\n\"What is the price of a six linked Loreweave in Standard?\"\n\n# Skill gems\n\nRequired: item name, level\nOptional: quality, league\n\n\"What is the price of a twenty one twenty three Kinetic Blast in Hardcore Incursion league?\"\n\n# Other items\n\nRequired: item name\nOptional: league\n\n\"What is the price of a Headhunter in Incursion?\"\n\n\nThis skill is fan-made and not affiliated with Grinding Gear Games in any way.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/3f2f/424cadf6061b45b6bdeefe6dc69d4707/APP_ICON_LARGE?versionId=NKEMIoJT3OCucD6SeSnRg99JsYnPifQB&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=DOPg5uQDEOqjB8V1YX46OxAJe3Q%3D"
+        },
+        "en-GB": {
+          "summary": "Helper for Path of Exile which allows you to price check items and find the rewards for quests.",
+          "examplePhrases": [
+            "Alexa, ask p o e for the price of a Mirror of Kalandra",
+            "Alexa, ask p o e for the price of twenty five Exalted Orbs in Standard league",
+            "Alexa, ask p o e for the price of a six linked Loreweave"
+          ],
+          "keywords": [
+            "path",
+            "of",
+            "exile",
+            "poe",
+            "p.o.e.",
+            "helper"
+          ],
+          "name": "Path of Exile Helper",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/38d6/9c4e58822e874bd48422e1f1ea46fb8c/APP_ICON?versionId=NywQCWTvy1Yccg3RpzmvQMFGWGCNpYK2&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=QQWKH2RSzyesK34JvW3K3drgsS4%3D",
+          "description": "This is helper for Path of Exile by Grinding Gear Games. It can check the price of an item, or lookup a quest reward.\n\nCurrent items supported for price checking: Currency, fragments, divination cards, prophecies, skill gems, maps, unique maps, unique jewels, unique flasks, unique weapons, unique armors, unique accessories.\n\nYou can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.\n\n# Currency\n\nRequired: item name\nOptional: quantity, league\n\n\"What is the price of ten Exalted Orbs in Incursion league?\"\n\n# Linked items\n\nRequired: item name\nOptional: links, league\n\n\"What is the price of a six linked Loreweave in Standard?\"\n\n# Skill gems\n\nRequired: item name, level\nOptional: quality, league\n\n\"What is the price of a twenty one twenty three Kinetic Blast in Hardcore Incursion league?\"\n\n# Other items\n\nRequired: item name\nOptional: league\n\n\"What is the price of a Headhunter in Incursion?\"\n\n\nThis skill is fan-made and not affiliated with Grinding Gear Games in any way.",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/5967/29e0d3af592e4a348acf34d5a123f050/APP_ICON_LARGE?versionId=r75y9CMj3rC0bcCZI.hpBFQ0Fdrz5TM4&AWSAccessKeyId=AKIAIEYXX6DHY7O4XWMA&Expires=1532635050&Signature=bpu7WkndLhFR6jnYiDiOvPCowtI%3D"
         }
       },
       "isAvailableWorldwide": true,
@@ -30,7 +112,8 @@
       "custom": {
         "endpoint": {
           "sourceDir": "dist/custom"
-        }
+        },
+        "interfaces": []
       }
     },
     "manifestVersion": "1.0",
