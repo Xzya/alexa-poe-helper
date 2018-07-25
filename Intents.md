@@ -17,7 +17,7 @@ All utterances have been generated on [this website](http://www.makermusings.com
 
 ```text
 {whatis} (/{article}/{quantity}) {<SLOT_NAME>} (/worth) (/in {league} (/league))
-(/{whatis} {article}) price of (/{article}/{quantity}) {<SLOT_NAME>} (/in {league} (/league))
+(/{whatis}) (/the) price of (/{article}/{quantity}) {<SLOT_NAME>} (/in {league} (/league))
 (/{quantity}) {<SLOT_NAME>} (/price) (/in {league} (/league))
 (/check) <TYPE> price (/in {league} (/league))
 ```
@@ -42,7 +42,7 @@ What <TYPE> do you want to know the price of?
 
 ```text
 {whatis} (/{article}) {<SLOT_NAME>} (/worth) (/in {league} (/league))
-(/{whatis} {article}) price of (/{article}) {<SLOT_NAME>} (/in {league} (/league))
+(/{whatis}) (/the) price of (/{article}) {<SLOT_NAME>} (/in {league} (/league))
 {<SLOT_NAME>} (/price) (/in {league} (/league))
 (/check) <TYPE> price (/in {league} (/league))
 ```
@@ -67,7 +67,7 @@ What <TYPE> do you want to know the price of?
 
 ```text
 {whatis} (/{article}) (/{links} (/link(/ed))) {<SLOT_NAME>} (/worth) (/in {league} (/league))
-(/{whatis} {article}) price of (/{article}) (/{links} (/link(/ed))) {<SLOT_NAME>} (/in {league} (/league))
+(/{whatis}) (/the) price of (/{article}) (/{links} (/link(/ed))) {<SLOT_NAME>} (/in {league} (/league))
 (/{links} (/link(/ed))) {<SLOT_NAME>} (/price) (/in {league} (/league))
 (/check) <TYPE> price (/in {league} (/league))
 ```
@@ -92,7 +92,7 @@ What <TYPE> do you want to know the price of?
 
 ```text
 {whatis} (/{article}) (/(/level) {level}) (/{quality} (/quality)) {<SLOT_NAME>} (/worth) (/in {league} (/league))
-(/{whatis} {article}) price of (/{article}) (/(/level) {level}) (/{quality} (/quality)) {<SLOT_NAME>} (/in {league} (/league))
+(/{whatis}) (/the) price of (/{article}) (/(/level) {level}) (/{quality} (/quality)) {<SLOT_NAME>} (/in {league} (/league))
 (/(/level) {level}) (/{quality} (/quality)) {<SLOT_NAME>} (/price) (/in {league} (/league))
 (/check) <TYPE> price (/in {league} (/league))
 ```
