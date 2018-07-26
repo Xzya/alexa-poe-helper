@@ -1,6 +1,7 @@
-import { skill, ssml, CreateIntentRequest, inProgressDelegate } from "./helpers";
+import { skill, ssml, CreateIntentRequest, inProgressDelegate, partial } from "./helpers";
 import { IntentTypes, LocaleTypes, SlotTypes } from "../lambda/custom/lib/constants";
 import { LeagueTypes } from "../lambda/custom/api";
+import { RequestEnvelope } from "../node_modules/ask-sdk-model";
 
 // mock the poe.ninja api client
 jest.mock("../lambda/custom/api/POENinjaClient");
@@ -118,6 +119,47 @@ export function GenericTest(options: {
         });
         const response = await skill(request);
         expect(response).toMatchObject(ssml(/Sorry, I couldn't find the price of the item you requested/gi));
+    });
+
+    it("Multiple resolution authorities", async () => {
+        const request = partial<RequestEnvelope>({
+            context: {
+                System: {}
+            },
+            request: {
+                type: "IntentRequest",
+                locale: locale,
+                dialogState: "COMPLETED",
+                intent: {
+                    name: name,
+                    slots: {
+                        [options.slotName]: {
+                            name: options.slotName,
+                            resolutions: {
+                                resolutionsPerAuthority: [{
+                                    status: {
+                                        code: "ER_SUCCESS_NO_MATCH"
+                                    },
+                                },
+                                {
+                                    status: {
+                                        code: "ER_SUCCESS_MATCH"
+                                    },
+                                    values: [{
+                                        value: {
+                                            name: "Value 2"
+                                        }
+                                    }]
+                                }]
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        const response = await skill(request);
+        // console.log(JSON.stringify(response, null, 2));
+        expect(response).toMatchObject(ssml(/The price of 1 '.+' in Incursion league is 123.5 Chaos Orbs/gi));
     });
 }
 

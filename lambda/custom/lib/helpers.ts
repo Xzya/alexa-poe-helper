@@ -210,49 +210,54 @@ export function GetSlotValues(filledSlots?: Slots): SlotValues {
 
             if (filledSlots[item] &&
                 filledSlots[item].resolutions &&
-                filledSlots[item].resolutions!.resolutionsPerAuthority &&
-                filledSlots[item].resolutions!.resolutionsPerAuthority![0] &&
-                filledSlots[item].resolutions!.resolutionsPerAuthority![0].status &&
-                filledSlots[item].resolutions!.resolutionsPerAuthority![0].status.code) {
-                switch (filledSlots[item].resolutions!.resolutionsPerAuthority![0].status.code) {
-                    case "ER_SUCCESS_MATCH":
-                        const valueWrappers = filledSlots[item].resolutions!.resolutionsPerAuthority![0].values;
+                filledSlots[item].resolutions!.resolutionsPerAuthority) {
 
-                        if (valueWrappers.length > 1) {
+                const resolutions = filledSlots[item].resolutions!.resolutionsPerAuthority!;
+
+                for (let resolution of resolutions) {
+                    switch (resolution.status.code) {
+                        case "ER_SUCCESS_MATCH":
+                            const valueWrappers = resolution.values;
+
+                            if (valueWrappers.length > 1) {
+                                slotValues[name] = {
+                                    name: name,
+                                    value: value,
+                                    isMatch: true,
+                                    resolved: valueWrappers[0].value.name,
+                                    id: valueWrappers[0].value.id,
+                                    isAmbiguous: true,
+                                    values: valueWrappers.map((valueWrapper) => valueWrapper.value),
+                                    confirmationStatus: confirmationStatus,
+                                };
+                                break;
+                            }
+
                             slotValues[name] = {
                                 name: name,
                                 value: value,
                                 isMatch: true,
                                 resolved: valueWrappers[0].value.name,
                                 id: valueWrappers[0].value.id,
-                                isAmbiguous: true,
-                                values: valueWrappers.map((valueWrapper) => valueWrapper.value),
+                                isAmbiguous: false,
+                                values: [],
                                 confirmationStatus: confirmationStatus,
                             };
                             break;
-                        }
-
-                        slotValues[name] = {
-                            name: name,
-                            value: value,
-                            isMatch: true,
-                            resolved: valueWrappers[0].value.name,
-                            id: valueWrappers[0].value.id,
-                            isAmbiguous: false,
-                            values: [],
-                            confirmationStatus: confirmationStatus,
-                        };
-                        break;
-                    case "ER_SUCCESS_NO_MATCH":
-                        slotValues[name] = {
-                            name: name,
-                            value: value,
-                            isMatch: false,
-                            confirmationStatus: confirmationStatus,
-                        };
-                        break;
-                    default:
-                        break;
+                        case "ER_SUCCESS_NO_MATCH":
+                            // only set the unmatched value if it wasn't already set
+                            if (!slotValues[name]) {
+                                slotValues[name] = {
+                                    name: name,
+                                    value: value,
+                                    isMatch: false,
+                                    confirmationStatus: confirmationStatus,
+                                };
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
             // slots which do not have any resolutions but have a value
