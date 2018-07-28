@@ -12,11 +12,10 @@
     "start": "nodemon",
     "generate-item-names": "ts-node lambda/tools/generateItemNames.ts",
     "test": "jest",
-    "start:test": "nodemon --config nodemon_tests.json"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "jest": {
-    "collectCoverage": true,
-    "coverageReporters": ["html"],
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
@@ -27,7 +26,8 @@
     ],
     "testMatch": [
       "**/*.spec.ts"
-    ]
+    ],
+    "coverageDirectory": ".coverage"
   },
   "author": "Mihail Cristian Dumitru",
   "license": "MIT",

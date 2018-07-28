@@ -1,9 +1,0 @@
-{
-    "watch": [
-        "__tests__",
-        "lambda"
-    ],
-    "ext": "ts",
-    "ignore": [],
-    "exec": "jest"
-}

@@ -215,6 +215,10 @@ Taken from [the official hello world project](https://github.com/alexa/skill-sam
 	$ ask deploy
 	```
 
+## Contributing
+
+Feel free to submit a pull request or create a new issue.
+
 ## License
 
 Open sourced under the [MIT license](./LICENSE.md).
