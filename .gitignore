@@ -1,6 +1,6 @@
 # Build directories
 dist
-coverage
+.coverage
 
 # Dependency directories
 /**/node_modules
