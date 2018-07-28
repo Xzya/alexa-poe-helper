@@ -1,17 +1,97 @@
-# Alexa Skill starter project using AWS Lambda and Typescript
+# Path of Exaile Helper for Alexa
 
-This is a simple starter project for Alexa skills using Typescript.
+This is helper Alexa skill for [Path of Exile](https://www.pathofexile.com/).
 
-Supports text localizations and contains a few helper functions to get you started!
+## What it can do
 
-## Pre-requisites
+The skill allows you to price check items and find the rewards for quests.
+
+### Price checking
+
+Items are split into four categories, each supporting different combinations of variables:
+
+| Category | Item types |
+| --- | --- |
+| Currency | `Currency` and `fragments` |
+| Linked items | `Unique weapons` and `unique armours` |
+| Skill gems | `Skill gems` |
+| Other items | `Divination cards`, `prophecies`, `maps`, `unique maps`, `unique jewels`, `unique flasks`, `unique accessories` |
+
+You can include the league in all queries. If no league is specified, it will default to the current temporary challenge league.
+
+#### Currency
+
+| Type | Variable |
+| --- | --- |
+| Required | `item name` |
+| Optional | `quantity`, `league` |
+
+Example queries:
+
+- Alexa, ask p o e what is the price of a `Mirror of Kalandra` in `Standard`
+- Alexa, ask p o e what is the price of `ten` `Exalted Orbs` in `Hardcore` league
+- Alexa, ask p o e what is the price of `five hundred` `fusings`
+- Alexa, ask p o e what is the price of a `Fragment of the Minotaur`
+
+#### Linked items
+
+| Type | Variable |
+| --- | --- |
+| Required | `item name` |
+| Optional | `links`, `league` |
+
+Example queries:
+
+- Alexa, ask p o e what is the price of a `six linked` `Loreweave` in `Standard`
+- Alexa, ask p o e what is the price of a `five linked` `belly`
+- Alexa, ask p o e what is the price of a `Starforge`
+- Alexa, ask p o e what is the price of a `six linked` `Disfavour`
+
+#### Skill gems
+
+| Type | Variable |
+| --- | --- |
+| Required | `item name`, `level` |
+| Optional | `quality`, `league` |
+
+Example queries:
+
+- Alexa, ask p o e what is the price of a `twenty one` `twenty three` `Kinetic Blast` in `Incursion` league
+- Alexa, ask p o e what is the price a `level four` `Empower`
+
+#### Other items
+
+| Type | Variable |
+| --- | --- |
+| Required | `item name` |
+| Optional | `league` |
+
+Example queries:
+
+- Alexa, ask p o e what is the price of a `Headhunter`
+- Alexa, ask p o e what is the price of a `Dying Sun` in `Standard`
+- Alexa, ask p o e what is the price of a `Pit of the Chimera Map`
+- Alexa, ask p o e what is the price of a `House of Mirrors`
+
+### Quest rewards
+
+You can check what is the reward for a quest, e.g.:
+
+- Alexa, ask p o e what is the quest reward for `The Dweller of the Deep`
+- Alexa, ask p o e what is the reward for `Kitava's Torments`
+
+---
+
+## Running the project
+
+### Pre-requisites
 
 - Node.js
 - Register for an [AWS Account](https://aws.amazon.com/)
 - Register for an [Amazon Developer Account](https://developer.amazon.com/)
 - Install and Setup [ASK CLI](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html)
 
-## Installation
+### Installation
 
 - Install the dependencies
 
@@ -19,7 +99,7 @@ Supports text localizations and contains a few helper functions to get you start
 $ npm install
 ```
 
-## Deployment
+### Deployment
 
 **ASK CLI** will create the skill and the Lambda function for you. The Lambda function will be created in `us-east-1 (Northern Virginia)` by default.
 
@@ -31,11 +111,11 @@ $ npm install
 $ ask deploy
 ```
 
-## Local development
+### Local development
 
 In order to develop locally and see your changes reflected instantly, you will need to create an SSH tunnel or expose somehow your local development server. There are several services that allow you to do this, for example [ngrok](https://ngrok.com/) or [serveo.net](https://serveo.net/).
 
-### Using servo.net
+#### Using servo.net
 
 This is the easiest to setup
 
@@ -57,7 +137,7 @@ Press g to start a GUI session and ctrl-c to quit.
 
 6. You are done! Just run `npm start` to start the local server and begin testing the skill.
 
-### Using ngrok.io
+#### Using ngrok.io
 
 1. [Install ngrok](https://ngrok.com/download)
 
@@ -81,6 +161,12 @@ To see the actual commands, check `package.json`.
 Also check the [ASK CLI Command Reference](https://developer.amazon.com/docs/smapi/ask-cli-command-reference.html) for more details on using the `ASK CLI`.
 
 ## Testing
+
+The project contains automated tests using [jest](https://jestjs.io/).
+
+```bash
+$ npm run test
+```
 
 Taken from [the official hello world project](https://github.com/alexa/skill-sample-nodejs-hello-world/blob/master/instructions/7-cli.md#testing).
 
