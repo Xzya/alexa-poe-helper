@@ -16,6 +16,7 @@
     "test:coverage": "jest --coverage"
   },
   "jest": {
+    "testEnvironment": "node",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
