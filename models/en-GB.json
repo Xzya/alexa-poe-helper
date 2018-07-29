@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "p o e",
+            "invocationName": "p. o. e.",
             "intents": [{
                     "name": "AMAZON.FallbackIntent",
                     "samples": []
