@@ -2267,14 +2267,19 @@
                                 "value": "Mirror of Kalandra",
                                 "synonyms": [
                                     "Mirror",
-                                    "Kalandra"
+                                    "Kalandra",
+                                    "Mirrors",
+                                    "Mirrors of Kalandra"
                                 ]
                             }
                         },
                         {
                             "id": "mirror-shard",
                             "name": {
-                                "value": "Mirror Shard"
+                                "value": "Mirror Shard",
+                                "synonyms": [
+                                    "Mirror Shards"
+                                ]
                             }
                         },
                         {
@@ -2284,14 +2289,18 @@
                                 "synonyms": [
                                     "Exalted",
                                     "Exalt",
-                                    "Exalts"
+                                    "Exalts",
+                                    "Exalted Orbs"
                                 ]
                             }
                         },
                         {
                             "id": "exalted-shard",
                             "name": {
-                                "value": "Exalted Shard"
+                                "value": "Exalted Shard",
+                                "synonyms": [
+                                    "Exalted Shards"
+                                ]
                             }
                         },
                         {
@@ -2308,7 +2317,8 @@
                             "name": {
                                 "value": "Ancient Orb",
                                 "synonyms": [
-                                    "Ancient"
+                                    "Ancient",
+                                    "Ancient Orbs"
                                 ]
                             }
                         },
@@ -2318,7 +2328,9 @@
                                 "value": "Harbinger's Orb",
                                 "synonyms": [
                                     "Harbinger",
-                                    "Harbinger's"
+                                    "Harbinger's",
+                                    "Harbinger's Orbs",
+                                    "Harbinger Orbs"
                                 ]
                             }
                         },
@@ -2337,7 +2349,9 @@
                             "name": {
                                 "value": "Orb of Annulment",
                                 "synonyms": [
-                                    "Annulment"
+                                    "Annulment",
+                                    "Annulments",
+                                    "Orbs of Annulment"
                                 ]
                             }
                         },
@@ -2347,7 +2361,8 @@
                                 "value": "Master Cartographer's Sextant",
                                 "synonyms": [
                                     "Master",
-                                    "Master Sextant"
+                                    "Master Sextant",
+                                    "Master Sextants"
                                 ]
                             }
                         },
@@ -2356,7 +2371,8 @@
                             "name": {
                                 "value": "Orb of Horizons",
                                 "synonyms": [
-                                    "Horizons"
+                                    "Horizons",
+                                    "Orbs of Horizons"
                                 ]
                             }
                         },
@@ -2366,7 +2382,8 @@
                                 "value": "Journeyman Cartographer's Sextant",
                                 "synonyms": [
                                     "Journeyman",
-                                    "Journeyman Sextant"
+                                    "Journeyman Sextant",
+                                    "Journeyman Sextants"
                                 ]
                             }
                         },
@@ -2376,7 +2393,8 @@
                                 "value": "Apprentice Cartographer's Sextant",
                                 "synonyms": [
                                     "Apprentice",
-                                    "Apprentice Sextant"
+                                    "Apprentice Sextant",
+                                    "Apprentice Sextants"
                                 ]
                             }
                         },
@@ -2386,7 +2404,9 @@
                                 "value": "Engineer's Orb",
                                 "synonyms": [
                                     "Engineer",
-                                    "Engineer's"
+                                    "Engineer's",
+                                    "Engineers",
+                                    "Engineer's Orbs"
                                 ]
                             }
                         },
@@ -2402,13 +2422,19 @@
                         {
                             "id": "blessing-chayula",
                             "name": {
-                                "value": "Blessing of Chayula"
+                                "value": "Blessing of Chayula",
+                                "synonyms": [
+                                    "Blessings of Chayula"
+                                ]
                             }
                         },
                         {
                             "id": "blessing-uul-netol",
                             "name": {
-                                "value": "Blessing of Uul-Netol"
+                                "value": "Blessing of Uul-Netol",
+                                "synonyms": [
+                                    "Blessings of Uul-Netol"
+                                ]
                             }
                         },
                         {
@@ -2416,7 +2442,8 @@
                             "name": {
                                 "value": "Blessing of Esh",
                                 "synonyms": [
-                                    "Esh's Blessing"
+                                    "Esh's Blessing",
+                                    "Blessings of Esh"
                                 ]
                             }
                         },
@@ -2425,7 +2452,8 @@
                             "name": {
                                 "value": "Blessing of Xoph",
                                 "synonyms": [
-                                    "Xoph's Blessing"
+                                    "Xoph's Blessing",
+                                    "Blessings of Xoph"
                                 ]
                             }
                         },
@@ -2434,7 +2462,8 @@
                             "name": {
                                 "value": "Blessing of Tul",
                                 "synonyms": [
-                                    "Tul's Blessing"
+                                    "Tul's Blessing",
+                                    "Blessings of Tul"
                                 ]
                             }
                         },
@@ -2443,7 +2472,9 @@
                             "name": {
                                 "value": "Splinter of Chayula",
                                 "synonyms": [
-                                    "Chayula Splinter"
+                                    "Chayula Splinter",
+                                    "Splinters of Chayula",
+                                    "Chayula Splinters"
                                 ]
                             }
                         },
@@ -2452,7 +2483,9 @@
                             "name": {
                                 "value": "Splinter of Xoph",
                                 "synonyms": [
-                                    "Xoph Splinter"
+                                    "Xoph Splinter",
+                                    "Splinters of Xoph",
+                                    "Xoph Splinters"
                                 ]
                             }
                         },
@@ -2461,7 +2494,9 @@
                             "name": {
                                 "value": "Splinter of Esh",
                                 "synonyms": [
-                                    "Esh Splinter"
+                                    "Esh Splinter",
+                                    "Splinters of Esh",
+                                    "Esh Splinters"
                                 ]
                             }
                         },
@@ -2470,7 +2505,9 @@
                             "name": {
                                 "value": "Splinter of Uul-Netol",
                                 "synonyms": [
-                                    "Uul-Netol Splinter"
+                                    "Uul-Netol Splinter",
+                                    "Splinters of Uul-Netol",
+                                    "Uul-Netol Splinters"
                                 ]
                             }
                         },
@@ -2479,7 +2516,9 @@
                             "name": {
                                 "value": "Splinter of Tul",
                                 "synonyms": [
-                                    "Tul Splinter"
+                                    "Tul Splinter",
+                                    "Splinters of Tul",
+                                    "Tul Splinters"
                                 ]
                             }
                         },
@@ -2488,7 +2527,9 @@
                             "name": {
                                 "value": "Regal Orb",
                                 "synonyms": [
-                                    "Regal"
+                                    "Regal",
+                                    "Regals",
+                                    "Regal Orbs"
                                 ]
                             }
                         },
@@ -2498,7 +2539,10 @@
                                 "value": "Gemcutter's Prism",
                                 "synonyms": [
                                     "Gemcutter",
-                                    "Gemcutter's"
+                                    "Gemcutter's",
+                                    "Gemcutters",
+                                    "Prisms",
+                                    "G. C. P."
                                 ]
                             }
                         },
@@ -2508,7 +2552,8 @@
                                 "value": "Orb of Regret",
                                 "synonyms": [
                                     "Regret",
-                                    "Regrets"
+                                    "Regrets",
+                                    "Orbs of Regret"
                                 ]
                             }
                         },
@@ -2518,7 +2563,8 @@
                                 "value": "Cartographer's Chisel",
                                 "synonyms": [
                                     "Chisel",
-                                    "Chisels"
+                                    "Chisels",
+                                    "Cartographer's Chisels"
                                 ]
                             }
                         },
@@ -2529,7 +2575,8 @@
                                 "synonyms": [
                                     "Fuse",
                                     "Fusing",
-                                    "Fusings"
+                                    "Fusings",
+                                    "Orbs of Fusing"
                                 ]
                             }
                         },
@@ -2539,7 +2586,8 @@
                                 "value": "Orb of Alchemy",
                                 "synonyms": [
                                     "Alchemy",
-                                    "Alchemies"
+                                    "Alchemies",
+                                    "Orbs of Alchemy"
                                 ]
                             }
                         },
@@ -2549,26 +2597,36 @@
                                 "value": "Orb of Scouring",
                                 "synonyms": [
                                     "Scouring",
-                                    "Scourings"
+                                    "Scourings",
+                                    "Orbs of Scouring"
                                 ]
                             }
                         },
                         {
                             "id": "blessed",
                             "name": {
-                                "value": "Blessed Orb"
+                                "value": "Blessed Orb",
+                                "synonyms": [
+                                    "Blessed Orbs"
+                                ]
                             }
                         },
                         {
                             "id": "silver",
                             "name": {
-                                "value": "Silver Coin"
+                                "value": "Silver Coin",
+                                "synonyms": [
+                                    "Silver Coins"
+                                ]
                             }
                         },
                         {
                             "id": "orb-of-binding",
                             "name": {
-                                "value": "Orb of Binding"
+                                "value": "Orb of Binding",
+                                "synonyms": [
+                                    "Orbs of Binding"
+                                ]
                             }
                         },
                         {
@@ -2590,7 +2648,9 @@
                                     "Chrom",
                                     "Chrome",
                                     "Chromatic",
-                                    "Chromes"
+                                    "Chromes",
+                                    "Chromatics",
+                                    "Chromatic Orbs"
                                 ]
                             }
                         },
@@ -2601,7 +2661,8 @@
                                 "synonyms": [
                                     "Jeweller",
                                     "Jeweller's",
-                                    "Jewellers"
+                                    "Jewellers",
+                                    "Jeweller's Orbs"
                                 ]
                             }
                         },
@@ -2611,7 +2672,10 @@
                                 "value": "Orb of Alteration",
                                 "synonyms": [
                                     "Alteration",
-                                    "Alteration Orb"
+                                    "Alteration Orb",
+                                    "Alterations",
+                                    "Orbs of Alteration",
+                                    "Alteration Orbs"
                                 ]
                             }
                         },
@@ -2621,7 +2685,9 @@
                                 "value": "Orb of Chance",
                                 "synonyms": [
                                     "Chance",
-                                    "Chance Orb"
+                                    "Chance Orb",
+                                    "Orbs of Chance",
+                                    "Chance Orbs"
                                 ]
                             }
                         },
@@ -2631,7 +2697,9 @@
                                 "value": "Orb of Augmentation",
                                 "synonyms": [
                                     "Augmentation",
-                                    "Augmentation Orb"
+                                    "Augmentation Orb",
+                                    "Orbs of Augmentation",
+                                    "Augmentation Orbs"
                                 ]
                             }
                         },
@@ -2641,7 +2709,10 @@
                                 "value": "Orb of Transmutation",
                                 "synonyms": [
                                     "Transmutation",
-                                    "Transmutation Orb"
+                                    "Transmutation Orb",
+                                    "Transmutations",
+                                    "Transmutation Orbs",
+                                    "Orbs of Transmutation"
                                 ]
                             }
                         },
@@ -2661,7 +2732,8 @@
                                 "value": "Armourer's Scrap",
                                 "synonyms": [
                                     "Armourer",
-                                    "Armourer's"
+                                    "Armourer's",
+                                    "Scraps"
                                 ]
                             }
                         },
@@ -2670,7 +2742,8 @@
                             "name": {
                                 "value": "Perandus Coin",
                                 "synonyms": [
-                                    "Perandus"
+                                    "Perandus",
+                                    "Perandus Coins"
                                 ]
                             }
                         },
@@ -2679,7 +2752,9 @@
                             "name": {
                                 "value": "Portal Scroll",
                                 "synonyms": [
-                                    "Portal"
+                                    "Portal",
+                                    "Portals",
+                                    "Portal Scrolls"
                                 ]
                             }
                         },
@@ -2689,7 +2764,9 @@
                                 "value": "Scroll of Wisdom",
                                 "synonyms": [
                                     "Wisdom",
-                                    "Wisdom Scroll"
+                                    "Wisdom Scroll",
+                                    "Wisdom Scrolls",
+                                    "Scrolls of Wisdom"
                                 ]
                             }
                         },
@@ -2698,56 +2775,83 @@
                             "name": {
                                 "value": "Eternal Orb",
                                 "synonyms": [
-                                    "Eternal"
+                                    "Eternal",
+                                    "Eternal Orbs"
                                 ]
                             }
                         },
                         {
                             "id": "annulment-shard",
                             "name": {
-                                "value": "Annulment Shard"
+                                "value": "Annulment Shard",
+                                "synonyms": [
+                                    "Annulment Shards"
+                                ]
                             }
                         },
                         {
                             "id": "binding-shard",
                             "name": {
-                                "value": "Binding Shard"
+                                "value": "Binding Shard",
+                                "synonyms": [
+                                    "Binding Shards"
+                                ]
                             }
                         },
                         {
                             "id": "horizon-shard",
                             "name": {
-                                "value": "Horizon Shard"
+                                "value": "Horizon Shard",
+                                "synonyms": [
+                                    "Horizon Shards"
+                                ]
                             }
                         },
                         {
                             "id": "harbingers-shard",
                             "name": {
-                                "value": "Harbinger's Shard"
+                                "value": "Harbinger's Shard",
+                                "synonyms": [
+                                    "Harbinger Shards",
+                                    "Harbinger's Shards"
+                                ]
                             }
                         },
                         {
                             "id": "engineers-shard",
                             "name": {
-                                "value": "Engineer's Shard"
+                                "value": "Engineer's Shard",
+                                "synonyms": [
+                                    "Engineer Shards",
+                                    "Engineer's Shards"
+                                ]
                             }
                         },
                         {
                             "id": "ancient-shard",
                             "name": {
-                                "value": "Ancient Shard"
+                                "value": "Ancient Shard",
+                                "synonyms": [
+                                    "Ancient Shards"
+                                ]
                             }
                         },
                         {
                             "id": "chaos-shard",
                             "name": {
-                                "value": "Chaos Shard"
+                                "value": "Chaos Shard",
+                                "synonyms": [
+                                    "Chaos Shards"
+                                ]
                             }
                         },
                         {
                             "id": "regal-shard",
                             "name": {
-                                "value": "Regal Shard"
+                                "value": "Regal Shard",
+                                "synonyms": [
+                                    "Regal Shards"
+                                ]
                             }
                         }
                     ]
