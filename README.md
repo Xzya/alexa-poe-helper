@@ -31,10 +31,10 @@ You can include the league in all queries. If no league is specified, it will de
 
 Example queries:
 
-- Alexa, ask p o e what is the price of a `Mirror of Kalandra` in `Standard`
-- Alexa, ask p o e what is the price of `ten` `Exalted Orbs` in `Hardcore` league
-- Alexa, ask p o e what is the price of `five hundred` `fusings`
-- Alexa, ask p o e what is the price of a `Fragment of the Minotaur`
+- Alexa, ask p. o. e. what is the price of a `Mirror of Kalandra` in `Standard`
+- Alexa, ask p. o. e. what is the price of `ten` `Exalted Orbs` in `Hardcore` league
+- Alexa, ask p. o. e. what is the price of `five hundred` `fusings`
+- Alexa, ask p. o. e. what is the price of a `Fragment of the Minotaur`
 
 #### Linked items
 
@@ -45,10 +45,10 @@ Example queries:
 
 Example queries:
 
-- Alexa, ask p o e what is the price of a `six linked` `Loreweave` in `Standard`
-- Alexa, ask p o e what is the price of a `five linked` `belly`
-- Alexa, ask p o e what is the price of a `Starforge`
-- Alexa, ask p o e what is the price of a `six linked` `Disfavour`
+- Alexa, ask p. o. e. what is the price of a `six linked` `Loreweave` in `Standard`
+- Alexa, ask p. o. e. what is the price of a `five linked` `belly`
+- Alexa, ask p. o. e. what is the price of a `Starforge`
+- Alexa, ask p. o. e. what is the price of a `six linked` `Disfavour`
 
 #### Skill gems
 
@@ -59,8 +59,8 @@ Example queries:
 
 Example queries:
 
-- Alexa, ask p o e what is the price of a `twenty one` `twenty three` `Kinetic Blast` in `Incursion` league
-- Alexa, ask p o e what is the price a `level four` `Empower`
+- Alexa, ask p. o. e. what is the price of a `twenty one` `twenty three` `Kinetic Blast` in `Incursion` league
+- Alexa, ask p. o. e. what is the price a `level four` `Empower`
 
 #### Other items
 
@@ -71,17 +71,17 @@ Example queries:
 
 Example queries:
 
-- Alexa, ask p o e what is the price of a `Headhunter`
-- Alexa, ask p o e what is the price of a `Dying Sun` in `Standard`
-- Alexa, ask p o e what is the price of a `Pit of the Chimera Map`
-- Alexa, ask p o e what is the price of a `House of Mirrors`
+- Alexa, ask p. o. e. what is the price of a `Headhunter`
+- Alexa, ask p. o. e. what is the price of a `Dying Sun` in `Standard`
+- Alexa, ask p. o. e. what is the price of a `Pit of the Chimera Map`
+- Alexa, ask p. o. e. what is the price of a `House of Mirrors`
 
 ### Quest rewards
 
 You can check what is the reward for a quest, e.g.:
 
-- Alexa, ask p o e what is the quest reward for `The Dweller of the Deep`
-- Alexa, ask p o e what is the reward for `Kitava's Torments`
+- Alexa, ask p. o. e. what is the quest reward for `The Dweller of the Deep`
+- Alexa, ask p. o. e. what is the reward for `Kitava's Torments`
 
 ---
 
