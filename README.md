@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/Xzya/alexa-poe-helper.svg?branch=master)](https://travis-ci.org/Xzya/alexa-poe-helper)
 [![codecov](https://codecov.io/gh/Xzya/alexa-poe-helper/branch/master/graph/badge.svg)](https://codecov.io/gh/Xzya/alexa-poe-helper)
 
-# Path of Exaile Helper for Alexa
+# Path of Exile Helper for Alexa
 
 This is helper Alexa skill for [Path of Exile](https://www.pathofexile.com/).
 
