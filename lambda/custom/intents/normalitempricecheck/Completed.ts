@@ -1,12 +1,12 @@
 import { RequestHandler } from "ask-sdk-core";
-import { ItemRequestTypes, apiClient } from "../../api";
+import { ItemRequestTypes, apiClient, LeagueTypeSlotToAPIMap } from "../../api";
 import { IsIntentWithCompleteDialog, GetRequestAttributes, GetLeagueSlot, CurrentDate, IsHighConfidenceItemPrice, CreateError, FormatPrice } from "../../lib/helpers";
 import { Strings, ErrorTypes } from "../../lib/constants";
 
 /**
  * Creates an item Dialog handler with complete state.
- * 
- * @param options 
+ *
+ * @param options
  */
 export function CreateNormalItemCompletedHandler(options: {
     intentName: string;
@@ -28,7 +28,7 @@ export function CreateNormalItemCompletedHandler(options: {
 
                     // get the item prices
                     const res = await apiClient.items({
-                        league: league,
+                        league: LeagueTypeSlotToAPIMap[league],
                         type: options.requestType,
                         date: CurrentDate(),
                     });

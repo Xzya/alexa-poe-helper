@@ -90,3 +90,12 @@ export enum Strings {
     QUEST_REWARD_MSG = "QUEST_REWARD_MSG",
     QUEST_REWARDS = "QUEST_REWARDS",
 }
+
+export enum LeagueSlotTypes {
+    Challenge = "Incursion",
+    HardcoreChallenge = "Hardcore Incursion",
+    Standard = "Standard",
+    Hardcore = "Hardcore",
+    IncursionEvent = "Flashback Event",
+    HarcoreIncursionEvent = "Hardcore Flashback Event",
+}

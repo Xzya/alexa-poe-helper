@@ -1,7 +1,7 @@
 import { RequestHandler } from "ask-sdk-core";
 import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, FormatPrice, CurrentDate, GetLeagueSlot, IsHighConfidenceItemPrice } from "../../lib/helpers";
 import { SlotTypes, IntentTypes, ErrorTypes, Strings } from "../../lib/constants";
-import { ItemRequestTypes, apiClient } from "../../api";
+import { ItemRequestTypes, apiClient, LeagueTypeSlotToAPIMap } from "../../api";
 
 export const Completed: RequestHandler = {
     canHandle(handlerInput) {
@@ -31,7 +31,7 @@ export const Completed: RequestHandler = {
             try {
                 // get the item prices
                 const res = await apiClient.items({
-                    league: league,
+                    league: LeagueTypeSlotToAPIMap[league],
                     type: ItemRequestTypes.SkillGem,
                     date: CurrentDate(),
                 });

@@ -1,12 +1,12 @@
 import { RequestHandler } from "ask-sdk-core";
 import { GetRequestAttributes, IsIntentWithCompleteDialog, CreateError, FormatPrice, CurrentDate, GetLeagueSlot, IsHighConfidenceItemPrice, GetLinksSlot } from "../../lib/helpers";
 import { ErrorTypes, Strings } from "../../lib/constants";
-import { ItemRequestTypes, apiClient } from "../../api";
+import { ItemRequestTypes, apiClient, LeagueTypeSlotToAPIMap } from "../../api";
 
 /**
  * Creates a linked item Dialog handler with complete state.
- * 
- * @param options 
+ *
+ * @param options
  */
 export function CreateLinkedItemCompletedHandler(options: {
     intentName: string;
@@ -32,7 +32,7 @@ export function CreateLinkedItemCompletedHandler(options: {
                 try {
                     // get the item prices
                     const res = await apiClient.items({
-                        league: league,
+                        league: LeagueTypeSlotToAPIMap[league],
                         type: options.requestType,
                         date: CurrentDate(),
                     });

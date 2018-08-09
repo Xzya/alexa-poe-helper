@@ -2891,6 +2891,29 @@
                                     "Challenge"
                                 ]
                             }
+                        },
+                        {
+                            "id": "flashbackevent",
+                            "name": {
+                                "value": "Flashback Event",
+                                "synonyms": [
+                                    "Incursion Flashback Event",
+                                    "Incursion Event",
+                                    "Flashback"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "flashbackeventhd",
+                            "name": {
+                                "value": "Hardcore Flashback Event",
+                                "synonyms": [
+                                    "Hardcore Incursion Flashback",
+                                    "Hardcore Incursion Event",
+                                    "Hardcore Incursion Flashback Event",
+                                    "Hardcore Flashback"
+                                ]
+                            }
                         }
                     ]
                 },

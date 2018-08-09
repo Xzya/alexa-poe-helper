@@ -1,14 +1,14 @@
 import { HandlerInput } from "ask-sdk-core";
 import { IntentRequest, services, Intent } from "ask-sdk-model";
 import { RequestAttributes, Slots, SlotValues, SessionAttributes, MatchedSlotValue } from "../interfaces";
-import { RequestTypes, ErrorTypes, Strings, SlotTypes } from "./constants";
-import { LeagueTypes, ItemEntity } from "../api";
+import { RequestTypes, ErrorTypes, Strings, SlotTypes, LeagueSlotTypes } from "./constants";
+import { ItemEntity } from "../api";
 
 /**
  * Checks if the request matches any of the given intents.
- * 
- * @param handlerInput 
- * @param intents 
+ *
+ * @param handlerInput
+ * @param intents
  */
 export function IsIntent(handlerInput: HandlerInput, ...intents: string[]): boolean {
     if (handlerInput.requestEnvelope.request.type === RequestTypes.Intent) {
@@ -23,9 +23,9 @@ export function IsIntent(handlerInput: HandlerInput, ...intents: string[]): bool
 
 /**
  * Checks if the request matches any of the given types.
- * 
- * @param handlerInput 
- * @param types 
+ *
+ * @param handlerInput
+ * @param types
  */
 export function IsType(handlerInput: HandlerInput, ...types: string[]): boolean {
     for (let i = 0; i < types.length; i++) {
@@ -38,10 +38,10 @@ export function IsType(handlerInput: HandlerInput, ...types: string[]): boolean 
 
 /**
  * Checks if the request matches the given intent and dialogState.
- * 
- * @param handlerInput 
- * @param intent 
- * @param state 
+ *
+ * @param handlerInput
+ * @param intent
+ * @param state
  */
 export function IsIntentWithDialogState(handlerInput: HandlerInput, intent: string, state: string): boolean {
     return handlerInput.requestEnvelope.request.type === RequestTypes.Intent
@@ -51,9 +51,9 @@ export function IsIntentWithDialogState(handlerInput: HandlerInput, intent: stri
 
 /**
  * Checks if the request matches the given intent with a non COMPLETED dialogState.
- * 
- * @param handlerInput 
- * @param intent 
+ *
+ * @param handlerInput
+ * @param intent
  */
 export function IsIntentWithIncompleteDialog(handlerInput: HandlerInput, intent: string): boolean {
     return handlerInput.requestEnvelope.request.type === RequestTypes.Intent
@@ -63,9 +63,9 @@ export function IsIntentWithIncompleteDialog(handlerInput: HandlerInput, intent:
 
 /**
  * Checks if the request matches the given intent with the COMPLETED dialogState.
- * 
- * @param handlerInput 
- * @param intent 
+ *
+ * @param handlerInput
+ * @param intent
  */
 export function IsIntentWithCompleteDialog(handlerInput: HandlerInput, intent: string): boolean {
     return IsIntentWithDialogState(handlerInput, intent, "COMPLETED");
@@ -73,8 +73,8 @@ export function IsIntentWithCompleteDialog(handlerInput: HandlerInput, intent: s
 
 /**
  * Gets the request attributes and casts it to our custom RequestAttributes type.
- * 
- * @param handlerInput 
+ *
+ * @param handlerInput
  */
 export function GetRequestAttributes(handlerInput: HandlerInput): RequestAttributes {
     return handlerInput.attributesManager.getRequestAttributes() as RequestAttributes;
@@ -82,8 +82,8 @@ export function GetRequestAttributes(handlerInput: HandlerInput): RequestAttribu
 
 /**
  * Gets the session attributes and casts it to our custom SessionAttributes type.
- * 
- * @param handlerInput 
+ *
+ * @param handlerInput
  */
 export function GetSessionAttributes(handlerInput: HandlerInput): SessionAttributes {
     return handlerInput.attributesManager.getSessionAttributes() as SessionAttributes;
@@ -91,8 +91,8 @@ export function GetSessionAttributes(handlerInput: HandlerInput): SessionAttribu
 
 /**
  * Gets the directive service client.
- * 
- * @param handlerInput 
+ *
+ * @param handlerInput
  */
 export function GetDirectiveServiceClient(handlerInput: HandlerInput): services.directive.DirectiveServiceClient {
     return handlerInput.serviceClientFactory!.getDirectiveServiceClient();
@@ -102,9 +102,9 @@ export function GetDirectiveServiceClient(handlerInput: HandlerInput): services.
  * Resets the given slot value by setting it to an empty string.
  * If the intent is using the Dialog Directive, this will cause Alexa
  * to reprompt the user for that slot.
- * 
- * @param request 
- * @param slotName 
+ *
+ * @param request
+ * @param slotName
  */
 export function ResetSlotValue(request: IntentRequest, slotName: string) {
     SetSlotValue(request, slotName, "");
@@ -112,9 +112,9 @@ export function ResetSlotValue(request: IntentRequest, slotName: string) {
 
 /**
  * Sets the given value for the slot.
- * 
- * @param request 
- * @param slotName 
+ *
+ * @param request
+ * @param slotName
  */
 export function SetSlotValue(request: IntentRequest, slotName: string, slotValue: string) {
     if (request.intent.slots) {
@@ -135,8 +135,8 @@ export function SetSlotValue(request: IntentRequest, slotName: string, slotValue
  * Resets all unmatched slot values by setting them to an empty string.
  * If the intent is using the Dialog Directive, this will cause Alexa
  * to reprompt the user for those slots.
- * 
- * @param request 
+ *
+ * @param request
  */
 export function ResetUnmatchedSlotValues(handlerInput: HandlerInput, slots: SlotValues) {
     if (handlerInput.requestEnvelope.request.type === RequestTypes.Intent) {
@@ -156,7 +156,7 @@ export function ResetUnmatchedSlotValues(handlerInput: HandlerInput, slots: Slot
 /**
  * Parses the slot values and returns a new object with additional information,
  * e.g. if the value was matched, or if it is ambiguous etc.
- * 
+ *
  * Example:
  *   If we have the following Drink Slot Type:
  *   {
@@ -176,7 +176,7 @@ export function ResetUnmatchedSlotValues(handlerInput: HandlerInput, slots: Slot
  *       ]
  *     }]
  *   }
- * 
+ *
  *   If the user said "Cola", the following value should be generated:
  *   {
  *     "name": "drink", // slot name
@@ -196,8 +196,8 @@ export function ResetUnmatchedSlotValues(handlerInput: HandlerInput, slots: Slot
  *     ],
  *     "confirmationStatus": "NONE"
  *   }
- * 
- * @param filledSlots 
+ *
+ * @param filledSlots
  */
 export function GetSlotValues(filledSlots?: Slots): SlotValues {
     const slotValues: SlotValues = {};
@@ -291,8 +291,8 @@ export function GetSlotValues(filledSlots?: Slots): SlotValues {
 
 /**
  * Wraps the given string as an interjection.
- * 
- * @param str 
+ *
+ * @param str
  */
 export function Interject(str: string): string {
     return `<say-as interpret-as="interjection">${str}</say-as>`;
@@ -300,9 +300,9 @@ export function Interject(str: string): string {
 
 /**
  * Creates an error with the given message and type.
- * 
- * @param msg 
- * @param type 
+ *
+ * @param msg
+ * @param type
  */
 export function CreateError(
     msg: string = "Something unexpected happened.",
@@ -316,8 +316,8 @@ export function CreateError(
 
 /**
  * Selects a random element from the array;
- * 
- * @param arr 
+ *
+ * @param arr
  */
 export function Random<T>(arr: T[]): T {
     return arr[Math.floor(Math.random() * arr.length)];
@@ -325,9 +325,9 @@ export function Random<T>(arr: T[]): T {
 
 /**
  * Returns a VoicePlayer.Speak directive with the given speech. Useful for sending progressive responses.
- * 
- * @param handlerInput 
- * @param speech 
+ *
+ * @param handlerInput
+ * @param speech
  */
 export function VoicePlayerSpeakDirective(handlerInput: HandlerInput, speech?: string): services.directive.SendDirectiveRequest {
     const requestId = handlerInput.requestEnvelope.request.requestId;
@@ -345,8 +345,8 @@ export function VoicePlayerSpeakDirective(handlerInput: HandlerInput, speech?: s
 
 /**
  * Rounds the number to one decimal place.
- * 
- * @param n 
+ *
+ * @param n
  */
 export function FormatPrice(n: number): number {
     return Math.round(n * 10) / 10;
@@ -362,9 +362,9 @@ export function CurrentDate() {
 /**
  * Tries to resolve an ambiguous value. Returns true if the value was resolved,
  * false otherwise.
- * 
- * @param intent 
- * @param slot 
+ *
+ * @param intent
+ * @param slot
  */
 export function TryToResolveValue(intent: Intent, slot: MatchedSlotValue) {
     let resolvedValue: string | undefined;
@@ -418,9 +418,9 @@ export function TryToResolveValue(intent: Intent, slot: MatchedSlotValue) {
 
 /**
  * Repropts the user to say a slot if it is ambiguous.
- * 
- * @param handlerInput 
- * @param slot 
+ *
+ * @param handlerInput
+ * @param slot
  */
 export function DisambiguateSlot(handlerInput: HandlerInput, slot: MatchedSlotValue) {
     const { t } = GetRequestAttributes(handlerInput);
@@ -448,22 +448,22 @@ export function DisambiguateSlot(handlerInput: HandlerInput, slot: MatchedSlotVa
 /**
  * Returns the LeagueType if it was found in the slots.
  * Defaults to LeagueTypes.Challenge.
- * 
- * @param slots 
+ *
+ * @param slots
  */
-export function GetLeagueSlot(slots: SlotValues): LeagueTypes {
+export function GetLeagueSlot(slots: SlotValues): LeagueSlotTypes {
     const leagueSlot = slots[SlotTypes.League];
     if (leagueSlot && leagueSlot.isMatch) {
-        return leagueSlot.resolved as LeagueTypes
+        return leagueSlot.resolved as LeagueSlotTypes;
     }
 
-    return LeagueTypes.Challenge;
+    return LeagueSlotTypes.Challenge;
 }
 
 /**
  * Returns the links slot. Defaults to 0.
- * 
- * @param slots 
+ *
+ * @param slots
  */
 export function GetLinksSlot(slots: SlotValues): number {
     let links = 0;
@@ -481,8 +481,8 @@ export function GetLinksSlot(slots: SlotValues): number {
 
 /**
  * Checks the count of the ItemEntity. Returns true if the count >= 5.
- * 
- * @param value 
+ *
+ * @param value
  */
 export function IsHighConfidenceItemPrice(value: ItemEntity) {
     return value.count >= 5;

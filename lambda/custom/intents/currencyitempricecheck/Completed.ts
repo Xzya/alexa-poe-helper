@@ -1,5 +1,5 @@
 import { RequestHandler } from "ask-sdk-core";
-import { apiClient, CurrencyEntity, CurrencyRequestTypes } from "../../api";
+import { apiClient, CurrencyEntity, CurrencyRequestTypes, LeagueTypeSlotToAPIMap } from "../../api";
 import { IsIntentWithCompleteDialog, GetRequestAttributes, GetLeagueSlot, CurrentDate, CreateError, FormatPrice } from "../../lib/helpers";
 import { Strings, ErrorTypes, SlotTypes } from "../../lib/constants";
 
@@ -9,8 +9,8 @@ function filterLowConfidence(value: CurrencyEntity) {
 
 /**
  * Creates a currency item Dialog handler with complete state.
- * 
- * @param options 
+ *
+ * @param options
  */
 export function CreateCurrencyItemCompletedHandler(options: {
     intentName: string;
@@ -44,7 +44,7 @@ export function CreateCurrencyItemCompletedHandler(options: {
                 try {
                     // get the currency exchange details
                     const res = await apiClient.currencies({
-                        league: league,
+                        league: LeagueTypeSlotToAPIMap[league],
                         type: options.requestType,
                         date: CurrentDate(),
                     });

@@ -1,9 +1,22 @@
+import { LeagueSlotTypes } from "../lib/constants";
+
 export enum LeagueTypes {
     Challenge = "Incursion", // "tmpstandard",
     HardcoreChallenge = "Hardcore Incursion", // "tmphardcore",
     Standard = "Standard",
     Hardcore = "Hardcore",
+    IncursionEvent = "Incursion Event (IRE001)",
+    HarcoreIncursionEvent = "Incursion Event HC (IRE002)",
 }
+
+export const LeagueTypeSlotToAPIMap: { [key: string]: LeagueTypes } = {
+    [LeagueSlotTypes.Challenge]: LeagueTypes.Challenge,
+    [LeagueSlotTypes.HardcoreChallenge]: LeagueTypes.HardcoreChallenge,
+    [LeagueSlotTypes.Standard]: LeagueTypes.Standard,
+    [LeagueSlotTypes.Hardcore]: LeagueTypes.Hardcore,
+    [LeagueSlotTypes.IncursionEvent]: LeagueTypes.IncursionEvent,
+    [LeagueSlotTypes.HarcoreIncursionEvent]: LeagueTypes.HarcoreIncursionEvent,
+};
 
 export enum CurrencyRequestTypes {
     Currency = "Currency",
